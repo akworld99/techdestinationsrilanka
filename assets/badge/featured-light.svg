@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="120" viewBox="0 0 440 120" role="img" aria-label="Featured on Tech Destination Sri Lanka">
+<rect x="1.5" y="1.5" width="437" height="117" rx="14" fill="#ffffff" stroke="#0b3c91" stroke-width="3"/>
+<g transform="translate(22 24)"><path d="M0 0h36L0 36z" fill="#e94e1b"/><path d="M36 0h36v36z" fill="#f7a600"/><path d="M0 36l36 36H0z" fill="#0f7d5c"/><path d="M36 36l36 36V36z" fill="#1eb2e6"/><path d="M36 0L72 36H36z" fill="#8d1b3d"/></g>
+<text x="116" y="46" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#b46f00">Featured on</text>
+<text x="116" y="74" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#0b3c91">Tech Destination</text>
+<text x="116" y="100" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#0b3c91">Sri Lanka</text>
+</svg>

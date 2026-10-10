@@ -169,6 +169,12 @@ def build_talent(B, stories):
     </div>
   </div>
 </section>
+<section class="section top-0">
+  <div class="wrap">
+    <div class="section-head"><h2>Hire by role</h2><a class="more" href="../hire/">All roles and pay</a></div>
+    {seo_pages.chip_links([(r["short"], "../hire/" + r["slug"] + "/") for r in __import__("seo_more").ROLES])}
+  </div>
+</section>
 <section class="section tint">
   <div class="wrap">
     <div class="section-head"><h2>What Sri Lankan talent is trusted with</h2><a class="more" href="../stories/">Read the stories</a></div>
@@ -194,6 +200,11 @@ def build_talent(B, stories):
         ("select", "timeline", "When", True, ["As soon as possible", "Within 3 months", "Later this year", "Exploring"]),
         ("textarea", "message", "Anything else", False, "Stack, seniority, time zone overlap, budget range"),
     ], "Send request", "Request sent. We will reply by email.")
+    find_faq, find_ld = seo_pages.faq_block(stories, [
+        ("Do I need a company in Sri Lanka to hire there?", "No. You can hire through an employer of record, contract individuals, or take a dedicated team from a Sri Lankan company."),
+        ("What roles can I hire in Sri Lanka?", "Software engineers, QA, DevOps and cloud, data and AI, designers and product managers, ERP consultants, cybersecurity engineers, and finance and accounting professionals."),
+        ("What does a Sri Lankan software engineer cost?", "A median of about LKR 177,000 a month, roughly USD 535, on self reported 2026 Glassdoor data, plus 15% statutory employer contributions. Strong engineers at export companies earn more."),
+    ])
     find = f"""
 <section class="page-head">
   <div class="wrap narrow">
@@ -210,11 +221,12 @@ def build_talent(B, stories):
       <div><strong>Teams from a partner company</strong><p>A dedicated team run by a Sri Lankan company we have reported on, working as an extension of yours.</p></div>
     </div>
     {find_form}
+    {find_faq}
     <p class="aside">Planning a team of 20 or more, or your own entity? See <a href="../../services/#setup">Set up</a> and <a href="../../services/#recruit">Recruit at scale</a>.</p>
   </div>
 </section>
 """
-    B.write("talent/find/index.html", B.page("Find talent from Sri Lanka", "Tell us the role you need. We introduce Sri Lankan engineers, specialists or dedicated teams who have delivered for global companies.", find, "../../", "talent/find/", active="talent"))
+    B.write("talent/find/index.html", B.page("Find talent from Sri Lanka", "Tell us the role you need. We introduce Sri Lankan engineers, specialists or dedicated teams who have delivered for global companies.", find, "../../", "talent/find/", active="talent", extra_head=find_ld))
 
     tt_form = form(B, "top-talent", "Apply to be featured", "It takes about five minutes. We review every application.", [
         ("text", "name", "Full name", True, ""),
@@ -229,6 +241,11 @@ def build_talent(B, stories):
         ("checks", "open_to", "Open to", False, ["Remote full time", "Contract or freelance", "Relocation", "Roles with companies in Sri Lanka"]),
         ("consent", "consent", "I agree that Tech Destination Sri Lanka may publish a profile based on this information and share it with employers. My email is never published.", True, None),
     ], "Send application", "Application sent. We will email you after we review it.")
+    tt_faq, tt_ld = seo_pages.faq_block(stories, [
+        ("Is it free to be featured as Sri Lankan Top Talent?", "Yes. There is no charge for professionals we select."),
+        ("Who can apply?", "Engineers, designers, data, product, ERP, security and finance professionals from Sri Lanka, at any career stage, who can show their work."),
+        ("Will my contact details be published?", "No. Your email and phone number are never published. Employers reach you through us."),
+    ])
     tt = f"""
 <section class="page-head">
   <div class="wrap narrow">
@@ -255,10 +272,11 @@ def build_talent(B, stories):
       <li><h3>Get featured</h3><p>We write your profile, you approve it, and we publish.</p></li>
     </ol>
     {tt_form}
+    {tt_faq}
   </div>
 </section>
 """
-    B.write("talent/top-talent/index.html", B.page("Be featured as Sri Lankan Top Talent", "Apply for a featured profile and get seen by global founders and hiring managers looking for Sri Lankan talent.", tt, "../../", "talent/top-talent/", active="talent"))
+    B.write("talent/top-talent/index.html", B.page("Be featured as Sri Lankan Top Talent", "Apply for a featured profile and get seen by global founders and hiring managers looking for Sri Lankan talent.", tt, "../../", "talent/top-talent/", active="talent", extra_head=tt_ld))
 
 
 # ------------------------------------------------------------------ why Sri Lanka

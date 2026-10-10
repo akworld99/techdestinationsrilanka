@@ -25,6 +25,8 @@ SITE_NAME = "Tech Destination Sri Lanka"
 TAGLINE = "Connecting the world to Sri Lanka's technology ecosystem"
 LINKEDIN = "https://www.linkedin.com/company/tech-destination-sri-lanka/"
 INSTAGRAM = "https://www.instagram.com/techdestination_srilanka/"
+GA_ID = "G-X888MY82H5"   # Google Analytics measurement ID
+INDEXNOW_KEY = "7c1e5a9d3b8f4e62a0d7c4b19f3e8a56"
 FOLLOWERS = "7,800+"     # LinkedIn followers, shown on the services and talent pages
 BOOKING_URL = ""          # Cal.com or Calendly link. Leave empty to hide the booking button.
 FORM_ENDPOINT = "https://formspree.io/f/maeqjjvw"        # Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave empty to hide the form.
@@ -253,6 +255,12 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
 <meta property="og:image" content="{img}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}
+gtag('consent','default',{{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'}});
+gtag('consent','default',{{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],wait_for_update:500}});
+try{{var c=localStorage.getItem('tdsl-consent');if(c)gtag('consent','update',{{analytics_storage:c}});}}catch(e){{}}
+gtag('js',new Date());gtag('config','{GA_ID}');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
 <link rel="icon" type="image/png" href="{prefix}assets/favicon.png">
 <link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{SITE_NAME} stories" href="{SITE_URL}/feed.xml">
@@ -300,6 +308,7 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
     <div>
       <p class="foot-h">For companies</p>
       <a href="{prefix}talent/find/">Find talent</a>
+      <a href="{prefix}hire/">Hire by role</a>
       <a href="{prefix}services/">Services</a>
       <a href="{prefix}guides/sri-lanka-tech-salaries/">Salary guide</a>
       <a href="{prefix}guides/how-to-hire-in-sri-lanka/">How to hire</a>
@@ -312,8 +321,9 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
       <a href="{prefix}talent/top-talent/">Be featured as Top Talent</a>
       <a href="{LINKEDIN}" rel="noopener">LinkedIn</a>
       <a href="{INSTAGRAM}" rel="noopener">Instagram</a>
-      <a href="{prefix}feed.xml">RSS feed</a>
+      <a href="{prefix}featured-badge/">Featured badge</a>
       <a href="{prefix}contact/">Contact</a>
+      <a href="{prefix}privacy/">Privacy</a>
     </div>
   </div>
   <div class="wrap foot-hubs">
@@ -329,6 +339,7 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
   </div>
   <div class="wrap legal">© {date.today().year} {SITE_NAME}. Company names and trademarks belong to their owners.</div>
 </footer>
+<div class="consent" id="consent" hidden><p>We use analytics cookies to see which pages are read. <a href="{prefix}privacy/">Privacy</a></p><div><button class="btn btn-small" data-consent="granted">Accept</button><button class="btn btn-small btn-ghost" data-consent="denied">Decline</button></div></div>
 <script src="{prefix}assets/app.js" defer></script>
 </body>
 </html>
@@ -465,6 +476,15 @@ def build_home(stories):
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>Live from our LinkedIn</h2><a class="more" href="{LINKEDIN}" rel="noopener">Follow {FOLLOWERS} others</a></div>
+    <div class="li-row">
+      {''.join(f'<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:{s["linkedin"]}?collapsed=1" height="600" frameborder="0" allowfullscreen loading="lazy" title="LinkedIn post: {e(s["title"])}"></iframe>' for s in stories[:3])}
+    </div>
+  </div>
+</section>
+
 <section class="cta">
   <div class="wrap cta-in">
     <h2>Built something global from Sri Lanka?</h2>
@@ -505,7 +525,7 @@ def build_stories_index(stories):
   </div>
 </section>
 """
-    write("stories/index.html", page("Stories", f"All {len(stories)} stories from {SITE_NAME}: Sri Lankan built companies, global companies in Sri Lanka, and ecosystem data.", body, "../", "stories/", active="stories"))
+    write("stories/index.html", page("Sri Lankan tech stories: companies, founders and data", f"All {len(stories)} stories from {SITE_NAME}: Sri Lankan built companies, global companies in Sri Lanka, and ecosystem data.", body, "../", "stories/", active="stories"))
 
 
 def build_story(s, stories):
@@ -516,8 +536,10 @@ def build_story(s, stories):
     sources = "".join(f'<li><a href="{e(u)}" rel="noopener nofollow">{e(l)}</a></li>' for l, u in s["sources"])
     li = f"https://www.linkedin.com/feed/update/urn:li:activity:{s['linkedin']}/" if s.get("linkedin") else LINKEDIN
     post_fig = ""
-    if (HERE / "post-images" / f"{s['slug']}.jpg").exists():
-        post_fig = f'<figure class="post-fig"><a href="{li}" rel="noopener"><img src="../../assets/posts/{s["slug"]}.jpg" alt="The original post graphic: {e(s["title"])}" width="800" height="1000" loading="lazy"></a><figcaption>As published on our <a href="{li}" rel="noopener">LinkedIn page</a>.</figcaption></figure>'
+    if s.get("linkedin"):
+        post_fig = (f'<section class="li-live"><h2>Live on LinkedIn</h2><p class="cap">The original post, with current reactions and comments.</p>'
+                    f'<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:{s["linkedin"]}?collapsed=1" height="640" width="504" frameborder="0" allowfullscreen loading="lazy" title="LinkedIn post: {e(s["title"])}"></iframe>'
+                    f'<p class="cap"><a href="{li}" rel="noopener">Open the post on LinkedIn</a></p></section>')
     note = f'<p class="note"><strong>Update.</strong> {e(s["note"])}</p>' if s.get("note") else ""
     body = f"""
 <article class="story">
@@ -587,7 +609,7 @@ def build_companies(stories):
     body = f"""
 <section class="page-head">
   <div class="wrap">
-    <h1>Companies</h1>
+    <h1>Tech companies in Sri Lanka</h1>
     <p class="lede">Every company we have featured: {nb} built by Sri Lankans and {len(cos) - nb} global companies running engineering or operations from Sri Lanka. Each entry links to the full story and its sources.</p>
     <div class="filters" role="group" aria-label="Filter companies">
       <button class="chip is-on" data-filter="all">All {len(cos)}</button>
@@ -611,7 +633,7 @@ def build_companies(stories):
   </div>
 </section>
 """
-    write("companies/index.html", page("Companies", f"Directory of the {len(cos)} companies featured by {SITE_NAME}, from Sri Lankan built product companies to global firms with teams in Colombo.", body, "../", "companies/", active="companies"))
+    write("companies/index.html", page("Tech companies in Sri Lanka: directory of featured companies", f"Directory of {len(cos)} technology companies in Sri Lanka featured by {SITE_NAME}: Sri Lankan built product companies and global firms with teams in Colombo.", body, "../", "companies/", active="companies"))
 
 
 def build_about(stories):
@@ -709,6 +731,7 @@ def build_meta(stories, extra_pages=()):
 <div class="actions"><a class="btn" href="{base}stories/">Browse the stories</a><a class="btn btn-ghost" href="{base}">Go to the home page</a></div></div></section>""", base, "404.html")
     write("404.html", nf.replace(f'href="{base}index.html"', f'href="{base}"'))
     write(".nojekyll", "")
+    write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
     write("CNAME", SITE_URL.split("//")[1] + "\n")
 
 
@@ -719,8 +742,9 @@ def write(rel, content):
 
 
 def main():
-    global seo_pages
+    global seo_pages, seo_more
     import seo_pages
+    import seo_more
     stories = parse_stories()
     for d in ("covers", "posts", "logos"):
         (ROOT / "assets" / d).mkdir(parents=True, exist_ok=True)
@@ -750,7 +774,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

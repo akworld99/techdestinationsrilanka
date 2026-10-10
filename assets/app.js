@@ -80,7 +80,7 @@
   // carry the industry or country a visitor came from into the talent form
   var ft = document.getElementById('find-talent-form');
   if (ft) {
-    ['industry', 'from'].forEach(function (k) {
+    ['industry', 'from', 'role'].forEach(function (k) {
       var v = params.get(k);
       if (!v || !/^[a-z-]+$/.test(v)) return;
       var h = document.createElement('input');
@@ -107,6 +107,7 @@
           if (!r.ok) throw new Error();
           form.reset();
           status.textContent = form.dataset.done;
+          if (window.gtag) gtag('event', 'generate_lead', { form_name: form.dataset.form });
         })
         .catch(function () {
           status.textContent = 'That did not send. Check your connection and try again, or message us on LinkedIn.';
@@ -114,6 +115,23 @@
         .then(function () { submit.disabled = false; });
     });
   });
+
+  // analytics consent banner, shown to visitors in Europe who have not chosen yet
+  var consent = document.getElementById('consent');
+  if (consent) {
+    var stored = null;
+    try { stored = localStorage.getItem('tdsl-consent'); } catch (err) {}
+    var tz = '';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (err) {}
+    if (!stored && tz.indexOf('Europe/') === 0) consent.hidden = false;
+    Array.prototype.forEach.call(consent.querySelectorAll('[data-consent]'), function (b) {
+      b.addEventListener('click', function () {
+        try { localStorage.setItem('tdsl-consent', b.dataset.consent); } catch (err) {}
+        if (window.gtag) gtag('consent', 'update', { analytics_storage: b.dataset.consent });
+        consent.hidden = true;
+      });
+    });
+  }
 
   // copy link on story pages
   var copyBtn = document.querySelector('[data-copy]');
