@@ -73,11 +73,82 @@ def chip_links(items):
     return '<ul class="names">' + "".join(f'<li><a href="{href}">{e(label)}</a></li>' for label, href in items) + "</ul>"
 
 
-def hub_blocks(prefix):
-    """Industry and country link blocks, reused on the why page, the home page and the talent page."""
-    v = chip_links([(x["label"], f"{prefix}why-sri-lanka/{x['slug']}/") for x in VERTICALS])
-    m = chip_links([(x["label"], f"{prefix}hire-from/{x['slug']}/") for x in MARKETS])
-    return v, m
+ICONS = {
+    "healthtech": '<path d="M3 12h4l2-5 4 10 2-5h6"/><path d="M12 21C6 17 3 13.5 3 9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 9 2.5c0 1-.2 1.9-.6 2.8"/>',
+    "automotive": '<path d="M4 16V12l2-5h12l2 5v4"/><path d="M2 16h20v2H2z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M5 12h14"/>',
+    "fintech": '<path d="M3 20h18"/><path d="M6 20v-6M11 20V9M16 20v-9"/><path d="M4 9l6-5 5 4 6-5"/><path d="M17 3h4v4"/>',
+    "ai": '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/><path d="M5 3l.6 1.6L7 5l-1.4.6L5 7l-.6-1.4L3 5l1.4-.4z"/>',
+    "enterprise-software": '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16l9 5 9-5"/>',
+    "semiconductors-embedded": '<rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10" y="10" width="4" height="4"/><path d="M10 7V3M14 7V3M10 21v-4M14 21v-4M7 10H3M7 14H3M21 10h-4M21 14h-4"/>',
+    "logistics-travel": '<path d="M2 7h11v10H2z"/><path d="M13 10h4l4 4v3h-8z"/><circle cx="6.5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',
+    "govtech": '<path d="M3 9l9-6 9 6z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9"/><path d="M2 21h20M3 18h18"/>',
+    "finance-accounting": '<rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 7h8"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15h.01M8.5 18h.01M12 18h3.5"/>',
+}
+
+
+def _flag(inner):
+    return f'<svg class="flag" viewBox="0 0 30 20" width="30" height="20" aria-hidden="true"><clipPath id="fc"><rect width="30" height="20" rx="3"/></clipPath><g clip-path="url(#fc)">{inner}</g><rect x=".5" y=".5" width="29" height="19" rx="2.5" fill="none" stroke="rgba(15,27,51,.18)"/></svg>'
+
+
+_NO = '<rect width="30" height="20" fill="#ba0c2f"/><path d="M0 10h30M11 0v20" stroke="#fff" stroke-width="5"/><path d="M0 10h30M11 0v20" stroke="#00205b" stroke-width="2.4"/>'
+_SE = '<rect width="30" height="20" fill="#006aa7"/><path d="M0 10h30M11 0v20" stroke="#fecc02" stroke-width="3.6"/>'
+_DK = '<rect width="30" height="20" fill="#c8102e"/><path d="M0 10h30M11 0v20" stroke="#fff" stroke-width="3.2"/>'
+_AE = '<rect width="30" height="6.67" fill="#00732f"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect y="13.33" width="30" height="6.67"/><rect width="8" height="20" fill="#e4002b"/>'
+_UK = '<rect width="30" height="20" fill="#012169"/><path d="M0 0l30 20M30 0L0 20" stroke="#fff" stroke-width="4"/><path d="M0 0l30 20M30 0L0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.4"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/>'
+FLAGS = {
+    "usa": '<rect width="30" height="20" fill="#fff"/>' + "".join(f'<rect y="{y}" width="30" height="1.54" fill="#b22234"/>' for y in (0, 3.08, 6.15, 9.23, 12.31, 15.38, 18.46)) + '<rect width="13" height="10.8" fill="#3c3b6e"/>',
+    "uk": _UK,
+    "nordics": None,
+    "norway": _NO,
+    "sweden": _SE,
+    "netherlands": '<rect width="30" height="6.67" fill="#ae1c28"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect y="13.33" width="30" height="6.67" fill="#21468b"/>',
+    "germany": '<rect width="30" height="6.67"/><rect y="6.67" width="30" height="6.67" fill="#dd0000"/><rect y="13.33" width="30" height="6.67" fill="#ffce00"/>',
+    "australia": '<rect width="30" height="20" fill="#012169"/><g transform="scale(.5)">' + _UK.replace('<rect width="30" height="20" fill="#012169"/>', '') + '</g><g fill="#fff"><circle cx="7.5" cy="15" r="1.6"/><circle cx="22" cy="4" r="1"/><circle cx="26" cy="9" r="1"/><circle cx="22" cy="16" r="1"/><circle cx="18.5" cy="10" r="1"/></g>',
+    "uae-gulf": _AE,
+}
+# shared working hours on a 9 to 6 day: (label, where the shared block sits in their day, share of their day)
+OVERLAP = {
+    "usa": ("Later shift, 2 to 3 hours", 0.0, 0.0),
+    "uk": ("3.5 to 4.5 shared hours", 0.0, 0.5),
+    "nordics": ("4.5 to 5.5 shared hours", 0.0, 0.61),
+    "norway": ("4.5 to 5.5 shared hours", 0.0, 0.61),
+    "sweden": ("4.5 to 5.5 shared hours", 0.0, 0.61),
+    "netherlands": ("4.5 to 5.5 shared hours", 0.0, 0.61),
+    "germany": ("4.5 to 5.5 shared hours", 0.0, 0.61),
+    "australia": ("3.5 to 4.5 shared hours", 0.5, 0.5),
+    "uae-gulf": ("6.5 to 7.5 shared hours", 0.0, 0.83),
+}
+
+
+def hub_blocks(prefix, stories=None):
+    """Industry cards and country cards, reused on the home page, the why page and the hire hub."""
+    from pathlib import Path
+    here = Path(__file__).resolve().parent
+    by = {s["slug"]: s for s in (stories or [])}
+    ind = []
+    for x in VERTICALS:
+        logos = ""
+        names = []
+        for slug, _ in x["proof"]:
+            s = by.get(slug)
+            if s and s.get("company") and (here / "logos" / f"{slug}.png").exists() and len(names) < 4:
+                logos += f'<img src="{prefix}assets/logos/{slug}.png" alt="" width="34" height="34" loading="lazy">'
+                names.append(s["company"])
+        ind.append(f'<a class="ind" href="{prefix}why-sri-lanka/{x["slug"]}/"><span class="ind-ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[x["slug"]]}</svg></span>'
+                   f'<strong>{e(x["label"])}</strong><span class="ind-who">{e(", ".join(names[:3]))}</span><span class="ind-logos">{logos}</span></a>')
+    ctry = []
+    for m in MARKETS:
+        label, start, size = OVERLAP[m["slug"]]
+        if m["slug"] == "nordics":
+            flag = '<span class="flags">' + _flag(_SE) + _flag(_NO) + _flag(_DK) + "</span>"
+        elif m["slug"] == "uae-gulf":
+            om = '<rect width="30" height="6.67" fill="#fff"/><rect y="6.67" width="30" height="6.67" fill="#db161b"/><rect y="13.33" width="30" height="6.67" fill="#008000"/><rect width="8" height="20" fill="#db161b"/>'
+            flag = '<span class="flags">' + _flag(_AE) + _flag(om) + "</span>"
+        else:
+            flag = _flag(FLAGS[m["slug"]])
+        bar = f'<span class="day" aria-hidden="true"><i style="left:{start * 100:.0f}%;width:{size * 100:.0f}%"></i></span>'
+        ctry.append(f'<a class="ctry" href="{prefix}hire-from/{m["slug"]}/">{flag}<strong>{e(m["label"])}</strong>{bar}<span class="ctry-ov">{e(label)}</span></a>')
+    return f'<div class="ind-grid">{"".join(ind)}</div>', f'<div class="ctry-grid">{"".join(ctry)}</div><p class="cap day-key"><span class="day"><i style="left:0;width:55%"></i></span> The blue block is the part of your 9 to 6 working day shared with Colombo.</p>'
 
 
 def related_for(slug):

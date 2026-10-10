@@ -103,7 +103,7 @@ def build_roles(B, stories):
         paths.append(path)
 
     cards = "".join(f'<a class="door" href="{r["slug"]}/"><h3>{e(r["short"])}</h3><p>Median about LKR {r["pay"][0][1] if r["slug"] != "software-engineers" else 177},000 a month for a {e((r["pay"][0][0] if r["slug"] != "software-engineers" else "software engineer").lower())}.</p><span class="door-go">Pay, companies and how to hire</span></a>' for r in ROLES)
-    v, m = SP.hub_blocks("../")
+    v, m = SP.hub_blocks("../", stories)
     faqs = [
         ("How do I hire developers in Sri Lanka?", "Choose one of four routes: an employer of record for a handful of direct hires, contractors for short projects, a dedicated team run by a Sri Lankan company, or your own registered company for a long term centre."),
         ("How much does a developer cost in Sri Lanka?", f"A software engineer in Colombo earns a median of about LKR 177,000 a month (about USD {SP.usd(177)}) and a senior engineer about LKR 260,000, on self reported Glassdoor data for 2026. Employers add 15% in statutory contributions. Partner company rates are around USD 25 to 40 an hour according to the Export Development Board."),

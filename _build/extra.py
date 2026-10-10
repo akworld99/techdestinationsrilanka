@@ -313,9 +313,9 @@ def build_why(B, stories):
       {''.join(f'<li><h2>{e(t)}</h2><p>{p}</p></li>' for t, p in rows)}
     </ol>
     <h2 class="h-sub">The case for your industry</h2>
-    {seo_pages.hub_blocks("../")[0]}
+    {seo_pages.hub_blocks("../", stories)[0]}
     <h2 class="h-sub mt">The case for your country</h2>
-    {seo_pages.hub_blocks("../")[1]}
+    {seo_pages.hub_blocks("../", stories)[1]}
     <div class="reach mt">
       <h2>Questions worth asking before you start</h2>
       <ul class="ticks">

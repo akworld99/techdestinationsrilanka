@@ -447,9 +447,9 @@ def build_home(stories):
   <div class="wrap">
     <div class="section-head"><h2>Why Sri Lanka, for your industry and your country</h2><a class="more" href="why-sri-lanka/">The full case</a></div>
     <p class="hub-l">By industry</p>
-    {seo_pages.hub_blocks("")[0]}
+    {seo_pages.hub_blocks("", stories)[0]}
     <p class="hub-l">By country</p>
-    {seo_pages.hub_blocks("")[1]}
+    {seo_pages.hub_blocks("", stories)[1]}
   </div>
 </section>
 
