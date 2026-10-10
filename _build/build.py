@@ -16,6 +16,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
+sys.path.insert(0, str(HERE))
+import seo_data  # noqa: E402
 
 # ---------------------------------------------------------------- settings
 SITE_URL = "https://akworld99.github.io/techdestinationsrilanka"  # change when a custom domain is connected
@@ -26,6 +28,8 @@ INSTAGRAM = "https://www.instagram.com/techdestination_srilanka/"
 FOLLOWERS = "7,800+"     # LinkedIn followers, shown on the services and talent pages
 BOOKING_URL = ""          # Cal.com or Calendly link. Leave empty to hide the booking button.
 FORM_ENDPOINT = ""        # Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave empty to hide the form.
+
+SEO_TITLES = {'creative-software': "Creative Software: Sri Lankan engineers behind Norway's health records", 'roar-global': "Roar Global: Sri Lanka's first AI gateway, built in Colombo", 'xeynergy': 'Xeynergy: bootstrapped Sri Lankan AI software company', 'frontwalker': "Frontwalker Sri Lanka: a Swedish group's global tech center", 'superloop': 'Superloop Sri Lanka: 24x7 network operations from Colombo', 'igt1-lanka': "IGT1 Lanka: IFS owners' new tech company in Port City Colombo", 'synopsys': 'Synopsys Sri Lanka: chip design software R&D in Colombo', 'michelin': 'Michelin Sri Lanka: IT hub for Asia at Orion City, Colombo', 'tiqri': 'Tiqri: Norwegian software company engineering from Colombo', 'healthrecon-connect': 'HealthRecon Connect: US healthcare operations run from Sri Lanka', 'zebra-technologies': 'Zebra Technologies Lanka: software R&D center in Colombo', 'gapstars': 'Gapstars: Dutch founded engineering teams built in Sri Lanka', 'simcentric': 'SimCentric: simulation software engineered in Colombo', 'rootcode': "Rootcode: Sri Lankan company building Estonia's AI platforms", 'infomate': 'Infomate: finance and accounting services from Sri Lanka', 'wealthos': 'WealthOS: Sri Lankan founded platform acquired by JPMorganChase', 'startup-genome-2026': "Sri Lanka in Startup Genome's 2026 ecosystem rankings", 'orion-city': "Orion City: Sri Lanka's IT park with 85+ tech companies", 'dijital-team': 'Dijital Team: Australian company with 200 people in Colombo', 'codegen': 'CodeGen: travelbox, Vega supercar and ChargeNET from Colombo', 'inivos': 'Inivos: Sri Lankan engineers on European automotive software', 'surge-global': 'Surge Global: Colombo company with a Qatar government contract', 'oceans': 'Oceans: Sri Lankan talent for 600+ US startups', 'ey-gds': 'EY Global Delivery Services in Sri Lanka: 500+ staff', 'virtusa': 'Virtusa: from Colombo to Nasdaq and a $2 billion acquisition', 'wns': 'WNS Sri Lanka: 20 years of delivery from Colombo', 'sysco-labs': "Sysco LABS Sri Lanka: Sysco's core software built in Colombo", 'wso2': 'WSO2: Colombo built software company sold for $600 million', 'why-global-companies-choose-sri-lanka': 'Why IFS, HCLTech, EY and Sysco build in Sri Lanka', 'universities': "Universities behind Sri Lanka's software engineering talent", 'it-bpm-exports-2025': 'Sri Lanka IT and BPM exports: $1.645 billion in 2025', 'millenniumit': 'MillenniumIT: the Colombo company behind the LSE trading platform'}
 
 CATEGORIES = {
     "built": ("Built by Sri Lankans", "Companies founded or led by Sri Lankan talent that compete globally."),
@@ -221,12 +225,13 @@ LANDMARKS = """<svg class="landmarks" viewBox="0 0 1200 300" role="img" aria-lab
 </svg>"""
 
 
-def page(title, desc, body, prefix, path, image=None, extra_head="", article=False, active=""):
+def page(title, desc, body, prefix, path, image=None, extra_head="", article=False, active="", seo_title=None):
     url = f"{SITE_URL}/{path}".rstrip("/") + ("/" if not path.endswith(".html") else "")
     if path == "":
         url = SITE_URL + "/"
     img = f"{SITE_URL}/{image or 'assets/share.jpg'}"
-    full_title = title if title == SITE_NAME else f"{title} | {SITE_NAME}"
+    title_tag = seo_title or title
+    full_title = title_tag if (title_tag == SITE_NAME or len(title_tag) > 42) else f"{title_tag} | {SITE_NAME}"
 
     def nav(href, label, key):
         cur = ' aria-current="page"' if key == active else ""
@@ -247,6 +252,7 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{img}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="icon" type="image/png" href="{prefix}assets/favicon.png">
 <link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{SITE_NAME} stories" href="{SITE_URL}/feed.xml">
@@ -263,9 +269,10 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
     <nav id="nav" class="nav" aria-label="Main">
       {nav('stories/', 'Stories', 'stories')}
       {nav('companies/', 'Companies', 'companies')}
+      {nav('why-sri-lanka/', 'Why Sri Lanka', 'why')}
       {nav('talent/', 'Talent', 'talent')}
       {nav('services/', 'Services', 'services')}
-      {nav('why-sri-lanka/', 'Why Sri Lanka', 'why')}
+      {nav('guides/', 'Guides', 'guides')}
       {nav('about/', 'About', 'about')}
       <a class="btn btn-small" href="{prefix}talent/find/">Find talent</a>
     </nav>
@@ -286,14 +293,19 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
       <a href="{prefix}stories/">Stories</a>
       <a href="{prefix}companies/">Companies</a>
       <a href="{prefix}why-sri-lanka/">Why Sri Lanka</a>
+      <a href="{prefix}guides/sri-lanka-tech-industry-facts/">Industry facts</a>
+      <a href="{prefix}tech-50/">Sri Lanka Tech 50</a>
       <a href="{prefix}about/">About</a>
     </div>
     <div>
       <p class="foot-h">For companies</p>
       <a href="{prefix}talent/find/">Find talent</a>
       <a href="{prefix}services/">Services</a>
+      <a href="{prefix}guides/sri-lanka-tech-salaries/">Salary guide</a>
+      <a href="{prefix}guides/how-to-hire-in-sri-lanka/">How to hire</a>
+      <a href="{prefix}guides/set-up-a-company-in-sri-lanka/">Set up a company</a>
+      <a href="{prefix}tech-tour/">Tech Tour</a>
       <a href="{prefix}get-featured/">Get featured</a>
-      <a href="{prefix}contact/">Contact</a>
     </div>
     <div>
       <p class="foot-h">For professionals</p>
@@ -301,7 +313,12 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
       <a href="{LINKEDIN}" rel="noopener">LinkedIn</a>
       <a href="{INSTAGRAM}" rel="noopener">Instagram</a>
       <a href="{prefix}feed.xml">RSS feed</a>
+      <a href="{prefix}contact/">Contact</a>
     </div>
+  </div>
+  <div class="wrap foot-hubs">
+    <p><strong>By industry</strong> {' '.join(f'<a href="{prefix}why-sri-lanka/{v["slug"]}/">{v["label"]}</a>' for v in seo_data.VERTICALS)}</p>
+    <p><strong>By country</strong> {' '.join(f'<a href="{prefix}hire-from/{m["slug"]}/">{m["label"]}</a>' for m in seo_data.MARKETS)}</p>
   </div>
   <div class="wrap news">
     <form class="newsletter" data-form="newsletter" data-done="You are on the list." action="{e(FORM_ENDPOINT)}" method="POST">
@@ -417,6 +434,30 @@ def build_home(stories):
 
 <section class="section tint">
   <div class="wrap">
+    <div class="section-head"><h2>Why Sri Lanka, for your industry and your country</h2><a class="more" href="why-sri-lanka/">The full case</a></div>
+    <p class="hub-l">By industry</p>
+    {seo_pages.hub_blocks("")[0]}
+    <p class="hub-l">By country</p>
+    {seo_pages.hub_blocks("")[1]}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>Numbers before you decide</h2><a class="more" href="guides/">All guides</a></div>
+    <div class="doors wrap3">
+      <a class="door" href="guides/sri-lanka-tech-salaries/"><h3>Salary and cost guide</h3><p>What engineers earn in Colombo in 2026 and what an employee costs on top, with sources.</p><span class="door-go">See the numbers</span></a>
+      <a class="door" href="guides/how-to-hire-in-sri-lanka/"><h3>How to hire</h3><p>Employer of record, contractors, a partner team or your own company, compared.</p><span class="door-go">Compare routes</span></a>
+      <a class="door" href="guides/set-up-a-company-in-sri-lanka/"><h3>Set up a company</h3><p>Registration, ownership, tax, the Board of Investment and Port City Colombo.</p><span class="door-go">Read the guide</span></a>
+      <a class="door" href="tech-tour/"><h3>Sri Lanka Tech Tour</h3><p>Three days in Colombo meeting the companies and people in our stories.</p><span class="door-go">Register interest</span></a>
+      <a class="door" href="tech-50/"><h3>Sri Lanka Tech 50</h3><p>Our annual fact checked list. Nominations for the first edition are open.</p><span class="door-go">Nominate a company</span></a>
+      <a class="door" href="guides/sri-lanka-tech-industry-facts/"><h3>Industry facts</h3><p>Exports, workforce, graduates, rankings and exits, each with its source.</p><span class="door-go">Check the facts</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
     <div class="section-head"><h2>{len(companies)} companies featured so far</h2><a class="more" href="companies/">Open the directory</a></div>
     <ul class="names">
       {''.join(f'<li><a href="stories/{s["slug"]}/">{logo(s, "")}{e(s["company"])}</a></li>' for s in sorted([s for s in stories if s.get("company")], key=lambda s: s["company"].lower()))}
@@ -432,7 +473,9 @@ def build_home(stories):
   </div>
 </section>
 """
-    ld = {"@context": "https://schema.org", "@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png", "sameAs": [LINKEDIN, INSTAGRAM]}
+    ld = [{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png", "sameAs": [LINKEDIN, INSTAGRAM], "description": TAGLINE,
+           "areaServed": ["LK", "US", "GB", "SE", "NO", "DK", "FI", "NL", "DE", "AU", "AE", "OM", "SA", "QA"], "knowsAbout": ["Sri Lanka technology industry", "software engineering talent", "IT outsourcing", "global capability centres"]},
+          {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/"}]
     head = f'<script type="application/ld+json">{json.dumps(ld)}</script>'
     desc = "Sourced stories about the global software, products and companies built by Sri Lankan tech talent, for founders, CTOs and investors."
     write("index.html", page(SITE_NAME, desc, body, "", "", extra_head=head))
@@ -495,6 +538,7 @@ def build_story(s, stories):
     </div>
     {f'<section class="sources"><h2>Sources</h2><ul>{sources}</ul></section>' if sources else ''}
     {post_fig}
+    {('<p class="rel">Related: ' + ' '.join(f'<a href="../../{p}">{e(l)}</a>' for l, p in seo_pages.related_for(s['slug'])) + '</p>') if seo_pages.related_for(s['slug']) else ''}
     <div class="story-actions">
       <a class="btn btn-ghost" href="{li}" rel="noopener">Join the discussion on LinkedIn</a>
       <button class="btn btn-ghost" data-copy>Copy link</button>
@@ -524,8 +568,10 @@ def build_story(s, stories):
         "author": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/"},
         "publisher": {"@type": "Organization", "name": SITE_NAME, "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/assets/logo.png"}},
     }
-    head = f'<script type="application/ld+json">{json.dumps(ld)}</script>\n<meta property="article:published_time" content="{s["date"].isoformat()}">'
-    write(f"stories/{s['slug']}/index.html", page(s["title"], s["dek"], body, "../../", f"stories/{s['slug']}/", image=f"assets/covers/{s['slug']}.jpg", extra_head=head, article=True, active="stories"))
+    if s.get("company"):
+        ld["about"] = {"@type": "Organization", "name": s["company"]}
+    head = f'<script type="application/ld+json">{json.dumps(ld)}</script>\n<meta property="article:published_time" content="{s["date"].isoformat()}">' + seo_pages.crumbs_ld(sys.modules[__name__], [("Stories", "stories/"), (s.get("company") or s["title"], f"stories/{s['slug']}/")])
+    write(f"stories/{s['slug']}/index.html", page(s["title"], s["dek"], body, "../../", f"stories/{s['slug']}/", image=f"assets/covers/{s['slug']}.jpg", extra_head=head, article=True, active="stories", seo_title=SEO_TITLES.get(s["slug"])))
 
 
 def build_companies(stories):
@@ -648,7 +694,8 @@ def build_meta(stories, extra_pages=()):
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
         f"  <url><loc>{SITE_URL}/{p}</loc><lastmod>{d.isoformat()}</lastmod></url>\n" for p, d in urls) + "</urlset>\n"
     write("sitemap.xml", sm)
-    write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+    bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Applebot-Extended", "Bingbot", "CCBot"]
+    write("robots.txt", "User-agent: *\nAllow: /\n\n" + "".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"Sitemap: {SITE_URL}/sitemap.xml\n")
     items = "".join(
         f"<item><title>{e(s['title'])}</title><link>{SITE_URL}/stories/{s['slug']}/</link><guid>{SITE_URL}/stories/{s['slug']}/</guid>"
         f"<pubDate>{datetime(s['date'].year, s['date'].month, s['date'].day, 6, tzinfo=timezone.utc).strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate>"
@@ -671,7 +718,8 @@ def write(rel, content):
 
 
 def main():
-    sys.path.insert(0, str(HERE))
+    global seo_pages
+    import seo_pages
     stories = parse_stories()
     for d in ("covers", "posts", "logos"):
         (ROOT / "assets" / d).mkdir(parents=True, exist_ok=True)
@@ -701,7 +749,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

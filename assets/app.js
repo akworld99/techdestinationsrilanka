@@ -77,6 +77,18 @@
     }
   }
 
+  // carry the industry or country a visitor came from into the talent form
+  var ft = document.getElementById('find-talent-form');
+  if (ft) {
+    ['industry', 'from'].forEach(function (k) {
+      var v = params.get(k);
+      if (!v || !/^[a-z-]+$/.test(v)) return;
+      var h = document.createElement('input');
+      h.type = 'hidden'; h.name = k; h.value = v;
+      ft.appendChild(h);
+    });
+  }
+
   // every form on the site posts to the same endpoint
   Array.prototype.forEach.call(document.querySelectorAll('form[data-form]'), function (form) {
     form.addEventListener('submit', function (ev) {

@@ -1,6 +1,8 @@
 """Services, talent, why Sri Lanka and get featured pages, plus the shared form builder."""
 import html
 
+import seo_pages
+
 e = html.escape
 
 
@@ -292,14 +294,18 @@ def build_why(B, stories):
     <ol class="reasons">
       {''.join(f'<li><h2>{e(t)}</h2><p>{p}</p></li>' for t, p in rows)}
     </ol>
-    <div class="reach">
+    <h2 class="h-sub">The case for your industry</h2>
+    {seo_pages.hub_blocks("../")[0]}
+    <h2 class="h-sub mt">The case for your country</h2>
+    {seo_pages.hub_blocks("../")[1]}
+    <div class="reach mt">
       <h2>Questions worth asking before you start</h2>
       <ul class="ticks">
         <li>Do you need a few people, a dedicated team from a partner, or your own entity?</li>
         <li>Which skills, and how senior? Niche skills take longer to hire anywhere.</li>
         <li>How many hours of overlap does your team need each day?</li>
       </ul>
-      <div class="actions"><a class="btn" href="../talent/find/">Find talent</a><a class="btn btn-ghost" href="../services/">See all services</a></div>
+      <div class="actions"><a class="btn" href="../talent/find/">Find talent</a><a class="btn btn-ghost" href="../guides/">Read the guides</a></div>
     </div>
   </div>
 </section>
