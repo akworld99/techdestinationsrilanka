@@ -150,7 +150,7 @@ def build_all(B, stories):
   <h2 class="h-sub mt">Who does this in Sri Lanka</h2>
   {SP.proof_list(B, stories, s['proof'], prefix)}
   <div class="reach mt"><h2>Talk to us first</h2><p>Tell us what you are building and how big the team needs to be. We will suggest the route and introduce the right people or partners.</p>
-  <div class="actions"><a class="btn" href="{prefix}talent/find/?route={s['slug']}">Find talent</a><a class="btn btn-ghost" href="{prefix}guides/sri-lanka-tech-salaries/">Salary and cost guide</a><a class="btn btn-ghost" href="{prefix}guides/set-up-a-company-in-sri-lanka/">Setup guide</a></div></div>
+  <div class="actions"><a class="btn" href="{prefix}talent/find/?route={s['slug']}">Find talent</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/sri-lanka-tech-salaries/">Salary and cost guide</a><a class="btn btn-ghost" href="{prefix}guides/set-up-a-company-in-sri-lanka/">Setup guide</a></div></div>
   {faq}
   <h2 class="h-sub mt">Other ways to build</h2>
   {others}

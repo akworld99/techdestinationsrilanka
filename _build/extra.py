@@ -138,7 +138,7 @@ def build_services(B, stories):
   <div class="wrap cta-in">
     <h2>Not sure which one fits?</h2>
     <p>Tell us what you are trying to do in two lines and we will point you the right way.</p>
-    <a class="btn btn-saffron" href="../contact/">Contact us</a>
+    <div class="actions"><a class="btn btn-saffron" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ondark" href="../contact/">Contact us</a></div>
   </div>
 </section>
 """
@@ -229,6 +229,7 @@ def build_talent(B, stories):
     </div>
     {find_form}
     {find_faq}
+    <p class="aside">Prefer to talk it through? <a href="{B.BOOKING_URL}" rel="noopener">Schedule a 30 minute call</a> or email <a href="mailto:{B.EMAIL}">{B.EMAIL}</a>.</p>
     <p class="aside">Planning a team of 20 or more, or your own entity? See <a href="../../services/#setup">Set up</a> and <a href="../../services/#recruit">Recruit at scale</a>.</p>
   </div>
 </section>

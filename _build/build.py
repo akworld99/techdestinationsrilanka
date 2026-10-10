@@ -28,7 +28,8 @@ INSTAGRAM = "https://www.instagram.com/techdestination_srilanka/"
 GA_ID = "G-X888MY82H5"   # Google Analytics measurement ID
 INDEXNOW_KEY = "7c1e5a9d3b8f4e62a0d7c4b19f3e8a56"
 FOLLOWERS = "7,800+"     # LinkedIn followers, shown on the services and talent pages
-BOOKING_URL = ""          # Cal.com or Calendly link. Leave empty to hide the booking button.
+EMAIL = "techdestinationsrilanka@gmail.com"
+BOOKING_URL = "https://calendly.com/digisavvyteams/30min"          # Cal.com or Calendly link. Leave empty to hide the booking button.
 FORM_ENDPOINT = "https://formspree.io/f/maeqjjvw"        # Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave empty to hide the form.
 
 SEO_TITLES = {'creative-software': "Creative Software: Sri Lankan engineers behind Norway's health records", 'roar-global': "Roar Global: Sri Lanka's first AI gateway, built in Colombo", 'xeynergy': 'Xeynergy: bootstrapped Sri Lankan AI software company', 'frontwalker': "Frontwalker Sri Lanka: a Swedish group's global tech center", 'superloop': 'Superloop Sri Lanka: 24x7 network operations from Colombo', 'igt1-lanka': "IGT1 Lanka: IFS owners' new tech company in Port City Colombo", 'synopsys': 'Synopsys Sri Lanka: chip design software R&D in Colombo', 'michelin': 'Michelin Sri Lanka: IT hub for Asia at Orion City, Colombo', 'tiqri': 'Tiqri: Norwegian software company engineering from Colombo', 'healthrecon-connect': 'HealthRecon Connect: US healthcare operations run from Sri Lanka', 'zebra-technologies': 'Zebra Technologies Lanka: software R&D center in Colombo', 'gapstars': 'Gapstars: Dutch founded engineering teams built in Sri Lanka', 'simcentric': 'SimCentric: simulation software engineered in Colombo', 'rootcode': "Rootcode: Sri Lankan company building Estonia's AI platforms", 'infomate': 'Infomate: finance and accounting services from Sri Lanka', 'wealthos': 'WealthOS: Sri Lankan founded platform acquired by JPMorganChase', 'startup-genome-2026': "Sri Lanka in Startup Genome's 2026 ecosystem rankings", 'orion-city': "Orion City: Sri Lanka's IT park with 85+ tech companies", 'dijital-team': 'Dijital Team: Australian company with 200 people in Colombo', 'codegen': 'CodeGen: travelbox, Vega supercar and ChargeNET from Colombo', 'inivos': 'Inivos: Sri Lankan engineers on European automotive software', 'surge-global': 'Surge Global: Colombo company with a Qatar government contract', 'oceans': 'Oceans: Sri Lankan talent for 600+ US startups', 'ey-gds': 'EY Global Delivery Services in Sri Lanka: 500+ staff', 'virtusa': 'Virtusa: from Colombo to Nasdaq and a $2 billion acquisition', 'wns': 'WNS Sri Lanka: 20 years of delivery from Colombo', 'sysco-labs': "Sysco LABS Sri Lanka: Sysco's core software built in Colombo", 'wso2': 'WSO2: Colombo built software company sold for $600 million', 'why-global-companies-choose-sri-lanka': 'Why IFS, HCLTech, EY and Sysco build in Sri Lanka', 'universities': "Universities behind Sri Lanka's software engineering talent", 'it-bpm-exports-2025': 'Sri Lanka IT and BPM exports: $1.645 billion in 2025', 'millenniumit': 'MillenniumIT: the Colombo company behind the LSE trading platform'}
@@ -294,7 +295,8 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
     <div class="foot-brand">
       <p class="foot-name">{SITE_NAME}</p>
       <p>{TAGLINE}.</p>
-      <p class="fine">We are an independent media platform. We are not a government body and we do not speak for one.</p>
+      <p class="foot-contact"><a class="btn btn-saffron btn-small" href="{BOOKING_URL}" rel="noopener">Schedule a call</a><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+      <p class="fine">We are an independent platform. We are not a government body and we do not speak for one.</p>
     </div>
     <div>
       <p class="foot-h">Read</p>
@@ -501,11 +503,11 @@ def build_home(stories):
   <div class="wrap cta-in">
     <h2>Ready to build in Sri Lanka?</h2>
     <p>Tell us the roles, the team size and the timeline. We will introduce the people, partners or advisers who fit.</p>
-    <div class="actions"><a class="btn btn-saffron" href="talent/find/">Find talent</a><a class="btn btn-ondark" href="contact/">Talk to us</a><a class="btn btn-ondark" href="get-featured/">Get your company featured</a></div>
+    <div class="actions"><a class="btn btn-saffron" href="talent/find/">Find talent</a><a class="btn btn-ondark" href="{BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ondark" href="get-featured/">Get your company featured</a></div>
   </div>
 </section>
 """
-    ld = [{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png", "sameAs": [LINKEDIN, INSTAGRAM], "description": TAGLINE,
+    ld = [{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png", "sameAs": [LINKEDIN, INSTAGRAM], "description": TAGLINE, "email": EMAIL, "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "url": BOOKING_URL},
            "areaServed": ["LK", "US", "GB", "SE", "NO", "DK", "FI", "NL", "DE", "AU", "AE", "OM", "SA", "QA"], "knowsAbout": ["Sri Lanka technology industry", "software engineering talent", "IT outsourcing", "global capability centres"]},
           {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/"},
           {"@context": "https://schema.org", "@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
@@ -695,7 +697,7 @@ def build_about(stories):
 
 
 def build_contact():
-    booking = f'<a class="btn" href="{e(BOOKING_URL)}" rel="noopener">Book a 20 minute call</a>' if BOOKING_URL else ""
+    booking = f'<a class="btn" href="{e(BOOKING_URL)}" rel="noopener">Schedule a 30 minute call</a>' if BOOKING_URL else ""
     import extra
     form = extra.form(sys.modules[__name__], "contact", "Send a message", "", [
         ("select", "need", "I want to", True, ["Hire Sri Lankan talent", "Find a delivery partner", "Set up in Sri Lanka", "Recruit at scale", "Feature my company", "Employer branding", "Events and delegations", "Something else"]),
@@ -716,10 +718,11 @@ def build_contact():
     <div class="doors stack" id="needs">{doors("../")}</div>
     <div class="reach">
       <h2>Reach us</h2>
-      <p>The fastest way to reach the team is a message to our LinkedIn page. Say which of the three you need, and roughly how many people or what timeline you have in mind.</p>
+      <p>Schedule a 30 minute call and tell us what you need, or email <a href="mailto:{EMAIL}">{EMAIL}</a> for any enquiry. It helps to say roughly how many people and what timeline you have in mind.</p>
       <div class="actions">
         {booking}
-        <a class="btn{' btn-ghost' if booking else ''}" href="{LINKEDIN}" rel="noopener">Message us on LinkedIn</a>
+        <a class="btn btn-ghost" href="mailto:{EMAIL}">Email us</a>
+        <a class="btn btn-ghost" href="{LINKEDIN}" rel="noopener">Message us on LinkedIn</a>
         <a class="btn btn-ghost" href="{INSTAGRAM}" rel="noopener">Instagram</a>
       </div>
     </div>

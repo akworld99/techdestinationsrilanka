@@ -110,7 +110,7 @@
           if (window.gtag) gtag('event', 'generate_lead', { form_name: form.dataset.form });
         })
         .catch(function () {
-          status.textContent = 'That did not send. Check your connection and try again, or message us on LinkedIn.';
+          status.textContent = 'That did not send. Check your connection and try again, or email techdestinationsrilanka@gmail.com.';
         })
         .then(function () { submit.disabled = false; });
     });

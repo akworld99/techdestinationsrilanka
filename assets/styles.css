@@ -429,6 +429,10 @@ p { margin: 0 0 1em; }
 .flow b { color: var(--ink); margin-right: 4px; }
 .cta .actions { margin-top: 0; }
 
+.foot-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 16px 0 0; }
+.foot-contact a:not(.btn) { color: #fff; margin: 0; text-decoration: underline; }
+.foot .foot-contact .btn { color: var(--blue-deep); margin: 0; display: inline-flex; }
+
 /* responsive */
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }

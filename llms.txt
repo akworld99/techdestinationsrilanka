@@ -64,6 +64,10 @@ Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its
 - [Sri Lanka Tech Tour](https://techdestinationsrilanka.lk/tech-tour/)
 - [Companies directory](https://techdestinationsrilanka.lk/companies/)
 
+## Contact
+- Schedule a call: https://calendly.com/digisavvyteams/30min
+- Email: techdestinationsrilanka@gmail.com
+
 ## Stories
 - [Sri Lankan engineers help build Norway's leading digital health platform. Meet Creative Software](https://techdestinationsrilanka.lk/stories/creative-software/): A Colombo company founded in 1999 has spent 25 years as the engineering partner behind DIPS, Norway's largest health records provider.
 - [A Colombo team built Sri Lanka's first AI gateway, with 200+ models billed in rupees. Meet Roar Global](https://techdestinationsrilanka.lk/stories/roar-global/): Roar started as a digital publisher in 2014. It is now an AI led venture builder with 150+ specialists and no outside capital.

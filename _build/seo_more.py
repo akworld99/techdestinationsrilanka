@@ -91,7 +91,7 @@ def build_roles(B, stories):
     <li><h3>Your own centre</h3><p>Register a company and hire directly. <a href="{prefix}guides/set-up-a-company-in-sri-lanka/">Setup guide</a></p></li>
   </ol>
   <div class="reach"><h2>Get a shortlist</h2><p>Tell us the seniority and stack. We introduce {e(r['role'])} or partner teams who fit.</p>
-  <div class="actions"><a class="btn" href="{prefix}talent/find/?role={r['slug']}">Find {e(r['short'].lower())}</a><a class="btn btn-ghost" href="{prefix}hire-from/">Guides by country</a></div></div>
+  <div class="actions"><a class="btn" href="{prefix}talent/find/?role={r['slug']}">Find {e(r['short'].lower())}</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}hire-from/">Guides by country</a></div></div>
   {faq}
   <h2 class="h-sub mt">Other roles</h2>
   {others}
@@ -193,7 +193,7 @@ def build_privacy(B):
   <h2>Embedded LinkedIn posts</h2>
   <p>Some pages show posts from our LinkedIn page inside a LinkedIn frame. LinkedIn may set its own cookies when those load. Their use is covered by LinkedIn's privacy policy.</p>
   <h2>Your requests</h2>
-  <p>To see, correct or delete information we hold about you, use the <a href="../contact/">contact page</a> or message us on <a href="{B.LINKEDIN}" rel="noopener">LinkedIn</a>.</p>
+  <p>To see, correct or delete information we hold about you, email <a href="mailto:{B.EMAIL}">{B.EMAIL}</a> or use the <a href="../contact/">contact page</a>.</p>
 </div></section>
 """
     B.write("privacy/index.html", B.page("Privacy", "What Tech Destination Sri Lanka collects through its forms and analytics, why, and how to have it removed.", body, "../", "privacy/"))

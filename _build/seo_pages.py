@@ -172,7 +172,7 @@ def related_for(slug):
 
 def cta(prefix, heading, text, q=""):
     return f"""<section class="cta"><div class="wrap cta-in"><h2>{e(heading)}</h2><p>{e(text)}</p>
-<div class="actions"><a class="btn btn-saffron" href="{prefix}talent/find/{q}">Find talent</a><a class="btn btn-ondark" href="{prefix}guides/sri-lanka-tech-salaries/">See salary guide</a></div></div></section>"""
+<div class="actions"><a class="btn btn-saffron" href="{prefix}talent/find/{q}">Find talent</a><a class="btn btn-ondark" href="https://calendly.com/digisavvyteams/30min" rel="noopener">Schedule a call</a><a class="btn btn-ondark" href="{prefix}guides/sri-lanka-tech-salaries/">See salary guide</a></div></div></section>"""
 
 
 # ------------------------------------------------------------------ industry pages
@@ -203,7 +203,7 @@ def build_verticals(B, stories):
     <div class="reach mt">
       <h2>Start with a shortlist</h2>
       <p>Tell us the roles and the stack. We introduce engineers or partner teams with {e(v['name'])} experience, and you take it from there.</p>
-      <div class="actions"><a class="btn" href="{prefix}talent/find/?industry={v['slug']}">Find {e(v['name'])} talent</a><a class="btn btn-ghost" href="{prefix}guides/how-to-hire-in-sri-lanka/">How hiring works</a></div>
+      <div class="actions"><a class="btn" href="{prefix}talent/find/?industry={v['slug']}">Find {e(v['name'])} talent</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/how-to-hire-in-sri-lanka/">How hiring works</a></div>
     </div>
     {faq}
     <h2 class="h-sub mt">Other industries</h2>
@@ -256,7 +256,7 @@ def build_markets(B, stories):
     <div class="reach">
       <h2>Tell us who you need</h2>
       <p>We introduce Sri Lankan engineers, specialists or partner teams who have worked with companies from {e(m['name'])}.</p>
-      <div class="actions"><a class="btn" href="{prefix}talent/find/?from={m['slug']}">Find talent</a><a class="btn btn-ghost" href="{prefix}guides/sri-lanka-tech-salaries/">Salary and cost guide</a></div>
+      <div class="actions"><a class="btn" href="{prefix}talent/find/?from={m['slug']}">Find talent</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/sri-lanka-tech-salaries/">Salary and cost guide</a></div>
     </div>
     {faq}
     <h2 class="h-sub mt">Other countries</h2>
@@ -699,7 +699,7 @@ def build_llms(B, stories, pages):
     lines += ["", "## Why Sri Lanka, by industry"] + [f"- [{v['h1']}]({B.SITE_URL}/why-sri-lanka/{v['slug']}/): {v['desc']}" for v in VERTICALS]
     lines += ["", "## Hiring from each country"] + [f"- [{m['h1']}]({B.SITE_URL}/hire-from/{m['slug']}/): {m['desc']}" for m in MARKETS]
     lines += ["", "## Services", f"- [Find talent from Sri Lanka]({B.SITE_URL}/talent/find/)", f"- [Be featured as Sri Lankan Top Talent]({B.SITE_URL}/talent/top-talent/)", f"- [All services]({B.SITE_URL}/services/)",
-              f"- [Sri Lanka Tech 50]({B.SITE_URL}/tech-50/)", f"- [Sri Lanka Tech Tour]({B.SITE_URL}/tech-tour/)", f"- [Companies directory]({B.SITE_URL}/companies/)"]
+              f"- [Sri Lanka Tech 50]({B.SITE_URL}/tech-50/)", f"- [Sri Lanka Tech Tour]({B.SITE_URL}/tech-tour/)", f"- [Companies directory]({B.SITE_URL}/companies/)", "", "## Contact", f"- Schedule a call: {B.BOOKING_URL}", f"- Email: {B.EMAIL}"]
     lines += ["", "## Stories"] + [f"- [{s['title']}]({B.SITE_URL}/stories/{s['slug']}/): {s['dek']}" for s in stories]
     B.write("llms.txt", "\n".join(lines) + "\n")
 
