@@ -23,6 +23,7 @@ SITE_NAME = "Tech Destination Sri Lanka"
 TAGLINE = "Connecting the world to Sri Lanka's technology ecosystem"
 LINKEDIN = "https://www.linkedin.com/company/tech-destination-sri-lanka/"
 INSTAGRAM = "https://www.instagram.com/techdestination_srilanka/"
+FOLLOWERS = "7,800+"     # LinkedIn followers, shown on the services and talent pages
 BOOKING_URL = ""          # Cal.com or Calendly link. Leave empty to hide the booking button.
 FORM_ENDPOINT = ""        # Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave empty to hide the form.
 
@@ -262,8 +263,11 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
     <nav id="nav" class="nav" aria-label="Main">
       {nav('stories/', 'Stories', 'stories')}
       {nav('companies/', 'Companies', 'companies')}
+      {nav('talent/', 'Talent', 'talent')}
+      {nav('services/', 'Services', 'services')}
+      {nav('why-sri-lanka/', 'Why Sri Lanka', 'why')}
       {nav('about/', 'About', 'about')}
-      <a class="btn btn-small" href="{prefix}contact/">Work with Sri Lankan talent</a>
+      <a class="btn btn-small" href="{prefix}talent/find/">Find talent</a>
     </nav>
   </div>
 </header>
@@ -279,24 +283,32 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
     </div>
     <div>
       <p class="foot-h">Read</p>
-      <a href="{prefix}stories/">All stories</a>
-      <a href="{prefix}stories/?type=built">Built by Sri Lankans</a>
-      <a href="{prefix}stories/?type=global">Global companies in Sri Lanka</a>
-      <a href="{prefix}stories/?type=ecosystem">Ecosystem and data</a>
+      <a href="{prefix}stories/">Stories</a>
+      <a href="{prefix}companies/">Companies</a>
+      <a href="{prefix}why-sri-lanka/">Why Sri Lanka</a>
+      <a href="{prefix}about/">About</a>
     </div>
     <div>
-      <p class="foot-h">Work with us</p>
-      <a href="{prefix}contact/?need=hire">Hire</a>
-      <a href="{prefix}contact/?need=setup">Set up</a>
-      <a href="{prefix}contact/?need=recruit">Recruit at scale</a>
-      <a href="{prefix}about/#feature">Suggest a company</a>
+      <p class="foot-h">For companies</p>
+      <a href="{prefix}talent/find/">Find talent</a>
+      <a href="{prefix}services/">Services</a>
+      <a href="{prefix}get-featured/">Get featured</a>
+      <a href="{prefix}contact/">Contact</a>
     </div>
     <div>
-      <p class="foot-h">Follow</p>
+      <p class="foot-h">For professionals</p>
+      <a href="{prefix}talent/top-talent/">Be featured as Top Talent</a>
       <a href="{LINKEDIN}" rel="noopener">LinkedIn</a>
       <a href="{INSTAGRAM}" rel="noopener">Instagram</a>
       <a href="{prefix}feed.xml">RSS feed</a>
     </div>
+  </div>
+  <div class="wrap news">
+    <form class="newsletter" data-form="newsletter" data-done="You are on the list." action="{e(FORM_ENDPOINT)}" method="POST">
+      <label for="nl-email"><strong>New stories by email.</strong> One short email when we publish. No spam.</label>
+      <div class="nl-row"><input id="nl-email" type="email" name="email" placeholder="you@company.com" required><input type="hidden" name="form" value="newsletter"><button class="btn btn-saffron" type="submit">Subscribe</button></div>
+      <p class="form-status" role="status"></p>
+    </form>
   </div>
   <div class="wrap legal">© {date.today().year} {SITE_NAME}. Company names and trademarks belong to their owners.</div>
 </footer>
@@ -317,6 +329,13 @@ def card(s, prefix, size=""):
 </article>"""
 
 
+def logo(s, prefix, cls="logo"):
+    """Company logo if _build/logos/<slug>.png exists, otherwise nothing."""
+    if (HERE / "logos" / f"{s['slug']}.png").exists():
+        return f'<img class="{cls}" src="{prefix}assets/logos/{s['slug']}.png" alt="" width="96" height="96" loading="lazy">'
+    return ""
+
+
 def doors(prefix):
     items = [
         ("hire", "Hire", "Add Sri Lankan engineers to your own team. We point you to people and partners who have done it before."),
@@ -324,7 +343,7 @@ def doors(prefix):
         ("recruit", "Recruit at scale", "Build a team of 20 or 200. We connect you with recruiters and employers of record who do this every week."),
     ]
     return "".join(
-        f'<a class="door" href="{prefix}contact/?need={k}"><h3>{t}</h3><p>{d}</p><span class="door-go">Start a conversation</span></a>' for k, t, d in items
+        f'<a class="door" href="{prefix}{"talent/find/" if k == "hire" else "contact/?need=" + k}" data-need="{k}"><h3>{t}</h3><p>{d}</p><span class="door-go">{"Find talent" if k == "hire" else "Start a conversation"}</span></a>' for k, t, d in items
     )
 
 
@@ -345,7 +364,7 @@ def build_home(stories):
       <p class="lede">Sri Lankan engineers build trading platforms for stock exchanges, health records for Norway and chip design software for Silicon Valley. We report the stories, with sources.</p>
       <div class="actions">
         <a class="btn" href="stories/">Read the stories</a>
-        <a class="btn btn-ghost" href="contact/">Work with Sri Lankan talent</a>
+        <a class="btn btn-ghost" href="talent/find/">Find talent from Sri Lanka</a>
       </div>
     </div>
     <div class="hero-lead">
@@ -372,16 +391,35 @@ def build_home(stories):
 
 <section class="section tint">
   <div class="wrap">
-    <div class="section-head"><h2>Three ways to work with Sri Lankan talent</h2></div>
-    <div class="doors">{doors("")}</div>
+    <div class="duo">
+      <a class="duo-card duo-blue" href="talent/find/">
+        <p class="duo-for">For companies</p>
+        <h2>Find talent from Sri Lanka</h2>
+        <p>Tell us the role. We introduce engineers, specialists or whole teams who have already delivered for global companies.</p>
+        <span class="btn btn-saffron">Find talent</span>
+      </a>
+      <a class="duo-card duo-saffron" href="talent/top-talent/">
+        <p class="duo-for">For professionals</p>
+        <h2>Be featured as Sri Lankan Top Talent</h2>
+        <p>Want to be hired by a global company? Apply for a featured profile and get seen by the founders and hiring managers who follow us.</p>
+        <span class="btn">Apply to be featured</span>
+      </a>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
+    <div class="section-head"><h2>Three ways to build in Sri Lanka</h2><a class="more" href="services/">All services</a></div>
+    <div class="doors">{doors("")}</div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
     <div class="section-head"><h2>{len(companies)} companies featured so far</h2><a class="more" href="companies/">Open the directory</a></div>
     <ul class="names">
-      {''.join(f'<li><a href="stories/{s["slug"]}/">{e(s["company"])}</a></li>' for s in sorted([s for s in stories if s.get("company")], key=lambda s: s["company"].lower()))}
+      {''.join(f'<li><a href="stories/{s["slug"]}/">{logo(s, "")}{e(s["company"])}</a></li>' for s in sorted([s for s in stories if s.get("company")], key=lambda s: s["company"].lower()))}
     </ul>
   </div>
 </section>
@@ -390,7 +428,7 @@ def build_home(stories):
   <div class="wrap cta-in">
     <h2>Built something global from Sri Lanka?</h2>
     <p>We feature companies and founders with real numbers and sources behind them. Tell us yours.</p>
-    <a class="btn btn-saffron" href="about/#feature">Suggest a company</a>
+    <a class="btn btn-saffron" href="get-featured/">Get featured</a>
   </div>
 </section>
 """
@@ -434,6 +472,9 @@ def build_story(s, stories):
     facts = "".join(f"<div><dt>{e(v)}</dt><dd>{e(l)}</dd></div>" for v, l in s["facts"])
     sources = "".join(f'<li><a href="{e(u)}" rel="noopener nofollow">{e(l)}</a></li>' for l, u in s["sources"])
     li = f"https://www.linkedin.com/feed/update/urn:li:activity:{s['linkedin']}/" if s.get("linkedin") else LINKEDIN
+    post_fig = ""
+    if (HERE / "post-images" / f"{s['slug']}.jpg").exists():
+        post_fig = f'<figure class="post-fig"><a href="{li}" rel="noopener"><img src="../../assets/posts/{s["slug"]}.jpg" alt="The original post graphic: {e(s["title"])}" width="800" height="1000" loading="lazy"></a><figcaption>As published on our <a href="{li}" rel="noopener">LinkedIn page</a>.</figcaption></figure>'
     note = f'<p class="note"><strong>Update.</strong> {e(s["note"])}</p>' if s.get("note") else ""
     body = f"""
 <article class="story">
@@ -442,7 +483,7 @@ def build_story(s, stories):
       <p class="crumb"><a href="../">Stories</a> <span aria-hidden="true">/</span> <a href="../?type={s['category']}">{e(s['catname'])}</a></p>
       <h1>{e(s['title'])}</h1>
       <p class="lede">{e(s['dek'])}</p>
-      <p class="meta"><time datetime="{s['date'].isoformat()}">{fdate(s['date'])}</time><span>{read_minutes(s)} min read</span><span>{e(s['sector'])}</span></p>
+      <div class="byline">{logo(s, '../../', 'by-logo') if s.get('company') else ''}<p class="meta"><time datetime="{s['date'].isoformat()}">{fdate(s['date'])}</time><span>{read_minutes(s)} min read</span><span>{e(s['sector'])}</span></p></div>
     </div>
   </header>
   <div class="wrap narrow">
@@ -453,6 +494,7 @@ def build_story(s, stories):
 {render_body(s['body'])}
     </div>
     {f'<section class="sources"><h2>Sources</h2><ul>{sources}</ul></section>' if sources else ''}
+    {post_fig}
     <div class="story-actions">
       <a class="btn btn-ghost" href="{li}" rel="noopener">Join the discussion on LinkedIn</a>
       <button class="btn btn-ghost" data-copy>Copy link</button>
@@ -490,7 +532,7 @@ def build_companies(stories):
     cos = sorted([s for s in stories if s.get("company")], key=lambda s: s["company"].lower())
     rows = "".join(
         f"""<a class="co" href="../stories/{s['slug']}/" data-type="{s['category']}" data-text="{e((s['company'] + ' ' + s['sector'] + ' ' + s['blurb']).lower())}">
-  <span class="co-mark co-{s['category']}" aria-hidden="true">{e(''.join(w[0] for w in re.findall(r"[A-Za-z0-9]+", s['company'])[:2]).upper())}</span>
+  {logo(s, '../', 'co-logo') or f'<span class="co-mark co-{s["category"]}" aria-hidden="true">' + e(''.join(w[0] for w in re.findall(r"[A-Za-z0-9]+", s['company'])[:2]).upper()) + '</span>'}
   <span class="co-main"><strong>{e(s['company'])}</strong><span>{e(s['blurb'])}</span></span>
   <span class="co-side"><span class="tag tag-{s['category']}">{'Sri Lankan built' if s['category'] == 'built' else 'Global company'}</span><span class="co-sector">{e(s['sector'])}</span></span>
 </a>""" for s in cos
@@ -519,7 +561,7 @@ def build_companies(stories):
   <div class="wrap cta-in">
     <h2>Missing from this list?</h2>
     <p>If your company builds for global markets with Sri Lankan talent, we want to hear about it.</p>
-    <a class="btn btn-saffron" href="../about/#feature">Suggest a company</a>
+    <a class="btn btn-saffron" href="../get-featured/">Get featured</a>
   </div>
 </section>
 """
@@ -553,14 +595,8 @@ def build_about(stories):
     <h2>Who it is for</h2>
     <p>Foreign founders, CTOs, hiring managers and investors who are deciding where to build their next team. If that is you, <a href="../contact/">tell us what you need</a> and we will point you to the right people.</p>
 
-    <h2 id="feature">Suggest a company</h2>
-    <p>We feature companies of every size as long as the story holds up. To suggest one, send us:</p>
-    <ul>
-      <li>What was built, and who uses it outside Sri Lanka</li>
-      <li>The people behind it</li>
-      <li>Numbers you can back with a public source or documents</li>
-    </ul>
-    <p>Message us on <a href="{LINKEDIN}" rel="noopener">LinkedIn</a> or use the <a href="../contact/?need=feature">contact page</a>. Partner spotlights are available for companies that want a dedicated feature. They follow the same sourcing rules and are labelled as partner content.</p>
+    <h2 id="feature">Get featured</h2>
+    <p>We feature companies of every size as long as the story holds up, and we feature individual professionals through Sri Lankan Top Talent. <a href="../get-featured/">Suggest a company</a> or <a href="../talent/top-talent/">apply as a professional</a>. Partner spotlights are available for companies that want a dedicated feature. They follow the same sourcing rules and are labelled as partner content.</p>
 
     <h2>What we are not</h2>
     <p>We are not a government body, an industry association or an investment promotion agency, and we do not speak for any of them.</p>
@@ -572,32 +608,18 @@ def build_about(stories):
 
 def build_contact():
     booking = f'<a class="btn" href="{e(BOOKING_URL)}" rel="noopener">Book a 20 minute call</a>' if BOOKING_URL else ""
-    form = ""
-    if FORM_ENDPOINT:
-        form = f"""
-    <form class="form" action="{e(FORM_ENDPOINT)}" method="POST" id="contact-form">
-      <h2>Send a message</h2>
-      <label>I want to
-        <select name="need" id="need">
-          <option value="hire">Hire Sri Lankan talent</option>
-          <option value="setup">Set up in Sri Lanka</option>
-          <option value="recruit">Recruit at scale</option>
-          <option value="feature">Suggest a company to feature</option>
-          <option value="other">Something else</option>
-        </select>
-      </label>
-      <label>Your name <input type="text" name="name" autocomplete="name" required></label>
-      <label>Work email <input type="email" name="email" autocomplete="email" required></label>
-      <label>Company <input type="text" name="company" autocomplete="organization"></label>
-      <label>What do you need? <textarea name="message" rows="5" required></textarea></label>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
-      <button class="btn" type="submit">Send message</button>
-      <p class="form-status" id="form-status" role="status"></p>
-    </form>"""
+    import extra
+    form = extra.form(sys.modules[__name__], "contact", "Send a message", "", [
+        ("select", "need", "I want to", True, ["Hire Sri Lankan talent", "Find a delivery partner", "Set up in Sri Lanka", "Recruit at scale", "Feature my company", "Employer branding", "Events and delegations", "Something else"]),
+        ("text", "name", "Your name", True, ""),
+        ("email", "email", "Work email", True, ""),
+        ("text", "company", "Company", False, ""),
+        ("textarea", "message", "What do you need?", True, "Roles, team size, timeline, or the question you have"),
+    ], "Send message", "Message sent. We will reply by email.")
     body = f"""
 <section class="page-head">
   <div class="wrap narrow">
-    <h1 id="contact-title">Work with Sri Lankan talent</h1>
+    <h1 id="contact-title">Contact</h1>
     <p class="lede" id="contact-lede">Tell us what you are trying to do. We will point you to the people, partners and companies who have done it before.</p>
   </div>
 </section>
@@ -617,12 +639,12 @@ def build_contact():
   </div>
 </section>
 """
-    write("contact/index.html", page("Work with Sri Lankan talent", "Hire Sri Lankan engineers, set up in Sri Lanka or recruit a team at scale. Tell us what you need.", body, "../", "contact/"))
+    write("contact/index.html", page("Contact", "Hire Sri Lankan talent, find a delivery partner, set up in Sri Lanka or get featured. Tell us what you need.", body, "../", "contact/"))
 
 
-def build_meta(stories):
+def build_meta(stories, extra_pages=()):
     now = datetime.now(timezone.utc)
-    urls = [("", date.today())] + [(p, date.today()) for p in ("stories/", "companies/", "about/", "contact/")] + [(f"stories/{s['slug']}/", s["date"]) for s in stories]
+    urls = [("", date.today())] + [(p, date.today()) for p in ("stories/", "companies/", "about/", "contact/") + tuple(extra_pages)] + [(f"stories/{s['slug']}/", s["date"]) for s in stories]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
         f"  <url><loc>{SITE_URL}/{p}</loc><lastmod>{d.isoformat()}</lastmod></url>\n" for p, d in urls) + "</urlset>\n"
     write("sitemap.xml", sm)
@@ -649,20 +671,28 @@ def write(rel, content):
 
 
 def main():
+    sys.path.insert(0, str(HERE))
     stories = parse_stories()
-    (ROOT / "assets" / "covers").mkdir(parents=True, exist_ok=True)
+    for d in ("covers", "posts", "logos"):
+        (ROOT / "assets" / d).mkdir(parents=True, exist_ok=True)
+    cf = HERE / "post-images" / "crops.json"   # per story [x, y, width] of the banner crop inside the 800x1000 post graphic
+    crops = json.loads(cf.read_text()) if cf.exists() else {}
     if "--no-images" not in sys.argv:
         make_brand_assets()
         for s in stories:
-            custom = HERE / "post-images" / f"{s['slug']}.jpg"   # drop the real post graphic here to replace the generated cover
+            custom = HERE / "post-images" / f"{s['slug']}.jpg"   # the original 4:5 post graphic
             dest = ROOT / "assets" / "covers" / f"{s['slug']}.jpg"
             if custom.exists():
                 from PIL import Image
+                x, y, w = crops.get(s["slug"], [0, 0, 800])
                 im = Image.open(custom).convert("RGB")
-                im.thumbnail((1200, 1200))
-                im.save(dest, "JPEG", quality=84, optimize=True, progressive=True)
+                h = round(w * 630 / 1200)
+                im.crop((x, y, x + w, y + h)).resize((1200, 630), Image.LANCZOS).save(dest, "JPEG", quality=82, optimize=True, progressive=True)
+                Image.open(custom).convert("RGB").save(ROOT / "assets" / "posts" / f"{s['slug']}.jpg", "JPEG", quality=80, optimize=True, progressive=True)
             else:
                 make_cover(s, dest)
+        for f in (HERE / "logos").glob("*.png"):
+            (ROOT / "assets" / "logos" / f.name).write_bytes(f.read_bytes())
     build_home(stories)
     build_stories_index(stories)
     for s in stories:
@@ -670,7 +700,8 @@ def main():
     build_companies(stories)
     build_about(stories)
     build_contact()
-    build_meta(stories)
+    import extra
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

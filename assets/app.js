@@ -58,41 +58,50 @@
   if (needs) {
     var need = params.get('need');
     var copy = {
-      hire: ['Hire Sri Lankan talent', 'Tell us the roles you need and when. We will point you to people and partners who have done it before.'],
-      setup: ['Set up in Sri Lanka', 'Tell us the size of team you have in mind. We will walk you through entity, Board of Investment and Port City options.'],
-      recruit: ['Recruit at scale', 'Tell us how many people you need and how fast. We will connect you with recruiters and employers of record who do this every week.'],
-      feature: ['Suggest a company', 'Tell us what was built, who uses it outside Sri Lanka, and where we can verify the numbers.']
+      hire: ['Hire Sri Lankan talent', 'Tell us the roles you need and when. We will introduce people and partners who have done it before.', 'Hire Sri Lankan talent'],
+      partner: ['Find a delivery partner', 'Describe the product or project. We will match you with a Sri Lankan company that has done that kind of work.', 'Find a delivery partner'],
+      setup: ['Set up in Sri Lanka', 'Tell us the size of team you have in mind. We will walk you through entity, Board of Investment and Port City options.', 'Set up in Sri Lanka'],
+      recruit: ['Recruit at scale', 'Tell us how many people you need and how fast. We will connect you with recruiters who do this every week.', 'Recruit at scale'],
+      feature: ['Feature my company', 'Tell us what was built, who uses it outside Sri Lanka, and where we can verify the numbers.', 'Feature my company'],
+      employer: ['Employer branding', 'Tell us who you are trying to hire and what makes your team worth joining.', 'Employer branding'],
+      events: ['Events and delegations', 'Tell us which event you are attending and what you want out of it.', 'Events and delegations']
     };
     if (copy[need]) {
       document.getElementById('contact-title').textContent = copy[need][0];
       document.getElementById('contact-lede').textContent = copy[need][1];
-      var sel = document.getElementById('need');
-      if (sel) sel.value = need;
+      var sel = document.querySelector('#contact-form select[name=need]');
+      if (sel) sel.value = copy[need][2];
       Array.prototype.forEach.call(needs.querySelectorAll('.door'), function (d) {
-        if (d.getAttribute('href').indexOf('need=' + need) !== -1) d.classList.add('is-on');
-      });
-    }
-    var form = document.getElementById('contact-form');
-    if (form) {
-      form.addEventListener('submit', function (ev) {
-        ev.preventDefault();
-        var status = document.getElementById('form-status');
-        var submit = form.querySelector('button[type=submit]');
-        submit.disabled = true;
-        status.textContent = 'Sending your message.';
-        fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-          .then(function (r) {
-            if (!r.ok) throw new Error();
-            form.reset();
-            status.textContent = 'Message sent. We reply within two working days.';
-          })
-          .catch(function () {
-            status.textContent = 'The message did not send. Check your connection and try again, or message us on LinkedIn.';
-          })
-          .then(function () { submit.disabled = false; });
+        if (d.dataset.need === need) d.classList.add('is-on');
       });
     }
   }
+
+  // every form on the site posts to the same endpoint
+  Array.prototype.forEach.call(document.querySelectorAll('form[data-form]'), function (form) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var status = form.querySelector('.form-status');
+      var submit = form.querySelector('button[type=submit]');
+      var endpoint = form.getAttribute('action');
+      if (!endpoint) {
+        status.textContent = 'This form is not switched on yet. Message us on LinkedIn and we will pick it up there.';
+        return;
+      }
+      submit.disabled = true;
+      status.textContent = 'Sending.';
+      fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) throw new Error();
+          form.reset();
+          status.textContent = form.dataset.done;
+        })
+        .catch(function () {
+          status.textContent = 'That did not send. Check your connection and try again, or message us on LinkedIn.';
+        })
+        .then(function () { submit.disabled = false; });
+    });
+  });
 
   // copy link on story pages
   var copyBtn = document.querySelector('[data-copy]');
