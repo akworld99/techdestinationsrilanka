@@ -120,25 +120,44 @@ OVERLAP = {
 }
 
 
+VIMG = {"healthtech": "creative-software", "automotive": "inivos", "fintech": "millenniumit", "ai": "roar-global", "enterprise-software": "wso2",
+        "semiconductors-embedded": "synopsys", "logistics-travel": "codegen", "govtech": "rootcode", "finance-accounting": "infomate"}
+DEMONYM = {"usa": "US", "uk": "UK", "nordics": "Nordic", "norway": "Norwegian", "sweden": "Swedish", "netherlands": "Dutch", "germany": "German", "australia": "Australian", "uae-gulf": "Gulf"}
+
+
+def _names(by, proof, n=3):
+    out = []
+    for slug, _ in proof:
+        s = by.get(slug)
+        name = (s.get("company") if s else None) or ("IFS" if slug == "why-global-companies-choose-sri-lanka" else None)
+        if name and name not in out:
+            out.append(name)
+    return out
+
+
 def hub_blocks(prefix, stories=None):
-    """Industry cards and country cards, reused on the home page, the why page and the hire hub."""
+    """Industry image tiles and country cards, reused on the home page, the why page and the hire hub."""
     from pathlib import Path
     here = Path(__file__).resolve().parent
     by = {s["slug"]: s for s in (stories or [])}
+
+    def logos(proof, n=5):
+        out = ""
+        k = 0
+        for slug, _ in proof:
+            if k < n and slug in by and by[slug].get("company") and (here / "logos" / f"{slug}.png").exists():
+                out += f'<img src="{prefix}assets/logos/{slug}.png" alt="{e(by[slug]["company"])} logo" width="36" height="36" loading="lazy">'
+                k += 1
+        return out
+
     ind = []
     for x in VERTICALS:
-        logos = ""
-        names = []
-        for slug, _ in x["proof"]:
-            s = by.get(slug)
-            if s and s.get("company") and (here / "logos" / f"{slug}.png").exists() and len(names) < 4:
-                logos += f'<img src="{prefix}assets/logos/{slug}.png" alt="" width="34" height="34" loading="lazy">'
-                names.append(s["company"])
-        ind.append(f'<a class="ind" href="{prefix}why-sri-lanka/{x["slug"]}/"><span class="ind-ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[x["slug"]]}</svg></span>'
-                   f'<strong>{e(x["label"])}</strong><span class="ind-who">{e(", ".join(names[:3]))}</span><span class="ind-logos">{logos}</span></a>')
+        names = _names(by, x["proof"])
+        ind.append(f'<a class="tile" href="{prefix}why-sri-lanka/{x["slug"]}/"><img src="{prefix}assets/covers/{VIMG[x["slug"]]}.jpg" alt="" loading="lazy" width="1200" height="630">'
+                   f'<span class="tile-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[x["slug"]]}</svg></span>'
+                   f'<span class="tile-body"><strong>{e(x["label"])}</strong><span>{e(", ".join(names[:3]))}{" and more" if len(names) > 3 else ""}</span><span class="tile-logos">{logos(x["proof"], 4)}</span></span></a>')
     ctry = []
     for m in MARKETS:
-        label, start, size = OVERLAP[m["slug"]]
         if m["slug"] == "nordics":
             flag = '<span class="flags">' + _flag(_SE) + _flag(_NO) + _flag(_DK) + "</span>"
         elif m["slug"] == "uae-gulf":
@@ -146,9 +165,11 @@ def hub_blocks(prefix, stories=None):
             flag = '<span class="flags">' + _flag(_AE) + _flag(om) + "</span>"
         else:
             flag = _flag(FLAGS[m["slug"]])
-        bar = f'<span class="day" aria-hidden="true"><i style="left:{start * 100:.0f}%;width:{size * 100:.0f}%"></i></span>'
-        ctry.append(f'<a class="ctry" href="{prefix}hire-from/{m["slug"]}/">{flag}<strong>{e(m["label"])}</strong>{bar}<span class="ctry-ov">{e(label)}</span></a>')
-    return f'<div class="ind-grid">{"".join(ind)}</div>', f'<div class="ctry-grid">{"".join(ctry)}</div><p class="cap day-key"><span class="day"><i style="left:0;width:55%"></i></span> The blue block is the part of your 9 to 6 working day shared with Colombo.</p>'
+        names = _names(by, m["proof"])
+        n = len(names)
+        ctry.append(f'<a class="ctry" href="{prefix}hire-from/{m["slug"]}/"><span class="ctry-top">{flag}<span class="ctry-n"><b>{n}</b> companies</span></span><strong>{e(m["label"])}</strong>'
+                    f'<span class="ctry-ov">{e(", ".join(names[:3]))}{" and more" if n > 3 else ""}</span><span class="tile-logos dark">{logos(m["proof"], 5)}</span></a>')
+    return f'<div class="tile-grid">{"".join(ind)}</div>', f'<div class="ctry-grid">{"".join(ctry)}</div>'
 
 
 def related_for(slug):
@@ -181,6 +202,7 @@ def build_verticals(B, stories):
 </section>
 <section class="section top-0">
   <div class="wrap narrow">
+    <img class="story-cover" src="{prefix}assets/covers/{VIMG[v['slug']]}.jpg" alt="" width="1200" height="630">
     {stats_strip(v['stats'])}
     <h2 class="h-sub mt">Who is already building {e(v['name'])} in Sri Lanka</h2>
     {proof_list(B, stories, v['proof'], prefix)}
@@ -203,7 +225,7 @@ def build_verticals(B, stories):
 """
         head = faq_ld + crumbs_ld(B, [("Why Sri Lanka", "why-sri-lanka/"), (v["label"], f"why-sri-lanka/{v['slug']}/")])
         path = f"why-sri-lanka/{v['slug']}/"
-        B.write(path + "index.html", B.page(v["title"], v["desc"], body, prefix, path, extra_head=head, active="why"))
+        B.write(path + "index.html", B.page(v["title"], v["desc"], body, prefix, path, image=f"assets/covers/{VIMG[v['slug']]}.jpg", extra_head=head, active="why"))
         paths.append(path)
     return paths
 
@@ -216,21 +238,24 @@ def build_markets(B, stories):
         faq, faq_ld = faq_block(stories, m["faqs"])
         others = chip_links([(x["label"], f"../{x['slug']}/") for x in MARKETS if x is not m])
         verts = chip_links([(x["label"], f"{prefix}why-sri-lanka/{x['slug']}/") for x in VERTICALS])
+        verts_top = hub_blocks(prefix, stories)[0]
         body = f"""
 <section class="page-head">
   <div class="wrap narrow">
     {crumb_html([("Why Sri Lanka", prefix + "why-sri-lanka/"), ("By country", "../")])}
-    <h1>{e(m['h1'])}</h1>
+    <h1>Why Sri Lanka is an ideal tech destination for {DEMONYM[m['slug']]} companies</h1>
     <p class="answer">{linked(B, stories, m['answer'], prefix)}</p>
   </div>
 </section>
 <section class="section top-0">
   <div class="wrap narrow">
     {stats_strip(m['stats'])}
+    <h2 class="h-sub mt">{len(m['proof'])} companies connected to {e(m['name'])} already build in Sri Lanka</h2>
+    {proof_list(B, stories, m['proof'], prefix)}
     <h2 class="h-sub mt">Working hours and time zones</h2>
     <p class="body-l">{e(m['overlap'])}</p>
-    <h2 class="h-sub mt">Companies connected to {e(m['name'])}</h2>
-    {proof_list(B, stories, m['proof'], prefix)}
+    <h2 class="h-sub mt">What {DEMONYM[m['slug']]} companies source from Sri Lanka</h2>
+    {verts_top}
     <h2 class="h-sub mt">Three ways to start</h2>
     <ol class="steps compact">
       <li><h3>Hire a few people</h3><p>Use an employer of record or contractors. No local company needed. <a href="{prefix}guides/how-to-hire-in-sri-lanka/">How it works</a></p></li>
@@ -245,26 +270,25 @@ def build_markets(B, stories):
     {faq}
     <h2 class="h-sub mt">Other countries</h2>
     {others}
-    <h2 class="h-sub mt">By industry</h2>
-    {verts}
   </div>
 </section>
 """
         head = faq_ld + crumbs_ld(B, [("Why Sri Lanka", "why-sri-lanka/"), ("By country", "hire-from/"), (m["label"], f"hire-from/{m['slug']}/")])
         path = f"hire-from/{m['slug']}/"
-        B.write(path + "index.html", B.page(m["title"], m["desc"], body, prefix, path, extra_head=head, active="why"))
+        seo_t = f"Why Sri Lanka for {DEMONYM[m['slug']]} companies: tech talent and teams"
+        B.write(path + "index.html", B.page(seo_t, m["desc"], body, prefix, path, extra_head=head, active="why"))
         paths.append(path)
 
-    cards = "".join(f'<a class="door" href="{m["slug"]}/"><h3>{e(m["label"])}</h3><p>{e(m["overlap"].split(". ")[0])}.</p><span class="door-go">Hiring from {e(m["name"])}</span></a>' for m in MARKETS)
+    cards = hub_blocks("../", stories)[1]
     body = f"""
 <section class="page-head"><div class="wrap">
   {crumb_html([("Why Sri Lanka", "../why-sri-lanka/")])}
-  <h1>Hiring Sri Lankan tech talent, by country</h1>
-  <p class="lede">Which companies from your market already build in Sri Lanka, how the working hours line up, and how to start.</p>
+  <h1>Why Sri Lanka, for your country</h1>
+  <p class="lede">Which companies from your market already build in Sri Lanka, what they build there, and how to start.</p>
 </div></section>
-<section class="section top-0"><div class="wrap"><div class="doors wrap3">{cards}</div></div></section>
+<section class="section top-0"><div class="wrap">{cards}</div></section>
 """
-    B.write("hire-from/index.html", B.page("Hire Sri Lankan tech talent by country", "Guides for companies in the USA, UK, Nordics, Netherlands, Germany, Australia and the Gulf hiring tech talent in Sri Lanka.", body, "../", "hire-from/",
+    B.write("hire-from/index.html", B.page("Why Sri Lanka for your country: who already builds there", "Guides for companies in the USA, UK, Nordics, Netherlands, Germany, Australia and the Gulf hiring tech talent in Sri Lanka.", body, "../", "hire-from/",
                                            extra_head=crumbs_ld(B, [("Why Sri Lanka", "why-sri-lanka/"), ("By country", "hire-from/")]), active="why"))
     return paths + ["hire-from/"]
 
@@ -668,7 +692,7 @@ def build_tour(B, stories):
 
 # ------------------------------------------------------------------ machine readable summary
 def build_llms(B, stories, pages):
-    lines = [f"# {B.SITE_NAME}", "", f"> {B.SITE_NAME} is an independent media platform that reports, with sources, on the software, products and companies built by Sri Lankan technology talent. It helps companies abroad find talent and partners in Sri Lanka.", "",
+    lines = [f"# {B.SITE_NAME}", "", f"> {B.SITE_NAME} helps companies abroad hire technology talent, find software outsourcing partners and set up teams in Sri Lanka. It publishes independent, sourced reporting on the software, products and companies built by Sri Lankan technology talent.", "",
              "Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its sources at the end.", "", "## Key facts"]
     lines += [f"- {q} {ans}" for q, ans, _ in FACTS]
     lines += ["", "## Guides"]
@@ -679,6 +703,8 @@ def build_llms(B, stories, pages):
         ("guides/sri-lanka-tech-industry-facts/", "Sri Lanka tech industry facts and statistics", "Sourced industry numbers"),
         ("why-sri-lanka/", "Why Sri Lanka", "Eight evidence backed reasons"),
     ]]
+    import solutions
+    lines += ["", "## Ways to build a team in Sri Lanka"] + [f"- [{x['h1']}]({B.SITE_URL}/solutions/{x['slug']}/): {x['desc']}" for x in solutions.SOLUTIONS]
     lines += ["", "## Why Sri Lanka, by industry"] + [f"- [{v['h1']}]({B.SITE_URL}/why-sri-lanka/{v['slug']}/): {v['desc']}" for v in VERTICALS]
     lines += ["", "## Hiring from each country"] + [f"- [{m['h1']}]({B.SITE_URL}/hire-from/{m['slug']}/): {m['desc']}" for m in MARKETS]
     lines += ["", "## Services", f"- [Find talent from Sri Lanka]({B.SITE_URL}/talent/find/)", f"- [Be featured as Sri Lankan Top Talent]({B.SITE_URL}/talent/top-talent/)", f"- [All services]({B.SITE_URL}/services/)",

@@ -98,6 +98,13 @@ def build_services(B, stories):
   </div>
 </section>
 
+<section class="section top-0">
+  <div class="wrap">
+    <div class="section-head"><h2>Five ways to build your team</h2><a class="more" href="../solutions/">Compare them</a></div>
+    {__import__("solutions").tiles("../")}
+  </div>
+</section>
+
 <section class="section tint" id="local">
   <div class="wrap">
     <div class="section-head"><h2>For Sri Lankan companies</h2></div>

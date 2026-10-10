@@ -309,6 +309,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <p class="foot-h">For companies</p>
       <a href="{prefix}talent/find/">Find talent</a>
       <a href="{prefix}hire/">Hire by role</a>
+      <a href="{prefix}solutions/">Ways to build</a>
       <a href="{prefix}services/">Services</a>
       <a href="{prefix}guides/sri-lanka-tech-salaries/">Salary guide</a>
       <a href="{prefix}guides/how-to-hire-in-sri-lanka/">How to hire</a>
@@ -328,6 +329,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
   </div>
   <div class="wrap foot-hubs">
     <p><strong>By industry</strong> {' '.join(f'<a href="{prefix}why-sri-lanka/{v["slug"]}/">{v["label"]}</a>' for v in seo_data.VERTICALS)}</p>
+    <p><strong>Ways to build</strong> {' '.join(f'<a href="{prefix}solutions/{x["slug"]}/">{x["label"]}</a>' for x in solutions.SOLUTIONS)}</p>
     <p><strong>By country</strong> {' '.join(f'<a href="{prefix}hire-from/{m["slug"]}/">{m["label"]}</a>' for m in seo_data.MARKETS)}</p>
   </div>
   <div class="wrap news">
@@ -384,16 +386,25 @@ def build_home(stories):
         ("#3 in Asia", "for affordable tech talent, Startup Genome 2026", "startup-genome-2026"),
         ("12,000+", "ICT graduates every year", "startup-genome-2026"),
     ]
+    svc = [
+        ("hire", "Hire talent", "Engineers, specialists and finance professionals added to your own team, as employees or contractors.", "talent/find/", "Find talent"),
+        ("partner", "Find a delivery partner", "A Sri Lankan company that has built your kind of product before, matched from the ones we have reported on.", "solutions/software-outsourcing-sri-lanka/", "How outsourcing works"),
+        ("setup", "Set up your own centre", "Company registration, Board of Investment and Port City options, with introductions to advisers on the ground.", "solutions/offshore-development-center-sri-lanka/", "Plan a centre"),
+        ("recruit", "Recruit at scale", "Twenty people or two hundred, through recruiters and campus pipelines that hire for global tech companies.", "contact/?need=recruit", "Start recruiting"),
+    ]
+    ICN = {'hire': '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M18 8v6M15 11h6"/>', 'partner': '<path d="M3 8l4-3 5 3 5-3 4 3v8l-4 3-5-3-5 3-4-3z"/><path d="M12 8v8"/>', 'setup': '<path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-5h6v5M8 9h2M14 9h2M8 12.5h2M14 12.5h2"/>', 'recruit': '<circle cx="8" cy="9" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M2 20c.5-3.3 2.8-5 6-5s5.5 1.7 6 5"/><path d="M15.5 15.2c3.2-.4 5.6 1.2 6.2 4.3"/>'}
+    ind_tiles, ctry_cards = seo_pages.hub_blocks("", stories)
     body = f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <h1>Sri Lanka. The underdog tech economy powering global software.</h1>
-      <p class="lede">Sri Lankan engineers build trading platforms for stock exchanges, health records for Norway and chip design software for Silicon Valley. We report the stories, with sources.</p>
+      <p class="lede">We help companies abroad hire Sri Lankan engineers, find delivery partners and set up their own teams. Our newsroom shows you the proof first: {len(stories)} sourced stories about what this talent has already built.</p>
       <div class="actions">
-        <a class="btn" href="stories/">Read the stories</a>
-        <a class="btn btn-ghost" href="talent/find/">Find talent from Sri Lanka</a>
+        <a class="btn" href="talent/find/">Find talent</a>
+        <a class="btn btn-ghost" href="services/">See what we do</a>
       </div>
+      <p class="hero-trust"><span><b>{len(companies)}</b> companies featured</span><span><b>{FOLLOWERS}</b> LinkedIn followers</span><span><b>{len(seo_pages.MARKETS)}</b> markets covered</span></p>
     </div>
     <div class="hero-lead">
       {card(lead, "", "lead")}
@@ -402,22 +413,49 @@ def build_home(stories):
   <div class="wrap">{LANDMARKS}</div>
 </section>
 
+<section class="section svc-home">
+  <div class="wrap">
+    <div class="section-head"><h2>What we do for companies building in Sri Lanka</h2><a class="more" href="services/">All services</a></div>
+    <div class="svc4">
+      {''.join(f'<a class="svc-card" href="{h}"><span class="ind-ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICN[k]}</svg></span><h3>{t_}</h3><p>{d}</p><span class="door-go">{c}</span></a>' for k, t_, d, h, c in svc)}
+    </div>
+    <ol class="flow"><li><b>Tell us what you need</b> Roles, team size and timeline.</li><li><b>We match you</b> People, partners or advisers from the ecosystem we report on.</li><li><b>You decide</b> You talk to them directly and choose.</li></ol>
+  </div>
+</section>
+
 <section class="band">
   <div class="wrap numbers">
     {''.join(f'<a class="num" href="stories/{slug}/"><strong>{e(v)}</strong><span>{e(l)}</span></a>' for v, l, slug in numbers)}
   </div>
 </section>
 
+<section class="section tint">
+  <div class="wrap">
+    <div class="section-head"><h2>Who already builds in Sri Lanka</h2><a class="more" href="why-sri-lanka/">The full case</a></div>
+    <p class="hub-l">By industry</p>
+    {ind_tiles}
+    <p class="hub-l mt">By country</p>
+    {ctry_cards}
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Latest stories</h2><a class="more" href="stories/">All {len(stories)} stories</a></div>
+    <div class="section-head"><h2>Five ways to build your team</h2><a class="more" href="solutions/">Compare them</a></div>
+    {solutions.tiles("")}
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <div class="section-head"><h2>The proof, in stories</h2><a class="more" href="stories/">All {len(stories)} stories</a></div>
     <div class="grid">
       {''.join(card(s, "") for s in rest)}
     </div>
   </div>
 </section>
 
-<section class="section tint">
+<section class="section">
   <div class="wrap">
     <div class="duo">
       <a class="duo-card duo-blue" href="talent/find/">
@@ -436,24 +474,7 @@ def build_home(stories):
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><h2>Three ways to build in Sri Lanka</h2><a class="more" href="services/">All services</a></div>
-    <div class="doors">{doors("")}</div>
-  </div>
-</section>
-
 <section class="section tint">
-  <div class="wrap">
-    <div class="section-head"><h2>Why Sri Lanka, for your industry and your country</h2><a class="more" href="why-sri-lanka/">The full case</a></div>
-    <p class="hub-l">By industry</p>
-    {seo_pages.hub_blocks("", stories)[0]}
-    <p class="hub-l">By country</p>
-    {seo_pages.hub_blocks("", stories)[1]}
-  </div>
-</section>
-
-<section class="section">
   <div class="wrap">
     <div class="section-head"><h2>Numbers before you decide</h2><a class="more" href="guides/">All guides</a></div>
     <div class="doors wrap3">
@@ -467,7 +488,7 @@ def build_home(stories):
   </div>
 </section>
 
-<section class="section tint">
+<section class="section">
   <div class="wrap">
     <div class="section-head"><h2>{len(companies)} companies featured so far</h2><a class="more" href="companies/">Open the directory</a></div>
     <ul class="names">
@@ -476,7 +497,7 @@ def build_home(stories):
   </div>
 </section>
 
-<section class="section">
+<section class="section tint">
   <div class="wrap">
     <div class="section-head"><h2>Live from our LinkedIn</h2><a class="more" href="{LINKEDIN}" rel="noopener">Follow {FOLLOWERS} others</a></div>
     <div class="li-row">
@@ -487,18 +508,23 @@ def build_home(stories):
 
 <section class="cta">
   <div class="wrap cta-in">
-    <h2>Built something global from Sri Lanka?</h2>
-    <p>We feature companies and founders with real numbers and sources behind them. Tell us yours.</p>
-    <a class="btn btn-saffron" href="get-featured/">Get featured</a>
+    <h2>Ready to build in Sri Lanka?</h2>
+    <p>Tell us the roles, the team size and the timeline. We will introduce the people, partners or advisers who fit.</p>
+    <div class="actions"><a class="btn btn-saffron" href="talent/find/">Find talent</a><a class="btn btn-ondark" href="contact/">Talk to us</a><a class="btn btn-ondark" href="get-featured/">Get your company featured</a></div>
   </div>
 </section>
 """
     ld = [{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png", "sameAs": [LINKEDIN, INSTAGRAM], "description": TAGLINE,
            "areaServed": ["LK", "US", "GB", "SE", "NO", "DK", "FI", "NL", "DE", "AU", "AE", "OM", "SA", "QA"], "knowsAbout": ["Sri Lanka technology industry", "software engineering talent", "IT outsourcing", "global capability centres"]},
-          {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/"}]
+          {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/"},
+          {"@context": "https://schema.org", "@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "url": SITE_URL + "/" + u, "areaServed": "Worldwide"}} for n, u in [
+                  ("Tech talent sourcing in Sri Lanka", "talent/find/"), ("Software outsourcing partner matching in Sri Lanka", "solutions/software-outsourcing-sri-lanka/"),
+                  ("Dedicated development teams in Sri Lanka", "solutions/dedicated-development-team-sri-lanka/"), ("IT staff augmentation in Sri Lanka", "solutions/staff-augmentation-sri-lanka/"),
+                  ("Offshore development centre setup in Sri Lanka", "solutions/offshore-development-center-sri-lanka/")]]}}]
     head = f'<script type="application/ld+json">{json.dumps(ld)}</script>'
-    desc = "Sourced stories about the global software, products and companies built by Sri Lankan tech talent, for founders, CTOs and investors."
-    write("index.html", page(SITE_NAME, desc, body, "", "", extra_head=head))
+    desc = "Hire Sri Lankan tech talent, find a software outsourcing partner or set up your own team. Backed by sourced stories on what Sri Lankan engineers have built."
+    write("index.html", page(SITE_NAME, desc, body, "", "", extra_head=head, seo_title="Tech Destination Sri Lanka: hire tech talent and build teams"))
 
 
 def build_stories_index(stories):
@@ -641,11 +667,14 @@ def build_about(stories):
 <section class="page-head">
   <div class="wrap narrow">
     <h1>About</h1>
-    <p class="lede">Tech Destination Sri Lanka is an independent media platform. We document what Sri Lankan tech talent has built for the world, so founders, CTOs and investors can judge it on evidence.</p>
+    <p class="lede">Tech Destination Sri Lanka helps companies abroad hire talent and build teams in Sri Lanka. We lead with independent, sourced reporting, so founders, CTOs and investors can judge the talent on evidence before they talk to us.</p>
   </div>
 </section>
 <section class="section top-0">
   <div class="wrap narrow prose">
+    <h2>What we do</h2>
+    <p>Two things. We report on what Sri Lankan technology talent has built, with sources. And we help companies abroad act on it: <a href="../talent/find/">finding talent</a>, <a href="../solutions/software-outsourcing-sri-lanka/">matching delivery partners</a>, and <a href="../solutions/offshore-development-center-sri-lanka/">setting up their own teams</a>. The reporting is how most people find us. The <a href="../services/">services</a> are how we help once they do.</p>
+
     <h2>Why this exists</h2>
     <p>Sri Lankan engineers built the trading platform the London Stock Exchange bought. They write core R&D for IFS, Sysco and Synopsys. They founded WSO2 and Virtusa. Most of the world has never heard any of it.</p>
     <p>We started on LinkedIn in April 2026 to change that, one sourced story at a time. This site is the permanent home for those stories.</p>
@@ -742,9 +771,10 @@ def write(rel, content):
 
 
 def main():
-    global seo_pages, seo_more
+    global seo_pages, seo_more, solutions
     import seo_pages
     import seo_more
+    import solutions
     stories = parse_stories()
     for d in ("covers", "posts", "logos"):
         (ROOT / "assets" / d).mkdir(parents=True, exist_ok=True)
@@ -774,7 +804,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

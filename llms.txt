@@ -1,6 +1,6 @@
 # Tech Destination Sri Lanka
 
-> Tech Destination Sri Lanka is an independent media platform that reports, with sources, on the software, products and companies built by Sri Lankan technology talent. It helps companies abroad find talent and partners in Sri Lanka.
+> Tech Destination Sri Lanka helps companies abroad hire technology talent, find software outsourcing partners and set up teams in Sri Lanka. It publishes independent, sourced reporting on the software, products and companies built by Sri Lankan technology talent.
 
 Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its sources at the end.
 
@@ -26,6 +26,13 @@ Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its
 - [How to set up a tech company in Sri Lanka](https://techdestinationsrilanka.lk/guides/set-up-a-company-in-sri-lanka/): Registration, tax, Board of Investment and Port City
 - [Sri Lanka tech industry facts and statistics](https://techdestinationsrilanka.lk/guides/sri-lanka-tech-industry-facts/): Sourced industry numbers
 - [Why Sri Lanka](https://techdestinationsrilanka.lk/why-sri-lanka/): Eight evidence backed reasons
+
+## Ways to build a team in Sri Lanka
+- [Software outsourcing and offshore development in Sri Lanka](https://techdestinationsrilanka.lk/solutions/software-outsourcing-sri-lanka/): Is Sri Lanka a good offshore software development destination? The evidence, the costs, the companies, and an honest view of where it fits and where it does not.
+- [Dedicated development teams in Sri Lanka](https://techdestinationsrilanka.lk/solutions/dedicated-development-team-sri-lanka/): A Sri Lankan company hires and runs a team that works only for you. Who does it well, how long clients stay, what it costs and how to start.
+- [IT staff augmentation in Sri Lanka](https://techdestinationsrilanka.lk/solutions/staff-augmentation-sri-lanka/): Add Sri Lankan engineers and specialists to your own team through an employer of record, contractors or a talent partner. Costs, routes and who does it.
+- [Offshore development centres and global capability centres in Sri Lanka](https://techdestinationsrilanka.lk/solutions/offshore-development-center-sri-lanka/): IFS, Sysco, Synopsys, Zebra and EY run their own centres in Sri Lanka. Who is there, the rules on ownership and tax, and how to set one up.
+- [Sri Lanka for startups: build your engineering team](https://techdestinationsrilanka.lk/solutions/sri-lanka-for-startups/): WealthOS built its platform with a Sri Lankan team and was acquired by JPMorganChase. How startups hire in Sri Lanka, what it costs and who can help.
 
 ## Why Sri Lanka, by industry
 - [Why Sri Lanka for healthtech companies](https://techdestinationsrilanka.lk/why-sri-lanka/healthtech/): Sri Lankan teams build health record platforms for Norway and run HITRUST certified operations for US healthcare. The evidence, the roles and how to hire.
