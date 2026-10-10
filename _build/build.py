@@ -20,14 +20,14 @@ sys.path.insert(0, str(HERE))
 import seo_data  # noqa: E402
 
 # ---------------------------------------------------------------- settings
-SITE_URL = "https://akworld99.github.io/techdestinationsrilanka"  # change when a custom domain is connected
+SITE_URL = "https://techdestinationsrilanka.lk"  # change when a custom domain is connected
 SITE_NAME = "Tech Destination Sri Lanka"
 TAGLINE = "Connecting the world to Sri Lanka's technology ecosystem"
 LINKEDIN = "https://www.linkedin.com/company/tech-destination-sri-lanka/"
 INSTAGRAM = "https://www.instagram.com/techdestination_srilanka/"
 FOLLOWERS = "7,800+"     # LinkedIn followers, shown on the services and talent pages
 BOOKING_URL = ""          # Cal.com or Calendly link. Leave empty to hide the booking button.
-FORM_ENDPOINT = ""        # Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave empty to hide the form.
+FORM_ENDPOINT = "https://formspree.io/f/maeqjjvw"        # Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave empty to hide the form.
 
 SEO_TITLES = {'creative-software': "Creative Software: Sri Lankan engineers behind Norway's health records", 'roar-global': "Roar Global: Sri Lanka's first AI gateway, built in Colombo", 'xeynergy': 'Xeynergy: bootstrapped Sri Lankan AI software company', 'frontwalker': "Frontwalker Sri Lanka: a Swedish group's global tech center", 'superloop': 'Superloop Sri Lanka: 24x7 network operations from Colombo', 'igt1-lanka': "IGT1 Lanka: IFS owners' new tech company in Port City Colombo", 'synopsys': 'Synopsys Sri Lanka: chip design software R&D in Colombo', 'michelin': 'Michelin Sri Lanka: IT hub for Asia at Orion City, Colombo', 'tiqri': 'Tiqri: Norwegian software company engineering from Colombo', 'healthrecon-connect': 'HealthRecon Connect: US healthcare operations run from Sri Lanka', 'zebra-technologies': 'Zebra Technologies Lanka: software R&D center in Colombo', 'gapstars': 'Gapstars: Dutch founded engineering teams built in Sri Lanka', 'simcentric': 'SimCentric: simulation software engineered in Colombo', 'rootcode': "Rootcode: Sri Lankan company building Estonia's AI platforms", 'infomate': 'Infomate: finance and accounting services from Sri Lanka', 'wealthos': 'WealthOS: Sri Lankan founded platform acquired by JPMorganChase', 'startup-genome-2026': "Sri Lanka in Startup Genome's 2026 ecosystem rankings", 'orion-city': "Orion City: Sri Lanka's IT park with 85+ tech companies", 'dijital-team': 'Dijital Team: Australian company with 200 people in Colombo', 'codegen': 'CodeGen: travelbox, Vega supercar and ChargeNET from Colombo', 'inivos': 'Inivos: Sri Lankan engineers on European automotive software', 'surge-global': 'Surge Global: Colombo company with a Qatar government contract', 'oceans': 'Oceans: Sri Lankan talent for 600+ US startups', 'ey-gds': 'EY Global Delivery Services in Sri Lanka: 500+ staff', 'virtusa': 'Virtusa: from Colombo to Nasdaq and a $2 billion acquisition', 'wns': 'WNS Sri Lanka: 20 years of delivery from Colombo', 'sysco-labs': "Sysco LABS Sri Lanka: Sysco's core software built in Colombo", 'wso2': 'WSO2: Colombo built software company sold for $600 million', 'why-global-companies-choose-sri-lanka': 'Why IFS, HCLTech, EY and Sysco build in Sri Lanka', 'universities': "Universities behind Sri Lanka's software engineering talent", 'it-bpm-exports-2025': 'Sri Lanka IT and BPM exports: $1.645 billion in 2025', 'millenniumit': 'MillenniumIT: the Colombo company behind the LSE trading platform'}
 
@@ -709,6 +709,7 @@ def build_meta(stories, extra_pages=()):
 <div class="actions"><a class="btn" href="{base}stories/">Browse the stories</a><a class="btn btn-ghost" href="{base}">Go to the home page</a></div></div></section>""", base, "404.html")
     write("404.html", nf.replace(f'href="{base}index.html"', f'href="{base}"'))
     write(".nojekyll", "")
+    write("CNAME", SITE_URL.split("//")[1] + "\n")
 
 
 def write(rel, content):
