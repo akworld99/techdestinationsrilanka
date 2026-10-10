@@ -1,0 +1,242 @@
+slug: creative-software
+title: Sri Lankan engineers help build Norway's leading digital health platform. Meet Creative Software
+dek: A Colombo company founded in 1999 has spent 25 years as the engineering partner behind DIPS, Norway's largest health records provider.
+date: 2026-10-07
+category: built
+company: Creative Software
+sector: Healthcare software
+blurb: Dedicated engineering teams for Scandinavian clients, including Norway's largest health records provider.
+facts: 550+ :: professionals || 1999 :: founded in Colombo || 4 :: continents served
+linkedin: 7513476546943426560
+instagram: DeLp7zgmbE7
+sources: Creative Software, DIPS testimonial => https://www.creativesoftware.com/old-home || Creative Software, founders => https://www.creativesoftware.com/founders || LMD, 25th anniversary => https://lmd.lk/creative-software/ || Creative Software on LinkedIn => https://lk.linkedin.com/company/creativesoftware
+---
+Norway runs one of the most advanced public healthcare systems in the world. The electronic health record platform at the centre of it is built by DIPS AS, the country's largest digital health provider. For years, Sri Lankan engineers in Colombo have been part of building it.
+
+Creative Software was founded in Colombo in 1999 by four cofounders: Jonas Bridgwater, Sushena Ranatunga, Sajith Peiris and Johann Senaratna.
+
+## A model that was ahead of its time
+
+The idea was simple. Build and manage dedicated software teams for international clients, so a Scandinavian company could have a Colombo engineering team that works as an extension of its own.
+
+Twenty five years later, Creative Software has 550+ professionals, a Microsoft Gold Partnership, and clients across four continents, with its deepest roots in Sweden, Norway and Denmark. Its work spans healthcare, construction, oil and gas, logistics, manufacturing, finance and IFS ERP consulting.
+
+## What the DIPS relationship says
+
+A DIPS director put it plainly: from the very start, Creative Software has been a significant contributor to their efforts to keep innovating and deliver Norway's leading digital health solution.
+
+That is a European national health platform, regulated and patient critical, trusting engineers in Colombo as core contributors.
+
+When Creative marked its 25th anniversary in December 2024, clients flew in from their home countries to celebrate with the Sri Lankan teams they had worked with for years. That is a partnership, well beyond a vendor contract.
+
+A quarter century of proof that Sri Lankan engineers can be trusted with the systems a country's healthcare depends on.
+=====
+slug: roar-global
+title: A Colombo team built Sri Lanka's first AI gateway, with 200+ models billed in rupees. Meet Roar Global
+dek: Roar started as a digital publisher in 2014. It is now an AI led venture builder with 150+ specialists and no outside capital.
+date: 2026-10-06
+category: built
+company: Roar Global
+sector: Artificial intelligence
+blurb: AI led venture builder behind Roar AI, Sri Lanka's first AI gateway.
+facts: 200+ :: AI models on one gateway || 150+ :: specialists || 5,000+ :: customers in 7 countries
+linkedin: 7513119746758959105
+instagram: DeJHrRnGYHe
+sources: Adaderana Biz, Roar AI launch => https://lnkd.in/gjBD6pP5 || Echelon, venture builder and three clusters => https://lnkd.in/gmkny_3B || Roar Global, OpenAI Select Partner => https://www.roar.global/ || Newswire, share buyback and headcount => https://lnkd.in/ggipVf6G
+---
+Most countries consume AI built elsewhere. Roar Global decided Sri Lanka should not be one of them.
+
+In September 2026, Roar launched Roar AI, Sri Lanka's first AI gateway, built by Roar's team in Colombo and hosted on local infrastructure. It gives developers, startups and businesses a single platform to access 200+ frontier and open source models from Anthropic, Google's Gemini, Meta's Llama, DeepSeek and more. It also provides the tools to deploy applications: locally hosted apps, integrated databases, usage controls and budget guardrails. All of it is billed in Sri Lankan rupees.
+
+## From publisher to venture builder
+
+Roar was founded in 2014 by Mustafa Kassim as a digital publisher in Colombo. It has since rebuilt itself into an AI led venture builder structured across three clusters: Platform Media, Creative, and AI. It builds and acquires specialised companies, each solving one problem deeply, on shared infrastructure. AI is the cluster growing fastest, and where most new ventures will sit.
+
+Roar is also an OpenAI Select Partner.
+
+The portfolio spans 3P Media (Google marketing, 750+ accounts), Roar AdX (a Meta Managed Partner across South Asia), Creatorflow (user generated content for Australian and New Zealand brands), Apex AI, BrandRadar, and ROARLABS, its applied AI research lab launched in 2026.
+
+## Built without outside capital
+
+Roar has been profitable for four to five years. It completed a buyback of its early investors in January 2026 and now employs 150+ specialists serving 5,000+ customers across seven countries.
+
+> We don't want Sri Lanka to simply be a market that consumes AI products built elsewhere.
+> Mustafa Kassim, founder, Roar Global
+
+A company that began by publishing local language content is now building the AI infrastructure Sri Lanka's next generation of founders will build on. From Colombo, for the region.
+=====
+slug: xeynergy
+title: Six engineers with no funding and no office built an 80 person AI software company. Meet Xeynergy
+dek: Bootstrapped in 2021, Xeynergy now earns multi million dollar recurring revenue and ships its own AI products.
+date: 2026-09-30
+category: built
+company: Xeynergy
+sector: Software and AI products
+blurb: Bootstrapped engineering firm serving US clients and building its own AI products.
+facts: 80+ :: people, from 6 in 2021 || 0 :: outside investment || 2 :: AI products of its own
+linkedin: 7510949471518773248
+instagram: Dd5sbyPDCPO
+sources: Xeynergy, five years of making it count => https://blog.xeynergy.com/five-years-of-making-it-count-fbd0674af484
+---
+Xeynergy started in 2021 with six engineers, no outside investment and no office. Five years later it is an 80+ person technology company with multi million dollar recurring revenue, on track to cross 100 people by the end of 2026.
+
+It was founded by three technologists with decades of combined experience: CEO Sanjaya Bentotage, Head of Engineering Maleen Cooray, and Head of Products and Operations Ruwanthi Abeywickrama. They built the company around a deliberate model. Fewer clients, harder problems, and deep long term partnerships instead of high volume outsourcing.
+
+Xeynergy builds software for US and international clients across the full technology lifecycle: engineering, QA and test automation, product management, DevOps and support.
+
+## How it is handling AI
+
+Most services companies see AI as a threat to their business. Xeynergy treated it as a mandate to move first. In 2025 it built FASE, its own Framework for AI Assisted Software Engineering, restructuring how its engineers work alongside AI.
+
+Then it went beyond services. Xeynergy now builds its own AI products:
+
+Accxis360 is an AI driven workforce automation platform spanning recruitment to performance management. BetterCode AI is an agentic platform for modernising and automating the software development lifecycle.
+
+## Why it matters
+
+A company built through Sri Lanka's toughest economic years, bootstrapped, disciplined and profitable, is now building AI tooling and exporting it globally.
+
+For any founder watching: Sri Lanka is where you find engineers who can execute, and it is also where companies are being built to lead the AI transition.
+=====
+slug: frontwalker
+title: A publicly listed Swedish tech company calls its Colombo office its global tech center. Meet Frontwalker
+dek: Frontwalker Group has built enterprise and public sector software for 35+ years. Its 100+ engineers in Sri Lanka carry delivery for the whole group.
+date: 2026-08-20
+category: global
+company: Frontwalker
+sector: Enterprise software
+blurb: Stockholm listed software group whose global tech center is in Colombo.
+facts: 100+ :: engineers in Colombo || 250+ :: projects delivered || 35+ :: years in business
+linkedin: 7496106306022305792
+instagram: DcQNkCsEsWG
+sources: Frontwalker, about and global tech center => https://lnkd.in/g6szQcjY || Frontwalker, Colombo office => https://lnkd.in/g86UaMGv
+---
+Frontwalker Group is a Swedish technology company that has been building enterprise and public sector software for 35+ years. It is publicly listed in Stockholm on NGM Nordic SME, and governed by the transparency and accountability standards that listing demands.
+
+It calls its Colombo operation its global tech center. The company does not describe it as a branch or a support office.
+
+## From Econsulate to the centre of the group
+
+Frontwalker's Sri Lanka team, formerly known as Econsulate and now fully integrated into the Swedish group, runs 100+ engineers who have delivered 250+ projects across AI systems, digital platforms, full stack product engineering and agile team deployment.
+
+The company describes its own model as "the intersection of Nordic trust and Sri Lankan innovation."
+
+A 35 year old listed European company puts its global engineering center in Colombo because the talent there is good enough to carry the group's product delivery worldwide, for startups, scaleups and enterprises alike.
+
+## The same story, a different flag
+
+Swedish, Norwegian, Dutch and Australian companies keep arriving at the same conclusion. The engineering they need is in Sri Lanka.
+=====
+slug: superloop
+title: An ASX listed telecom challenger runs 24x7 network operations from Colombo. Meet Superloop
+dek: Superloop serves 400,000+ customers in Australia. Engineers in Sri Lanka help keep its national network running around the clock.
+date: 2026-08-17
+category: global
+company: Superloop
+sector: Telecommunications
+blurb: Australian telecom with network engineering, security and 24x7 operations teams in Colombo.
+facts: 400,000+ :: customers || 900+ :: employees || 24x7 :: network operations from Colombo
+linkedin: 7494984431716347905
+instagram: DcIQojRk8Wy
+sources: Hire.lk, Superloop company profile => https://hire.lk/companies/telecommunications/superloop-communications-sri-lanka/ || Superloop careers, Colombo technical roles => https://lk.linkedin.com/jobs/view/senior-noc-engineer-sri-lanka-at-superloop-3705660537
+---
+Superloop is one of Australia's fastest growing telecommunications companies. It is listed on the ASX (SLC), with 900+ employees and 400,000+ customers, running carrier grade fibre and fixed wireless networks across Australia.
+
+Part of the technical operation behind that network runs from Colombo.
+
+## What the Colombo team does
+
+Superloop's Sri Lanka team works across network engineering, cybersecurity, cloud and infrastructure, and 24x7 network operations supporting the company's enterprise, wholesale and international customers. These are the engineers who keep an Australian national network running around the clock.
+
+## How Superloop treats that team
+
+Two things are worth noting. Salaries are benchmarked to the Australian dollar, and every employee receives company stock, alongside healthcare cover and a workspace in the centre of Colombo.
+
+It is another example of the same pattern. An established, publicly listed international company chose Sri Lanka as a place to run technical operations its entire business depends on, and it pays its Sri Lankan engineers on an international benchmark to do it.
+=====
+slug: igt1-lanka
+title: The private equity firms behind IFS bet on Sri Lanka again, this time inside Port City Colombo. Meet IGT1 Lanka
+dek: EQT, Hg and TA Associates launched a second, fully export oriented technology company in Sri Lanka in 2025.
+date: 2026-08-10
+category: global
+company: IGT1 Lanka
+sector: Technology and talent services
+blurb: Sister company to IFS, serving the technology portfolio of EQT, Hg and TA Associates from Port City Colombo.
+facts: 3 :: global private equity owners || 100% :: export oriented || 2 :: office buildings leased at Port City
+linkedin: 7492454920898433024
+instagram: Db2SWA3k1PA
+sources: Port City Colombo, official announcement => https://www.portcitycolombo.lk/news-room/igt-1-officially-on-boards-at-the-business-centre-at-port-city-colombo/ || Adaderana Biz => https://bizenglish.adaderana.lk/igt-1-officially-on-boards-at-the-business-centre-at-port-city-colombo/ || IGT1 Lanka => https://www.igt1sl.com/en
+---
+Three of the world's largest private equity firms, EQT Group, Hg and TA Associates, already own IFS, a company that has spent 27 years in Sri Lanka and built 3,000+ tech jobs here. So what did they do next?
+
+In 2025, those same owners launched IGT1 Outsourcing Lanka, a new, 100% export oriented technology and talent company and a sister company to IFS. It became one of the first global IT firms to set up inside the Port City Colombo Special Economic Zone, with Authorised Person status granted by the Port City Economic Commission.
+
+## What IGT1 does
+
+IGT1 serves the global technology portfolio of EQT, Hg and TA. It provides software, IT services and specialist tech talent to software companies worldwide, including work in areas like generative AI. It is leasing two office buildings at the Port City Business Centre.
+
+## Why a repeat bet matters
+
+Global investors do not build a second company in a country unless the first one convinced them. Over 27 years, IFS showed that Sri Lankan engineering delivers at world class standards. IGT1 is what that proof earns: more capital, more jobs, and a flagship presence in the country's most ambitious new economic zone.
+
+The first bet built 3,000 careers. The second one is just getting started.
+=====
+slug: synopsys
+title: The software that designs the world's microchips is partly engineered in Colombo. Meet Synopsys Sri Lanka
+dek: Synopsys opened its Sri Lanka R&D operation in 2015. The Colombo team works on core chip design and verification products.
+date: 2026-08-06
+category: global
+company: Synopsys
+sector: Semiconductor software
+blurb: Nasdaq listed chip design software leader with a core R&D team in Colombo since 2015.
+facts: 2015 :: R&D operation opened || 3 :: partner universities || 1 :: EDA company in Sri Lanka
+linkedin: 7491054777993367552
+instagram: Dbr8fQWk933
+sources: Sunday Times, R&D investment => https://www.sundaytimes.lk/170806/business-times/silicon-valleys-synopsys-to-invest-in-rd-capabilities-in-sri-lanka-252855.html || LMD, VLSI curriculum => https://lmd.lk/synopsys/ || Synopsys careers => https://careers.synopsys.com/
+---
+Almost every advanced microchip on earth, in your phone, your car, data centers and AI accelerators, is designed using Electronic Design Automation (EDA) software. Synopsys is the global leader in it. It is Nasdaq listed and one of the largest software companies in the world.
+
+Some of that software is engineered in Colombo.
+
+## Core product work
+
+Synopsys opened its Sri Lanka R&D operation in 2015. It is the only EDA company to build a presence here. Since then the Colombo team has grown into a substantial R&D operation doing core product development, well beyond support or testing tickets.
+
+Their work includes RTL compilation, logic synthesis, FPGA prototyping through HAPS, and the ZeBu emulation platform. Chip designers use this technology to verify silicon for automotive, 5G, networking, AI and data center applications before a single chip is manufactured. Getting it right saves companies from costly chip respins.
+
+## Investing in the pipeline
+
+Synopsys worked with the University of Moratuwa, University of Peradeniya and University of Ruhuna to build Sri Lanka's VLSI (chip design) curriculum, investing in the talent pipeline directly. When chairman Dr. Aart de Geus visited Colombo, he met government leaders to discuss growing the ecosystem further.
+
+## Why it matters
+
+Chip design software is about as deep and specialised as technology gets. It goes where the engineering talent can handle it. Synopsys chose Sri Lanka, and Sri Lankan engineers have been delivering at the frontier of semiconductors ever since.
+=====
+slug: michelin
+title: One of the world's largest tyre makers runs IT support for Asia from Colombo. Meet Michelin's Sri Lanka hub
+dek: 100+ IT professionals at Orion City keep Michelin's business technology running across a continent.
+date: 2026-08-03
+category: global
+company: Michelin
+sector: Enterprise IT
+blurb: IT services team and shared service center in Colombo supporting Michelin operations across Asia.
+facts: 100+ :: IT professionals in Colombo || 175+ :: countries Michelin operates in || 130,000+ :: employees worldwide
+linkedin: 7489963227934507008
+instagram: DbklQkTk7QR
+sources: Daily FT, Orion City tenants => https://www.ft.lk/it-telecom-tech/Orion-City-Destination-for-Innovation/50-787566 || Michelin careers, Sri Lanka IT team => https://lk.linkedin.com/jobs/view/eux-senior-manager-at-michelin-3741849593
+---
+Michelin is one of the largest tyre manufacturers in the world, operating in 175+ countries with 130,000+ employees.
+
+Part of the technology backbone that keeps it running is based in Colombo.
+
+## A delivery hub for a continent
+
+Michelin's team at Orion City includes 100+ IT professionals who deliver End User Experience (EUX) services: equipment, software and IT support across Michelin's business operations throughout Asia. They coordinate directly with the North America team to keep standards consistent worldwide.
+
+Alongside it, Michelin runs a Shared Service Center in Colombo handling procurement and core support functions for the group.
+
+This is a delivery hub plugged into Michelin's global operations. Sri Lankan professionals here manage IT infrastructure and support for one of the world's most recognised industrial brands across an entire continent.
+
+## Why Colombo
+
+When a 130 year old global manufacturer chooses Colombo to run IT operations for all of Asia, cost is only part of the reason. It needs the talent, the language skills and the reliability to keep a global business moving, and it found them here.

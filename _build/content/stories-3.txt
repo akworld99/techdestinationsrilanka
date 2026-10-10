@@ -1,0 +1,241 @@
+slug: startup-genome-2026
+title: Sri Lanka made the biggest jump in Startup Genome's 2026 emerging ecosystem rankings
+dek: The Global Startup Ecosystem Report 2026 ranks Sri Lanka third in Asia for affordable tech talent after a climb of more than 65 positions.
+date: 2026-06-19
+category: ecosystem
+sector: Rankings and data
+facts: 65+ :: positions climbed in one year || #3 :: in Asia for affordable tech talent || 12,000+ :: ICT graduates a year
+linkedin: 7473638204642877440
+sources: Startup Genome, Sri Lanka => https://lnkd.in/eTA_rt5 || Startup Genome, Sri Lanka by the numbers => https://lnkd.in/eAvqmmBH || Global Startup Ecosystem Report 2026 => https://lnkd.in/gBsDQsaS
+---
+The Global Startup Ecosystem Report 2026 is Startup Genome's annual benchmark, built on data from 5.5 million+ startups across 350+ ecosystems.
+
+In this year's edition, Sri Lanka recorded the biggest jump in the entire Emerging Ecosystem rankings, climbing more than 65 positions in a single year.
+
+## The numbers behind it
+
+Sri Lanka ranks third in Asia for Affordable Tech Talent. It produces 12,000+ ICT graduates every year. And it is increasingly recognised for innovation in fintech, govtech and agritech.
+
+> Sri Lanka is solidifying its position as a rising innovation hub powered by exceptional technical talent, business-friendly policies and innovative government support.
+> Marc Penzel, founder, Startup Genome
+
+## The startups it named
+
+The report spotlighted Sri Lankan startups making global moves: Kaiju Labs (fintech, acquired by Singapore's KAST Finance), Jendo Innovations (biotech with patented vascular health technology) and Rootcode (govtech).
+
+## Why this matters
+
+The report is an independent global benchmark read by investors, policymakers and founders worldwide. When Sri Lanka posts the single biggest climb on that list, it is external validation, measured by the people who measure the whole world.
+=====
+slug: orion-city
+title: One founder's bet on a purpose built IT park now houses 85+ companies and 8,000 professionals. Meet Orion City
+dek: In 2007 Sri Lanka had no purpose built IT park. Jeevan Gnanam started one with 10,000 sq. ft. and Virtusa as the first tenant.
+date: 2026-06-18
+category: built
+company: Orion City
+sector: Tech infrastructure
+blurb: Sri Lanka's first purpose built IT park, home to 85+ local and international technology companies.
+facts: 85+ :: companies on campus || 8,000+ :: professionals on site || 1M :: sq. ft. developed
+linkedin: 7473275811157102592
+sources: Echelon, Jeevan Gnanam => https://lnkd.in/gHjAFviq || Daily FT => https://lnkd.in/gNFiw9f5 || Orion City => https://lnkd.in/gZnqnGpM
+---
+In 2007, Jeevan Gnanam had an idea most people around him did not understand.
+
+Sri Lanka had no purpose built IT park. Tech companies were scattered across converted office buildings never designed for them, with unreliable power, no real infrastructure and no ecosystem. Jeevan believed that if you built a proper home for technology companies, the industry would come.
+
+He started small. The first phase was around 10,000 sq. ft. The first tenant was Virtusa.
+
+## Then it grew
+
+Today Orion City spans 16 acres and 1 million sq. ft. of developed space. It houses 85+ local and international companies, including IFS, Virtusa, WNS, Michelin, Synopsys, Pearson and Infomate, and 8,000+ professionals work on site.
+
+The infrastructure became what Jeevan imagined and more: a LEED Gold certified tower, 700 kW of solar power, a Tier III ready data center, uninterrupted power around the clock, and a full campus with a hotel, gym, dining and retail.
+
+## Beyond real estate
+
+Jeevan went on to cofound Hatch, Sri Lanka's largest startup incubator. He cofounded the Lankan Angel Network to fund early stage ventures. And he now leads Sri Lanka's first high density data center.
+
+Global companies that want to establish in Sri Lanka will find the infrastructure already built for them.
+=====
+slug: dijital-team
+title: An Australian founder built a 200 person tech team in Colombo in two years. Meet Dijital Team
+dek: Founded in 2023, ranked the 4th Best Workplace in Sri Lanka in its size category by 2025.
+date: 2026-06-15
+category: global
+company: Dijital Team
+sector: Dedicated IT teams
+blurb: Australian headquartered company building dedicated offshore IT teams in Colombo.
+facts: 200 :: employees in two years || 4th :: Best Workplace, 100 to 250 employees || 2023 :: founded
+linkedin: 7472183484422283264
+sources: Adaderana Biz => https://lnkd.in/gkR3MDU8 || Lanka Business News => https://lnkd.in/gKny3nQi || Great Place to Work Sri Lanka => https://lnkd.in/gfeBr3im
+---
+In 2023, Peter Ward, an Australian managing director, noticed something. Sri Lanka had an enormous pool of technical talent that the global IT industry was not tapping into.
+
+He founded Dijital Team. It is headquartered in Australia with operations at the World Trade Centre in Colombo, and a mission to build dedicated offshore IT teams in Sri Lanka for clients across Australia, the US, Europe and the UK.
+
+## Two years later
+
+200 employees. Software developers, network engineers, QA specialists and cybersecurity experts, all based in Sri Lanka.
+
+The culture numbers back it up. In 2025, Great Place to Work Sri Lanka ranked Dijital Team the 4th Best Workplace in Sri Lanka in the 100 to 250 employees category, and one of the Top 10 Best Workplaces in Technology in the country.
+
+Dijital Team was also one of the first companies in Sri Lanka to launch LinkedIn Learning for all employees, partnering directly with LinkedIn India.
+
+## The philosophy
+
+Ward's philosophy is simple: take care of the people who delight the customer. The result is a company where retention is high, applicants arrive already aligned to the culture, and recruitment has shifted from convincing to attracting.
+
+200 people. Two years. Fourth best workplace in its category. That is the speed at which global companies can build in Sri Lanka.
+=====
+slug: codegen
+title: The Colombo company behind a travel platform with a billion bookings also built an electric supercar. Meet CodeGen
+dek: CodeGen's travelbox platform serves 250+ travel businesses. The same company built Vega and Sri Lanka's largest EV charging network.
+date: 2026-06-11
+category: built
+company: CodeGen International
+sector: Travel technology
+blurb: Maker of the travelbox travel platform, the Vega electric supercar and the ChargeNET charging network.
+facts: 600+ :: engineers || 250+ :: global travel clients || 1B+ :: bookings processed
+linkedin: 7470710306663579648
+sources: CodeGen, clients => https://codegen.co.uk/ || Echelon => https://lnkd.in/gDdqQvKT || Adaderana Biz => https://lnkd.in/gN4Z7dgg
+---
+CodeGen International was founded in 1999 by Dr. Harsha Subasinghe, who holds a PhD in Artificial Intelligence from City University London.
+
+Its flagship product, travelbox, became one of the world's leading travel technology platforms, used by international airlines, online travel agencies, tour operators, parks and attractions, and cruise lines.
+
+## The clients and the numbers
+
+Clients include Virgin Holidays, Kuoni Travel, SriLankan Airlines, Tour America, Desert Adventures, Eden Collection and Walkers Tours, among 250+ travel businesses globally.
+
+600+ engineers. 250+ global clients. 20+ countries across five continents. Over 1 billion bookings processed.
+
+Its engineering hub is in Colombo at TRACE Expert City, with offices in London and the US.
+
+## It did not stop at travel software
+
+The same company built Vega, Sri Lanka's first all electric supercar, and ChargeNET, Sri Lanka's first and largest EV charging network.
+
+A travel tech platform competing globally, an electric supercar and a national EV charging network, all engineered by the same Sri Lankan company from Colombo.
+
+This is what deep, sustained R&D capability looks like when it is built and kept in Sri Lanka.
+=====
+slug: inivos
+title: Sri Lankan engineers are writing software for European vehicle programs. Meet Inivos
+dek: Founded in 2019, Inivos has grown to 180+ professionals and partnered with ICT Automotive to work on embedded and electric vehicle software.
+date: 2026-06-08
+category: built
+company: Inivos
+sector: Enterprise and automotive software
+blurb: Colombo founded technology firm now contributing to European automotive software programs.
+facts: 180+ :: professionals || 4 :: countries with teams || 2019 :: founded
+linkedin: 7469672102728507392
+sources: LMD, Inivos profile => https://lmd.lk/inivos/ || Inivos => https://lnkd.in/g-cne9YY || Daily FT => https://lnkd.in/gMK_qQ5J || Inivos, announcement => https://lnkd.in/gvVGNC9x
+---
+Inivos was founded in 2019 by Asanga Marasinghe and his cofounders, a Sri Lankan team with one goal: build a technology company that could compete globally.
+
+Asanga came up through IFS, the Swedish ERP company. He joined as a software engineer on a scholarship while still a part time student, and rose through years of international project work before cofounding Inivos.
+
+The company started small. Today Inivos has 180+ professionals across Sri Lanka, the USA, Singapore and Canada.
+
+## Into automotive software
+
+Inivos has now entered one of the hardest markets in tech. It partnered with ICT Automotive, a subsidiary of ICT Group and the European supplier behind vehicle software for brands like Volkswagen, BMW, Audi, Mercedes and DAF.
+
+Inivos's Sri Lankan engineers are contributing to real automotive projects: embedded systems, electric vehicle software, and software defined vehicle platforms built to the strictest safety standards.
+
+ICT Group brings 40+ years in automotive software and 400+ specialists across Europe. When it looked to scale its engineering capacity, it chose Sri Lanka.
+
+## The launch
+
+The launch event in Colombo was attended by the Netherlands Deputy Ambassador to Sri Lanka and the University of Moratuwa.
+
+From a startup founded in 2019 to building safety critical software for European automotive programs. That is how fast Sri Lankan engineering can move.
+=====
+slug: surge-global
+title: A self taught founder won a billionaire's backing, delivered, then bought his company back. Meet Surge Global
+dek: Bhanuka Harischandra founded Surge in Colombo in 2015. It now has 400+ people and a contract with the government of Qatar.
+date: 2026-06-04
+category: built
+company: Surge Global
+sector: Marketing and technology services
+blurb: Colombo founded marketing and technology company with 400+ people across Sri Lanka, India and the US.
+facts: 400+ :: employees || $500,000 :: Tavistock Group investment || 2015 :: founded in Colombo
+linkedin: 7468176014662254592
+sources: The Morning, Forbes 30 Under 30 => https://lnkd.in/gN-pK4Vx || LMD, Qatar project => https://lnkd.in/g24zA_26 || Surge Global, Tavistock => https://lnkd.in/g6D4Qdxe || ICTA, founder bio => https://lnkd.in/gwN7yHgh
+---
+In 2015, Bhanuka Harischandra, a self taught marketer, founded Surge Global in Colombo. He was 19 when he built his first business, a YouTube network that generated half a billion video views for 600+ creators. When YouTube's policy changes killed it overnight, he pivoted and started Surge.
+
+## The Tavistock chapter
+
+Three years later, the Tavistock Group, a multi billion dollar private investment organisation owned by British billionaire Joe Lewis, invested $500,000 in Surge. Tavistock brought Surge into its portfolio to work on some of its most strategic assets, including a multibillion dollar smart city project in Orlando, Florida.
+
+Surge delivered. Then it bought the business back.
+
+## Where it stands today
+
+400+ employees, tracking to 600+. Teams across Sri Lanka, India and the United States. Clients from startups to Fortune 500 companies across education, government, retail and tech. Performance marketing, software engineering, AI and machine learning, data analytics, cybersecurity, creative and branding, all delivered from Colombo.
+
+In 2024, Surge won a technology transformation contract with the government of Qatar. Its cybersecurity and engineering teams have deployed as far as Port Moresby, Papua New Guinea.
+
+Harischandra was named to Forbes 30 Under 30 for media, marketing and advertising, one of only two Sri Lankans on the list that year.
+
+A multi billion dollar investment group trusted a Sri Lankan company with its most strategic projects. A Gulf state government chose it for digital transformation. All built from Colombo.
+=====
+slug: oceans
+title: A Stanford graduate built a $15M business placing Sri Lankan talent with US startups. Meet Oceans
+dek: Ian Myers worked remotely with a Sri Lankan team for two years, then built a company around what he saw.
+date: 2026-06-01
+category: global
+company: Oceans
+sector: Talent
+blurb: US company placing Sri Lankan executive assistants and specialists with 600+ startups and agencies.
+facts: $15M :: annual recurring revenue || 600+ :: client companies || 86% :: first match success rate
+linkedin: 7467092618674397184
+sources: The Zero to One => https://lnkd.in/g2ez7TXy || Echelon => https://lnkd.in/gHYQciiq || Oceans => https://lnkd.in/gvyTfBnW
+---
+In late 2021, Ian Myers, a Stanford graduate and former VC, launched Oceans from a simple observation. After two years working remotely with a team in Sri Lanka, he realised the talent was world class and almost nobody outside the country knew it.
+
+He started placing Sri Lankan executive assistants with US startup founders. After the tenth hire, his friends kept asking for more. Oceans was born.
+
+## Three years later
+
+$15M in annual recurring revenue. 600+ companies as clients. Placements with Morning Brew, beehiiv, True Classic and hundreds of other startups and agencies across the US.
+
+## How it works
+
+Oceans selects the top 1% of talent, trains them on the latest AI tools, matches them in 24 hours and places them within two weeks. It reports an 86% first match success rate, and clients save 50 to 80% compared to US hires.
+
+> There is nowhere on the planet with a better price-to-talent ratio than Sri Lanka.
+> Ian Myers, founder, Oceans
+
+The model has expanded beyond executive assistants into marketing, finance and operations specialists, with 600+ Sri Lankan professionals now embedded in global teams.
+
+A bootstrapped, profitable, $15M business built on Sri Lankan talent.
+=====
+slug: ey-gds
+title: EY runs its global delivery network from nine countries. Sri Lanka is one of them
+dek: EY Global Delivery Services employs 90,000+ people worldwide. Its Sri Lanka centre has grown to 500+ staff.
+date: 2026-05-27
+category: global
+company: EY Global Delivery Services
+sector: Professional services
+blurb: One of nine countries in EY's global delivery network, with 500+ staff in Sri Lanka.
+facts: 500+ :: staff in Sri Lanka || 9 :: countries in the network || 90,000+ :: GDS professionals worldwide
+linkedin: 7465288222412283905
+sources: Source 1 => https://lnkd.in/gQZFdDid || Source 2 => https://lnkd.in/gNRtw26A
+---
+EY's Global Delivery Services network has 90,000+ professionals across 9 countries and 21 cities worldwide.
+
+The countries: India, the Philippines, Poland, Hungary, Argentina, the UK, Mexico, Spain and Sri Lanka.
+
+## The Sri Lanka centre
+
+In 2022, EY signed a Board of Investment agreement and opened its GDS centre in Sri Lanka. The workforce is now at 500+ staff.
+
+The centre delivers business consulting, technology consulting and audit services to EY member firms globally.
+
+Sri Lankan professionals at EY GDS work directly with EY teams across every service line, geography and sector, delivering the same quality as their counterparts in London, New York or Mumbai.
+
+## Why it matters
+
+When one of the Big Four chooses your country as one of just nine locations globally for its delivery network, that is a strategic bet.

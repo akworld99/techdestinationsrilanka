@@ -1,0 +1,216 @@
+slug: virtusa
+title: It started with 10 engineers in a Colombo home, listed on Nasdaq and sold for $2 billion. Meet Virtusa
+dek: Kris Canekeratne cofounded Virtusa in 1996 and led it for 25 years. Colombo remains one of its most important technology centres.
+date: 2026-05-21
+category: built
+company: Virtusa
+sector: Digital engineering
+blurb: Global digital engineering company cofounded by a Sri Lankan, with 3,000+ engineers in Colombo.
+facts: $2B :: acquisition in 2021 || 3,000+ :: engineers in Colombo || 35,000 :: employees globally
+linkedin: 7463089693346279424
+sources: Sunday Times Sri Lanka => https://lnkd.in/gGRDJHpF || Daily Mirror => https://lnkd.in/gPmFaH33 || Daily FT => https://lnkd.in/gHgkD-Zc
+---
+A tech company cofounded in Colombo in 1996 went public on Nasdaq, scaled to 35,000 employees globally and was acquired for $2 billion. Sri Lanka was at the centre of it from day one.
+
+## The founder
+
+It started with Kris Canekeratne, a Sri Lankan born and raised in Colombo. He launched Virtusa with six engineers in his basement in Boston and ten more working from his parents' home in Colombo. He led the company as Chairman and CEO for 25 years until the acquisition.
+
+## The company
+
+Virtusa is a global digital engineering company. It serves 20+ Fortune 50 companies and four of the top five banks in both the US and India. Its clients span banking, financial services, insurance, healthcare, telecom and media.
+
+In 2021, Baring Private Equity Asia acquired Virtusa for $2 billion, one of the largest tech deals in the region.
+
+## Colombo's role
+
+Virtusa's Colombo operation is one of its most significant advanced technology centres in the world. 3,000+ engineers. A Global Technology Office focused on R&D, advanced research and engineering excellence. Fortune 500 clients served directly from Colombo.
+
+In 2023, Virtusa expanded its Colombo headquarters by 13,000 sq. ft. to keep up with growth. The company has publicly stated its goal to double its Sri Lankan headcount.
+
+From a Colombo living room to Nasdaq to a $2 billion acquisition. Sri Lanka's largest tech employer, and still expanding.
+=====
+slug: wns
+title: A global business process leader has delivered from Colombo for 20 years. Meet WNS Sri Lanka
+dek: WNS has operated in Sri Lanka since 2004 and employs 800+ people across two facilities in Colombo.
+date: 2026-05-19
+category: global
+company: WNS
+sector: Business process management
+blurb: Global business process management company, now part of Capgemini, operating in Colombo since 2004.
+facts: 800+ :: employees in Colombo || 2004 :: operating in Sri Lanka since || 2 :: facilities
+linkedin: 7462381552388280322
+note: WNS was acquired by Capgemini in October 2025 and is no longer separately listed on the New York Stock Exchange. This article has been updated to reflect that.
+sources: WNS Sri Lanka on LinkedIn => https://lnkd.in/gtQwCcB5 || WNS careers, Sri Lanka => https://lnkd.in/g_Etqw6x || EDB Sri Lanka => https://lnkd.in/gnKAWdCm || Capgemini, WNS acquisition completed => https://www.capgemini.com/wp-content/uploads/2025/10/Capgemini_-_2025-10-17_-_Capgemini_completes_the_acquisition_of_WNS.pdf
+---
+WNS is one of the world's large business process management companies: 44,000+ professionals, 60 delivery centers, 16 countries, and 400+ global clients across banking, insurance, healthcare, travel, shipping, retail and telecom. It was listed on the New York Stock Exchange until Capgemini acquired it in October 2025.
+
+Sri Lanka has been part of that network since 2004.
+
+## The Colombo operation
+
+WNS Sri Lanka operates with 800+ employees across two facilities in Colombo, delivering finance and accounting, legal, consultancy, robotic process automation, banking, contact center, HR and travel services to global clients.
+
+That is 20 years of continuous operations from Colombo. Two decades of scaled delivery for a global leader in its field.
+
+## Why Sri Lanka
+
+WNS chose Sri Lanka for the same reasons other global companies have: English speaking talent, a business culture that works easily with Western clients, cost efficiency, and a timezone that bridges Europe, the Middle East and Asia Pacific.
+
+800+ professionals. 20 years. Still growing.
+=====
+slug: sysco-labs
+title: The world's largest foodservice company builds its core software in Colombo. Meet Sysco LABS
+dek: Sysco LABS Sri Lanka works on the same codebase and sprint cycles as Sysco's teams in Texas.
+date: 2026-05-15
+category: global
+company: Sysco LABS
+sector: Foodservice technology
+blurb: Innovation and engineering arm of Sysco Corporation, the world's largest foodservice distributor.
+facts: $81.4B :: Sysco revenue || #54 :: on the Fortune 500 || 730,000+ :: customer locations served
+linkedin: 7460924463702941696
+sources: Sysco LABS => https://syscolabs.lk || Source 2 => https://lnkd.in/ggr43PVC
+---
+Sysco Corporation is the world's largest foodservice distributor. Fortune 500 rank: 54. $81.4 billion in revenue. 75,000+ employees. 337 distribution centers across 10 countries. 730,000+ customer locations globally.
+
+## The engineering arm
+
+Sysco LABS Sri Lanka is the innovation and engineering arm of Sysco Corporation. Its engineering teams in Colombo work alongside counterparts in Austin and Houston, Texas, building the software that powers the entire foodservice journey: sourcing, merchandising, warehouse operations, ordering, pricing algorithms, ecommerce and last mile delivery.
+
+## Same codebase, same standards
+
+Sysco LABS Sri Lanka operates on the same codebase, the same sprint cycles and the same engineering standards as the US teams. The Colombo office builds enterprise grade product.
+
+The tech stack spans full stack engineering, cloud infrastructure, data and analytics, AI and machine learning, enterprise architecture, UI and UX, quality engineering and cybersecurity.
+
+## A capability decision
+
+When the world's largest foodservice company, an $81 billion business serving 730,000 locations, trusts Sri Lankan engineers with its core technology, it is making a decision about capability.
+=====
+slug: wso2
+title: A software company built in Colombo sold for $600 million. Meet WSO2
+dek: EQT acquired WSO2 in 2024. 80% of its 780 engineers are Sri Lankan, and its headquarters is still Colombo.
+date: 2026-05-11
+category: built
+company: WSO2
+sector: Enterprise software
+blurb: API management, integration and identity software company founded and headquartered in Colombo.
+facts: $600M :: acquisition by EQT in 2024 || 700+ :: enterprise clients || 70+ :: countries
+linkedin: 7459502628524175360
+sources: TechCrunch => https://lnkd.in/gtwPT-6S
+---
+A software company built in Colombo sold for $600 million. 80% of its 780 engineers are Sri Lankan.
+
+## What WSO2 builds
+
+WSO2 builds API management, integration and identity software. That is the same space as Apigee (acquired by Google), MuleSoft (acquired by Salesforce for $6.5B) and Okta.
+
+Customers include Samsung, AT&T and Axa. 700+ enterprise clients. 70+ countries. 18 offices worldwide. All headquartered in Colombo.
+
+In 2024, EQT Private Capital Asia acquired WSO2 for $600 million.
+
+## The founder
+
+Behind it is Dr. Sanjiva Weerawarana. He spent eight years at IBM Research in New York, where he coauthored web service standards that power the modern internet. He was elected to the IBM Academy of Technology, is a member of the Apache Software Foundation and created the Ballerina programming language.
+
+He left all of that and came back to Colombo in 2005 to build WSO2.
+
+$600 million. Built, led and sold by Sri Lankan talent. The largest enterprise software exit in the country's history.
+=====
+slug: why-global-companies-choose-sri-lanka
+title: Why IFS, HCLTech, EY and Sysco keep building in Sri Lanka
+dek: These are scaled operations, some of them decades old. Four reasons come up every time.
+date: 2026-05-06
+category: ecosystem
+sector: Analysis
+facts: 2,200+ :: IFS employees in Colombo || 4,000+ :: seats in HCLTech's expanded facility || 4 to 6 hours :: daily overlap with Europe
+linkedin: 7457678066342064128
+---
+These are scaled operations that have placed their trust in Sri Lanka for years.
+
+## Who is here
+
+IFS has 2,200+ employees in Colombo. They handle 75% of its global R&D and 80% of its global product support, making it the second largest tech employer in the country.
+
+HCLTech opened a delivery center in 2020, then expanded to a facility for 4,000+ employees.
+
+EY runs a Global Delivery Services centre with 500+ staff.
+
+Sysco LABS Sri Lanka builds enterprise software for a Fortune 100 company.
+
+HSBC, WNS, RR Donnelley and Innodata also run operations here.
+
+## Why they keep choosing Sri Lanka
+
+The talent pipeline is real. The country produces 12,000+ ICT graduates every year, according to Startup Genome.
+
+English is widely used in business, business culture is familiar to Western companies, and onboarding friction is low from day one.
+
+The time zone works. GMT+5:30 gives four to six hours of daily real time overlap with Europe and three to four hours with the US East Coast. That is enough for standups, code reviews and sprint planning without anyone waking up at 4am.
+
+The cost math is simple. A fully loaded senior engineering team in Colombo runs 60 to 70% cheaper than London, Sydney or San Francisco.
+
+Retention is strong. Engineers join these companies and build entire careers there, because the work is global grade.
+
+When Fortune 500 companies trust your engineers with their core tech, that is the strongest endorsement a market can get.
+=====
+slug: universities
+title: The universities behind Sri Lanka's engineering pipeline
+dek: Moratuwa has been a top contributor to Google Summer of Code since 2004. SLIIT serves 25,000+ students.
+date: 2026-05-04
+category: ecosystem
+sector: Talent pipeline
+facts: 2004 :: Moratuwa in Google Summer of Code since || 25,000+ :: students at SLIIT
+linkedin: 7456953272411791360
+---
+The University of Moratuwa is one of the top global contributors to Google Summer of Code, and has been since 2004.
+
+SLIIT, the country's largest private tech university, serves 25,000+ students and was ranked joint third in Sri Lanka by the Times Higher Education World University Rankings.
+
+These are engineers with deep computer science fundamentals, well beyond what a boot camp produces.
+
+Companies like IFS, WSO2 and 99x hire directly from these pipelines, and have done so successfully for decades.
+
+The talent is there. The pipeline is real. The question is whether you are tapping into it.
+=====
+slug: it-bpm-exports-2025
+title: Sri Lanka's IT and BPM exports hit $1.645 billion in 2025
+dek: 500+ tech companies and 120,000+ IT professionals make ICT one of the country's largest export earners.
+date: 2026-04-30
+category: ecosystem
+sector: Industry data
+facts: $1.645B :: IT and BPM export revenue, 2025 || 120,000+ :: IT professionals || 500+ :: tech companies
+linkedin: 7455518833638907904
+---
+Sri Lanka's IT and BPM sector hit $1.645 billion in export revenue in 2025. January 2026 data showed ICT exports up 60% year on year.
+
+500+ tech companies. 120,000+ IT professionals. Global firms like HSBC, Sysco LABS and HCLTech already run development centers here.
+
+ICT is now one of the country's largest export earners.
+
+This is a $1.6 billion industry that most of the world has not noticed yet. Tech Destination Sri Lanka exists to show why it should.
+=====
+slug: millenniumit
+title: The London Stock Exchange picked a Colombo company for its trading platform, then bought the company. Meet MillenniumIT
+dek: The Millennium Exchange platform processes trades in 125 microseconds and powers exchanges on several continents.
+date: 2026-04-28
+category: built
+company: MillenniumIT
+sector: Capital markets technology
+blurb: Colombo built trading technology company acquired by the London Stock Exchange Group.
+facts: 125 :: microseconds to process a trade || $16M :: estimated annual saving for the LSE || 2008 :: chosen by the London Stock Exchange
+linkedin: 7454789380155760640
+---
+This was the first story Tech Destination Sri Lanka ever published, and it is still one of the greatest in Sri Lankan tech history.
+
+In 2008, the London Stock Exchange needed a faster trading platform. NASDAQ pitched. IBM was considered.
+
+The exchange went with MillenniumIT, a company out of Colombo.
+
+## Good enough to buy the company
+
+The software was so good that the London Stock Exchange bought the entire company. The Millennium Exchange platform processes trades in 125 microseconds and now powers stock exchanges across London, Johannesburg, Argentina, Kenya and more.
+
+That switch saved the LSE an estimated $16 million per year.
+
+Sri Lankan engineers did more than support global finance. They built the infrastructure running it.

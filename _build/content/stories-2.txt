@@ -1,0 +1,251 @@
+slug: tiqri
+title: A Norwegian software company has run its core engineering from Colombo for 15 years. Meet Tiqri
+dek: 150 developers, 250+ projects and client relationships that have lasted more than a decade.
+date: 2026-07-20
+category: global
+company: Tiqri
+sector: Software engineering
+blurb: Norwegian parented software company with its core engineering team in Colombo.
+facts: 150 :: developers || 250+ :: completed projects || 15+ :: years of delivery from Colombo
+linkedin: 7484872238794559488
+instagram: DbAbyOciJo-
+sources: Tiqri, about => https://www.tiqri.com/about-us/ || Tiqri on LinkedIn => https://www.linkedin.com/company/tiqri || BCS Sri Lanka B2B Directory 2025 => https://bcssrilanka.info/
+---
+Tiqri is a Norwegian parented software company that runs its core engineering out of Colombo. For 15+ years, its Sri Lankan developers have built software for clients across Scandinavia, the US, Europe, the Middle East and Asia Pacific.
+
+## Dedicated teams, long relationships
+
+The model is deliberate. Tiqri assigns a dedicated, long term engineering team to each client instead of a rotating pool handling tickets. That is why several client relationships have run for over a decade.
+
+The work is real product engineering. For more than ten years, Tiqri's Colombo team has worked alongside a Norway based development team to power end to end automated warehousing: the Automated Storage and Retrieval Systems that cut manual handling, optimise space and improve accuracy across warehouse operations.
+
+## The track record
+
+150 developers. 250+ completed projects. A client range spanning early stage startups to Fortune 500 companies. Skillsets cover AI, cloud, enterprise software, IoT, mobile, BI and QA. Leadership blends Norwegian and Sri Lankan expertise, led by CEO Kim Worm-Petersen.
+
+For any founder or CTO watching: a European company chose Sri Lanka as the engine room for 15 years of global software delivery, and trusts it with Fortune 500 work.
+=====
+slug: healthrecon-connect
+title: A Colombo based team handles revenue operations for US healthcare, then bought an American company. Meet HealthRecon Connect
+dek: HITRUST certified and 1,500+ people strong, with Sri Lanka as its main operational base.
+date: 2026-07-16
+category: built
+company: HealthRecon Connect
+sector: Healthcare services and technology
+blurb: Technology enabled revenue cycle management for US and ANZ healthcare providers, run mainly from Sri Lanka.
+facts: 1,500+ :: people across 3 countries || HITRUST :: certified || 30+ :: years of domain expertise
+linkedin: 7483422675810537474
+instagram: Da2HWFvmcwy
+sources: HealthRecon Connect, about and timeline => https://www.healthreconconnect.com/about/ || HealthRecon Connect, team => https://www.healthreconconnect.com/the-team/
+---
+US healthcare is one of the most regulated industries on the planet. Patient data, insurance claims, and compliance frameworks where mistakes cost millions. Trust is the entire product.
+
+Hundreds of US healthcare providers run that function through a company whose main delivery centre is in Colombo.
+
+## What it does
+
+HealthRecon Connect delivers technology enabled Revenue Cycle Management to healthcare providers across the US and the Australia and New Zealand region: insurance verification, billing, claims, payment posting and collections. It supports a global workforce of over 1,500 people across Sri Lanka, India and the Philippines, with Sri Lanka as its main operational base.
+
+## The credentials
+
+In this industry credentials are what matter, and the company has them. HITRUST certification, one of the toughest data security standards in US healthcare. SOC 1 Type 1 and Type 2 audits completed. An A+ rating from the Better Business Bureau. Signatory Participant of the United Nations Global Compact. Certified a Great Workplace by Great Place to Work Sri Lanka and ranked among the country's 40 Best Workplaces.
+
+## Automation plus accountability
+
+The company pairs 30+ years of domain expertise with machine learning, AI and automated workflows built through HRC Labs, its technology arm in Sri Lanka. The automation handles volume. The certified professionals handle the judgment, the exceptions and the accountability no algorithm can carry.
+
+## The part that flips the script
+
+HealthRecon Connect acquired Accordias Healthcare, an American healthcare consulting company. A firm built on Sri Lankan talent bought a US company to expand its capabilities.
+
+It is still growing at home too. A new delivery centre opened in Kandy, taking global healthcare careers beyond Colombo.
+=====
+slug: zebra-technologies
+title: The barcode technology tracking your parcels is partly built in Colombo. Meet Zebra Technologies Lanka
+dek: The Nasdaq listed leader in scanning, RFID and mobile computing runs a software R&D center in Sri Lanka.
+date: 2026-07-13
+category: global
+company: Zebra Technologies
+sector: Enterprise hardware and software
+blurb: Nasdaq listed enterprise technology company with a software R&D center in Colombo.
+facts: Nasdaq :: listed parent || R&D :: center in Colombo || iOS, Android, cloud, IoT :: engineering scope
+linkedin: 7482335521977823233
+instagram: DauKxAHjO_0
+sources: Zebra Technologies, R&D center careers => https://lnkd.in/gjbtBGCA || Glassdoor, Colombo office => https://lnkd.in/gbJrRD3F
+---
+Zebra Technologies is a Nasdaq listed American company and a global leader in enterprise asset intelligence: barcode scanning, RFID, rugged mobile computing, real time location systems and specialty printers. Its technology runs in warehouses, retail stores, hospitals and factories across the world.
+
+Chances are, a package you have received was tracked using Zebra technology. Part of the software behind it is built in Colombo.
+
+## A real engineering operation
+
+Zebra Technologies Lanka (Private) Limited is a wholly owned subsidiary running a software R&D center in Colombo. It builds product for Zebra's global platforms. It is neither a reseller nor a support office.
+
+Sri Lankan engineers here work across iOS and Android development, cloud, data capture, IoT and enterprise software, the same technologies Zebra ships to Fortune 500 clients worldwide. Employee reviews highlight strong mentorship, innovative projects and a culture that develops engineers early in their careers.
+
+## The pattern
+
+A global, publicly listed technology leader sets up core R&D in Sri Lanka because the engineering talent is here, and it delivers.
+=====
+slug: gapstars
+title: A Dutch founder searched the world for engineering talent and chose Sri Lanka. Meet Gapstars
+dek: Since 2015 Gapstars has built dedicated engineering teams in Colombo for 75+ European and international companies.
+date: 2026-07-06
+category: global
+company: Gapstars
+sector: Dedicated engineering teams
+blurb: Dutch founded company building embedded engineering teams, with its largest base in Colombo.
+facts: 300+ :: professionals || 75+ :: client companies || 2015 :: founded
+linkedin: 7479798798643261440
+instagram: DacW8Z5jXTJ
+sources: EconomyNext => https://economynext.com/brand_voice/gapstars-bridging-europes-tech-talent-crunch-from-sri-lanka/ || Silicon Canals => https://siliconcanals.com/gapstars-dutch-scaleups-talent-development-teams/ || Gapstars, about => https://gapstars.net/tech/about/
+---
+A Dutch founder went looking for the best place in the world to build software teams for European companies. His research pointed to one country: Sri Lanka.
+
+In 2015, Hugo Hemmen founded Gapstars on that decision.
+
+## Teams that embed with the client
+
+The model is different from traditional outsourcing. Gapstars builds dedicated engineering teams that embed directly into their clients' companies, working as full extensions of the business instead of a detached vendor handling tickets.
+
+Today Gapstars has 300+ professionals across hubs in Amsterdam, Lisbon, Dubai and Colombo, with its largest engineering base in Sri Lanka. It supports 75+ companies across the Benelux region, Austria, the UK, the UAE and the US.
+
+## The work
+
+Its clients include Otrium, a Dutch fashion scaleup, and Dual Inventive, whose Sri Lankan team works on railway safety systems used across the Netherlands.
+
+Gapstars has been named one of the Top 10 IT Workplaces in Sri Lanka, and regularly flies its Colombo engineers to client headquarters in Europe.
+
+For any founder or CTO watching: a European company chose to build its engineering core in Sri Lanka because the talent measured up against the best in the world.
+=====
+slug: simcentric
+title: A company picked in the UK Ministry of Defence's search for future tech leaders builds its training software in Colombo. Meet SimCentric
+dek: SimCentric's simulation and virtual reality software helps armed forces train safely. Its engineering centre has been in Sri Lanka since day one.
+date: 2026-07-02
+category: built
+company: SimCentric
+sector: Simulation and training software
+blurb: Simulation and VR training software used by 80+ organisations, engineered in Colombo.
+facts: 100+ :: engineers in Sri Lanka || 80+ :: organisations using its products || 2009 :: founded
+linkedin: 7478353021555339264
+sources: UK Government, contract announcement => https://lnkd.in/enG4hFVx || Daily News, managing director appointment => https://lnkd.in/gHnaYAvm || Echelon, founders and origin => https://lnkd.in/gpW8Km7q || Arteculate, team and global clients => https://lnkd.in/gWNVabUZ
+---
+In May 2026, the UK Ministry of Defence awarded contracts to 13 companies under a new scheme to find Britain's next billion pound technology firms. The contracts were issued through Commercial X, the ministry's accelerated procurement vehicle.
+
+One of those winners runs its entire engineering operation out of Colombo.
+
+## Software for safer training
+
+SimCentric builds high fidelity simulation and virtual reality training software. It lets forces train and rehearse in synthetic environments, reducing real world risk to people on the ground. Its focus areas are training transformation, range safety and risk reduction.
+
+## Two friends from Oxford
+
+SimCentric was cofounded in 2009 by Dr. Romesh Ranawana, a Sri Lankan, and Adam Easton, an Australian. The two met while doing PhDs in Artificial Intelligence at Oxford. They built the engineering centre in Colombo, and the core technology has been built there ever since.
+
+The managing director today is Haridhu Abeygoonaratne, who joined SimCentric as its fourth employee and rose from Chief Operating Officer to MD. He also serves as Vice Chair of SLASSCOM, the apex body for Sri Lanka's IT and BPM industry.
+
+## Where it stands
+
+SimCentric has 100+ engineers in Sri Lanka, based at Orion City, with commercial offices in the UK and Australia. Its products are used by 80+ organisations worldwide. It is a pioneer in bringing Epic Games' Unreal Engine into professional simulation, and it is ISO 27001 certified, the global standard for information security.
+
+That is the level Sri Lankan engineering now reaches.
+=====
+slug: rootcode
+title: A Colombo company is helping build Estonia's national AI infrastructure. Meet Rootcode
+dek: Rootcode works on platforms for the world's most digital government and ranked first in Asia Pacific at the 2025 APICTA Awards.
+date: 2026-06-29
+category: built
+company: Rootcode
+sector: Govtech and AI
+blurb: Colombo headquartered product engineering and AI company working with the Estonian government.
+facts: 2014 :: founded in Colombo || #1 :: in Asia Pacific at APICTA 2025 || 5 :: school computer labs built
+linkedin: 7477244524625387520
+sources: The Island, Estonia and Bürokratt => https://lnkd.in/gRp6X9v6 || Rootcode, about => https://rootcode.io/about || Rootcode, awards => https://rootcode.io/awards
+---
+Estonia is the most digitally advanced government in the world. It pioneered digital citizenship and runs almost everything online. So it means something that a Sri Lankan company is helping build its national AI infrastructure.
+
+Rootcode was founded in 2014 by Alagan Mahalingam. Headquartered in Colombo with a strategic base in Estonia, it builds software products across three divisions: Rootcode Labs (engineering), Rootcode Studio (design) and Rootcode AI.
+
+## The Estonia work
+
+At Rootcode Connect 2025 in Tallinn, alongside European government leaders, the company showcased its role in building core national AI infrastructure. That includes platforms for the Estonian government and the next generation of Bürokratt, Estonia's national AI powered citizen engagement system.
+
+It is also building an AI driven crop health platform with custom hardware for the City of Porto in Portugal, helping farmers improve agricultural productivity.
+
+## Recognition
+
+In 2025, Rootcode ranked first in the Asia Pacific region at the Asia Pacific ICT Alliance (APICTA) Awards, winning three awards while representing Sri Lanka. At the Global Startup Awards, Rootcode won the South Asia region and went on to the global finals. In 2026, founder Alagan Mahalingam was named South Asia's Founder of the Year at the same awards.
+
+Rootcode is ISO 9001 and ISO 27001 certified. Mats Hultin, a former Ericsson and Saab executive with 20+ years in leadership, sits on its board to drive global expansion.
+
+## Giving back
+
+The Rootcode Foundation has built five computer labs in underserved Sri Lankan schools, working with 300+ students, all on Rootcoders' own time.
+
+From Colombo to the engine room of Europe's most digital government.
+=====
+slug: infomate
+title: 600 Sri Lankan finance professionals run the books for clients in 10+ countries. Meet Infomate
+dek: A John Keells Holdings subsidiary turned Sri Lanka's depth in accounting talent into a global shared services business.
+date: 2026-06-25
+category: built
+company: Infomate
+sector: Finance and accounting services
+blurb: John Keells Holdings subsidiary delivering finance and accounting services to 150+ clients worldwide.
+facts: 600+ :: professionals || 150+ :: clients || 10+ :: countries served
+linkedin: 7475812598706266112
+sources: Infomate => https://infomateworld.com/ || Infomate, about => https://lnkd.in/gtPADYms
+---
+Sri Lanka has one of the largest pools of globally certified accountants outside the UK: CIMA, ACCA and CA professionals. The Australian once wrote that "accounting is now embedded in the national DNA."
+
+Infomate turned that into a global business.
+
+## From group finance to global clients
+
+Infomate was founded in 2005 as a wholly owned subsidiary of John Keells Holdings PLC, Sri Lanka's largest listed conglomerate, with 150+ years of history across 70+ companies. It started by running finance for the group itself, then pioneered shared services in Sri Lanka and took the model global.
+
+Two decades later: 600+ professionals, grown from a team of 60. 150+ clients across 10+ countries and four continents. Three delivery facilities. ISO 27001 certified. It runs on the platforms global finance is built on: SAP, Oracle, NetSuite, Microsoft Dynamics and Xero.
+
+Its clients include Fortune 500 companies and 100+ blue chip firms across the UK, US, Australia and the Nordic region. In 2025, Everest Group recognised Infomate in its Finance and Accounting Outsourcing PEAK Matrix assessment.
+
+## A 16 year client relationship
+
+One client, a Norwegian accounting firm, evaluated 20 potential partners in Sri Lanka before choosing Infomate in 2010. They still work together today, and call the partnership "of vital strategic importance."
+
+## Beyond Colombo
+
+Infomate built Sri Lanka's first rural BPO centres in Jaffna, Mahawilachchiya and Seenigama, bringing global finance careers to parts of the country that outsourcing usually ignores.
+
+Leading it is CEO Jehan Perinpanayagam, a CIMA qualified professional with 25+ years of experience who pioneered Sri Lanka's first shared services operation and the country's first rural BPOs.
+
+This is the overlooked half of Sri Lanka's talent story: globally certified finance professionals whom the world's biggest companies trust with their numbers.
+=====
+slug: wealthos
+title: JPMorganChase acquired a wealth platform founded by two Sri Lankans. Meet WealthOS
+dek: First client in 2023, acquired in January 2026. The 50+ engineer team in Sri Lanka joined JP Morgan Personal Investing.
+date: 2026-06-22
+category: built
+company: WealthOS
+sector: Fintech
+blurb: Wealth management infrastructure platform founded by two Sri Lankans and acquired by JPMorganChase.
+facts: 2026 :: acquired by JPMorganChase || 50+ :: engineers in Sri Lanka || 2019 :: founded
+linkedin: 7474725367103008768
+sources: e27 => https://lnkd.in/g8xsntQa || FinTech Futures => https://lnkd.in/e_6MEnnZ || EconomyNext => https://lnkd.in/dwgPWzUZ
+---
+In January 2026, JPMorganChase, the world's largest bank by market value, acquired WealthOS, a wealth management infrastructure platform founded by two Sri Lankans.
+
+## What WealthOS built
+
+WealthOS was founded in late 2019 by Anton Padmasiri and Chamat Arambewela. It built the behind the scenes systems that digital wealth managers and pension providers rely on: cloud native infrastructure for the UK's pension and wealth market.
+
+It secured its first client in 2023. Less than three years later it was acquired by JP Morgan, one of the fastest major exits in Sri Lankan tech history.
+
+## Where the team went
+
+The entire team, 50+ engineers in Sri Lanka and a handful in the UK, is joining JP Morgan Personal Investing, the bank's retail wealth brand built on its earlier £700M Nutmeg acquisition. Investors including Barclays and the Singapore and Sri Lanka focused VC fund nVentures exited.
+
+This is the fourth major exit by a Sri Lankan tech startup, joining MillenniumIT, WSO2 and PickMe.
+
+## The takeaway
+
+The world's most valuable bank placed a bet on Colombo's engineering talent. When a bank of that scale acquires mission critical financial infrastructure built by Sri Lankans, the question of whether Sri Lanka can build for global markets is already answered.
