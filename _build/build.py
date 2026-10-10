@@ -304,6 +304,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}companies/">Companies</a>
       <a href="{prefix}why-sri-lanka/">Why Sri Lanka</a>
       <a href="{prefix}guides/sri-lanka-tech-industry-facts/">Industry facts</a>
+      <a href="{prefix}answers/">Answers</a>
       <a href="{prefix}tech-50/">Sri Lanka Tech 50</a>
       <a href="{prefix}about/">About</a>
     </div>
@@ -316,6 +317,10 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}guides/sri-lanka-tech-salaries/">Salary guide</a>
       <a href="{prefix}guides/how-to-hire-in-sri-lanka/">How to hire</a>
       <a href="{prefix}guides/set-up-a-company-in-sri-lanka/">Set up a company</a>
+      <a href="{prefix}guides/employer-of-record-sri-lanka/">Employer of record</a>
+      <a href="{prefix}tools/team-cost-calculator/">Team cost calculator</a>
+      <a href="{prefix}compare/">Compare destinations</a>
+      <a href="{prefix}playbook/">Free playbook</a>
       <a href="{prefix}tech-tour/">Tech Tour</a>
       <a href="{prefix}get-featured/">Get featured</a>
     </div>
@@ -333,6 +338,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
     <p><strong>By industry</strong> {' '.join(f'<a href="{prefix}why-sri-lanka/{v["slug"]}/">{v["label"]}</a>' for v in seo_data.VERTICALS)}</p>
     <p><strong>Ways to build</strong> {' '.join(f'<a href="{prefix}solutions/{x["slug"]}/">{x["label"]}</a>' for x in solutions.SOLUTIONS)}</p>
     <p><strong>By country</strong> {' '.join(f'<a href="{prefix}hire-from/{m["slug"]}/">{m["label"]}</a>' for m in seo_data.MARKETS)}</p>
+    <p><strong>Compare</strong> {' '.join(f'<a href="{prefix}compare/{o["slug"]}/">Sri Lanka vs {o["name"][0].upper() + o["name"][1:]}</a>' for o in seo_compare.OTHERS)}</p>
   </div>
   <div class="wrap news">
     <form class="newsletter" data-form="newsletter" data-done="You are on the list." action="{e(FORM_ENDPOINT)}" method="POST">
@@ -483,6 +489,9 @@ def build_home(stories):
       <a class="door" href="guides/sri-lanka-tech-salaries/"><h3>Salary and cost guide</h3><p>What engineers earn in Colombo in 2026 and what an employee costs on top, with sources.</p><span class="door-go">See the numbers</span></a>
       <a class="door" href="guides/how-to-hire-in-sri-lanka/"><h3>How to hire</h3><p>Employer of record, contractors, a partner team or your own company, compared.</p><span class="door-go">Compare routes</span></a>
       <a class="door" href="guides/set-up-a-company-in-sri-lanka/"><h3>Set up a company</h3><p>Registration, ownership, tax, the Board of Investment and Port City Colombo.</p><span class="door-go">Read the guide</span></a>
+      <a class="door" href="tools/team-cost-calculator/"><h3>Team cost calculator</h3><p>Pick the roles and team size. See the monthly and yearly cost, direct or through a partner.</p><span class="door-go">Estimate a team</span></a>
+      <a class="door" href="compare/"><h3>Sri Lanka compared</h3><p>Side by side with Vietnam, the Philippines, Poland, Ukraine, Romania and Latin America.</p><span class="door-go">Compare destinations</span></a>
+      <a class="door" href="playbook/"><h3>The 2026 playbook</h3><p>Salaries, hiring routes, setup, tax and industry numbers in one PDF.</p><span class="door-go">Download free</span></a>
       <a class="door" href="tech-tour/"><h3>Sri Lanka Tech Tour</h3><p>Three days in Colombo meeting the companies and people in our stories.</p><span class="door-go">Register interest</span></a>
       <a class="door" href="tech-50/"><h3>Sri Lanka Tech 50</h3><p>Our annual fact checked list. Nominations for the first edition are open.</p><span class="door-go">Nominate a company</span></a>
       <a class="door" href="guides/sri-lanka-tech-industry-facts/"><h3>Industry facts</h3><p>Exports, workforce, graduates, rankings and exits, each with its source.</p><span class="door-go">Check the facts</span></a>
@@ -630,6 +639,7 @@ def build_companies(stories):
   <div class="wrap">
     <h1>Tech companies in Sri Lanka</h1>
     <p class="lede">Every company we have featured: {nb} built by Sri Lankans and {len(cos) - nb} global companies running engineering or operations from Sri Lanka. Each entry links to the full story and its sources.</p>
+    <p class="intro-cta">Looking for a partner or a team like one of these? <a href="../talent/find/">Tell us what you need</a> or <a href="{BOOKING_URL}" rel="noopener">schedule a call</a> and we will introduce the right one.</p>
     <div class="filters" role="group" aria-label="Filter companies">
       <button class="chip is-on" data-filter="all">All {len(cos)}</button>
       <button class="chip" data-filter="built">Sri Lankan built</button>
@@ -765,10 +775,11 @@ def write(rel, content):
 
 
 def main():
-    global seo_pages, seo_more, solutions
+    global seo_pages, seo_more, solutions, seo_compare
     import seo_pages
     import seo_more
     import solutions
+    import seo_compare
     stories = parse_stories()
     import art
     art.write_all(ROOT)
@@ -800,7 +811,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

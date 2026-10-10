@@ -342,6 +342,14 @@ def build_salary(B, stories):
         for role, med, rng, url in items:
             yearly = round(med * 1000 * 12 * 1.15 / FX / 100) * 100
             rows += f"<tr><td>{a(role, url)}</td><td>{med},000</td><td>{rng}</td><td>{usd(med)}</td><td>{yearly:,}</td></tr>"
+    csv = ["group,role,median_lkr_month,range_lkr_thousands_month,median_usd_month,employer_cost_usd_year,source,source_url"]
+    for group, items in GLASSDOOR:
+        for role, med, rng, url in items:
+            csv.append(f'{group},{role},{med * 1000},"{rng}",{usd(med).replace(",", "")},{round(med * 1000 * 12 * 1.15 / FX / 100) * 100},Glassdoor 2026 self reported,"{url}"')
+    for r, m, n, rng in COMMUNITY:
+        csv.append(f'Export and dollar pegged employers,{r},{m * 1000},"{rng}",{usd(m).replace(",", "")},{round(m * 1000 * 12 * 1.15 / FX / 100) * 100},TechSalary community records 2025 to 2026 ({n} records),https://techsalary.tldr.lk/')
+    B.write("data/sri-lanka-tech-salaries-2026.csv", "\n".join(csv) + "\n")
+    cite = f'<div class="cite"><strong>Use this data.</strong> Free to quote, chart or republish with a link to this page. <a href="../../data/sri-lanka-tech-salaries-2026.csv" download>Download the CSV</a> or run the numbers in the <a href="../../tools/team-cost-calculator/">team cost calculator</a>.<br><span>Suggested credit: Tech Destination Sri Lanka, Sri Lanka tech salary and cost guide 2026, {B.SITE_URL}/guides/sri-lanka-tech-salaries/</span></div>'
     crow = "".join(f"<tr><td>{e(r)}</td><td>{m},000</td><td>{rng}</td><td>{usd(m)}</td><td>{n}</td></tr>" for r, m, n, rng in COMMUNITY)
     faqs = [
         ("What is the average software engineer salary in Sri Lanka?", f"Self reported Glassdoor data for Colombo in 2026 shows a median of about LKR 177,000 a month for a software engineer (about USD {usd(177)}) and LKR 260,000 for a senior software engineer (about USD {usd(260)}). Community reported figures that include dollar pegged roles are higher, at about LKR 280,000 and LKR 447,000."),
@@ -366,6 +374,7 @@ def build_salary(B, stories):
     <thead><tr><th>Role</th><th>Median LKR a month</th><th>Range, LKR thousands</th><th>Median USD a month</th><th>Employer cost, USD a year</th></tr></thead>
     <tbody>{rows}</tbody>
   </table></div>
+  {cite}
 
   <h2 class="h-sub mt">What engineers at export and dollar pegged employers report</h2>
   <p class="cap">Medians we calculated from 2025 and 2026 records on {a("TechSalary", "https://techsalary.tldr.lk/")}, a community run Sri Lankan salary database. Small samples. Includes salaries pegged to foreign currency, so it skews high.</p>
@@ -584,6 +593,7 @@ def build_facts(B, stories):
   <p class="reviewed">Last reviewed {REVIEWED}. Where sources disagree we show the range and say who reported what.</p>
 </div></section>
 <section class="section top-0"><div class="wrap narrow">{items}
+  <div class="cite"><strong>Use these numbers.</strong> Free to quote or republish with a link to this page. Each one names its original source, so cite that as well.<br><span>Suggested credit: Tech Destination Sri Lanka, Sri Lanka tech industry facts 2026, {B.SITE_URL}/guides/sri-lanka-tech-industry-facts/</span></div>
   <div class="reach mt"><h2>Need a number we do not have?</h2><p>Ask us. If we can source it, we will add it here.</p><div class="actions"><a class="btn" href="{prefix}contact/">Contact us</a><a class="btn btn-ghost" href="{prefix}stories/">Read the stories</a></div></div>
 </div></section>
 """
@@ -599,6 +609,11 @@ def build_guides_hub(B):
         ("how-to-hire-in-sri-lanka/", "How to hire in Sri Lanka", "Employer of record, contractors, partner teams or your own company, with the employment rules to know."),
         ("set-up-a-company-in-sri-lanka/", "How to set up a tech company", "Registration, ownership, the 15% export tax, the Board of Investment and Port City Colombo."),
         ("sri-lanka-tech-industry-facts/", "Industry facts and statistics", "Exports, workforce, graduates, rankings and exits, each with its source."),
+        ("employer-of-record-sri-lanka/", "Employer of record in Sri Lanka", "Hire without a local company: who covers Sri Lanka, what you pay and the rules to know."),
+        ("../tools/team-cost-calculator/", "Team cost calculator", "Pick roles and team size to see monthly and yearly cost, direct or through a partner."),
+        ("../compare/", "Sri Lanka compared", "Side by side with Vietnam, the Philippines, Poland, Ukraine, Romania and Latin America."),
+        ("../answers/", "Answers", "Short, sourced answers to the questions founders and CTOs ask most."),
+        ("../playbook/", "The 2026 playbook (PDF)", "Salaries, hiring routes, setup, tax and industry numbers in one download."),
         ("../why-sri-lanka/", "Why Sri Lanka, by industry", "Evidence pages for healthtech, automotive, fintech, AI and more."),
         ("../hire-from/", "Hiring by country", "Time zones and proof for the USA, UK, Nordics, Netherlands, Germany, Australia and the Gulf."),
     ]
@@ -693,7 +708,14 @@ def build_llms(B, stories, pages):
         ("guides/set-up-a-company-in-sri-lanka/", "How to set up a tech company in Sri Lanka", "Registration, tax, Board of Investment and Port City"),
         ("guides/sri-lanka-tech-industry-facts/", "Sri Lanka tech industry facts and statistics", "Sourced industry numbers"),
         ("why-sri-lanka/", "Why Sri Lanka", "Eight evidence backed reasons"),
+        ("guides/employer-of-record-sri-lanka/", "Employer of record in Sri Lanka", "Providers, costs and rules for hiring without a local company"),
+        ("tools/team-cost-calculator/", "Sri Lanka team cost calculator", "Cost of a team by role and size"),
+        ("answers/", "Answers", "Short sourced answers on hiring, outsourcing and setup"),
+        ("playbook/", "Sri Lanka tech team playbook 2026", "All guides in one PDF"),
+        ("data/sri-lanka-tech-salaries-2026.csv", "Salary data 2026 (CSV)", "Open data, free to use with attribution"),
     ]]
+    import seo_compare
+    lines += ["", "## Sri Lanka compared with other offshore destinations"] + [f"- [Sri Lanka vs {o['name'][0].upper() + o['name'][1:]}]({B.SITE_URL}/compare/{o['slug']}/): {o['answer']}" for o in seo_compare.OTHERS]
     import solutions
     lines += ["", "## Ways to build a team in Sri Lanka"] + [f"- [{x['h1']}]({B.SITE_URL}/solutions/{x['slug']}/): {x['desc']}" for x in solutions.SOLUTIONS]
     lines += ["", "## Why Sri Lanka, by industry"] + [f"- [{v['h1']}]({B.SITE_URL}/why-sri-lanka/{v['slug']}/): {v['desc']}" for v in VERTICALS]

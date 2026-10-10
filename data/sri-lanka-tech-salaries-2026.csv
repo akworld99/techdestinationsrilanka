@@ -1,0 +1,31 @@
+group,role,median_lkr_month,range_lkr_thousands_month,median_usd_month,employer_cost_usd_year,source,source_url
+Software engineering,Associate software engineer,93000,"53 to 175",280,3900,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-associate-software-engineer-salary-SRCH_IL.0,7_IM1025_KO8,35.htm"
+Software engineering,Software engineer,177000,"118 to 243",535,7400,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-software-engineer-salary-SRCH_IL.0,7_IM1025_KO8,25.htm"
+Software engineering,Senior software engineer,260000,"188 to 900",785,10800,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-sri-lanka-senior-software-engineer-salary-SRCH_IL.0,17_IM1025_KO18,42.htm"
+Software engineering,Associate technical lead,365000,"274 to 524",1105,15200,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-associate-technical-lead-salary-SRCH_IL.0,7_IM1025_KO8,32.htm"
+Software engineering,Software architect,661000,"465 to 988",1995,27600,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-software-architect-salary-SRCH_IL.0,7_IM1025_KO8,26.htm"
+Software engineering,Engineering manager,390000,"185 to 2,400",1180,16300,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-engineering-manager-salary-SRCH_IL.0,7_IM1025_KO8,27.htm"
+QA, DevOps and security,QA engineer,101000,"62 to 194",305,4200,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-qa-engineer-salary-SRCH_IL.0,7_IM1025_KO8,19.htm"
+QA, DevOps and security,Senior QA engineer,205000,"153 to 300",620,8500,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-senior-qa-engineer-salary-SRCH_IL.0,7_IM1025_KO8,26.htm"
+QA, DevOps and security,DevOps engineer,202000,"128 to 456",610,8400,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-devops-engineer-salary-SRCH_IL.0,7_IM1025_KO8,23.htm"
+QA, DevOps and security,Senior DevOps engineer,333000,"238 to 550",1005,13900,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-senior-devops-engineer-salary-SRCH_IL.0,7_IM1025_KO8,30.htm"
+QA, DevOps and security,Cyber security engineer,205000,"108 to 1,300",620,8500,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-cyber-security-engineer-salary-SRCH_IL.0,7_IM1025_KO8,31.htm"
+Data and AI,Data engineer,215000,"140 to 356",650,9000,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-data-engineer-salary-SRCH_IL.0,7_IM1025_KO8,21.htm"
+Data and AI,Senior data engineer,364000,"241 to 513",1100,15200,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-senior-data-engineer-salary-SRCH_IL.0,7_IM1025_KO8,28.htm"
+Data and AI,Data scientist,217000,"142 to 279",655,9000,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-data-scientist-salary-SRCH_IL.0,7_IM1025_KO8,22.htm"
+Data and AI,Machine learning engineer,233000,"110 to 279",705,9700,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-machine-learning-engineer-salary-SRCH_IL.0,7_IM1025_KO8,33.htm"
+Product, design and ERP,UX designer,156000,"88 to 229",470,6500,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-ux-designer-salary-SRCH_IL.0,7_IM1025_KO8,19.htm"
+Product, design and ERP,Senior UX designer,244000,"210 to 376",735,10200,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-senior-ux-designer-salary-SRCH_IL.0,7_IM1025_KO8,26.htm"
+Product, design and ERP,Business analyst,108000,"74 to 167",325,4500,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-business-analyst-salary-SRCH_IL.0,7_IM1025_KO8,24.htm"
+Product, design and ERP,Product manager,233000,"145 to 367",705,9700,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-product-manager-salary-SRCH_IL.0,7_IM1025_KO8,23.htm"
+Product, design and ERP,Senior product manager,325000,"195 to 575",980,13500,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-senior-product-manager-salary-SRCH_IL.0,7_IM1025_KO8,30.htm"
+Product, design and ERP,ERP consultant,169000,"103 to 249",510,7000,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-erp-consultant-salary-SRCH_IL.0,7_IM1025_KO8,22.htm"
+Product, design and ERP,SAP consultant,219000,"133 to 415",660,9100,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-sap-consultant-salary-SRCH_IL.0,7_IM1025_KO8,22.htm"
+Finance,Assistant accountant,81000,"54 to 125",245,3400,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-assistant-accountant-salary-SRCH_IL.0,7_IM1025_KO8,28.htm"
+Finance,Financial analyst,79000,"53 to 129",240,3300,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-financial-analyst-salary-SRCH_IL.0,7_IM1025_KO8,25.htm"
+Finance,Finance manager,267000,"211 to 433",805,11100,Glassdoor 2026 self reported,"https://www.glassdoor.com/Salaries/colombo-finance-manager-salary-SRCH_IL.0,7_IM1025_KO8,23.htm"
+Export and dollar pegged employers,Associate software engineer,115000,"50 to 225",345,4800,TechSalary community records 2025 to 2026 (13 records),https://techsalary.tldr.lk/
+Export and dollar pegged employers,Software engineer,280000,"38 to 1,496",845,11700,TechSalary community records 2025 to 2026 (19 records),https://techsalary.tldr.lk/
+Export and dollar pegged employers,Senior software engineer,447000,"120 to 1,978",1350,18600,TechSalary community records 2025 to 2026 (13 records),https://techsalary.tldr.lk/
+Export and dollar pegged employers,Associate tech lead,605000,"392 to 900",1830,25200,TechSalary community records 2025 to 2026 (11 records),https://techsalary.tldr.lk/
+Export and dollar pegged employers,Tech lead and senior tech lead,774000,"638 to 2,791",2340,32300,TechSalary community records 2025 to 2026 (6 records),https://techsalary.tldr.lk/

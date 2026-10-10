@@ -154,6 +154,8 @@ def build_all(B, stories):
   {faq}
   <h2 class="h-sub mt">Other ways to build</h2>
   {others}
+  <h2 class="h-sub mt">Plan it</h2>
+  {SP.chip_links([("Team cost calculator", prefix + "tools/team-cost-calculator/"), ("Sri Lanka compared with other destinations", prefix + "compare/"), ("Employer of record", prefix + "guides/employer-of-record-sri-lanka/"), ("Download the playbook", prefix + "playbook/")])}
 </div>
 <div class="wrap"><h2 class="h-sub mt">By industry</h2>{ind}</div>
 </section>

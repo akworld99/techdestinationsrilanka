@@ -108,6 +108,8 @@
           form.reset();
           status.textContent = form.dataset.done;
           if (window.gtag) gtag('event', 'generate_lead', { form_name: form.dataset.form });
+          var rev = form.closest('[data-reveal]');
+          if (rev) { var link = document.getElementById(rev.dataset.reveal + '-link'); if (link) link.hidden = false; }
         })
         .catch(function () {
           status.textContent = 'That did not send. Check your connection and try again, or email techdestinationsrilanka@gmail.com.';
