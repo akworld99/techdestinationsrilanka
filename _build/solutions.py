@@ -125,7 +125,7 @@ SOLUTIONS = [
 
 def tiles(prefix):
     return '<div class="tile-grid five">' + "".join(
-        f'<a class="tile" href="{prefix}solutions/{s["slug"]}/"><img src="{prefix}assets/covers/{s["img"]}.jpg" alt="" loading="lazy" width="1200" height="630"><span class="tile-body"><strong>{e(s["label"])}</strong><span>{e(s["short"])}</span></span></a>'
+        f'<a class="tile" href="{prefix}solutions/{s["slug"]}/"><img src="{prefix}assets/art/{s["slug"]}.svg" alt="" loading="lazy" width="1200" height="900"><span class="tile-body"><strong>{e(s["label"])}</strong><span>{e(s["short"])}</span></span></a>'
         for s in SOLUTIONS) + "</div>"
 
 
@@ -144,7 +144,7 @@ def build_all(B, stories):
   <p class="reviewed">Last reviewed {SP.REVIEWED}.</p>
 </div></section>
 <section class="section top-0"><div class="wrap narrow">
-  <img class="story-cover" src="{prefix}assets/covers/{s['img']}.jpg" alt="" width="1200" height="630">
+  <img class="story-cover art" src="{prefix}assets/art/{s['slug']}.svg" alt="" width="1200" height="900">
   {SP.stats_strip(s['stats'])}
   <div class="prose tight">{''.join(f'<h2>{e(h)}</h2><p>{SP.linked(B, stories, t, prefix)}</p>' for h, t in s['sections'])}</div>
   <h2 class="h-sub mt">Who does this in Sri Lanka</h2>
@@ -160,7 +160,7 @@ def build_all(B, stories):
 """
         path = f"solutions/{s['slug']}/"
         head = faq_ld + SP.crumbs_ld(B, [("Ways to build", "solutions/"), (s["label"], path)])
-        B.write(path + "index.html", B.page(s["title"], s["desc"], body, prefix, path, image=f"assets/covers/{s['img']}.jpg", extra_head=head, active="services"))
+        B.write(path + "index.html", B.page(s["title"], s["desc"], body, prefix, path, extra_head=head, active="services"))
         paths.append(path)
     body = f"""
 <section class="page-head"><div class="wrap">

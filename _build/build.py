@@ -490,15 +490,6 @@ def build_home(stories):
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>{len(companies)} companies featured so far</h2><a class="more" href="companies/">Open the directory</a></div>
-    <ul class="names">
-      {''.join(f'<li><a href="stories/{s["slug"]}/">{logo(s, "")}{e(s["company"])}</a></li>' for s in sorted([s for s in stories if s.get("company")], key=lambda s: s["company"].lower()))}
-    </ul>
-  </div>
-</section>
-
-<section class="section tint">
-  <div class="wrap">
     <div class="section-head"><h2>Live from our LinkedIn</h2><a class="more" href="{LINKEDIN}" rel="noopener">Follow {FOLLOWERS} others</a></div>
     <div class="li-row">
       {''.join(f'<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:{s["linkedin"]}?collapsed=1" height="600" frameborder="0" allowfullscreen loading="lazy" title="LinkedIn post: {e(s["title"])}"></iframe>' for s in stories[:3])}
@@ -776,6 +767,8 @@ def main():
     import seo_more
     import solutions
     stories = parse_stories()
+    import art
+    art.write_all(ROOT)
     for d in ("covers", "posts", "logos"):
         (ROOT / "assets" / d).mkdir(parents=True, exist_ok=True)
     cf = HERE / "post-images" / "crops.json"   # per story [x, y, width] of the banner crop inside the 800x1000 post graphic

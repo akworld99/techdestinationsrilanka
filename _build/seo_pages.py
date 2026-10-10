@@ -135,27 +135,19 @@ def _names(by, proof, n=3):
     return out
 
 
+TAGLINE = {"healthtech": "Regulated health platforms and operations", "automotive": "Embedded, electric vehicle and connected car software", "fintech": "Trading, banking and wealth platforms",
+           "ai": "AI products, agents and data platforms", "enterprise-software": "ERP, integration and large product codebases", "semiconductors-embedded": "Chip design tools and device software",
+           "logistics-travel": "Booking, warehouse and supply chain systems", "govtech": "Public sector platforms and secure delivery", "finance-accounting": "Accounting, finance operations and shared services"}
+PITCH = {"usa": "Core engineering and R&D for Fortune 500 companies", "uk": "Trading, wealth and simulation platforms", "nordics": "Product partnerships that have lasted decades",
+         "norway": "National health and warehouse automation software", "sweden": "Enterprise software R&D at scale", "netherlands": "Embedded engineering teams for scaleups",
+         "germany": "Automotive and chip design software", "australia": "Live network operations and dedicated teams", "uae-gulf": "The closest deep engineering market to the Gulf"}
+
+
 def hub_blocks(prefix, stories=None):
-    """Industry image tiles and country cards, reused on the home page, the why page and the hire hub."""
-    from pathlib import Path
-    here = Path(__file__).resolve().parent
-    by = {s["slug"]: s for s in (stories or [])}
-
-    def logos(proof, n=5):
-        out = ""
-        k = 0
-        for slug, _ in proof:
-            if k < n and slug in by and by[slug].get("company") and (here / "logos" / f"{slug}.png").exists():
-                out += f'<img src="{prefix}assets/logos/{slug}.png" alt="{e(by[slug]["company"])} logo" width="36" height="36" loading="lazy">'
-                k += 1
-        return out
-
-    ind = []
-    for x in VERTICALS:
-        names = _names(by, x["proof"])
-        ind.append(f'<a class="tile" href="{prefix}why-sri-lanka/{x["slug"]}/"><img src="{prefix}assets/covers/{VIMG[x["slug"]]}.jpg" alt="" loading="lazy" width="1200" height="630">'
-                   f'<span class="tile-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[x["slug"]]}</svg></span>'
-                   f'<span class="tile-body"><strong>{e(x["label"])}</strong><span>{e(", ".join(names[:3]))}{" and more" if len(names) > 3 else ""}</span><span class="tile-logos">{logos(x["proof"], 4)}</span></span></a>')
+    """Industry tiles and country cards, reused on the home page, the why page and the hire hub. No company names or logos here by design."""
+    ind = "".join(
+        f'<a class="tile" href="{prefix}why-sri-lanka/{x["slug"]}/"><img src="{prefix}assets/art/{x["slug"]}.svg" alt="" loading="lazy" width="1200" height="900">'
+        f'<span class="tile-body"><strong>{e(x["label"])}</strong><span>{e(TAGLINE[x["slug"]])}</span></span></a>' for x in VERTICALS)
     ctry = []
     for m in MARKETS:
         if m["slug"] == "nordics":
@@ -165,11 +157,10 @@ def hub_blocks(prefix, stories=None):
             flag = '<span class="flags">' + _flag(_AE) + _flag(om) + "</span>"
         else:
             flag = _flag(FLAGS[m["slug"]])
-        names = _names(by, m["proof"])
-        n = len(names)
-        ctry.append(f'<a class="ctry" href="{prefix}hire-from/{m["slug"]}/"><span class="ctry-top">{flag}<span class="ctry-n"><b>{n}</b> companies</span></span><strong>{e(m["label"])}</strong>'
-                    f'<span class="ctry-ov">{e(", ".join(names[:3]))}{" and more" if n > 3 else ""}</span><span class="tile-logos dark">{logos(m["proof"], 5)}</span></a>')
-    return f'<div class="tile-grid">{"".join(ind)}</div>', f'<div class="ctry-grid">{"".join(ctry)}</div>'
+        n = len(m["proof"])
+        ctry.append(f'<a class="ctry" href="{prefix}hire-from/{m["slug"]}/"><span class="ctry-top">{flag}<span class="ctry-n"><b>{n}</b> companies building here</span></span><strong>{e(m["label"])}</strong>'
+                    f'<span class="ctry-ov">{e(PITCH[m["slug"]])}</span></a>')
+    return f'<div class="tile-grid">{ind}</div>', f'<div class="ctry-grid">{"".join(ctry)}</div>'
 
 
 def related_for(slug):
@@ -202,7 +193,7 @@ def build_verticals(B, stories):
 </section>
 <section class="section top-0">
   <div class="wrap narrow">
-    <img class="story-cover" src="{prefix}assets/covers/{VIMG[v['slug']]}.jpg" alt="" width="1200" height="630">
+    <img class="story-cover art" src="{prefix}assets/art/{v['slug']}.svg" alt="" width="1200" height="900">
     {stats_strip(v['stats'])}
     <h2 class="h-sub mt">Who is already building {e(v['name'])} in Sri Lanka</h2>
     {proof_list(B, stories, v['proof'], prefix)}
@@ -225,7 +216,7 @@ def build_verticals(B, stories):
 """
         head = faq_ld + crumbs_ld(B, [("Why Sri Lanka", "why-sri-lanka/"), (v["label"], f"why-sri-lanka/{v['slug']}/")])
         path = f"why-sri-lanka/{v['slug']}/"
-        B.write(path + "index.html", B.page(v["title"], v["desc"], body, prefix, path, image=f"assets/covers/{VIMG[v['slug']]}.jpg", extra_head=head, active="why"))
+        B.write(path + "index.html", B.page(v["title"], v["desc"], body, prefix, path, extra_head=head, active="why"))
         paths.append(path)
     return paths
 
