@@ -29,6 +29,7 @@ Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its
 - [Employer of record in Sri Lanka](https://techdestinationsrilanka.lk/guides/employer-of-record-sri-lanka/): Providers, costs and rules for hiring without a local company
 - [Sri Lanka team cost calculator](https://techdestinationsrilanka.lk/tools/team-cost-calculator/): Cost of a team by role and size
 - [Answers](https://techdestinationsrilanka.lk/answers/): Short sourced answers on hiring, outsourcing and setup
+- [Sri Lanka's startup ecosystem](https://techdestinationsrilanka.lk/guides/sri-lanka-startup-ecosystem/): Size, rankings, exits, investors and weaknesses
 - [Sri Lanka tech team playbook 2026](https://techdestinationsrilanka.lk/playbook/): All guides in one PDF
 - [Salary data 2026 (CSV)](https://techdestinationsrilanka.lk/data/sri-lanka-tech-salaries-2026.csv): Open data, free to use with attribution
 
@@ -56,17 +57,17 @@ Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its
 - [Why Sri Lanka for semiconductor and embedded software companies](https://techdestinationsrilanka.lk/why-sri-lanka/semiconductors-embedded/): Synopsys engineers chip design software in Colombo and Zebra runs device software R&D here. The evidence, the roles and how to hire embedded talent in Sri Lanka.
 - [Why Sri Lanka for logistics, supply chain and travel tech companies](https://techdestinationsrilanka.lk/why-sri-lanka/logistics-travel/): A travel platform with a billion bookings, warehouse automation and Sysco's supply chain systems are built by Sri Lankan engineers. How to hire them.
 - [Why Sri Lanka for govtech and public sector technology](https://techdestinationsrilanka.lk/why-sri-lanka/govtech/): Sri Lankan companies build AI infrastructure for Estonia, public sector software for Sweden and a transformation programme for Qatar. The evidence and how to hire.
-- [Why Sri Lanka for finance, accounting and shared services](https://techdestinationsrilanka.lk/why-sri-lanka/finance-accounting/): Infomate, WNS and EY run finance, accounting and delivery centres from Sri Lanka, drawing on one of the largest pools of CIMA and ACCA accountants outside the UK.
+- [Why Sri Lanka for finance, accounting and shared services](https://techdestinationsrilanka.lk/why-sri-lanka/finance-accounting/): WNS, EY and Sri Lankan firms run finance, accounting and delivery centres from Sri Lanka, drawing on one of the largest pools of CIMA and ACCA accountants outside the UK.
 
 ## Hiring from each country
 - [Hire Sri Lankan tech talent from the USA](https://techdestinationsrilanka.lk/hire-from/usa/): Sysco, Synopsys, Zebra and Virtusa run engineering in Sri Lanka for US businesses. Who is there, how the time zones work and how to hire.
 - [Hire Sri Lankan tech talent from the UK](https://techdestinationsrilanka.lk/hire-from/uk/): The London Stock Exchange's trading platform and a wealth platform bought by JPMorganChase were built by Sri Lankan engineers. How to hire from the UK.
-- [Hire Sri Lankan tech talent from the Nordics](https://techdestinationsrilanka.lk/hire-from/nordics/): IFS, Creative Software, Tiqri and Frontwalker have built Nordic software in Sri Lanka for up to 27 years. Who is there, the time overlap and how to hire.
-- [Hire Sri Lankan tech talent from Norway](https://techdestinationsrilanka.lk/hire-from/norway/): DIPS, Tiqri and a Norwegian accounting firm have built with Sri Lankan teams for 15 years and more. Who is there, the time overlap and how to hire from Norway.
-- [Hire Sri Lankan tech talent from Sweden](https://techdestinationsrilanka.lk/hire-from/sweden/): IFS does about 60% of its global product development in Colombo and Frontwalker calls Colombo its global tech center. Who is there, the time overlap and how to hire from Sweden.
-- [Hire Sri Lankan tech talent from the Netherlands](https://techdestinationsrilanka.lk/hire-from/netherlands/): Gapstars and ICT Group have built Dutch engineering capacity in Sri Lanka. Who is there, the time overlap and how to hire from the Netherlands.
+- [Hire Sri Lankan tech talent from the Nordics](https://techdestinationsrilanka.lk/hire-from/nordics/): Nordic companies, led by IFS, have built software in Sri Lanka for up to 27 years. Who is there, the time overlap and how to hire.
+- [Hire Sri Lankan tech talent from Norway](https://techdestinationsrilanka.lk/hire-from/norway/): DIPS, a Norwegian software group and a Norwegian accounting firm have built with Sri Lankan teams for 15 years and more. Who is there, the time overlap and how to hire from Norway.
+- [Hire Sri Lankan tech talent from Sweden](https://techdestinationsrilanka.lk/hire-from/sweden/): IFS does about 60% of its global product development in Colombo and a Stockholm listed software group calls Colombo its global tech center. Who is there, the time overlap and how to hire from Sweden.
+- [Hire Sri Lankan tech talent from the Netherlands](https://techdestinationsrilanka.lk/hire-from/netherlands/): Dutch founders and technology groups have built engineering capacity in Sri Lanka. Who is there, the time overlap and how to hire from the Netherlands.
 - [Hire Sri Lankan tech talent from Germany](https://techdestinationsrilanka.lk/hire-from/germany/): Sri Lankan engineers contribute to software for German vehicle brands and build chip design tools used by the automotive industry. The evidence and how to hire.
-- [Hire Sri Lankan tech talent from Australia](https://techdestinationsrilanka.lk/hire-from/australia/): Superloop runs 24x7 network operations from Colombo and Dijital Team built a 200 person team in two years. Who is there and how to hire from Australia.
+- [Hire Sri Lankan tech talent from Australia](https://techdestinationsrilanka.lk/hire-from/australia/): An ASX listed telecom runs 24x7 network operations from Colombo, and Australian companies have built teams of 200 people here. Who is there and how to hire from Australia.
 - [Hire Sri Lankan tech talent from the UAE, Oman and the Gulf](https://techdestinationsrilanka.lk/hire-from/uae-gulf/): Sri Lanka is 1.5 hours ahead of the UAE and Oman and already delivers government and enterprise technology in the Gulf. The evidence and how to hire.
 
 ## Services

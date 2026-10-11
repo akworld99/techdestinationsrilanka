@@ -415,3 +415,7 @@ MARKETS = [
         ],
     ),
 ]
+
+
+import capability
+capability.apply(VERTICALS + MARKETS)

@@ -51,6 +51,9 @@ ROLES = [
 ]
 
 
+import capability
+capability.apply(ROLES)
+
 def build_roles(B, stories):
     paths = []
     for r in ROLES:
@@ -65,7 +68,7 @@ def build_roles(B, stories):
         rows = "".join(f"<tr><td>{e(l)}</td><td>{m},000</td><td>{SP.usd(m)}</td><td>{round(m * 1000 * 12 * 1.15 / SP.FX / 100) * 100:,}</td></tr>" for l, m in r["pay"])
         faqs = [
             (f"How much do {r['role']} earn in Sri Lanka?", f"Self reported Glassdoor data for Colombo in 2026 shows a median of about LKR {main[1]},000 a month (about USD {SP.usd(main[1])}) for a {main[0].lower()}. Export focused employers pay above the median."),
-            (f"Which companies employ {r['role']} in Sri Lanka?", "Published examples include " + ", ".join(next(s for s in stories if s["slug"] == p[0]).get("company") or "IFS" for p in r["proof"][:4]) + "."),
+            (f"Which companies employ {r['role']} in Sri Lanka?", "Global companies with their own centres here, such as IFS, Sysco, Synopsys, Zebra Technologies and EY, alongside Sri Lankan product and services companies."),
             (f"Do I need a local company to hire {r['role']} in Sri Lanka?", "No. You can hire through an employer of record, contract individuals, or take a dedicated team from a Sri Lankan company. Your own entity makes sense once the team passes a few dozen people."),
         ]
         faq, faq_ld = SP.faq_block(stories, faqs)
@@ -82,7 +85,7 @@ def build_roles(B, stories):
   <p class="cap">Median monthly pay in Colombo. Source: Glassdoor, 2026, self reported. Employer cost adds 15% statutory contributions. Full method and caveats in the <a href="{prefix}guides/sri-lanka-tech-salaries/">salary guide</a>.</p>
   <div class="tbl"><table><thead><tr><th>Role</th><th>Median LKR a month</th><th>Median USD a month</th><th>Employer cost, USD a year</th></tr></thead><tbody>{rows}</tbody></table></div>
   <p class="body-l mt-s">{e(r['note'])}</p>
-  <h2 class="h-sub mt">Where {e(r['role'])} in Sri Lanka work today</h2>
+  <h2 class="h-sub mt">What {e(r['role'])} in Sri Lanka work on today</h2>
   {SP.proof_list(B, stories, r['proof'], prefix)}
   <h2 class="h-sub mt">How to hire them</h2>
   <ol class="steps compact">

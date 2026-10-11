@@ -43,8 +43,8 @@ def form(B, kind, title, intro, fields, submit, done):
 
 
 def story_link(B, stories, slug, prefix, label=None):
-    s = next(x for x in stories if x["slug"] == slug)
-    return f'<a href="{prefix}stories/{slug}/">{e(label or s.get("company") or s["title"])}</a>'
+    """Plain mention, no link: capability pages do not promote featured companies."""
+    return e(seo_pages.mention(stories, slug, label or ""))
 
 
 # ------------------------------------------------------------------ services
@@ -186,10 +186,10 @@ def build_talent(B, stories):
   <div class="wrap">
     <div class="section-head"><h2>What Sri Lankan talent is trusted with</h2><a class="more" href="../stories/">Read the stories</a></div>
     <div class="proof">
-      <div><strong>Core product R&D</strong><p>Chip design software at {sl('synopsys')}, enterprise platforms at {sl('sysco-labs')} and device software at {sl('zebra-technologies')}.</p></div>
-      <div><strong>National systems</strong><p>Norway's health records with {sl('creative-software')} and Estonia's government AI with {sl('rootcode')}.</p></div>
-      <div><strong>Financial infrastructure</strong><p>The London Stock Exchange's trading platform from {sl('millenniumit')} and a wealth platform bought by JPMorganChase from {sl('wealthos')}.</p></div>
-      <div><strong>Embedded teams</strong><p>Long running dedicated teams at {sl('tiqri')}, {sl('gapstars')} and {sl('oceans')}.</p></div>
+      <div><strong>Core product R&D</strong><p>Chip design software at Synopsys, enterprise platforms at IFS and Sysco, and device software at Zebra Technologies.</p></div>
+      <div><strong>National systems</strong><p>Engineering on Norway's leading health record platform and on Estonia's government AI.</p></div>
+      <div><strong>Financial infrastructure</strong><p>The London Stock Exchange's trading platform, and a wealth platform bought by JPMorganChase.</p></div>
+      <div><strong>Embedded teams</strong><p>Dedicated teams that have worked inside European and US companies for ten years and more.</p></div>
     </div>
   </div>
 </section>
@@ -290,23 +290,24 @@ def build_talent(B, stories):
 # ------------------------------------------------------------------ why Sri Lanka
 def build_why(B, stories):
     sl = lambda slug, label=None: story_link(B, stories, slug, "../", label)
+    lk = lambda slug, label: f'<a href="../stories/{slug}/">{e(label)}</a>'
     rows = [
         ("The work is core product, and has been for decades",
-         f"IFS does about 60% of its global product development in Colombo ({sl('why-global-companies-choose-sri-lanka', 'the roundup')}). {sl('sysco-labs')} works on the same codebase as Sysco's teams in Texas. {sl('synopsys')} engineers chip design software here, and {sl('zebra-technologies')} builds product for its global platforms."),
+         f"IFS does about 60% of its global product development in Colombo ({lk('why-global-companies-choose-sri-lanka', 'our analysis')}). Sysco's engineers here work on the same codebase as its teams in Texas. Synopsys engineers chip design software here, and Zebra Technologies builds product for its global platforms."),
         ("Sri Lankan founders build companies that get bought",
-         f"The London Stock Exchange bought {sl('millenniumit')} for its trading platform. EQT acquired {sl('wso2')} for $600 million. {sl('virtusa')} listed on Nasdaq and sold for $2 billion. JPMorganChase acquired {sl('wealthos')} in 2026."),
+         "The London Stock Exchange bought the Colombo company that built its trading platform. EQT acquired WSO2 for $600 million. Virtusa listed on Nasdaq and sold for $2 billion. JPMorganChase acquired a Sri Lankan founded wealth platform in 2026."),
         ("European and Australian companies stay for the long run",
-         f"{sl('creative-software')} has worked with Scandinavian clients for 25 years and {sl('tiqri')} for 15. {sl('frontwalker')} calls Colombo its global tech center. {sl('gapstars')}, {sl('superloop')} and {sl('dijital-team')} have all built their engineering base here."),
+         "Colombo teams have worked with Scandinavian clients for 25 years. A Stockholm listed software group calls Colombo its global tech center. Dutch and Australian companies have built their engineering base here and kept growing it."),
         ("The talent pipeline is measured",
-         f"12,000+ ICT graduates a year and third in Asia for affordable tech talent, according to {sl('startup-genome-2026', 'Startup Genome 2026')}. 120,000+ IT professionals and $1.645 billion in exports ({sl('it-bpm-exports-2025', 'export data')}). {sl('universities', 'Moratuwa and SLIIT')} feed it."),
+         f"12,000+ ICT graduates a year and third in Asia for affordable tech talent, according to {lk('startup-genome-2026', 'Startup Genome 2026')}. 120,000+ IT professionals and $1.645 billion in exports ({lk('it-bpm-exports-2025', 'export data')}). {lk('universities', 'Moratuwa and SLIIT')} feed it."),
         ("It is more than software engineers",
-         f"{sl('infomate')} runs finance for clients in 10+ countries on Sri Lanka's depth in certified accountants. {sl('healthrecon-connect')} handles US healthcare revenue operations under HITRUST certification."),
+         "Sri Lanka's depth in certified accountants supports finance operations for clients in 10+ countries, and US healthcare revenue operations run from Colombo under HITRUST certification."),
         ("The working day overlaps with yours",
-         f"GMT+5:30 gives four to six hours of real time overlap with Europe and three to four with the US East Coast, and a full day with the Middle East and much of Asia Pacific ({sl('why-global-companies-choose-sri-lanka', 'analysis')})."),
+         f"GMT+5:30 gives four to six hours of real time overlap with Europe and three to four with the US East Coast, and a full day with the Middle East and much of Asia Pacific ({lk('why-global-companies-choose-sri-lanka', 'analysis')})."),
         ("The infrastructure is already built",
-         f"{sl('orion-city')} houses 85+ technology companies on a purpose built campus. Port City Colombo's special economic zone has its first global tenants, including {sl('igt1-lanka')}."),
-        ("New companies are building AI products, beyond services",
-         f"{sl('roar-global')} launched the country's first AI gateway. {sl('xeynergy')} ships its own AI products. {sl('rootcode')} builds AI infrastructure for the Estonian government."),
+         "Purpose built technology campuses in Colombo house 85+ technology companies, and Port City Colombo's special economic zone has its first global tenants."),
+        ("Startups are building products, beyond services",
+         'Sri Lankan startups ship their own AI products, and one builds AI infrastructure for the Estonian government. The country has about 750 to 1,000 startups. <a href="../guides/sri-lanka-startup-ecosystem/">See the startup ecosystem</a>.'),
     ]
     body = f"""
 <section class="page-head">

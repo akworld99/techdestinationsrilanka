@@ -304,6 +304,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}companies/">Companies</a>
       <a href="{prefix}why-sri-lanka/">Why Sri Lanka</a>
       <a href="{prefix}guides/sri-lanka-tech-industry-facts/">Industry facts</a>
+      <a href="{prefix}guides/sri-lanka-startup-ecosystem/">Startup ecosystem</a>
       <a href="{prefix}answers/">Answers</a>
       <a href="{prefix}tech-50/">Sri Lanka Tech 50</a>
       <a href="{prefix}about/">About</a>
@@ -492,6 +493,7 @@ def build_home(stories):
       <a class="door" href="tools/team-cost-calculator/"><h3>Team cost calculator</h3><p>Pick the roles and team size. See the monthly and yearly cost, direct or through a partner.</p><span class="door-go">Estimate a team</span></a>
       <a class="door" href="compare/"><h3>Sri Lanka compared</h3><p>Side by side with Vietnam, the Philippines, Poland, Ukraine, Romania and Latin America.</p><span class="door-go">Compare destinations</span></a>
       <a class="door" href="playbook/"><h3>The 2026 playbook</h3><p>Salaries, hiring routes, setup, tax and industry numbers in one PDF.</p><span class="door-go">Download free</span></a>
+      <a class="door" href="guides/sri-lanka-startup-ecosystem/"><h3>The startup ecosystem</h3><p>How many startups, how it ranks, the exits, the investors and the weak points.</p><span class="door-go">See the ecosystem</span></a>
       <a class="door" href="tech-tour/"><h3>Sri Lanka Tech Tour</h3><p>Three days in Colombo meeting the companies and people in our stories.</p><span class="door-go">Register interest</span></a>
       <a class="door" href="tech-50/"><h3>Sri Lanka Tech 50</h3><p>Our annual fact checked list. Nominations for the first edition are open.</p><span class="door-go">Nominate a company</span></a>
       <a class="door" href="guides/sri-lanka-tech-industry-facts/"><h3>Industry facts</h3><p>Exports, workforce, graduates, rankings and exits, each with its source.</p><span class="door-go">Check the facts</span></a>
@@ -775,11 +777,12 @@ def write(rel, content):
 
 
 def main():
-    global seo_pages, seo_more, solutions, seo_compare
+    global seo_pages, seo_more, solutions, seo_compare, seo_startups
     import seo_pages
     import seo_more
     import solutions
     import seo_compare
+    import seo_startups
     stories = parse_stories()
     import art
     art.write_all(ROOT)
@@ -811,7 +814,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

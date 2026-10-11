@@ -123,6 +123,9 @@ SOLUTIONS = [
 ]
 
 
+import capability
+capability.apply(SOLUTIONS)
+
 def tiles(prefix):
     return '<div class="tile-grid five">' + "".join(
         f'<a class="tile" href="{prefix}solutions/{s["slug"]}/"><img src="{prefix}assets/art/{s["slug"]}.svg" alt="" loading="lazy" width="1200" height="900"><span class="tile-body"><strong>{e(s["label"])}</strong><span>{e(s["short"])}</span></span></a>'
@@ -147,7 +150,7 @@ def build_all(B, stories):
   <img class="story-cover art" src="{prefix}assets/art/{s['slug']}.svg" alt="" width="1200" height="900">
   {SP.stats_strip(s['stats'])}
   <div class="prose tight">{''.join(f'<h2>{e(h)}</h2><p>{SP.linked(B, stories, t, prefix)}</p>' for h, t in s['sections'])}</div>
-  <h2 class="h-sub mt">Who does this in Sri Lanka</h2>
+  <h2 class="h-sub mt">What this looks like in Sri Lanka today</h2>
   {SP.proof_list(B, stories, s['proof'], prefix)}
   <div class="reach mt"><h2>Talk to us first</h2><p>Tell us what you are building and how big the team needs to be. We will suggest the route and introduce the right people or partners.</p>
   <div class="actions"><a class="btn" href="{prefix}talent/find/?route={s['slug']}">Find talent</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/sri-lanka-tech-salaries/">Salary and cost guide</a><a class="btn btn-ghost" href="{prefix}guides/set-up-a-company-in-sri-lanka/">Setup guide</a></div></div>
@@ -155,7 +158,7 @@ def build_all(B, stories):
   <h2 class="h-sub mt">Other ways to build</h2>
   {others}
   <h2 class="h-sub mt">Plan it</h2>
-  {SP.chip_links([("Team cost calculator", prefix + "tools/team-cost-calculator/"), ("Sri Lanka compared with other destinations", prefix + "compare/"), ("Employer of record", prefix + "guides/employer-of-record-sri-lanka/"), ("Download the playbook", prefix + "playbook/")])}
+  {SP.chip_links([("Team cost calculator", prefix + "tools/team-cost-calculator/"), ("Sri Lanka compared with other destinations", prefix + "compare/"), ("Employer of record", prefix + "guides/employer-of-record-sri-lanka/"), ("Download the playbook", prefix + "playbook/"), ("Startup ecosystem", prefix + "guides/sri-lanka-startup-ecosystem/")])}
 </div>
 <div class="wrap"><h2 class="h-sub mt">By industry</h2>{ind}</div>
 </section>

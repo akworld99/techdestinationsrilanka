@@ -12,26 +12,30 @@ FX = 331  # LKR per USD, market rate on 8 October 2026
 
 
 # ------------------------------------------------------------------ helpers
-def linked(B, stories, text, prefix):
-    """Escape text, then turn [[slug]] and [[slug|label]] into story links."""
+def mention(stories, slug, label=""):
+    """Plain text for a story reference: a neutral description for featured service companies, the name otherwise."""
+    import capability
+    if slug in capability.ANON:
+        return capability.ANON[slug]
     by = {s["slug"]: s for s in stories}
+    return label or by[slug].get("company") or by[slug]["title"]
 
+
+def _mentions(stories, text):
     def rep(m):
         slug, _, label = m.group(1).partition("|")
-        s = by[slug]
-        return f'<a href="{prefix}stories/{slug}/">{e(label or s.get("company") or s["title"])}</a>'
+        out = mention(stories, slug, label)
+        start = m.start() == 0 or text[:m.start()].rstrip().endswith((".", "?", ":"))
+        return out[0].upper() + out[1:] if start else out
+    return re.sub(r"\[\[([^\]]+)\]\]", rep, text)
 
-    return re.sub(r"\[\[([^\]]+)\]\]", rep, e(text))
 
-
-def plain(text):
-    return re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", text)
+def linked(B, stories, text, prefix):
+    return e(_mentions(stories, text))
 
 
 def plain_names(stories, text):
-    by = {s["slug"]: s for s in stories}
-    text = plain(text)
-    return re.sub(r"\[\[([^\]]+)\]\]", lambda m: by[m.group(1)].get("company") or by[m.group(1)]["title"], text)
+    return _mentions(stories, text)
 
 
 def ld(obj):
@@ -55,14 +59,8 @@ def crumb_html(trail):
 
 
 def proof_list(B, stories, proof, prefix):
-    by = {s["slug"]: s for s in stories}
-    out = []
-    for slug, text in proof:
-        s = by[slug]
-        name = s.get("company") or "The roundup"
-        out.append(f'<a class="evi" href="{prefix}stories/{slug}/">{B.logo(s, prefix, "co-logo") or "<span class=\'co-mark co-ecosystem\' aria-hidden=\'true\'>TD</span>"}'
-                   f'<span><strong>{e(name)}</strong><span>{e(text)}</span><em>Read the story and sources</em></span></a>')
-    return f'<div class="evi-list">{"".join(out)}</div>'
+    items = "".join(f"<li>{e(t if isinstance(t, str) else t[1])}</li>" for t in proof)
+    return f'<ul class="ticks built">{items}</ul><p class="cap">Sourced detail on this work is in our <a href="{prefix}stories/">stories</a>.</p>'
 
 
 def stats_strip(stats):
@@ -165,8 +163,8 @@ def hub_blocks(prefix, stories=None):
 
 def related_for(slug):
     """Industry and country pages that cite a given story."""
-    out = [(f"Why Sri Lanka for {x['name']}", f"why-sri-lanka/{x['slug']}/") for x in VERTICALS if any(p[0] == slug for p in x["proof"])]
-    out += [(f"Hiring from {x['name']}", f"hire-from/{x['slug']}/") for x in MARKETS if any(p[0] == slug for p in x["proof"])]
+    out = [(f"Why Sri Lanka for {x['name']}", f"why-sri-lanka/{x['slug']}/") for x in VERTICALS if slug in x.get("cites", [])]
+    out += [(f"Hiring from {x['name']}", f"hire-from/{x['slug']}/") for x in MARKETS if slug in x.get("cites", [])]
     return out
 
 
@@ -195,7 +193,7 @@ def build_verticals(B, stories):
   <div class="wrap narrow">
     <img class="story-cover art" src="{prefix}assets/art/{v['slug']}.svg" alt="" width="1200" height="900">
     {stats_strip(v['stats'])}
-    <h2 class="h-sub mt">Who is already building {e(v['name'])} in Sri Lanka</h2>
+    <h2 class="h-sub mt">What is already built in Sri Lanka</h2>
     {proof_list(B, stories, v['proof'], prefix)}
     <h2 class="h-sub mt">Roles you can hire</h2>
     <ul class="names roles">{''.join(f'<li><span>{e(r)}</span></li>' for r in v['roles'])}</ul>
@@ -241,7 +239,7 @@ def build_markets(B, stories):
 <section class="section top-0">
   <div class="wrap narrow">
     {stats_strip(m['stats'])}
-    <h2 class="h-sub mt">{len(m['proof'])} companies connected to {e(m['name'])} already build in Sri Lanka</h2>
+    <h2 class="h-sub mt">Work already done from Sri Lanka for {e(m['name'])}</h2>
     {proof_list(B, stories, m['proof'], prefix)}
     <h2 class="h-sub mt">Working hours and time zones</h2>
     <p class="body-l">{e(m['overlap'])}</p>
@@ -401,7 +399,7 @@ def build_salary(B, stories):
   <p class="body-l">The SLASSCOM chairman said in a {a("2023 interview", "https://echelon.lk/slasscom-chairman-on-unlocking-the-tech-potential/")} that normal annual wage growth is about 10% to 15%, and that most tech companies raised pay by 45% to 70% or pegged it to the dollar during the 2022 crisis. SLASSCOM's 2025 report says increment budgets have since stabilised. Budget for double digit annual rises for good engineers.</p>
 
   <h2 class="h-sub mt">Our advice</h2>
-  <p class="body-l">Do not hire at the median. The companies in our stories that keep people for a decade pay on an international benchmark. <a href="{prefix}stories/superloop/">Superloop</a> pegs Colombo salaries to the Australian dollar and gives every employee stock. You will still pay far less than at home, and you will get the engineers everyone else is trying to hire.</p>
+  <p class="body-l">Do not hire at the median. The companies in our stories that keep people for a decade pay on an international benchmark. One Australian employer pegs Colombo salaries to the Australian dollar and gives every employee stock. You will still pay far less than at home, and you will get the engineers everyone else is trying to hire.</p>
 
   <div class="reach mt"><h2>Want real quotes?</h2><p>Tell us the roles. We will introduce people or partner companies who can give you current numbers.</p>
   <div class="actions"><a class="btn" href="{prefix}talent/find/">Find talent</a><a class="btn btn-ghost" href="../how-to-hire-in-sri-lanka/">How to hire in Sri Lanka</a></div></div>
@@ -516,7 +514,7 @@ def build_setup_guide(B, stories):
   </ul>
 
   <h2>Port City Colombo</h2>
-  <p>Port City is a special economic zone beside Colombo's business district. <a href="{prefix}stories/igt1-lanka/">IGT1 Lanka</a> was one of the first global IT firms to move in.</p>
+  <p>Port City is a special economic zone beside Colombo's business district. The first global IT firms moved in during 2025.</p>
   <ul>
     <li>You operate there as an Authorised Person, licensed by the {a("Colombo Port City Economic Commission", "https://www.portcitycolombo.gov.lk/application-process")}. The licence runs 12 months and is renewable. Until space is ready you can work from an approved location outside the zone.</li>
     <li>Business is done in foreign currency and must serve overseas clients unless the commission authorises local dealings.</li>
@@ -527,7 +525,7 @@ def build_setup_guide(B, stories):
 
   <h2>Where tech companies locate</h2>
   <ul>
-    <li><a href="{prefix}stories/orion-city/">Orion City</a>, Colombo 09: a 16 acre IT park that is home to IFS, Virtusa, Synopsys and Michelin teams.</li>
+    <li>Orion City, Colombo 09: a 16 acre IT park that is home to IFS, Virtusa, Synopsys and Michelin teams.</li>
     <li>TRACE Expert City, Colombo 10: a tech campus whose tenants include CodeGen.</li>
     <li>World Trade Center, Colombo 01: twin towers in the business district, home to the BOI and Dijital Team.</li>
     <li>Port City Colombo: the special economic zone described above.</li>
@@ -609,6 +607,7 @@ def build_guides_hub(B):
         ("how-to-hire-in-sri-lanka/", "How to hire in Sri Lanka", "Employer of record, contractors, partner teams or your own company, with the employment rules to know."),
         ("set-up-a-company-in-sri-lanka/", "How to set up a tech company", "Registration, ownership, the 15% export tax, the Board of Investment and Port City Colombo."),
         ("sri-lanka-tech-industry-facts/", "Industry facts and statistics", "Exports, workforce, graduates, rankings and exits, each with its source."),
+        ("sri-lanka-startup-ecosystem/", "The startup ecosystem", "How many startups, how the country ranks, the exits, the investors and the weak points."),
         ("employer-of-record-sri-lanka/", "Employer of record in Sri Lanka", "Hire without a local company: who covers Sri Lanka, what you pay and the rules to know."),
         ("../tools/team-cost-calculator/", "Team cost calculator", "Pick roles and team size to see monthly and yearly cost, direct or through a partner."),
         ("../compare/", "Sri Lanka compared", "Side by side with Vietnam, the Philippines, Poland, Ukraine, Romania and Latin America."),
@@ -711,6 +710,7 @@ def build_llms(B, stories, pages):
         ("guides/employer-of-record-sri-lanka/", "Employer of record in Sri Lanka", "Providers, costs and rules for hiring without a local company"),
         ("tools/team-cost-calculator/", "Sri Lanka team cost calculator", "Cost of a team by role and size"),
         ("answers/", "Answers", "Short sourced answers on hiring, outsourcing and setup"),
+        ("guides/sri-lanka-startup-ecosystem/", "Sri Lanka's startup ecosystem", "Size, rankings, exits, investors and weaknesses"),
         ("playbook/", "Sri Lanka tech team playbook 2026", "All guides in one PDF"),
         ("data/sri-lanka-tech-salaries-2026.csv", "Salary data 2026 (CSV)", "Open data, free to use with attribution"),
     ]]
