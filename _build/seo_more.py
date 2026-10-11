@@ -30,7 +30,7 @@ ROLES = [
          note="See also our page on why AI companies build in Sri Lanka."),
     dict(slug="erp-consultants", role="ERP consultants", short="ERP and IFS consultants",
          pay=[("ERP consultant", 169), ("SAP consultant", 219)],
-         proof=[("why-global-companies-choose-sri-lanka", "IFS runs 75% of its global R&D and 80% of product support from Colombo."), ("creative-software", "IFS ERP consulting alongside product engineering."),
+         proof=[("why-global-companies-choose-sri-lanka", "IFS does about 60% of its global product development in Colombo."), ("creative-software", "IFS ERP consulting alongside product engineering."),
                 ("inivos", "Founded by engineers who came up through IFS."), ("igt1-lanka", "Set up by the owners of IFS to supply software talent."), ("infomate", "Finance teams working daily on SAP, Oracle, NetSuite and Dynamics.")],
          note="IFS has operated in Sri Lanka for 27 years, which makes Colombo one of the deepest IFS talent pools anywhere. No public salary data exists for IFS consultants specifically."),
     dict(slug="cybersecurity-engineers", role="cybersecurity engineers", short="Cybersecurity engineers",
@@ -107,7 +107,7 @@ def build_roles(B, stories):
     faqs = [
         ("How do I hire developers in Sri Lanka?", "Choose one of four routes: an employer of record for a handful of direct hires, contractors for short projects, a dedicated team run by a Sri Lankan company, or your own registered company for a long term centre."),
         ("How much does a developer cost in Sri Lanka?", f"A software engineer in Colombo earns a median of about LKR 177,000 a month (about USD {SP.usd(177)}) and a senior engineer about LKR 260,000, on self reported Glassdoor data for 2026. Employers add 15% in statutory contributions. Partner company rates are around USD 25 to 40 an hour according to the Export Development Board."),
-        ("Is Sri Lanka good for software outsourcing?", "The evidence says yes. IFS runs 75% of its global R&D in Colombo, Sysco, Synopsys and Zebra run engineering centres there, and Sri Lankan built companies such as WSO2 and Virtusa have been acquired for USD 600 million and USD 2 billion."),
+        ("Is Sri Lanka good for software outsourcing?", "The evidence says yes. IFS does about 60% of its global product development in Colombo, Sysco, Synopsys and Zebra run engineering centres there, and Sri Lankan built companies such as WSO2 and Virtusa have been acquired for USD 600 million and USD 2 billion."),
         ("What time zone do Sri Lankan developers work in?", "UTC+5:30. That gives 4.5 to 5.5 shared working hours with Central Europe, 3.5 to 4.5 with the UK, 6.5 to 7.5 with the Gulf and 3.5 to 4.5 with eastern Australia. Teams serving the US usually work a later shift."),
     ]
     faq, faq_ld = SP.faq_block(stories, faqs)

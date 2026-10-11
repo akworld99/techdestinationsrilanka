@@ -125,12 +125,13 @@ category: ecosystem
 sector: Analysis
 facts: 2,200+ :: IFS employees in Colombo || 4,000+ :: seats in HCLTech's expanded facility || 4 to 6 hours :: daily overlap with Europe
 linkedin: 7457678066342064128
+sources: IFS, 25 years in Sri Lanka (2023) => https://www.ifs.com/en/insights/news/ifs-marks-25th-anniversary-of-the-inception-of-its-operations-in-sri-lanka
 ---
 These are scaled operations that have placed their trust in Sri Lanka for years.
 
 ## Who is here
 
-IFS has 2,200+ employees in Colombo. They handle 75% of its global R&D and 80% of its global product support, making it the second largest tech employer in the country.
+IFS has 2,200+ employees in Colombo. They do about 60% of its global product development, by the company's own account, making it the second largest tech employer in the country.
 
 HCLTech opened a delivery center in 2020, then expanded to a facility for 4,000+ employees.
 

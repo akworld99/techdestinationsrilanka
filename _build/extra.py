@@ -73,7 +73,7 @@ def build_services(B, stories):
     ]
     local_co = [
         block("spotlight", "Partner spotlight", f"A dedicated feature on your company, written to our editorial standard and published to our LinkedIn audience of {B.FOLLOWERS} followers and on this site.",
-              ["Researched, sourced and written by our editors", "A permanent story page and directory listing here", "Labelled as partner content, with the same fact checking as every story"],
+              ["Researched, sourced and written by our editors", "A permanent story page and directory listing here", "Fact checked and sourced like every story"],
               "Ask about a spotlight", "../get-featured/"),
         block("employer", "Employer branding", "Show engineers why they should build their career with you.",
               ["Team and culture stories", "Hiring campaigns to a Sri Lankan tech audience", "Founder and leadership profiles"],
@@ -292,7 +292,7 @@ def build_why(B, stories):
     sl = lambda slug, label=None: story_link(B, stories, slug, "../", label)
     rows = [
         ("The work is core product, and has been for decades",
-         f"IFS runs 75% of its global R&D from Colombo ({sl('why-global-companies-choose-sri-lanka', 'the roundup')}). {sl('sysco-labs')} works on the same codebase as Sysco's teams in Texas. {sl('synopsys')} engineers chip design software here, and {sl('zebra-technologies')} builds product for its global platforms."),
+         f"IFS does about 60% of its global product development in Colombo ({sl('why-global-companies-choose-sri-lanka', 'the roundup')}). {sl('sysco-labs')} works on the same codebase as Sysco's teams in Texas. {sl('synopsys')} engineers chip design software here, and {sl('zebra-technologies')} builds product for its global platforms."),
         ("Sri Lankan founders build companies that get bought",
          f"The London Stock Exchange bought {sl('millenniumit')} for its trading platform. EQT acquired {sl('wso2')} for $600 million. {sl('virtusa')} listed on Nasdaq and sold for $2 billion. JPMorganChase acquired {sl('wealthos')} in 2026."),
         ("European and Australian companies stay for the long run",
@@ -360,8 +360,8 @@ def build_get_featured(B, stories):
 <section class="section top-0">
   <div class="wrap narrow">
     <div class="proof two">
-      <div><strong>Editorial feature</strong><p>Free. We choose stories on merit: real products, real clients and numbers we can source. We decide what runs and how it is written.</p></div>
-      <div><strong>Partner spotlight</strong><p>A paid, dedicated feature for companies that want guaranteed coverage. Same fact checking, labelled as partner content. Ask us for the media kit.</p></div>
+      <div><strong>Editorial feature</strong><p>A sourced story on what your company built and who uses it abroad, published here and on LinkedIn.</p></div>
+      <div><strong>Partner spotlight</strong><p>A dedicated feature with wider promotion to our audience. Ask us for the media kit.</p></div>
     </div>
     <h2 class="h-sub">What makes a story we can run</h2>
     <ul class="ticks">

@@ -566,7 +566,7 @@ FACTS = [
     ("How many ICT graduates does Sri Lanka produce each year?", "Startup Genome's 2026 report says 12,000+. Industry estimates reported in the press in 2026 say about 17,000 enter the sector each year.", [("Our story on the 2026 report", "stories/startup-genome-2026/")]),
     ("How does Sri Lanka rank for tech talent?", "Third in Asia for affordable tech talent in Startup Genome's Global Startup Ecosystem Report 2026, which also recorded Sri Lanka climbing more than 65 places in its emerging ecosystem rankings, the biggest jump that year.", [("Our story", "stories/startup-genome-2026/")]),
     ("What are the biggest Sri Lankan tech exits?", "Virtusa, cofounded by a Sri Lankan, was acquired for USD 2 billion in 2021. WSO2 was acquired by EQT for USD 600 million in 2024. The London Stock Exchange bought MillenniumIT after choosing its trading platform. JPMorganChase acquired WealthOS in 2026.", [("Virtusa", "stories/virtusa/"), ("WSO2", "stories/wso2/"), ("MillenniumIT", "stories/millenniumit/"), ("WealthOS", "stories/wealthos/")]),
-    ("Which global companies run R&D in Sri Lanka?", "IFS runs 75% of its global R&D from Colombo. Sysco, Synopsys and Zebra Technologies run engineering or R&D centres there. HCLTech, EY, HSBC and WNS run delivery operations.", [("Our roundup", "stories/why-global-companies-choose-sri-lanka/"), ("Companies directory", "companies/")]),
+    ("Which global companies run R&D in Sri Lanka?", "IFS does about 60% of its global product development in Colombo. Sysco, Synopsys and Zebra Technologies run engineering or R&D centres there. HCLTech, EY, HSBC and WNS run delivery operations.", [("Our roundup", "stories/why-global-companies-choose-sri-lanka/"), ("Companies directory", "companies/")]),
     ("Who are the largest tech employers in Sri Lanka?", "Virtusa has 3,000+ engineers in Colombo and IFS has 2,200+ employees there.", [("Virtusa", "stories/virtusa/"), ("Our roundup", "stories/why-global-companies-choose-sri-lanka/")]),
     ("What time zone is Sri Lanka in?", "UTC+5:30 all year, with no daylight saving. That is 1.5 hours ahead of the UAE, 3.5 to 4.5 hours ahead of Central Europe, 4.5 to 5.5 hours ahead of the UK and 9.5 to 10.5 hours ahead of US Eastern time.", [("Guides by country", "hire-from/")]),
     ("What does a software engineer earn in Sri Lanka?", f"A median of about LKR 177,000 a month (about USD {usd(177)}) according to self reported Glassdoor data for 2026, and about LKR 260,000 for a senior engineer. Export focused employers pay more.", [("Salary and cost guide", "guides/sri-lanka-tech-salaries/")]),
@@ -589,7 +589,7 @@ def build_facts(B, stories):
 <section class="page-head"><div class="wrap narrow">
   {crumb_html([("Guides", "../")])}
   <h1>Sri Lanka tech industry facts and statistics</h1>
-  <p class="answer">Sri Lanka's IT and business process sector exported USD 1.645 billion of services in 2025 and employs roughly 150,000 people. It is home to most of IFS's global R&D, to engineering centres for Sysco, Synopsys and Zebra, and to exits worth up to USD 2 billion. The key numbers are below, each with its source.</p>
+  <p class="answer">Sri Lanka's IT and business process sector exported USD 1.645 billion of services in 2025 and employs roughly 150,000 people. It is home to about 60% of IFS's global product development, to engineering centres for Sysco, Synopsys and Zebra, and to exits worth up to USD 2 billion. The key numbers are below, each with its source.</p>
   <p class="reviewed">Last reviewed {REVIEWED}. Where sources disagree we show the range and say who reported what.</p>
 </div></section>
 <section class="section top-0"><div class="wrap narrow">{items}
@@ -646,7 +646,7 @@ def build_tech50(B, stories):
 <section class="section top-0"><div class="wrap narrow">
   <div class="proof two">
     <div><strong>What gets a company on the list</strong><p>Work delivered for customers outside Sri Lanka, growth in people and revenue, and recognition that can be checked. Every entry is fact checked to the same standard as our <a href="../stories/">stories</a>.</p></div>
-    <div><strong>What does not</strong><p>Payment. Sponsors support the list and are named as sponsors. They have no say in who is selected or how companies are ranked.</p></div>
+    <div><strong>Who it is for</strong><p>Product companies, engineering services firms, global companies with centres here and startups under five years old.</p></div>
   </div>
   <h2 class="h-sub">How it works</h2>
   <ol class="steps compact">
@@ -698,7 +698,7 @@ def build_tour(B, stories):
 
 # ------------------------------------------------------------------ machine readable summary
 def build_llms(B, stories, pages):
-    lines = [f"# {B.SITE_NAME}", "", f"> {B.SITE_NAME} helps companies abroad hire technology talent, find software outsourcing partners and set up teams in Sri Lanka. It publishes independent, sourced reporting on the software, products and companies built by Sri Lankan technology talent.", "",
+    lines = [f"# {B.SITE_NAME}", "", f"> {B.SITE_NAME} helps companies abroad hire technology talent, find software outsourcing partners and set up teams in Sri Lanka. It publishes sourced reporting on the software, products and companies built by Sri Lankan technology talent.", "",
              "Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its sources at the end.", "", "## Key facts"]
     lines += [f"- {q} {ans}" for q, ans, _ in FACTS]
     lines += ["", "## Guides"]

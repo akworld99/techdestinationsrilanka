@@ -105,11 +105,11 @@ VERTICALS = [
         slug="enterprise-software", name="enterprise software", label="Enterprise software and ERP",
         h1="Why Sri Lanka for enterprise software and ERP companies",
         title="Why Sri Lanka for enterprise software and ERP companies",
-        desc="IFS runs 75% of its global R&D from Colombo and WSO2 sold for $600 million. The evidence, the roles and how to hire enterprise software talent in Sri Lanka.",
-        answer="Enterprise software is the deepest part of Sri Lanka's tech industry. IFS runs 75% of its global R&D and 80% of its product support from Colombo. [[wso2]], an API and identity software company founded and headquartered here, sold for $600 million in 2024. [[sysco-labs]] builds the core systems of the world's largest foodservice distributor on the same codebase as its US teams. Software companies come here for product engineers who have maintained large systems for years.",
-        stats=[("75%", "of IFS global R&D is done in Colombo"), ("$600M", "paid by EQT for WSO2 in 2024"), ("700+", "enterprise customers of WSO2")],
+        desc="IFS does about 60% of its global product development in Colombo and WSO2 sold for $600 million. The evidence, the roles and how to hire enterprise software talent in Sri Lanka.",
+        answer="Enterprise software is the deepest part of Sri Lanka's tech industry. IFS does about 60% of its global product development in Colombo. [[wso2]], an API and identity software company founded and headquartered here, sold for $600 million in 2024. [[sysco-labs]] builds the core systems of the world's largest foodservice distributor on the same codebase as its US teams. Software companies come here for product engineers who have maintained large systems for years.",
+        stats=[("60%", "of IFS product development is done in Colombo"), ("$600M", "paid by EQT for WSO2 in 2024"), ("700+", "enterprise customers of WSO2")],
         proof=[
-            ("why-global-companies-choose-sri-lanka", "IFS employs 2,200+ people in Colombo, who handle most of its global R&D and product support."),
+            ("why-global-companies-choose-sri-lanka", "IFS employs 2,200+ people in Colombo, who do about 60% of its global product development."),
             ("wso2", "API management, integration and identity software used by 700+ enterprises in 70+ countries, built and led from Colombo."),
             ("sysco-labs", "Same codebase, sprint cycles and engineering standards as Sysco's teams in Texas."),
             ("igt1-lanka", "A second company from the owners of IFS, created to supply software and talent to their global software portfolio."),
@@ -123,7 +123,7 @@ VERTICALS = [
         faqs=[
             ("Which enterprise software companies build in Sri Lanka?", "IFS, WSO2, Sysco LABS, Virtusa and IGT1 Lanka all run large engineering operations in Colombo."),
             ("Can I find IFS and ERP consultants in Sri Lanka?", "Yes. IFS has built its largest R&D base here over 27 years, and firms such as Creative Software and Inivos employ engineers and consultants who came through that ecosystem."),
-            ("Is Sri Lanka only used for support work?", "No. IFS does 75% of its global R&D in Colombo, WSO2 builds its whole product here, and Sysco LABS shares one codebase with its US teams."),
+            ("Is Sri Lanka only used for support work?", "No. IFS does about 60% of its global product development in Colombo, WSO2 builds its whole product here, and Sysco LABS shares one codebase with its US teams."),
         ],
     ),
     dict(
@@ -276,7 +276,7 @@ MARKETS = [
         h1="Hire Sri Lankan tech talent from the Nordics",
         title="Hire developers in Sri Lanka from Norway, Sweden and Denmark",
         desc="IFS, Creative Software, Tiqri and Frontwalker have built Nordic software in Sri Lanka for up to 27 years. Who is there, the time overlap and how to hire.",
-        answer="Nordic companies have the longest record of building software in Sri Lanka. IFS, founded in Sweden, runs 75% of its global R&D in Colombo. [[creative-software]] has served Swedish, Norwegian and Danish clients for 25 years, including DIPS, Norway's largest health records provider. [[tiqri]], Norwegian parented, has delivered from Colombo for 15 years. [[frontwalker]], listed in Stockholm, calls Colombo its global tech center.",
+        answer="Nordic companies have the longest record of building software in Sri Lanka. IFS, founded in Sweden, does about 60% of its global product development in Colombo. [[creative-software]] has served Swedish, Norwegian and Danish clients for 25 years, including DIPS, Norway's largest health records provider. [[tiqri]], Norwegian parented, has delivered from Colombo for 15 years. [[frontwalker]], listed in Stockholm, calls Colombo its global tech center.",
         overlap="Sri Lanka is 3.5 hours ahead of Sweden, Norway and Denmark in summer and 4.5 hours ahead in winter. With a 9 to 6 day in both places you share 4.5 to 5.5 working hours every day. Finland is one hour closer, with 5.5 to 6.5 shared hours.",
         stats=[("27 years", "IFS has operated in Sri Lanka"), ("4.5 to 5.5", "shared working hours a day"), ("550+", "people at Creative Software")],
         proof=[
@@ -316,10 +316,10 @@ MARKETS = [
         slug="sweden", name="Sweden", label="Sweden",
         h1="Hire Sri Lankan tech talent from Sweden",
         title="Hire developers in Sri Lanka from Sweden: who, how, time zones",
-        desc="IFS runs 75% of its global R&D in Colombo and Frontwalker calls Colombo its global tech center. Who is there, the time overlap and how to hire from Sweden.",
-        answer="Sweden's best known enterprise software company does most of its engineering in Sri Lanka. IFS, founded in Sweden, runs 75% of its global R&D and 80% of its product support from Colombo, with 2,200+ people. [[frontwalker]], listed in Stockholm, calls its Colombo office its global tech center. [[creative-software]] has built dedicated teams for Swedish clients for 25 years.",
+        desc="IFS does about 60% of its global product development in Colombo and Frontwalker calls Colombo its global tech center. Who is there, the time overlap and how to hire from Sweden.",
+        answer="Sweden's best known enterprise software company does most of its engineering in Sri Lanka. IFS, founded in Sweden, does about 60% of its global product development in Colombo, with 2,200+ people. [[frontwalker]], listed in Stockholm, calls its Colombo office its global tech center. [[creative-software]] has built dedicated teams for Swedish clients for 25 years.",
         overlap="Sri Lanka is 3.5 hours ahead of Sweden in summer and 4.5 hours ahead in winter. With a 9 to 6 day in both places you share 4.5 to 5.5 working hours every day.",
-        stats=[("75%", "of IFS global R&D is done in Colombo"), ("100+", "Frontwalker engineers in Colombo"), ("4.5 to 5.5", "shared working hours a day")],
+        stats=[("60%", "of IFS product development is done in Colombo"), ("100+", "Frontwalker engineers in Colombo"), ("4.5 to 5.5", "shared working hours a day")],
         proof=[
             ("why-global-companies-choose-sri-lanka", "IFS is the second largest tech employer in Sri Lanka."),
             ("frontwalker", "Describes its model as the intersection of Nordic trust and Sri Lankan innovation."),
@@ -330,7 +330,7 @@ MARKETS = [
         faqs=[
             ("Which Swedish companies have engineering teams in Sri Lanka?", "IFS and Frontwalker both run large engineering operations in Colombo. EQT, the Swedish investment firm, owns WSO2 and co owns IFS and IGT1 Lanka."),
             ("What is the time difference between Sweden and Sri Lanka?", "Sri Lanka is 3.5 hours ahead in summer and 4.5 hours ahead in winter, giving 4.5 to 5.5 shared working hours a day."),
-            ("How much of IFS is built in Sri Lanka?", "According to our reporting, 75% of IFS global R&D and 80% of its global product support are handled from Colombo."),
+            ("How much of IFS is built in Sri Lanka?", "About 60% of IFS global product development is done in Colombo by more than 2,200 people, according to IFS."),
         ],
     ),
     dict(
