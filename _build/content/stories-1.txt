@@ -1,3 +1,36 @@
+slug: zone24x7
+title: A Silicon Valley company has built its robots, RFID systems and AI in Colombo for over 20 years. Meet Zone24x7
+dek: Zone24x7 is headquartered in San Jose, but its hardware and software engineering has been done in Colombo since 2004.
+date: 2026-10-13
+category: global
+company: Zone24x7
+sector: RFID, IoT, robotics and AI engineering
+blurb: San Jose company that has engineered hardware and software in Colombo since 2004.
+facts: 2004 :: Colombo technology centre opened || 50+ :: enterprise customers || US patent :: for its AZIRO inventory robot
+sources: Export Development Board, Zone24x7 success story => https://www.srilankabusiness.com/edb/success-stories/electrical-and-electronics/zone24x7.html || Sunday Observer, 20th anniversary (2024) => https://www.sundayobserver.lk/2024/02/11/business/16120/zone-24x7-marks-20th-anniversary-in-tech-industry || Daily FT, AZIRO and US patent (2015) => https://www.ft.lk/it-telecom-tech/zone24x7-emerges-overall-winner-at-nbqsa-2015/50-483639 || Daily Mirror, APICTA 2015 Gold => https://dailymirror.lk/other/zone24x7-wins-gold-for-sri-lanka-at-apicta-2015-in-r-d/117-97371 || Hiru News, 2025 awards and 2026 AI focus => https://hirunews.lk/goldfmnews/448892/zone24x7-wins-seven-tech-awards-strengthens-enterprise-ai-push-for-2026
+---
+Most Silicon Valley companies send software work offshore. Zone24x7 put its whole engineering operation in Colombo, hardware included.
+
+Llavan Fernando and Saw-Chin Fernando founded Zone24x7 in San Jose, California in 2003. A year later they opened its Advanced Technology Centre in Colombo, and that is where the engineering has been done ever since. Today the company is led by CEO Neschae Fernando and General Manager Vipula Liyanaarachchi.
+
+## Hardware and software, from one team
+
+What makes Zone24x7 different is the range. The Colombo team engineers both the software and the hardware: RFID and embedded systems, IoT and remote monitoring, robotics, AI driven computer vision and enterprise software.
+
+It serves 50+ enterprise customers across retail, hi-tech, banking, telecommunications, logistics and manufacturing, including Tier 1 retailers and hi-tech companies.
+
+## AZIRO, a robot designed in Colombo
+
+The clearest example is AZIRO, an autonomous robot that moves through a store and counts RFID tagged stock on its own, a job retailers usually do by hand or with expensive fixed readers. AZIRO holds a US patent, and in 2015 it won R&D Gold at the Asia Pacific ICT Alliance (APICTA) Awards, ahead of teams from Singapore, Hong Kong and Australia.
+
+## Still winning in 2025
+
+In 2025 Zone24x7 was named national winner for Best Innovative Product in Manufacturing at the SLASSCOM National Ingenuity Awards, and won Gold and IoT Technology of the Year at the National ICT Awards. Its focus for 2026 is enterprise AI and automation.
+
+## Why it matters
+
+Hardware and software R&D is harder to do offshore than code alone. A Silicon Valley company has done it from Colombo for more than two decades.
+=====
 slug: creative-software
 title: Sri Lankan engineers help build Norway's leading digital health platform. Meet Creative Software
 dek: A Colombo company founded in 1999 has spent 25 years as the engineering partner behind DIPS, Norway's largest health records provider.

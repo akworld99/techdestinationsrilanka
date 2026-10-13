@@ -1,7 +1,7 @@
 {
  "": [
-  "954c5bf4d14ea60b",
-  "2026-10-11"
+  "50f2d502c3757ae1",
+  "2026-10-13"
  ],
  "about/": [
   "f2e2ad52e68b2582",
@@ -12,7 +12,7 @@
   "2026-10-11"
  ],
  "companies/": [
-  "126149e065e19ad5",
+  "e04462ad393ad6bc",
   "2026-10-13"
  ],
  "compare/": [
@@ -48,11 +48,11 @@
   "2026-10-13"
  ],
  "featured-badge/": [
-  "3a1d912aec95e324",
+  "f7119bc641af64de",
   "2026-10-13"
  ],
  "get-featured/": [
-  "abb5044d09eebc59",
+  "cfb16d659d99c206",
   "2026-10-13"
  ],
  "guides/": [
@@ -196,7 +196,7 @@
   "2026-10-11"
  ],
  "stories/": [
-  "3e9dc7bdff9f73f4",
+  "e1aad9215801ab94",
   "2026-10-13"
  ],
  "stories/codegen/": [
@@ -208,28 +208,28 @@
   "2026-10-13"
  ],
  "stories/dijital-team/": [
-  "43b6633985f49c4a",
-  "2026-06-15"
+  "00d94e7668173240",
+  "2026-10-13"
  ],
  "stories/ey-gds/": [
-  "907b701062ce733b",
-  "2026-05-27"
+  "a99506951ffea2da",
+  "2026-10-13"
  ],
  "stories/frontwalker/": [
-  "20662744d97cf853",
-  "2026-08-20"
+  "285458a9b8e9a9f1",
+  "2026-10-13"
  ],
  "stories/gapstars/": [
-  "2aa912598b6dc64c",
-  "2026-07-06"
+  "5899a1d1ee245d3e",
+  "2026-10-13"
  ],
  "stories/healthrecon-connect/": [
   "7fe179889e607795",
   "2026-07-16"
  ],
  "stories/igt1-lanka/": [
-  "08d73e9f1f46ab1b",
-  "2026-08-10"
+  "fe9823d749d4463e",
+  "2026-10-13"
  ],
  "stories/infomate/": [
   "07d0847f84617bdc",
@@ -244,16 +244,16 @@
   "2026-04-30"
  ],
  "stories/michelin/": [
-  "e5c9cd5cb14192f6",
-  "2026-08-03"
+  "c3f1ee89af707401",
+  "2026-10-13"
  ],
  "stories/millenniumit/": [
   "b57976c10c99ddf9",
   "2026-04-28"
  ],
  "stories/oceans/": [
-  "08e0969853da68c9",
-  "2026-06-01"
+  "dab272650ad5502b",
+  "2026-10-13"
  ],
  "stories/orion-city/": [
   "6fddfc55ddae3036",
@@ -276,24 +276,24 @@
   "2026-06-19"
  ],
  "stories/superloop/": [
-  "2894e77087de4fc4",
-  "2026-08-17"
+  "78ae757fce855ed3",
+  "2026-10-13"
  ],
  "stories/surge-global/": [
   "0ee0585d91a81035",
   "2026-06-04"
  ],
  "stories/synopsys/": [
-  "c7aef8390e8b639f",
-  "2026-08-06"
+  "356ab157883a016b",
+  "2026-10-13"
  ],
  "stories/sysco-labs/": [
-  "e5c5ccdcb29419e0",
-  "2026-05-15"
+  "dbe437aeebeb9b10",
+  "2026-10-13"
  ],
  "stories/tiqri/": [
-  "e2a81589b107b550",
-  "2026-07-20"
+  "ffa99d5bdf80747d",
+  "2026-10-13"
  ],
  "stories/universities/": [
   "b7cc387264c1e26a",
@@ -312,8 +312,8 @@
   "2026-05-06"
  ],
  "stories/wns/": [
-  "3347c1407ba2135a",
-  "2026-05-19"
+  "992ae69248ddbb3e",
+  "2026-10-13"
  ],
  "stories/wso2/": [
   "7ea2d9ef014ce67f",
@@ -324,8 +324,12 @@
   "2026-09-30"
  ],
  "stories/zebra-technologies/": [
-  "b39f6eed0f3022ed",
-  "2026-07-13"
+  "c440bfe7459bbd40",
+  "2026-10-13"
+ ],
+ "stories/zone24x7/": [
+  "6a8a3e0aec372176",
+  "2026-10-13"
  ],
  "talent/": [
   "0c41ca67a64f6d67",
