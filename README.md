@@ -15,3 +15,9 @@ At the top of `_build/build.py`: `SITE_URL` (change when a custom domain is conn
 ## Industry and country pages
 
 Content for `why-sri-lanka/<industry>/` and `hire-from/<country>/` lives in `_build/seo_data.py`. Guides, Tech 50 and Tech Tour are in `_build/seo_pages.py`. Salary figures and the exchange rate are at the top of that file. Review the guides every quarter and update `REVIEWED`.
+
+## Search engines
+
+- `sitemap.xml` lastmod dates come from `_build/lastmod.json`, which stores a hash of each page. A page's date only moves when its content changes, so commit `lastmod.json` with every build.
+- `.github/workflows/indexnow.yml` runs after each GitHub Pages deploy and submits changed URLs to IndexNow (Bing, Yandex and others). Run it by hand from the Actions tab with "Submit every URL" ticked to resubmit the whole site.
+- Google does not use IndexNow. Use Search Console's sitemap report and URL Inspection for Google.

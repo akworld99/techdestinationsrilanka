@@ -142,7 +142,7 @@ def build_services(B, stories):
   </div>
 </section>
 """
-    B.write("services/index.html", B.page("Services", "Hire Sri Lankan talent, find a delivery partner, set up in Sri Lanka, recruit at scale, or get your company and people featured.", body, "../", "services/", active="services"))
+    B.write("services/index.html", B.page("Services", "Hire Sri Lankan talent, find a delivery partner, set up in Sri Lanka, recruit at scale, or get your company and people featured.", body, "../", "services/", active="services", seo_title="Tech hiring, outsourcing and setup services in Sri Lanka"))
 
 
 # ------------------------------------------------------------------ talent
@@ -194,7 +194,7 @@ def build_talent(B, stories):
   </div>
 </section>
 """
-    B.write("talent/index.html", B.page("Talent", "Find talent from Sri Lanka, or apply to be featured as Sri Lankan Top Talent and get seen by global employers.", hub, "../", "talent/", active="talent"))
+    B.write("talent/index.html", B.page("Talent", "Find talent from Sri Lanka, or apply to be featured as Sri Lankan Top Talent and get seen by global employers.", hub, "../", "talent/", active="talent", seo_title="Sri Lankan tech talent: hire engineers or get featured"))
 
     find_form = form(B, "find-talent", "Tell us who you need", "A few lines are enough. We reply by email with next steps.", [
         ("text", "name", "Your name", True, ""),
@@ -234,7 +234,7 @@ def build_talent(B, stories):
   </div>
 </section>
 """
-    B.write("talent/find/index.html", B.page("Find talent from Sri Lanka", "Tell us the role you need. We introduce Sri Lankan engineers, specialists or dedicated teams who have delivered for global companies.", find, "../../", "talent/find/", active="talent", extra_head=find_ld))
+    B.write("talent/find/index.html", B.page("Find talent from Sri Lanka", "Tell us the role you need. We introduce Sri Lankan engineers, specialists or dedicated teams who have delivered for global companies.", find, "../../", "talent/find/", active="talent", extra_head=find_ld, seo_title="Find tech talent in Sri Lanka: engineers and teams"))
 
     tt_form = form(B, "top-talent", "Apply to be featured", "It takes about five minutes. We review every application.", [
         ("text", "name", "Full name", True, ""),
@@ -337,7 +337,7 @@ def build_why(B, stories):
   </div>
 </section>
 """
-    B.write("why-sri-lanka/index.html", B.page("Why Sri Lanka", "Eight evidence backed reasons global companies build technology teams in Sri Lanka, each linked to a sourced story.", body, "../", "why-sri-lanka/", active="why"))
+    B.write("why-sri-lanka/index.html", B.page("Why Sri Lanka", "Eight evidence backed reasons global companies build technology teams in Sri Lanka, each linked to a sourced story.", body, "../", "why-sri-lanka/", active="why", seo_title="Why Sri Lanka for tech teams: eight sourced reasons"))
 
 
 # ------------------------------------------------------------------ get featured

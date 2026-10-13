@@ -1,0 +1,394 @@
+{
+ "": [
+  "954c5bf4d14ea60b",
+  "2026-10-11"
+ ],
+ "about/": [
+  "f2e2ad52e68b2582",
+  "2026-10-13"
+ ],
+ "answers/": [
+  "1a7552c32d3b02d2",
+  "2026-10-11"
+ ],
+ "companies/": [
+  "126149e065e19ad5",
+  "2026-10-13"
+ ],
+ "compare/": [
+  "80ef2f1c46854a15",
+  "2026-10-11"
+ ],
+ "compare/latin-america/": [
+  "ef0267ac77526aaa",
+  "2026-10-11"
+ ],
+ "compare/philippines/": [
+  "eb215a79436a7a17",
+  "2026-10-11"
+ ],
+ "compare/poland/": [
+  "ffc6ec7506d6e618",
+  "2026-10-11"
+ ],
+ "compare/romania/": [
+  "179ddbc8a8421596",
+  "2026-10-11"
+ ],
+ "compare/ukraine/": [
+  "a4acb64c4cf286d7",
+  "2026-10-11"
+ ],
+ "compare/vietnam/": [
+  "c072ee6611a4842c",
+  "2026-10-11"
+ ],
+ "contact/": [
+  "048a381021921749",
+  "2026-10-13"
+ ],
+ "featured-badge/": [
+  "3a1d912aec95e324",
+  "2026-10-13"
+ ],
+ "get-featured/": [
+  "abb5044d09eebc59",
+  "2026-10-13"
+ ],
+ "guides/": [
+  "9b78e5f485b22082",
+  "2026-10-13"
+ ],
+ "guides/employer-of-record-sri-lanka/": [
+  "d9462c17730327f8",
+  "2026-10-11"
+ ],
+ "guides/how-to-hire-in-sri-lanka/": [
+  "1121a40ae34a2fde",
+  "2026-10-11"
+ ],
+ "guides/set-up-a-company-in-sri-lanka/": [
+  "beb6a5bb67bedc8d",
+  "2026-10-11"
+ ],
+ "guides/sri-lanka-startup-ecosystem/": [
+  "78947d049941a326",
+  "2026-10-11"
+ ],
+ "guides/sri-lanka-tech-industry-facts/": [
+  "47e601108194e8c3",
+  "2026-10-11"
+ ],
+ "guides/sri-lanka-tech-salaries/": [
+  "a1e2518d22c78626",
+  "2026-10-11"
+ ],
+ "hire-from/": [
+  "ed023403171fc0ac",
+  "2026-10-11"
+ ],
+ "hire-from/australia/": [
+  "8f9c51d4f9d2db0b",
+  "2026-10-13"
+ ],
+ "hire-from/germany/": [
+  "3be58c2ddcbd4bb1",
+  "2026-10-11"
+ ],
+ "hire-from/netherlands/": [
+  "9ff27a20fcee19a3",
+  "2026-10-11"
+ ],
+ "hire-from/nordics/": [
+  "2f14d27d42a13ebf",
+  "2026-10-11"
+ ],
+ "hire-from/norway/": [
+  "d7ce0c083fed0979",
+  "2026-10-13"
+ ],
+ "hire-from/sweden/": [
+  "a303d4396e06ed05",
+  "2026-10-13"
+ ],
+ "hire-from/uae-gulf/": [
+  "b0768dda5e66cf9c",
+  "2026-10-11"
+ ],
+ "hire-from/uk/": [
+  "7ae3ceb2f996a4fa",
+  "2026-10-11"
+ ],
+ "hire-from/usa/": [
+  "b1348d941011ab5f",
+  "2026-10-11"
+ ],
+ "hire/": [
+  "23a97d80afe42cc9",
+  "2026-10-11"
+ ],
+ "hire/accountants/": [
+  "4a3e7042ac75905a",
+  "2026-10-11"
+ ],
+ "hire/cybersecurity-engineers/": [
+  "94208633136c8df7",
+  "2026-10-11"
+ ],
+ "hire/data-ai-engineers/": [
+  "a839be80bbc39976",
+  "2026-10-11"
+ ],
+ "hire/designers-product-managers/": [
+  "a7f492701c13c5c5",
+  "2026-10-11"
+ ],
+ "hire/devops-engineers/": [
+  "944fbd433aeff2b2",
+  "2026-10-11"
+ ],
+ "hire/erp-consultants/": [
+  "b32a7fa786c0daba",
+  "2026-10-11"
+ ],
+ "hire/qa-engineers/": [
+  "573f20a339e05eb8",
+  "2026-10-11"
+ ],
+ "hire/software-engineers/": [
+  "500ae776dc4ec827",
+  "2026-10-11"
+ ],
+ "playbook/": [
+  "578503560e7ddd48",
+  "2026-10-13"
+ ],
+ "privacy/": [
+  "be84580059fd74f4",
+  "2026-10-13"
+ ],
+ "services/": [
+  "cc355e2565a478e1",
+  "2026-10-13"
+ ],
+ "solutions/": [
+  "eb3112604a03903d",
+  "2026-10-13"
+ ],
+ "solutions/dedicated-development-team-sri-lanka/": [
+  "7461bf66fa9c8ce2",
+  "2026-10-11"
+ ],
+ "solutions/offshore-development-center-sri-lanka/": [
+  "c2180f44ee0e320b",
+  "2026-10-11"
+ ],
+ "solutions/software-outsourcing-sri-lanka/": [
+  "4e63a4d529de6492",
+  "2026-10-11"
+ ],
+ "solutions/sri-lanka-for-startups/": [
+  "5d8ea2d14cc6c7b8",
+  "2026-10-11"
+ ],
+ "solutions/staff-augmentation-sri-lanka/": [
+  "f96348bea571e6dc",
+  "2026-10-11"
+ ],
+ "stories/": [
+  "3e9dc7bdff9f73f4",
+  "2026-10-13"
+ ],
+ "stories/codegen/": [
+  "6e9d39b858fa8a19",
+  "2026-06-11"
+ ],
+ "stories/creative-software/": [
+  "5318bfee883da043",
+  "2026-10-13"
+ ],
+ "stories/dijital-team/": [
+  "43b6633985f49c4a",
+  "2026-06-15"
+ ],
+ "stories/ey-gds/": [
+  "907b701062ce733b",
+  "2026-05-27"
+ ],
+ "stories/frontwalker/": [
+  "20662744d97cf853",
+  "2026-08-20"
+ ],
+ "stories/gapstars/": [
+  "2aa912598b6dc64c",
+  "2026-07-06"
+ ],
+ "stories/healthrecon-connect/": [
+  "7fe179889e607795",
+  "2026-07-16"
+ ],
+ "stories/igt1-lanka/": [
+  "08d73e9f1f46ab1b",
+  "2026-08-10"
+ ],
+ "stories/infomate/": [
+  "07d0847f84617bdc",
+  "2026-06-25"
+ ],
+ "stories/inivos/": [
+  "3fdcb5b7f423d5d5",
+  "2026-06-08"
+ ],
+ "stories/it-bpm-exports-2025/": [
+  "a24e8313d725ac92",
+  "2026-04-30"
+ ],
+ "stories/michelin/": [
+  "e5c9cd5cb14192f6",
+  "2026-08-03"
+ ],
+ "stories/millenniumit/": [
+  "b57976c10c99ddf9",
+  "2026-04-28"
+ ],
+ "stories/oceans/": [
+  "08e0969853da68c9",
+  "2026-06-01"
+ ],
+ "stories/orion-city/": [
+  "6fddfc55ddae3036",
+  "2026-06-18"
+ ],
+ "stories/roar-global/": [
+  "1691e16c6c33765a",
+  "2026-10-06"
+ ],
+ "stories/rootcode/": [
+  "cb0ab87950cedc9a",
+  "2026-06-29"
+ ],
+ "stories/simcentric/": [
+  "71ed3d43bc12a94d",
+  "2026-07-02"
+ ],
+ "stories/startup-genome-2026/": [
+  "b28ac6628b3817db",
+  "2026-06-19"
+ ],
+ "stories/superloop/": [
+  "2894e77087de4fc4",
+  "2026-08-17"
+ ],
+ "stories/surge-global/": [
+  "0ee0585d91a81035",
+  "2026-06-04"
+ ],
+ "stories/synopsys/": [
+  "c7aef8390e8b639f",
+  "2026-08-06"
+ ],
+ "stories/sysco-labs/": [
+  "e5c5ccdcb29419e0",
+  "2026-05-15"
+ ],
+ "stories/tiqri/": [
+  "e2a81589b107b550",
+  "2026-07-20"
+ ],
+ "stories/universities/": [
+  "b7cc387264c1e26a",
+  "2026-05-04"
+ ],
+ "stories/virtusa/": [
+  "62c5ef79e86e22f7",
+  "2026-05-21"
+ ],
+ "stories/wealthos/": [
+  "b2899d14d0286245",
+  "2026-06-22"
+ ],
+ "stories/why-global-companies-choose-sri-lanka/": [
+  "0106701af56c2f4b",
+  "2026-05-06"
+ ],
+ "stories/wns/": [
+  "3347c1407ba2135a",
+  "2026-05-19"
+ ],
+ "stories/wso2/": [
+  "7ea2d9ef014ce67f",
+  "2026-05-11"
+ ],
+ "stories/xeynergy/": [
+  "ad15310143284875",
+  "2026-09-30"
+ ],
+ "stories/zebra-technologies/": [
+  "b39f6eed0f3022ed",
+  "2026-07-13"
+ ],
+ "talent/": [
+  "0c41ca67a64f6d67",
+  "2026-10-13"
+ ],
+ "talent/find/": [
+  "b495d06a5c3211ad",
+  "2026-10-13"
+ ],
+ "talent/top-talent/": [
+  "c38eeff1a87eca38",
+  "2026-10-13"
+ ],
+ "tech-50/": [
+  "e5d550cbdc07e5e9",
+  "2026-10-13"
+ ],
+ "tech-tour/": [
+  "d81517ccd6aa4eb5",
+  "2026-10-13"
+ ],
+ "tools/team-cost-calculator/": [
+  "6c3dba83ff75bd5d",
+  "2026-10-11"
+ ],
+ "why-sri-lanka/": [
+  "49573b9bbfc237a9",
+  "2026-10-13"
+ ],
+ "why-sri-lanka/ai/": [
+  "fc53db619e21e285",
+  "2026-10-11"
+ ],
+ "why-sri-lanka/automotive/": [
+  "d8d172677cae5fb1",
+  "2026-10-11"
+ ],
+ "why-sri-lanka/enterprise-software/": [
+  "096944f27520d02b",
+  "2026-10-13"
+ ],
+ "why-sri-lanka/finance-accounting/": [
+  "ef5e7d94dfdc1c2d",
+  "2026-10-13"
+ ],
+ "why-sri-lanka/fintech/": [
+  "5c37096f713ba911",
+  "2026-10-11"
+ ],
+ "why-sri-lanka/govtech/": [
+  "e97a09075385ffd0",
+  "2026-10-11"
+ ],
+ "why-sri-lanka/healthtech/": [
+  "5a81318ce9d678d4",
+  "2026-10-11"
+ ],
+ "why-sri-lanka/logistics-travel/": [
+  "840cf2ff86ecba0b",
+  "2026-10-13"
+ ],
+ "why-sri-lanka/semiconductors-embedded/": [
+  "31a7cc02b28bde9a",
+  "2026-10-11"
+ ]
+}

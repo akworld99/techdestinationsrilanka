@@ -1,34 +1,45 @@
 User-agent: *
 Allow: /
+Disallow: /_build/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /_build/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /_build/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /_build/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /_build/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /_build/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /_build/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /_build/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /_build/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /_build/
 
 User-agent: CCBot
 Allow: /
+Disallow: /_build/
 
 Sitemap: https://techdestinationsrilanka.lk/sitemap.xml

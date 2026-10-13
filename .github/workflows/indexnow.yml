@@ -1,0 +1,27 @@
+name: Ping IndexNow
+
+# After GitHub Pages finishes deploying, tell Bing and other IndexNow search engines which pages changed.
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Submit every URL in the sitemap"
+        type: boolean
+        default: false
+
+jobs:
+  ping:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - name: Submit changed URLs
+        env:
+          ALL: ${{ github.event.inputs.all }}
+        run: python3 _build/indexnow.py

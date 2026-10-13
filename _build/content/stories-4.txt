@@ -40,6 +40,7 @@ sector: Business process management
 blurb: Global business process management company, now part of Capgemini, operating in Colombo since 2004.
 facts: 800+ :: employees in Colombo || 2004 :: operating in Sri Lanka since || 2 :: facilities
 linkedin: 7462381552388280322
+updated: 2026-10-11
 note: WNS was acquired by Capgemini in October 2025 and is no longer separately listed on the New York Stock Exchange. This article has been updated to reflect that.
 sources: WNS Sri Lanka on LinkedIn => https://lnkd.in/gtQwCcB5 || WNS careers, Sri Lanka => https://lnkd.in/g_Etqw6x || EDB Sri Lanka => https://lnkd.in/gnKAWdCm || Capgemini, WNS acquisition completed => https://www.capgemini.com/wp-content/uploads/2025/10/Capgemini_-_2025-10-17_-_Capgemini_completes_the_acquisition_of_WNS.pdf
 ---

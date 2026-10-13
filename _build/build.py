@@ -32,7 +32,7 @@ EMAIL = "techdestinationsrilanka@gmail.com"
 BOOKING_URL = "https://calendly.com/digisavvyteams/30min"          # Cal.com or Calendly link. Leave empty to hide the booking button.
 FORM_ENDPOINT = "https://formspree.io/f/maeqjjvw"        # Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave empty to hide the form.
 
-SEO_TITLES = {'creative-software': "Creative Software: Sri Lankan engineers behind Norway's health records", 'roar-global': "Roar Global: Sri Lanka's first AI gateway, built in Colombo", 'xeynergy': 'Xeynergy: bootstrapped Sri Lankan AI software company', 'frontwalker': "Frontwalker Sri Lanka: a Swedish group's global tech center", 'superloop': 'Superloop Sri Lanka: 24x7 network operations from Colombo', 'igt1-lanka': "IGT1 Lanka: IFS owners' new tech company in Port City Colombo", 'synopsys': 'Synopsys Sri Lanka: chip design software R&D in Colombo', 'michelin': 'Michelin Sri Lanka: IT hub for Asia at Orion City, Colombo', 'tiqri': 'Tiqri: Norwegian software company engineering from Colombo', 'healthrecon-connect': 'HealthRecon Connect: US healthcare operations run from Sri Lanka', 'zebra-technologies': 'Zebra Technologies Lanka: software R&D center in Colombo', 'gapstars': 'Gapstars: Dutch founded engineering teams built in Sri Lanka', 'simcentric': 'SimCentric: simulation software engineered in Colombo', 'rootcode': "Rootcode: Sri Lankan company building Estonia's AI platforms", 'infomate': 'Infomate: finance and accounting services from Sri Lanka', 'wealthos': 'WealthOS: Sri Lankan founded platform acquired by JPMorganChase', 'startup-genome-2026': "Sri Lanka in Startup Genome's 2026 ecosystem rankings", 'orion-city': "Orion City: Sri Lanka's IT park with 85+ tech companies", 'dijital-team': 'Dijital Team: Australian company with 200 people in Colombo', 'codegen': 'CodeGen: travelbox, Vega supercar and ChargeNET from Colombo', 'inivos': 'Inivos: Sri Lankan engineers on European automotive software', 'surge-global': 'Surge Global: Colombo company with a Qatar government contract', 'oceans': 'Oceans: Sri Lankan talent for 600+ US startups', 'ey-gds': 'EY Global Delivery Services in Sri Lanka: 500+ staff', 'virtusa': 'Virtusa: from Colombo to Nasdaq and a $2 billion acquisition', 'wns': 'WNS Sri Lanka: 20 years of delivery from Colombo', 'sysco-labs': "Sysco LABS Sri Lanka: Sysco's core software built in Colombo", 'wso2': 'WSO2: Colombo built software company sold for $600 million', 'why-global-companies-choose-sri-lanka': 'Why IFS, HCLTech, EY and Sysco build in Sri Lanka', 'universities': "Universities behind Sri Lanka's software engineering talent", 'it-bpm-exports-2025': 'Sri Lanka IT and BPM exports: $1.645 billion in 2025', 'millenniumit': 'MillenniumIT: the Colombo company behind the LSE trading platform'}
+SEO_TITLES = {'creative-software': "Creative Software: the Sri Lankan team behind Norway's DIPS", 'roar-global': "Roar Global: Sri Lanka's first AI gateway, built in Colombo", 'xeynergy': 'Xeynergy: bootstrapped Sri Lankan AI software company', 'frontwalker': "Frontwalker Sri Lanka: a Swedish group's global tech center", 'superloop': 'Superloop Sri Lanka: 24x7 network operations from Colombo', 'igt1-lanka': "IGT1 Lanka: IFS owners' new tech company in Port City Colombo", 'synopsys': 'Synopsys Sri Lanka: chip design software R&D in Colombo', 'michelin': 'Michelin Sri Lanka: IT hub for Asia at Orion City, Colombo', 'tiqri': 'Tiqri: Norwegian software company engineering from Colombo', 'healthrecon-connect': 'HealthRecon Connect: US healthcare operations run from Sri Lanka', 'zebra-technologies': 'Zebra Technologies Lanka: software R&D center in Colombo', 'gapstars': 'Gapstars: Dutch founded engineering teams built in Sri Lanka', 'simcentric': 'SimCentric: simulation software engineered in Colombo', 'rootcode': "Rootcode: Sri Lankan company building Estonia's AI platforms", 'infomate': 'Infomate: finance and accounting services from Sri Lanka', 'wealthos': 'WealthOS: Sri Lankan founded platform acquired by JPMorganChase', 'startup-genome-2026': "Sri Lanka in Startup Genome's 2026 ecosystem rankings", 'orion-city': "Orion City: Sri Lanka's IT park with 85+ tech companies", 'dijital-team': 'Dijital Team: Australian company with 200 people in Colombo', 'codegen': 'CodeGen: travelbox, Vega supercar and ChargeNET from Colombo', 'inivos': 'Inivos: Sri Lankan engineers on European automotive software', 'surge-global': 'Surge Global: Colombo company with a Qatar government contract', 'oceans': 'Oceans: Sri Lankan talent for 600+ US startups', 'ey-gds': 'EY Global Delivery Services in Sri Lanka: 500+ staff', 'virtusa': 'Virtusa: from Colombo to Nasdaq and a $2 billion acquisition', 'wns': 'WNS Sri Lanka: 20 years of delivery from Colombo', 'sysco-labs': "Sysco LABS Sri Lanka: Sysco's core software built in Colombo", 'wso2': 'WSO2: Colombo built software company sold for $600 million', 'why-global-companies-choose-sri-lanka': 'Why IFS, HCLTech, EY and Sysco build in Sri Lanka', 'universities': "Universities behind Sri Lanka's software engineering talent", 'it-bpm-exports-2025': 'Sri Lanka IT and BPM exports: $1.645 billion in 2025', 'millenniumit': 'MillenniumIT: the Colombo company behind the LSE trading platform'}
 
 CATEGORIES = {
     "built": ("Built by Sri Lankans", "Companies founded or led by Sri Lankan talent that compete globally."),
@@ -228,13 +228,36 @@ LANDMARKS = """<svg class="landmarks" viewBox="0 0 1200 300" role="img" aria-lab
 </svg>"""
 
 
-def page(title, desc, body, prefix, path, image=None, extra_head="", article=False, active="", seo_title=None):
+PAGE_TYPES = {"about/": "AboutPage", "contact/": "ContactPage", "stories/": "CollectionPage", "companies/": "CollectionPage",
+              "guides/": "CollectionPage", "why-sri-lanka/": "CollectionPage", "solutions/": "CollectionPage", "talent/": "CollectionPage"}
+CRUMB_NAMES = {"stories": "Stories", "guides": "Guides", "why-sri-lanka": "Why Sri Lanka", "hire-from": "Hire from", "hire": "Hire",
+               "solutions": "Solutions", "compare": "Compare", "talent": "Talent", "tools": "Tools", "companies": "Companies"}
+
+
+def page_schema(title, desc, url, path):
+    """WebPage schema with a breadcrumb, for pages that do not define their own structured data."""
+    parts = [x for x in path.strip("/").split("/") if x]
+    crumbs = [("Home", SITE_URL + "/")]
+    for i, part in enumerate(parts):
+        last = i == len(parts) - 1
+        crumbs.append((title if last else CRUMB_NAMES.get(part, part.replace("-", " ").title()), f"{SITE_URL}/{'/'.join(parts[:i + 1])}/"))
+    ld = {"@context": "https://schema.org", "@type": PAGE_TYPES.get(path, "WebPage"), "name": title, "description": desc, "url": url,
+          "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/"},
+          "publisher": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png"},
+          "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": n + 1, "name": name, "item": item} for n, (name, item) in enumerate(crumbs)]}}
+    return f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+
+
+def page(title, desc, body, prefix, path, image=None, extra_head="", article=False, active="", seo_title=None, noindex=False):
     url = f"{SITE_URL}/{path}".rstrip("/") + ("/" if not path.endswith(".html") else "")
     if path == "":
         url = SITE_URL + "/"
     img = f"{SITE_URL}/{image or 'assets/share.jpg'}"
     title_tag = seo_title or title
-    full_title = title_tag if (title_tag == SITE_NAME or len(title_tag) > 42) else f"{title_tag} | {SITE_NAME}"
+    if path and not noindex and "application/ld+json" not in extra_head:
+        extra_head += page_schema(title, desc, url, path)
+    full_title = title_tag if (title_tag == SITE_NAME or len(title_tag) + len(SITE_NAME) + 3 > 62) else f"{title_tag} | {SITE_NAME}"
 
     def nav(href, label, key):
         cur = ' aria-current="page"' if key == active else ""
@@ -247,7 +270,7 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(full_title)}</title>
 <meta name="description" content="{e(desc)}">
-<link rel="canonical" href="{url}">
+{"" if noindex else f'<link rel="canonical" href="{url}">'}
 <meta property="og:site_name" content="{SITE_NAME}">
 <meta property="og:type" content="{'article' if article else 'website'}">
 <meta property="og:title" content="{e(title)}">
@@ -255,7 +278,7 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{img}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="robots" content="{"noindex, follow" if noindex else "index, follow, max-image-preview:large, max-snippet:-1"}">
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}
 gtag('consent','default',{{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'}});
 gtag('consent','default',{{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],wait_for_update:500}});
@@ -615,7 +638,7 @@ def build_story(s, stories):
     url = f"{SITE_URL}/stories/{s['slug']}/"
     ld = {
         "@context": "https://schema.org", "@type": "NewsArticle", "headline": s["title"][:110], "description": s["dek"],
-        "datePublished": s["date"].isoformat(), "dateModified": date.today().isoformat() if s.get("note") else s["date"].isoformat(),
+        "datePublished": s["date"].isoformat(), "dateModified": s.get("updated", s["date"].isoformat()),
         "image": [f"{SITE_URL}/assets/covers/{s['slug']}.jpg"], "mainEntityOfPage": url,
         "author": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/"},
         "publisher": {"@type": "Organization", "name": SITE_NAME, "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/assets/logo.png"}},
@@ -745,14 +768,38 @@ def build_contact():
     write("contact/index.html", page("Contact", "Hire Sri Lankan talent, find a delivery partner, set up in Sri Lanka or get featured. Tell us what you need.", body, "../", "contact/"))
 
 
+LASTMOD_FILE = HERE / "lastmod.json"   # path -> [content hash, date it last changed]; keeps sitemap lastmod honest
+LASTMOD = json.loads(LASTMOD_FILE.read_text()) if LASTMOD_FILE.exists() else {}
+
+
+def lastmod(path, published=None):
+    f = ROOT / (path + "index.html" if not path.endswith(".html") else path)
+    html = f.read_text(encoding="utf-8") if f.exists() else ""
+    html = re.sub(r"© \d{4}", "", html)
+    html = re.sub(r'"dateModified": "[^"]*"', "", html)
+    digest = hashlib.sha1(html.encode("utf-8")).hexdigest()[:16]
+    old = LASTMOD.get(path)
+    if old and old[0] == digest:
+        d = date.fromisoformat(old[1])
+    else:
+        d = date.today()
+        LASTMOD[path] = [digest, d.isoformat()]
+    if published and published > d:
+        d = published
+    return d
+
+
 def build_meta(stories, extra_pages=()):
     now = datetime.now(timezone.utc)
-    urls = [("", date.today())] + [(p, date.today()) for p in ("stories/", "companies/", "about/", "contact/") + tuple(extra_pages)] + [(f"stories/{s['slug']}/", s["date"]) for s in stories]
+    paths = ["", "stories/", "companies/", "about/", "contact/"] + list(extra_pages)
+    story_dates = {f"stories/{s['slug']}/": s["date"] for s in stories}
+    urls = [(p, lastmod(p, story_dates.get(p))) for p in paths + list(story_dates)]
+    LASTMOD_FILE.write_text(json.dumps(LASTMOD, indent=1, sort_keys=True) + "\n")
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
         f"  <url><loc>{SITE_URL}/{p}</loc><lastmod>{d.isoformat()}</lastmod></url>\n" for p, d in urls) + "</urlset>\n"
     write("sitemap.xml", sm)
     bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Applebot-Extended", "Bingbot", "CCBot"]
-    write("robots.txt", "User-agent: *\nAllow: /\n\n" + "".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"Sitemap: {SITE_URL}/sitemap.xml\n")
+    write("robots.txt", "User-agent: *\nAllow: /\nDisallow: /_build/\n\n" + "".join(f"User-agent: {b}\nAllow: /\nDisallow: /_build/\n\n" for b in bots) + f"Sitemap: {SITE_URL}/sitemap.xml\n")
     items = "".join(
         f"<item><title>{e(s['title'])}</title><link>{SITE_URL}/stories/{s['slug']}/</link><guid>{SITE_URL}/stories/{s['slug']}/</guid>"
         f"<pubDate>{datetime(s['date'].year, s['date'].month, s['date'].day, 6, tzinfo=timezone.utc).strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate>"
@@ -763,7 +810,7 @@ def build_meta(stories, extra_pages=()):
     nf = page("Page not found", "That page does not exist.", f"""
 <section class="page-head"><div class="wrap narrow"><h1>Page not found</h1>
 <p class="lede">That link does not lead anywhere. The stories are all still here.</p>
-<div class="actions"><a class="btn" href="{base}stories/">Browse the stories</a><a class="btn btn-ghost" href="{base}">Go to the home page</a></div></div></section>""", base, "404.html")
+<div class="actions"><a class="btn" href="{base}stories/">Browse the stories</a><a class="btn btn-ghost" href="{base}">Go to the home page</a></div></div></section>""", base, "404.html", noindex=True)
     write("404.html", nf.replace(f'href="{base}index.html"', f'href="{base}"'))
     write(".nojekyll", "")
     write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
