@@ -83,6 +83,7 @@ Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its
 - Email: techdestinationsrilanka@gmail.com
 
 ## Stories
+- [The AI and API platforms telcos use across Asia are built out of Colombo. Meet Axonect](https://techdestinationsrilanka.lk/stories/axonect/): Formerly Axiata Digital Labs, the company started in Colombo in 2019 and now sells Gartner recognised API and integration platforms to telcos and banks.
 - [A Silicon Valley company has built its robots, RFID systems and AI in Colombo for over 20 years. Meet Zone24x7](https://techdestinationsrilanka.lk/stories/zone24x7/): Zone24x7 is headquartered in San Jose, but its hardware and software engineering has been done in Colombo since 2004.
 - [Sri Lankan engineers help build Norway's leading digital health platform. Meet Creative Software](https://techdestinationsrilanka.lk/stories/creative-software/): A Colombo company founded in 1999 has spent 25 years as the engineering partner behind DIPS, Norway's largest health records provider.
 - [A Colombo team built Sri Lanka's first AI gateway, with 200+ models billed in rupees. Meet Roar Global](https://techdestinationsrilanka.lk/stories/roar-global/): Roar started as a digital publisher in 2014. It is now an AI led venture builder with 150+ specialists and no outside capital.

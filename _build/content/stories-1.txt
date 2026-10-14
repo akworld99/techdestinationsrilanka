@@ -1,3 +1,36 @@
+slug: axonect
+title: The AI and API platforms telcos use across Asia are built out of Colombo. Meet Axonect
+dek: Formerly Axiata Digital Labs, the company started in Colombo in 2019 and now sells Gartner recognised API and integration platforms to telcos and banks.
+date: 2026-10-15
+category: global
+company: Axonect
+sector: Telco API, AI and integration platforms
+blurb: Formerly Axiata Digital Labs; builds API, integration and marketplace platforms for telcos and banks.
+facts: 2019 :: started as Axiata Digital Labs || 12 :: TM Forum and GSMA awards || 2 :: platforms recognised by Gartner
+sources: Axonect, about us => https://axonect.com/about-us/ || Axonect, platforms and customers => https://axonect.com/ || MWC Barcelona 2026, Axonect exhibitor profile => https://www.mwcbarcelona.com/exhibitors/34512-axonect-an-axiata-comany || Gartner Market Guide recognition (July 2025) => https://www.axiatadigitallabs.com/2025/07/09/adls-axonect-enterprise-marketplace-recognized-in-the-2025-gartner-market-guide-for-csp-b2b-digital-marketplace-solutions/ || Whale Cloud partnership (March 2026) => https://www.axiatadigitallabs.com/2026/03/18/whale-cloud-and-axonect-announce-strategic-partnership-to-accelerate-telecom-digital-transformation/ || Daily FT, Colombo headquarters (2023) => https://www.ft.lk/hr/Axiata-Group-Chief-People-Officer-visit-to-Axiata-Digital-Labs/47-749788
+---
+Most people know Axiata as one of Asia's biggest telecom groups. Fewer know that much of the software behind its digital push was built out of Colombo.
+
+That company is Axonect, formerly Axiata Digital Labs. It started in 2019 as Axiata Group's technology arm, with its headquarters in Colombo, and has since become a platform company that sells its own products to telcos, banks and digital businesses well beyond the Axiata group.
+
+It is led by CEO Anthony Rodrigo, alongside CTO Namal Jayathilake, COO Loh John Wu, CFO Rohana Wijebandara and Chief People Officer Maheshi Gamage.
+
+## What it builds
+
+APIM is an ultra low latency API manager built for telco networks, now with an MCP server and AI gateway. Fabric is a unified DevOps and integration platform for launching telco services faster. Telco Digital Marketplace lets operators sell digital services to business customers.
+
+## The proof
+
+Gartner has recognised both its API Manager and its Telco Digital Marketplace, which appeared in Gartner's 2025 Market Guide for CSP B2B Digital Marketplace Solutions. Axonect has won six TM Forum Catalyst Awards, two TM Forum Excellence Awards and four GSMA GLOMO Awards.
+
+By the company's own count, it has delivered 400+ digital transformations and digitally enabled 350 million+ users. Its platforms run at Dialog Axiata, CelcomDigi and Ncell, at Commercial Bank across Sri Lanka, Bangladesh and the Maldives, and at BIZAO, an African payments aggregator handling 350 million+ payment requests a month across a dozen countries.
+
+In March 2026, at MWC Barcelona, Axonect announced a strategic partnership with Whale Cloud, with a first joint win at a leading Asia Pacific telco.
+
+## Why it matters
+
+A unit that started inside a telecom group, in Colombo, now sells the platforms telcos need to become tech companies. That is the shift from building for one group to building for the market.
+=====
 slug: zone24x7
 title: A Silicon Valley company has built its robots, RFID systems and AI in Colombo for over 20 years. Meet Zone24x7
 dek: Zone24x7 is headquartered in San Jose, but its hardware and software engineering has been done in Colombo since 2004.
