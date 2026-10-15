@@ -7,6 +7,7 @@ company: Axonect
 sector: Telco API, AI and integration platforms
 blurb: Formerly Axiata Digital Labs; builds API, integration and marketplace platforms for telcos and banks.
 facts: 2019 :: started as Axiata Digital Labs || 12 :: TM Forum and GSMA awards || 2 :: platforms recognised by Gartner
+linkedin: 7516381194742091776
 sources: Axonect, about us => https://axonect.com/about-us/ || Axonect, platforms and customers => https://axonect.com/ || MWC Barcelona 2026, Axonect exhibitor profile => https://www.mwcbarcelona.com/exhibitors/34512-axonect-an-axiata-comany || Gartner Market Guide recognition (July 2025) => https://www.axiatadigitallabs.com/2025/07/09/adls-axonect-enterprise-marketplace-recognized-in-the-2025-gartner-market-guide-for-csp-b2b-digital-marketplace-solutions/ || Whale Cloud partnership (March 2026) => https://www.axiatadigitallabs.com/2026/03/18/whale-cloud-and-axonect-announce-strategic-partnership-to-accelerate-telecom-digital-transformation/ || Daily FT, Colombo headquarters (2023) => https://www.ft.lk/hr/Axiata-Group-Chief-People-Officer-visit-to-Axiata-Digital-Labs/47-749788
 ---
 Most people know Axiata as one of Asia's biggest telecom groups. Fewer know that much of the software behind its digital push was built out of Colombo.
@@ -40,6 +41,7 @@ company: Zone24x7
 sector: RFID, IoT, robotics and AI engineering
 blurb: San Jose company that has engineered hardware and software in Colombo since 2004.
 facts: 2004 :: Colombo technology centre opened || 50+ :: enterprise customers || US patent :: for its AZIRO inventory robot
+linkedin: 7516022589417246720
 sources: Export Development Board, Zone24x7 success story => https://www.srilankabusiness.com/edb/success-stories/electrical-and-electronics/zone24x7.html || Sunday Observer, 20th anniversary (2024) => https://www.sundayobserver.lk/2024/02/11/business/16120/zone-24x7-marks-20th-anniversary-in-tech-industry || Daily FT, AZIRO and US patent (2015) => https://www.ft.lk/it-telecom-tech/zone24x7-emerges-overall-winner-at-nbqsa-2015/50-483639 || Daily Mirror, APICTA 2015 Gold => https://dailymirror.lk/other/zone24x7-wins-gold-for-sri-lanka-at-apicta-2015-in-r-d/117-97371 || Hiru News, 2025 awards and 2026 AI focus => https://hirunews.lk/goldfmnews/448892/zone24x7-wins-seven-tech-awards-strengthens-enterprise-ai-push-for-2026
 ---
 Most Silicon Valley companies send software work offshore. Zone24x7 put its whole engineering operation in Colombo, hardware included.

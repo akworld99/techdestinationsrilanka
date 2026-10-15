@@ -128,7 +128,7 @@ capability.apply(SOLUTIONS)
 
 def tiles(prefix):
     return '<div class="tile-grid five">' + "".join(
-        f'<a class="tile" href="{prefix}solutions/{s["slug"]}/"><img src="{prefix}assets/art/{s["slug"]}.svg" alt="" loading="lazy" width="1200" height="900"><span class="tile-body"><strong>{e(s["label"])}</strong><span>{e(s["short"])}</span></span></a>'
+        f'<a class="tile" href="{prefix}solutions/{s["slug"]}/"><img src="{prefix}assets/art/{s["slug"]}.svg" alt="{e(s["label"])} in Sri Lanka, illustration" loading="lazy" width="1200" height="900"><span class="tile-body"><strong>{e(s["label"])}</strong><span>{e(s["short"])}</span></span></a>'
         for s in SOLUTIONS) + "</div>"
 
 
@@ -147,7 +147,7 @@ def build_all(B, stories):
   <p class="reviewed">Last reviewed {SP.REVIEWED}.</p>
 </div></section>
 <section class="section top-0"><div class="wrap narrow">
-  <img class="story-cover art" src="{prefix}assets/art/{s['slug']}.svg" alt="" width="1200" height="900">
+  <img class="story-cover art" src="{prefix}assets/art/{s['slug']}.svg" alt="{e(s['h1'])}, illustration" width="1200" height="900">
   {SP.stats_strip(s['stats'])}
   <div class="prose tight">{''.join(f'<h2>{e(h)}</h2><p>{SP.linked(B, stories, t, prefix)}</p>' for h, t in s['sections'])}</div>
   <h2 class="h-sub mt">What this looks like in Sri Lanka today</h2>

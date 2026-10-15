@@ -144,7 +144,7 @@ PITCH = {"usa": "Core engineering and R&D for Fortune 500 companies", "uk": "Tra
 def hub_blocks(prefix, stories=None):
     """Industry tiles and country cards, reused on the home page, the why page and the hire hub. No company names or logos here by design."""
     ind = "".join(
-        f'<a class="tile" href="{prefix}why-sri-lanka/{x["slug"]}/"><img src="{prefix}assets/art/{x["slug"]}.svg" alt="" loading="lazy" width="1200" height="900">'
+        f'<a class="tile" href="{prefix}why-sri-lanka/{x["slug"]}/"><img src="{prefix}assets/art/{x["slug"]}.svg" alt="{e(x["label"])} in Sri Lanka, illustration" loading="lazy" width="1200" height="900">'
         f'<span class="tile-body"><strong>{e(x["label"])}</strong><span>{e(TAGLINE[x["slug"]])}</span></span></a>' for x in VERTICALS)
     ctry = []
     for m in MARKETS:
@@ -191,7 +191,7 @@ def build_verticals(B, stories):
 </section>
 <section class="section top-0">
   <div class="wrap narrow">
-    <img class="story-cover art" src="{prefix}assets/art/{v['slug']}.svg" alt="" width="1200" height="900">
+    <img class="story-cover art" src="{prefix}assets/art/{v['slug']}.svg" alt="{e(v['h1'])}, illustration" width="1200" height="900">
     {stats_strip(v['stats'])}
     <h2 class="h-sub mt">What is already built in Sri Lanka</h2>
     {proof_list(B, stories, v['proof'], prefix)}

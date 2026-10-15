@@ -382,7 +382,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
 
 def card(s, prefix, size=""):
     return f"""<article class="card {size}" data-type="{s['category']}" data-text="{e((s['title'] + ' ' + s.get('company', '') + ' ' + s['sector']).lower())}">
-  <a class="card-cover" href="{prefix}stories/{s['slug']}/" tabindex="-1" aria-hidden="true"><img src="{prefix}assets/covers/{s['slug']}.jpg" alt="" width="1200" height="630" loading="lazy"></a>
+  <a class="card-cover" href="{prefix}stories/{s['slug']}/" tabindex="-1" aria-hidden="true"><img src="{prefix}assets/covers/{s['slug']}.jpg" alt="{e(s.get('company') or s['title'])} story cover" width="1200" height="630" loading="lazy"></a>
   <div class="card-body">
     <p class="meta"><span class="tag tag-{s['category']}">{e(s['catname'])}</span><time datetime="{s['date'].isoformat()}">{fdate(s['date'])}</time></p>
     <h3><a href="{prefix}stories/{s['slug']}/">{e(s['title'])}</a></h3>
@@ -394,7 +394,7 @@ def card(s, prefix, size=""):
 def logo(s, prefix, cls="logo"):
     """Company logo if _build/logos/<slug>.png exists, otherwise nothing."""
     if (HERE / "logos" / f"{s['slug']}.png").exists():
-        return f'<img class="{cls}" src="{prefix}assets/logos/{s['slug']}.png" alt="" width="96" height="96" loading="lazy">'
+        return f'<img class="{cls}" src="{prefix}assets/logos/{s['slug']}.png" alt="{e(s.get('company') or s['title'])} logo" width="96" height="96" loading="lazy">'
     return ""
 
 
@@ -605,7 +605,7 @@ def build_story(s, stories):
     </div>
   </header>
   <div class="wrap narrow">
-    <img class="story-cover" src="../../assets/covers/{s['slug']}.jpg" alt="" width="1200" height="630">
+    <img class="story-cover" src="../../assets/covers/{s['slug']}.jpg" alt="{e(s['title'])}" width="1200" height="630">
     <dl class="facts">{facts}</dl>
     {note}
     <div class="prose">
