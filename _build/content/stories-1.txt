@@ -1,3 +1,32 @@
+slug: boardpac
+title: The boardroom software Petronas and Deloitte use is built in Sri Lanka. Meet BoardPAC
+dek: Founded by Lakmini Wijesundera, BoardPAC replaces printed board packs with a secure app used by 50,000+ directors and executives in 40+ countries.
+date: 2026-10-21
+category: global
+company: BoardPAC
+sector: Board meeting and governance software
+blurb: Secure board meeting software used by 1,000+ enterprise customers in 40+ countries.
+facts: 1,000+ :: enterprise customers || 50,000+ :: users || 40+ :: countries
+sources: BoardPAC, customers, certifications and 2026 events => https://boardpac.co/ || Daily FT, BoardPAC appoints Vijendran Watson as Chairman (2021) => https://www.ft.lk/business/BoardPAC-appoints-Vijendran-Watson-as-Chairman/34-722293 || BoardPAC and the Johannesburg Stock Exchange (2024) => https://boardpac.co/news/boardpac-elevates-board-governance-standards-through-collaboration-with-johannesburg-stock-exchange/
+---
+Board meetings are where a company's biggest decisions are made: budgets, acquisitions, CEO appointments. At companies such as Petronas, Deloitte and OCBC Bank, the software that runs those meetings comes from Sri Lanka.
+
+That software is BoardPAC. It was founded by Lakmini Wijesundera, who leads it as CEO, and is chaired by Vijendran Watson, the founding Managing Director of Mobitel and a founding member of edotco Group.
+
+## What it builds
+
+BoardPAC replaces printed board packs with a secure app. Directors read board papers, annotate them, vote on resolutions and sign minutes on a tablet, and company secretaries run the whole meeting cycle from one place. The company has also launched an AI assistant built for board members.
+
+## The proof
+
+By the company's own count, BoardPAC serves 1,000+ enterprise customers and 50,000+ users in 40+ countries. Customers shown on its website include Petronas, Deloitte, OCBC Bank, Vodacom, Axiata and MAS Holdings. It holds ISO 27001 and SOC 2 certification.
+
+In 2026 it sponsored the Chartered Governance Institute of Southern Africa's conference in Johannesburg and took part in the CGI Global Governance Summit in Kuala Lumpur.
+
+## Why it matters
+
+Board software is among the most sensitive products a company buys. It holds unreleased results, deal papers and legal matters. Directors in more than 40 countries trust a platform built by a Sri Lankan team with exactly that.
+=====
 slug: axonect
 title: The AI and API platforms telcos use across Asia are built out of Colombo. Meet Axonect
 dek: Formerly Axiata Digital Labs, the company started in Colombo in 2019 and now sells Gartner recognised API and integration platforms to telcos and banks.
