@@ -1,3 +1,36 @@
+slug: vetstoria
+title: 900,000 vet appointments a month are booked on software built in Colombo. Meet Vetstoria
+dek: Founded by two vets and an engineer and now part of US-based PetDesk, Vetstoria's online booking platform is used by 10,000+ veterinary clinics and engineered by its team in Colombo.
+date: 2026-10-22
+category: global
+company: Vetstoria
+sector: Veterinary online booking software
+blurb: Online booking for 10,000+ vet clinics, part of PetDesk, engineered in Colombo.
+facts: 10,000+ :: veterinary clinics || 900,000 :: appointments booked a month || 30+ :: practice software integrations
+sources: Vetstoria, about us => https://www.vetstoria.com/about-us/ || Vetstoria is becoming PetDesk => https://www.vetstoria.com/?p=101062 || PetDesk acquisition, via PeakSpan (2024) => https://peakspancapital.com/partnerships-news/petdesk-unites-with-veterinary-management-groups-vmg-to-deliver-a-comprehensive-solution-for-modern-veterinary-clinics || Vet Times, Julien Renard interview (2023) => https://www.vettimes.com/news/business/digital/face-to-face-julien-renard-from-vetstoria-speaks-to-vbj || Veterinary Innovation Podcast, founding story (2020) => https://www.vetstoria.com/blog/veterinary-innovation-podcast-with-vetstoria-ceo-julien-renard/ || Vetstoria and VetCor => https://www.vetstoria.com/vetstoria-and-vetcor/ || Vetstoria, Sri Lanka engineering hires (2021) => https://www.vetstoria.com/blog/new-employee-round-up-june-2021/
+---
+Pet owners book around 900,000 vet appointments a month through Vetstoria, and 42% of those bookings happen outside clinic hours. The software behind them is built in Sri Lanka.
+
+Vetstoria was founded by two vets and an engineer. CEO Julien Renard spent ten years in clinical practice, watching every clinic he worked in handle bookings differently. He built the company with Julien Poublon, a friend from vet school, and Damjee Ediriweera, co-founder and technical director.
+
+## What it builds
+
+Vetstoria launched in 2015 with a pet portal app. Clinics kept asking for online booking instead, so the team built that, and it took off. In the UK there was no shared veterinary data standard, so Vetstoria had to convince each practice software vendor to integrate with it, one at a time. Today it connects to more than 30 systems, including IDEXX, Covetrus and ezyVet, and syncs bookings with each clinic's system in real time.
+
+## The proof
+
+By the company's own figures, Vetstoria is used by 10,000+ clinics in dozens of countries, up from 3,500 in 2023, and books about 900,000 appointments a month. It runs a dedicated integration for VetCor, a US network of 750+ animal hospitals.
+
+US-based PetDesk acquired Vetstoria in 2022, alongside WhiskerCloud and Kontak. The product now carries the name Vetstoria by PetDesk, with full unification under PetDesk planned for early 2027.
+
+## The Sri Lanka part
+
+Vetstoria's product engineering, QA, data and cybersecurity teams work out of its Colombo office. They build the booking engine, the real-time sync with clinic software, and the analytics hospital groups use to spot unused appointment capacity.
+
+## Why it matters
+
+The customers are vets in the UK, the US and Europe. The engineering behind the bookings is done in Colombo.
+=====
 slug: boardpac
 title: The boardroom software Petronas and Deloitte use is built in Sri Lanka. Meet BoardPAC
 dek: Founded by Lakmini Wijesundera, BoardPAC replaces printed board packs with a secure app used by 50,000+ directors and executives in 40+ countries.
