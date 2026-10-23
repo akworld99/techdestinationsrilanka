@@ -344,6 +344,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}guides/employer-of-record-sri-lanka/">Employer of record</a>
       <a href="{prefix}guides/pay-employees-and-contractors-in-sri-lanka/">Pay people in Sri Lanka</a>
       <a href="{prefix}offshoring/">Business process outsourcing</a>
+      <a href="{prefix}startups/">Top startups in Sri Lanka</a>
       <a href="{prefix}tools/team-cost-calculator/">Team cost calculator</a>
       <a href="{prefix}compare/">Compare destinations</a>
       <a href="{prefix}playbook/">Free playbook</a>
@@ -835,6 +836,7 @@ def main():
     import seo_startups
     import seo_payroll
     import seo_offshoring
+    import seo_top_startups
     stories = parse_stories()
     import art
     art.write_all(ROOT)
@@ -866,7 +868,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_top_startups.build(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 
