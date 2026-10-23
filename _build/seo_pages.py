@@ -434,7 +434,7 @@ def build_hire_guide(B, stories):
     <thead><tr><th>Route</th><th>Best for</th><th>You need</th><th>Trade off</th></tr></thead>
     <tbody>
       <tr><td><strong>Employer of record</strong></td><td>1 to 10 people you manage directly</td><td>A contract with a provider. {a("Deel", "https://www.deel.com/hiring/employees/sri-lanka/")}, {a("Remote", "https://remote.com/country-explorer/sri-lanka")}, {a("G-P", "https://www.globalization-partners.com/globalpedia/sri-lanka-employer-of-record")} and {a("Multiplier", "https://www.usemultiplier.com/srilanka/employer-of-record")} list Sri Lanka</td><td>A monthly fee per person, and you do your own recruiting</td></tr>
-      <tr><td><strong>Contractors</strong></td><td>Short projects and specialists</td><td>A services contract and a way to pay abroad</td><td>Less commitment on both sides. Check misclassification risk with an adviser</td></tr>
+      <tr><td><strong>Contractors</strong></td><td>Short projects and specialists</td><td>A services contract and a way to pay abroad. See <a href="../pay-employees-and-contractors-in-sri-lanka/">how to pay contractors</a></td><td>Less commitment on both sides. Check misclassification risk with an adviser</td></tr>
       <tr><td><strong>Dedicated team from a partner</strong></td><td>5 to 100 people, fast</td><td>A services agreement with a Sri Lankan company such as those in our <a href="{prefix}companies/">directory</a></td><td>You pay a margin. The partner handles hiring, HR, space and retention</td></tr>
       <tr><td><strong>Your own company</strong></td><td>Long term centres of 30 people or more</td><td>A registered company, a local secretary, payroll and an office. See the <a href="../set-up-a-company-in-sri-lanka/">setup guide</a></td><td>Most control and lowest unit cost, most work to start</td></tr>
     </tbody>
@@ -457,7 +457,7 @@ def build_hire_guide(B, stories):
     <li>Termination: for employers with 15 or more staff, non disciplinary termination of someone with over 180 days of service needs written consent or approval from the Commissioner of Labour ({a("Termination of Employment of Workmen Act", "https://lankalaw.net/wp-content/uploads/2025/03/Termination-of-Employment-of-Workmen-Consolidated-2024.pdf")}). Compensation follows a formula capped at LKR 2.5 million ({a("De Saram", "https://www.desaram.com/sri-lanka-employment-termination-redundancy-laws-2025/")}).</li>
     <li>Income tax: the first LKR 150,000 a month is tax free, then bands from 6% to 36% apply ({a("Inland Revenue notice, March 2025", "https://taxadvisor.lk/data/uploads/notice_to_taxpayers_26_03_2025_.pdf")}).</li>
   </ul>
-  <p class="body-l">The termination rules are the part foreign employers most often miss. Hire carefully, use the probation period properly, and take local advice before ending a contract.</p>
+  <p class="body-l">The termination rules are the part foreign employers most often miss. Hire carefully, use the probation period properly, and take local advice before ending a contract. For contracts, payroll and tax in detail, read <a href="../pay-employees-and-contractors-in-sri-lanka/">how to pay employees and contractors in Sri Lanka</a>.</p>
 
   <div class="reach mt"><h2>Skip the search</h2><p>Tell us the roles and we will introduce people or partner teams who fit.</p>
   <div class="actions"><a class="btn" href="{prefix}talent/find/">Find talent</a><a class="btn btn-ghost" href="{prefix}hire-from/">Guides by country</a></div></div>
@@ -608,6 +608,7 @@ def build_guides_hub(B):
         ("set-up-a-company-in-sri-lanka/", "How to set up a tech company", "Registration, ownership, the 15% export tax, the Board of Investment and Port City Colombo."),
         ("sri-lanka-tech-industry-facts/", "Industry facts and statistics", "Exports, workforce, graduates, rankings and exits, each with its source."),
         ("sri-lanka-startup-ecosystem/", "The startup ecosystem", "How many startups, how the country ranks, the exits, the investors and the weak points."),
+        ("pay-employees-and-contractors-in-sri-lanka/", "How to pay employees and contractors", "Contracts, currency, the 15% tax cap, EPF and ETF, payroll deadlines and the laws that apply."),
         ("employer-of-record-sri-lanka/", "Employer of record in Sri Lanka", "Hire without a local company: who covers Sri Lanka, what you pay and the rules to know."),
         ("../tools/team-cost-calculator/", "Team cost calculator", "Pick roles and team size to see monthly and yearly cost, direct or through a partner."),
         ("../compare/", "Sri Lanka compared", "Side by side with Vietnam, the Philippines, Poland, Ukraine, Romania and Latin America."),
@@ -708,6 +709,7 @@ def build_llms(B, stories, pages):
         ("guides/sri-lanka-tech-industry-facts/", "Sri Lanka tech industry facts and statistics", "Sourced industry numbers"),
         ("why-sri-lanka/", "Why Sri Lanka", "Eight evidence backed reasons"),
         ("guides/employer-of-record-sri-lanka/", "Employer of record in Sri Lanka", "Providers, costs and rules for hiring without a local company"),
+        ("guides/pay-employees-and-contractors-in-sri-lanka/", "How to pay employees and contractors in Sri Lanka", "Contracts, currency, contractor tax, EPF and ETF, payroll deadlines and the laws that apply"),
         ("tools/team-cost-calculator/", "Sri Lanka team cost calculator", "Cost of a team by role and size"),
         ("answers/", "Answers", "Short sourced answers on hiring, outsourcing and setup"),
         ("guides/sri-lanka-startup-ecosystem/", "Sri Lanka's startup ecosystem", "Size, rankings, exits, investors and weaknesses"),

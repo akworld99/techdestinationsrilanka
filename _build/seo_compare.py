@@ -243,6 +243,7 @@ def build_eor(B, stories):
     <li>Employer provident fund contribution of 12% and trust fund contribution of 3%.</li>
     <li>The provider's monthly fee per employee.</li>
     <li>Any benefits you choose to add, such as medical cover.</li>
+    <li>For the full cost breakdown and payroll rules, see <a href="../pay-employees-and-contractors-in-sri-lanka/">how to pay employees and contractors</a>.</li>
   </ul>
   <h2 class="h-sub mt">What an employer of record does not do</h2>
   <p class="body-l">It does not find the people. You still need to source, interview and select. That is the part we help with: tell us the roles and we introduce candidates or partner teams, and you can employ them through whichever provider you prefer.</p>
@@ -266,6 +267,8 @@ ANSWERS = [
         ("How do I find software developers in Sri Lanka?", "Tell us the roles and we introduce candidates or partner teams. You can also work with companies in our directory or recruit directly through an employer of record.", "talent/find/"),
         ("What does a senior software engineer cost in Sri Lanka?", "Roughly USD 10,800 a year at the local median and about USD 18,600 at export company pay levels, including 15% statutory contributions, on 2026 data.", "guides/sri-lanka-tech-salaries/"),
         ("Do Sri Lankan developers speak English?", "English is the working language of the export technology sector and of university level computing education. On the EF English Proficiency Index 2025 the general population ranks 73rd of 123 countries, so interview for it.", "compare/"),
+        ("How do I pay a contractor in Sri Lanka?", "Sign a services agreement, take monthly invoices and pay by bank transfer into the contractor's Sri Lankan account, in dollars if you like. They pay their own tax, capped at 15% on foreign currency service income.", "guides/pay-employees-and-contractors-in-sri-lanka/"),
+        ("Can I run payroll in Sri Lanka without a local company?", "No. Payroll needs a registered local employer for provident fund, trust fund and tax withholding. Use an employer of record or your own Sri Lankan company.", "guides/pay-employees-and-contractors-in-sri-lanka/"),
         ("What is the notice period in Sri Lanka?", "There is no statutory minimum. It is set in the employment contract.", "guides/how-to-hire-in-sri-lanka/"),
         ("How many public holidays does Sri Lanka have?", "The 2026 government calendar lists 26 public holidays, of which 8 are mercantile holidays that apply to most private sector offices.", "guides/sri-lanka-tech-salaries/"),
     ]),

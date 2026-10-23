@@ -27,6 +27,7 @@ Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its
 - [Sri Lanka tech industry facts and statistics](https://techdestinationsrilanka.lk/guides/sri-lanka-tech-industry-facts/): Sourced industry numbers
 - [Why Sri Lanka](https://techdestinationsrilanka.lk/why-sri-lanka/): Eight evidence backed reasons
 - [Employer of record in Sri Lanka](https://techdestinationsrilanka.lk/guides/employer-of-record-sri-lanka/): Providers, costs and rules for hiring without a local company
+- [How to pay employees and contractors in Sri Lanka](https://techdestinationsrilanka.lk/guides/pay-employees-and-contractors-in-sri-lanka/): Contracts, currency, contractor tax, EPF and ETF, payroll deadlines and the laws that apply
 - [Sri Lanka team cost calculator](https://techdestinationsrilanka.lk/tools/team-cost-calculator/): Cost of a team by role and size
 - [Answers](https://techdestinationsrilanka.lk/answers/): Short sourced answers on hiring, outsourcing and setup
 - [Sri Lanka's startup ecosystem](https://techdestinationsrilanka.lk/guides/sri-lanka-startup-ecosystem/): Size, rankings, exits, investors and weaknesses
