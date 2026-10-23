@@ -2,6 +2,7 @@
 import html
 
 import seo_pages as SP
+import seo_offshoring_plus as X
 from seo_pages import a
 
 e = html.escape
@@ -313,7 +314,8 @@ def build(B, stories):
     for c in CAPS:
         prefix = "../../"
         path = f"offshoring/{c['slug']}/"
-        faq, faq_ld = SP.faq_block(stories, c["faqs"])
+        c["_art"] = ART[c["slug"]]
+        faq, faq_ld = SP.faq_block(stories, c["faqs"] + X.EXTRA[c["slug"]]["faqs"])
         others = SP.chip_links([(x["label"], f"../{x['slug']}/") for x in CAPS if x is not c])
         body = f"""
 <section class="page-head"><div class="wrap narrow">
@@ -325,6 +327,8 @@ def build(B, stories):
 <section class="section top-0"><div class="wrap narrow">
   <img class="story-cover art" src="{prefix}assets/art/{ART[c['slug']]}.svg" alt="{e(c['h1'])}, illustration" width="1200" height="900">
   {SP.stats_strip(c['stats'])}
+  <h2 class="h-sub mt">{e(c['label'])} outsourcing in Sri Lanka at a glance</h2>
+  {X.glance_html(c)}
   <h2 class="h-sub mt">What Sri Lankan teams do</h2>
   <ul class="ticks">{''.join(f'<li>{e(w)}</li>' for w in c['what'])}</ul>
   <h2 class="h-sub mt">The evidence</h2>
@@ -333,6 +337,7 @@ def build(B, stories):
   {_markets()}
   <h2 class="h-sub mt">AI: what is being automated, and what is not</h2>
   <p class="body-l">{e(c['ai'])}</p>
+  {X.depth_html(c, prefix)}
   <h2 class="h-sub mt">Ways to set it up</h2>
   <ul class="ticks">
     <li><strong>A managed provider</strong> runs the process for you under a service agreement. Fastest to start.</li>
@@ -344,10 +349,11 @@ def build(B, stories):
   {faq}
   <h2 class="h-sub mt">Other services from Sri Lanka</h2>
   {others}
-  <p class="body-l mt">See also: <a href="../">Outsourcing to Sri Lanka overview</a> · <a href="{prefix}compare/philippines/">Sri Lanka vs the Philippines</a> · <a href="{prefix}guides/how-to-hire-in-sri-lanka/">How to hire in Sri Lanka</a></p>
+  <p class="body-l mt">See also: <a href="../">Outsourcing to Sri Lanka overview</a> · <a href="../bpo-companies-sri-lanka/">BPO companies in Sri Lanka</a> · <a href="{prefix}compare/philippines/">Sri Lanka vs the Philippines</a> · <a href="{prefix}guides/how-to-hire-in-sri-lanka/">How to hire in Sri Lanka</a></p>
+  <p class="body-l">By market: <a href="../from-uk/">from the UK</a> · <a href="../from-australia/">from Australia</a> · <a href="../from-usa/">from the USA</a> · <a href="../from-uae/">from the UAE</a></p>
 </div></section>
 """
-        head = faq_ld + SP.crumbs_ld(B, [("Offshoring", "offshoring/"), (c["label"], path)])
+        head = faq_ld + X.schema(B, c, path) + SP.crumbs_ld(B, [("Offshoring", "offshoring/"), (c["label"], path)])
         B.write(path + "index.html", B.page(c["h1"], c["desc"], body, prefix, path, extra_head=head, active="services", seo_title=c["title"]))
         paths.append(path)
 
@@ -383,14 +389,25 @@ def build(B, stories):
   </ul>
   <h2 class="h-sub mt">By buyer market</h2>
   {_markets()}
+  <div class="doors wrap3 mt">
+    <a class="door has-art" href="from-uk/"><img class="door-art" src="../assets/art/g-countries.svg" alt="" loading="lazy" width="1200" height="900"><h3>From the UK</h3><p>Accounting, insurance, legal and BIM teams that cover the UK day.</p><span class="door-go">UK guide</span></a>
+    <a class="door has-art" href="from-australia/"><img class="door-art" src="../assets/art/g-why.svg" alt="" loading="lazy" width="1200" height="900"><h3>From Australia</h3><p>Offshore accountants, assistants and marketers with a shared afternoon.</p><span class="door-go">Australia guide</span></a>
+    <a class="door has-art" href="from-usa/"><img class="door-art" src="../assets/art/o-medical.svg" alt="" loading="lazy" width="1200" height="900"><h3>From the USA</h3><p>Medical billing, research and back office with overnight turnaround.</p><span class="door-go">USA guide</span></a>
+    <a class="door has-art" href="from-uae/"><img class="door-art" src="../assets/art/g-offshoring.svg" alt="" loading="lazy" width="1200" height="900"><h3>From the UAE</h3><p>Teams 1.5 hours away that share almost the whole working day.</p><span class="door-go">UAE guide</span></a>
+    <a class="door has-art" href="bpo-companies-sri-lanka/"><img class="door-art" src="../assets/art/o-support.svg" alt="" loading="lazy" width="1200" height="900"><h3>BPO companies in Sri Lanka</h3><p>Who delivers which service from Sri Lanka, with sources.</p><span class="door-go">See the directory</span></a>
+  </div>
   {_cta(B, prefix)}
   {faq}
   <p class="body-l mt">Looking for software teams instead? See <a href="{prefix}solutions/software-outsourcing-sri-lanka/">software outsourcing</a>, <a href="{prefix}solutions/dedicated-development-team-sri-lanka/">dedicated teams</a> and <a href="{prefix}why-sri-lanka/finance-accounting/">finance and shared services</a>.</p>
 </div></section>
 """
-    head = faq_ld + SP.crumbs_ld(B, [("Offshoring", "offshoring/")])
+    art = SP.ld({"@context": "https://schema.org", "@type": "Article", "headline": "Outsourcing to Sri Lanka: business services beyond tech", "datePublished": "2026-10-23", "dateModified": "2026-10-23",
+                 "author": {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"}, "publisher": {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"},
+                 "mainEntityOfPage": f"{B.SITE_URL}/offshoring/", "image": f"{B.SITE_URL}/assets/art/g-offshoring.svg", "about": ["Business process outsourcing", "Sri Lanka"]})
+    head = faq_ld + art + SP.crumbs_ld(B, [("Offshoring", "offshoring/")])
     B.write("offshoring/index.html", B.page("Outsourcing to Sri Lanka: business services beyond tech",
                                             "Outsourcing companies and BPO services in Sri Lanka: accounting, investment research, medical billing, customer support, legal, BIM, marketing and virtual assistants. Evidence and sources.",
                                             body, prefix, "offshoring/", extra_head=head, active="services",
                                             seo_title="Outsourcing to Sri Lanka: BPO companies and services (2026)"))
+    paths += X.build_markets(B, stories, CAPS, _cta, _markets()) + X.build_directory(B, stories, _cta)
     return paths + ["offshoring/"]

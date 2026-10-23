@@ -201,7 +201,7 @@ def build_verticals(B, stories):
     <div class="reach mt">
       <h2>Start with a shortlist</h2>
       <p>Tell us the roles and the stack. We introduce engineers or partner teams with {e(v['name'])} experience, and you take it from there.</p>
-      <div class="actions"><a class="btn" href="{prefix}talent/find/?industry={v['slug']}">Find {e(v['name'])} talent</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/how-to-hire-in-sri-lanka/">How hiring works</a></div>
+      <div class="actions"><a class="btn" href="{prefix}talent/find/?industry={v['slug']}">Find {e(v['name'])} talent</a>{('<a class="btn btn-ghost" href="' + prefix + 'offshoring/accounting-bookkeeping-outsourcing-sri-lanka/">Accounting outsourcing</a>') if v['slug'] == "finance-accounting" else ""}<a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/how-to-hire-in-sri-lanka/">How hiring works</a></div>
     </div>
     {faq}
     <h2 class="h-sub mt">Other industries</h2>
@@ -254,7 +254,7 @@ def build_markets(B, stories):
     <div class="reach">
       <h2>Tell us who you need</h2>
       <p>We introduce Sri Lankan engineers, specialists or partner teams who have worked with companies from {e(m['name'])}.</p>
-      <div class="actions"><a class="btn" href="{prefix}talent/find/?from={m['slug']}">Find talent</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/sri-lanka-tech-salaries/">Salary and cost guide</a></div>
+      <div class="actions"><a class="btn" href="{prefix}talent/find/?from={m['slug']}">Find talent</a>{('<a class="btn btn-ghost" href="' + prefix + 'offshoring/' + {"uk": "from-uk", "australia": "from-australia", "usa": "from-usa", "uae-gulf": "from-uae"}[m['slug']] + '/">Business services</a>') if m['slug'] in ("uk", "australia", "usa", "uae-gulf") else ""}<a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="{prefix}guides/sri-lanka-tech-salaries/">Salary and cost guide</a></div>
     </div>
     {faq}
     <h2 class="h-sub mt">Other countries</h2>
@@ -721,6 +721,10 @@ def build_llms(B, stories, pages):
         ("playbook/", "Sri Lanka tech team playbook 2026", "All guides in one PDF"),
         ("data/sri-lanka-tech-salaries-2026.csv", "Salary data 2026 (CSV)", "Open data, free to use with attribution"),
     ]]
+    import seo_offshoring, seo_offshoring_plus as OX
+    lines += ["", "## Outsourcing business services to Sri Lanka"] + [f"- [{c['h1']}]({B.SITE_URL}/offshoring/{c['slug']}/): {c['answer']}" for c in seo_offshoring.CAPS]
+    lines += [f"- [{m['h1']}]({B.SITE_URL}/offshoring/{m['slug']}/): {m['answer']}" for m in OX.MARKET_PAGES]
+    lines += [f"- [BPO and outsourcing companies in Sri Lanka]({B.SITE_URL}/offshoring/bpo-companies-sri-lanka/): Organisations delivering business services from Sri Lanka, by service, with sources"]
     import seo_compare
     lines += ["", "## Sri Lanka compared with other offshore destinations"] + [f"- [Sri Lanka vs {o['name'][0].upper() + o['name'][1:]}]({B.SITE_URL}/compare/{o['slug']}/): {o['answer']}" for o in seo_compare.OTHERS]
     import solutions

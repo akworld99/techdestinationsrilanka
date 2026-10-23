@@ -89,7 +89,7 @@ def build_compare(B, stories):
   <p class="cap mt-s">Sources: {a("EF English Proficiency Index 2025", o["efurl"])}, {a("Uvik rate index 2026", UVIK)}, {a("Accelerance 2026 rates guide", ACC)}, {a("WIPO Global Innovation Index 2025", GII.format(o["cc"]))}, Kearney Global Services Location Index. Workforce figures count different things in each country and are not directly comparable.</p>
   <div class="vs">
     <div><h2>Where {e(N)} is stronger</h2><ul class="ticks">{''.join(f'<li>{e(x)}</li>' for x in o['theirs'])}</ul></div>
-    <div><h2>Where Sri Lanka is stronger</h2><ul class="ticks">{''.join(f'<li>{e(x)}</li>' for x in o['ours'])}</ul></div>
+    <div><h2>Where Sri Lanka is stronger</h2><ul class="ticks">{''.join(f'<li>{e(x)}</li>' for x in o['ours'])}</ul>{'<p class="body-l">For business services, see <a href="../../offshoring/">outsourcing to Sri Lanka beyond tech</a> and the <a href="../../offshoring/bpo-companies-sri-lanka/">BPO company directory</a>.</p>' if o['slug'] == 'philippines' else ''}</div>
   </div>
   <h2 class="h-sub mt">What to watch in each</h2>
   <ul class="ticks">{watch}</ul>
@@ -286,6 +286,7 @@ ANSWERS = [
         ("Do I need Board of Investment approval?", "No. It is optional. Registration helps with investor approval, visas and facilitation.", "guides/set-up-a-company-in-sri-lanka/"),
         ("What is a global capability centre?", "A company's own offshore operation, staffed by its employees. IFS, Sysco, Synopsys and EY run them in Sri Lanka.", "solutions/offshore-development-center-sri-lanka/"),
     ]),
+    ("Outsourcing business services", [(q, ans, u) for q, ans, u in __import__("seo_offshoring_plus").ANSWERS]),
     ("The industry", [
         ("How big is Sri Lanka's IT industry?", "USD 1.645 billion in IT and business process exports in 2025 according to the Export Development Board, with roughly 150,000 to 175,000 people employed.", "guides/sri-lanka-tech-industry-facts/"),
         ("Which global tech companies are in Sri Lanka?", "IFS, Sysco, Synopsys, Zebra Technologies, Virtusa, HCLTech, EY, HSBC, WNS and Michelin all run engineering or delivery operations there.", "companies/"),
