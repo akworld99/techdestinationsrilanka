@@ -173,6 +173,7 @@ def build_all(B, stories):
   <p class="lede">Five routes, from handing over a project to opening your own centre. Each page has the evidence, the costs and the companies that do it.</p>
 </div></section>
 <section class="section top-0"><div class="wrap">{tiles("../")}
+  <p class="body-l mt">Need accounting, research, medical billing, support or other business services rather than software? See <a href="../offshoring/">outsourcing to Sri Lanka beyond tech</a>.</p>
   <div class="reach mt"><h2>Not sure which fits?</h2><p>Tell us the team size and timeline and we will point you the right way.</p>
   <div class="actions"><a class="btn" href="../talent/find/">Find talent</a><a class="btn btn-ghost" href="../services/">Our services</a></div></div>
 </div></section>
