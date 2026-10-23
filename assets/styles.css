@@ -526,3 +526,19 @@ p { margin: 0 0 1em; }
 .toc ol { margin: 8px 0 0 20px; display: grid; gap: 4px; }
 .toc a { text-decoration: none; }
 .toc a:hover { text-decoration: underline; }
+/* illustrated guide cards */
+.door.has-art { padding-top: 0; overflow: hidden; }
+.door-art { display: block; max-width: none; width: calc(100% + 56px); margin: 0 -28px 22px; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 45%; background: #041532; transition: transform 0.4s ease; }
+.door.has-art:hover .door-art { transform: scale(1.03); }
+/* homepage business services band */
+.section.biz { background: radial-gradient(ellipse at 20% 0%, #12449f 0%, #082a66 45%, #041532 100%); color: #d7e2f7; }
+.biz h2 { color: #fff; font-size: clamp(2rem, 3.4vw, 2.8rem); margin: 6px 0 14px; }
+.biz .eyebrow { color: var(--saffron); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; margin: 0; }
+.biz-head { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: end; margin-bottom: 34px; }
+.biz-lede { font-size: 18px; max-width: 640px; margin: 0 0 22px; }
+.biz-stats { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.biz-stats li { border-left: 3px solid var(--saffron); padding: 4px 0 4px 16px; }
+.biz-stats strong { display: block; color: #fff; font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
+.biz-stats span { font-size: 15px; }
+.biz .tile-grid.five .tile { box-shadow: 0 0 0 1px rgba(255,255,255,.12); }
+@media (max-width: 980px) { .biz-head { grid-template-columns: 1fr; } }

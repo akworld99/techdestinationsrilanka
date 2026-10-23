@@ -618,7 +618,10 @@ def build_guides_hub(B):
         ("../why-sri-lanka/", "Why Sri Lanka, by industry", "Evidence pages for healthtech, automotive, fintech, AI and more."),
         ("../hire-from/", "Hiring by country", "Time zones and proof for the USA, UK, Nordics, Netherlands, Germany, Australia and the Gulf."),
     ]
-    cards = "".join(f'<a class="door" href="{h}"><h3>{e(t)}</h3><p>{e(d)}</p><span class="door-go">Open</span></a>' for h, t, d in items)
+    art = {"sri-lanka-tech-salaries/": "g-salaries", "how-to-hire-in-sri-lanka/": "g-hire", "set-up-a-company-in-sri-lanka/": "g-setup", "sri-lanka-tech-industry-facts/": "g-facts",
+           "sri-lanka-startup-ecosystem/": "g-ecosystem", "employer-of-record-sri-lanka/": "g-eor", "pay-employees-and-contractors-in-sri-lanka/": "g-pay", "../offshoring/": "g-offshoring",
+           "../tools/team-cost-calculator/": "g-calculator", "../compare/": "g-compare", "../answers/": "g-answers", "../playbook/": "g-playbook", "../why-sri-lanka/": "g-why", "../hire-from/": "g-countries"}
+    cards = "".join(f'<a class="door has-art" href="{h}"><img class="door-art" src="../assets/art/{art.get(h, "g-why")}.svg" alt="{e(t)}, illustration" loading="lazy" width="1200" height="900"><h3>{e(t)}</h3><p>{e(d)}</p><span class="door-go">Open</span></a>' for h, t, d in items)
     body = f"""
 <section class="page-head"><div class="wrap">
   <h1>Guides</h1>

@@ -344,7 +344,6 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}guides/employer-of-record-sri-lanka/">Employer of record</a>
       <a href="{prefix}guides/pay-employees-and-contractors-in-sri-lanka/">Pay people in Sri Lanka</a>
       <a href="{prefix}offshoring/">Business process outsourcing</a>
-      <a href="{prefix}startups/">Top startups in Sri Lanka</a>
       <a href="{prefix}tools/team-cost-calculator/">Team cost calculator</a>
       <a href="{prefix}compare/">Compare destinations</a>
       <a href="{prefix}playbook/">Free playbook</a>
@@ -481,6 +480,8 @@ def build_home(stories):
   </div>
 </section>
 
+{seo_offshoring.home_section(sys.modules[__name__])}
+
 <section class="section tint">
   <div class="wrap">
     <div class="section-head"><h2>The proof, in stories</h2><a class="more" href="stories/">All {len(stories)} stories</a></div>
@@ -513,12 +514,12 @@ def build_home(stories):
   <div class="wrap">
     <div class="section-head"><h2>Numbers before you decide</h2><a class="more" href="guides/">All guides</a></div>
     <div class="doors wrap3">
-      <a class="door" href="guides/sri-lanka-tech-salaries/"><h3>Salary and cost guide</h3><p>What engineers earn in Colombo in 2026 and what an employee costs on top, with sources.</p><span class="door-go">See the numbers</span></a>
-      <a class="door" href="guides/how-to-hire-in-sri-lanka/"><h3>How to hire</h3><p>Employer of record, contractors, a partner team or your own company, compared.</p><span class="door-go">Compare routes</span></a>
-      <a class="door" href="offshoring/"><h3>Outsource business services</h3><p>Accounting, research, medical billing, support, legal, BIM and marketing teams.</p><span class="door-go">See services</span></a>
-      <a class="door" href="guides/set-up-a-company-in-sri-lanka/"><h3>Set up a company</h3><p>Registration, ownership, tax, the Board of Investment and Port City Colombo.</p><span class="door-go">Read the guide</span></a>
-      <a class="door" href="tools/team-cost-calculator/"><h3>Team cost calculator</h3><p>Pick the roles and team size. See the monthly and yearly cost, direct or through a partner.</p><span class="door-go">Estimate a team</span></a>
-      <a class="door" href="compare/"><h3>Sri Lanka compared</h3><p>Side by side with Vietnam, the Philippines, Poland, Ukraine, Romania and Latin America.</p><span class="door-go">Compare destinations</span></a>
+      <a class="door has-art" href="guides/sri-lanka-tech-salaries/"><img class="door-art" src="assets/art/g-salaries.svg" alt="" loading="lazy" width="1200" height="900"><h3>Salary and cost guide</h3><p>What engineers earn in Colombo in 2026 and what an employee costs on top, with sources.</p><span class="door-go">See the numbers</span></a>
+      <a class="door has-art" href="guides/how-to-hire-in-sri-lanka/"><img class="door-art" src="assets/art/g-hire.svg" alt="" loading="lazy" width="1200" height="900"><h3>How to hire</h3><p>Employer of record, contractors, a partner team or your own company, compared.</p><span class="door-go">Compare routes</span></a>
+      <a class="door has-art" href="guides/pay-employees-and-contractors-in-sri-lanka/"><img class="door-art" src="assets/art/g-pay.svg" alt="" loading="lazy" width="1200" height="900"><h3>Pay people in Sri Lanka</h3><p>Contracts, currency, contractor tax, EPF and ETF, and payroll deadlines.</p><span class="door-go">Read the guide</span></a>
+      <a class="door has-art" href="guides/set-up-a-company-in-sri-lanka/"><img class="door-art" src="assets/art/g-setup.svg" alt="" loading="lazy" width="1200" height="900"><h3>Set up a company</h3><p>Registration, ownership, tax, the Board of Investment and Port City Colombo.</p><span class="door-go">Read the guide</span></a>
+      <a class="door has-art" href="tools/team-cost-calculator/"><img class="door-art" src="assets/art/g-calculator.svg" alt="" loading="lazy" width="1200" height="900"><h3>Team cost calculator</h3><p>Pick the roles and team size. See the monthly and yearly cost, direct or through a partner.</p><span class="door-go">Estimate a team</span></a>
+      <a class="door has-art" href="compare/"><img class="door-art" src="assets/art/g-compare.svg" alt="" loading="lazy" width="1200" height="900"><h3>Sri Lanka compared</h3><p>Side by side with Vietnam, the Philippines, Poland, Ukraine, Romania and Latin America.</p><span class="door-go">Compare destinations</span></a>
       <a class="door" href="playbook/"><h3>The 2026 playbook</h3><p>Salaries, hiring routes, setup, tax and industry numbers in one PDF.</p><span class="door-go">Download free</span></a>
       <a class="door" href="guides/sri-lanka-startup-ecosystem/"><h3>The startup ecosystem</h3><p>How many startups, how it ranks, the exits, the investors and the weak points.</p><span class="door-go">See the ecosystem</span></a>
       <a class="door" href="tech-tour/"><h3>Sri Lanka Tech Tour</h3><p>Three days in Colombo meeting the companies and people in our stories.</p><span class="door-go">Register interest</span></a>
@@ -828,7 +829,7 @@ def write(rel, content):
 
 
 def main():
-    global seo_pages, seo_more, solutions, seo_compare, seo_startups
+    global seo_pages, seo_more, solutions, seo_compare, seo_startups, seo_offshoring
     import seo_pages
     import seo_more
     import solutions
@@ -836,10 +837,11 @@ def main():
     import seo_startups
     import seo_payroll
     import seo_offshoring
-    import seo_top_startups
     stories = parse_stories()
     import art
     art.write_all(ROOT)
+    import art_more
+    art_more.write_all(ROOT)
     for d in ("covers", "posts", "logos"):
         (ROOT / "assets" / d).mkdir(parents=True, exist_ok=True)
     cf = HERE / "post-images" / "crops.json"   # per story [x, y, width] of the banner crop inside the 800x1000 post graphic
@@ -868,7 +870,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_top_startups.build(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

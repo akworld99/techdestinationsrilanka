@@ -267,9 +267,35 @@ def _cta(B, prefix, slug=""):
   <div class="actions"><a class="btn" href="{prefix}talent/find/{q}">Tell us what you need</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="mailto:{B.EMAIL}">Email us</a></div></div>"""
 
 
-def _cards(prefix_to_section):
-    return '<div class="doors wrap3">' + "".join(
-        f'<a class="door" href="{prefix_to_section}{c["slug"]}/"><h3>{e(c["label"])}</h3><p>{e(c["short"])}</p><span class="door-go">Read more</span></a>' for c in CAPS) + "</div>"
+ART = {'accounting-bookkeeping-outsourcing-sri-lanka': 'o-accounting', 'investment-research-kpo-sri-lanka': 'o-research', 'virtual-assistants-sri-lanka': 'o-va', 'digital-marketing-outsourcing-sri-lanka': 'o-marketing', 'customer-support-outsourcing-sri-lanka': 'o-support', 'medical-billing-outsourcing-sri-lanka': 'o-medical', 'legal-process-outsourcing-sri-lanka': 'o-legal', 'engineering-design-bim-outsourcing-sri-lanka': 'o-bim', 'data-annotation-sri-lanka': 'o-annotation', 'insurance-hr-payroll-outsourcing-sri-lanka': 'o-insurance'}
+
+
+def _cards(prefix_to_section, prefix_to_root):
+    return '<div class="tile-grid five">' + "".join(
+        f'<a class="tile" href="{prefix_to_section}{c["slug"]}/"><img src="{prefix_to_root}assets/art/{ART[c["slug"]]}.svg" alt="{e(c["label"])} outsourcing in Sri Lanka, illustration" loading="lazy" width="1200" height="900">'
+        f'<span class="tile-body"><strong>{e(c["label"])}</strong><span>{e(c["short"])}</span></span></a>' for c in CAPS) + "</div>"
+
+
+def home_section(B):
+    """Homepage band introducing business services offshoring."""
+    return f"""<section class="section biz">
+  <div class="wrap">
+    <div class="biz-head">
+      <div>
+        <p class="eyebrow">Beyond software</p>
+        <h2>Offshore business teams in Sri Lanka</h2>
+        <p class="biz-lede">Global banks, insurers and research firms have run operations in Colombo for more than 20 years. Companies in the UK, Australia, the US and the Gulf now offshore accounting, research, medical billing, support, legal and design work here too.</p>
+        <div class="actions"><a class="btn btn-saffron" href="offshoring/">See all services</a><a class="btn btn-ondark" href="talent/find/?route=offshoring">Tell us what you need</a></div>
+      </div>
+      <ul class="biz-stats">
+        <li><strong>$1.64B</strong><span>IT and business process exports in 2025</span></li>
+        <li><strong>9,000+</strong><span>Chartered Accountants, plus 40,000 students</span></li>
+        <li><strong>1.5 hrs</strong><span>from Dubai, a shared afternoon with Sydney</span></li>
+      </ul>
+    </div>
+    {_cards("offshoring/", "")}
+  </div>
+</section>"""
 
 
 HUB_FAQS = [
@@ -297,6 +323,7 @@ def build(B, stories):
   <p class="reviewed">Last reviewed {REVIEWED}. Sources are linked next to each fact.</p>
 </div></section>
 <section class="section top-0"><div class="wrap narrow">
+  <img class="story-cover art" src="{prefix}assets/art/{ART[c['slug']]}.svg" alt="{e(c['h1'])}, illustration" width="1200" height="900">
   {SP.stats_strip(c['stats'])}
   <h2 class="h-sub mt">What Sri Lankan teams do</h2>
   <ul class="ticks">{''.join(f'<li>{e(w)}</li>' for w in c['what'])}</ul>
@@ -339,7 +366,7 @@ def build(B, stories):
   <h2 class="h-sub mt">What you can outsource to Sri Lanka</h2>
   <div class="tbl"><table><thead><tr><th>Service</th><th>What teams do</th><th>One fact</th></tr></thead><tbody>{rows}</tbody></table></div>
 </div>
-<div class="wrap"><h2 class="h-sub mt">Explore by service</h2>{_cards("")}</div>
+<div class="wrap"><h2 class="h-sub mt">Explore by service</h2>{_cards("", prefix)}</div>
 <div class="wrap narrow">
   <h2 class="h-sub mt">Why companies choose Sri Lanka for business services</h2>
   <ul class="ticks">
