@@ -49,7 +49,7 @@ EXTRA = {
         glance=[("Best for", "Banking, insurance, travel and complex servicing; email and chat; UK, Gulf and Australian hours"), ("Main client markets", "UK, Australia, UAE, US, Nordics"),
                 ("Typical setup", "A managed team through a business process provider, or a dedicated team"), ("AI exposure", "High for simple tier one queries, low for escalations and regulated cases"), ("Hours", "UK and Gulf day shifts natural; US needs night shifts")],
         checklist=["Which industries and channels does the provider already support?", "How are quality, call recording and customer data handled?", "What is the plan for shift cover, attrition and peaks?", "How will the team work alongside your AI chatbot?", "What are the service levels and the penalties for missing them?"],
-        faqs=[("Are there call centers in Sri Lanka?", "Yes. Contact centres serve airlines, hospitality, retail and financial services, and global firms such as HSBC and WNS have run customer operations in Colombo since 2004. The sector is smaller than the largest call centre destinations."),
+        faqs=[("Are there call centers in Sri Lanka?", "Yes. Contact centres serve airlines, hospitality, retail and financial services, and global firms such as HSBC have run customer operations in Colombo since 2004. The sector is smaller than the largest call centre destinations."),
               ("Is Sri Lanka good for email and chat support?", "Yes, particularly for complex or regulated queries and for customers in the UK, the Gulf and Australia, where working hours overlap.")]),
     "medical-billing-outsourcing-sri-lanka": dict(
         term="medical billing outsourcing",
@@ -138,15 +138,15 @@ MARKET_PAGES = [
     dict(slug="from-uk", name="the UK", short="UK", h1="Outsourcing to Sri Lanka from the UK",
          title="Outsourcing to Sri Lanka from the UK: BPO, accounting and offshore teams",
          desc="How UK companies, accounting firms, insurers and law firms outsource to Sri Lanka: time zone, the best fit services, data protection, examples and how to start.",
-         answer="UK businesses have outsourced to Sri Lanka for more than 20 years. HSBC and WNS opened in Colombo in 2004, the London Stock Exchange Group employs more than 1,600 people there, and in 2025 the UK specialist insurer CFC opened a 200 seat hub in Colombo. Sri Lanka is 4.5 hours ahead of the UK in summer and 5.5 in winter, so a team starting early afternoon covers the full UK day, and work processed in the Sri Lankan morning is ready before London opens.",
+         answer="UK businesses have outsourced to Sri Lanka for more than 20 years. HSBC opened its Colombo operations in 2004, the London Stock Exchange Group employs more than 1,600 people there, and in 2025 the UK specialist insurer CFC opened a 200 seat hub in Colombo. Sri Lanka is 4.5 hours ahead of the UK in summer and 5.5 in winter, so a team starting early afternoon covers the full UK day, and work processed in the Sri Lankan morning is ready before London opens.",
          tz="4.5 hours ahead (BST) or 5.5 hours ahead (GMT)", best=["accounting-bookkeeping-outsourcing-sri-lanka", "insurance-hr-payroll-outsourcing-sri-lanka", "legal-process-outsourcing-sri-lanka", "engineering-design-bim-outsourcing-sri-lanka", "customer-support-outsourcing-sri-lanka"],
          law="Your UK GDPR obligations still apply when data is processed in Sri Lanka. Use a data processing agreement with international transfer terms, and expect Sri Lanka's own data protection law to apply to processors from 1 January 2027. If you engage individual contractors, take advice on how IR35 applies to your arrangement.",
          proof=[("HSBC has run operations in Colombo since 2004, serving 24 markets.", "HSBC Sri Lanka", "https://www.about.hsbc.lk/hsbc-in-sri-lanka/hsbc-electronic-data-processing"),
                 ("LSEG's Colombo hubs employ more than 1,600 people.", "LSEG careers", "https://www.lseg.com/en/careers/where-we-work/colombo-sri-lanka"),
-                ("UK specialist insurer CFC opened a 200 seat global services hub in Colombo with Virtusa in October 2025.", "Daily Mirror", "https://www.dailymirror.lk/business-news/Virtusa-partners-to-unveil-200-seat-digital-service-hub-in-Sri-Lanka/273-323084"),
-                ("A UK managed BIM team delivers Revit, clash detection and RIBA work packages from Sri Lanka.", "The Sourcing Collective", "https://thesourcingcollective.co.uk/about-us-bim-manager-team/"),
+                ("UK specialist insurer CFC opened a 200 seat global services hub in Colombo in October 2025.", "Daily Mirror", "https://www.dailymirror.lk/business-news/Virtusa-partners-to-unveil-200-seat-digital-service-hub-in-Sri-Lanka/273-323084"),
+                ("A UK managed BIM team delivers Revit, clash detection and RIBA work packages from Sri Lanka.", "Company website", "https://thesourcingcollective.co.uk/about-us-bim-manager-team/"),
                 ("A Colombo legal process outsourcing firm serves UK clients among more than 14 jurisdictions.", "Daily FT", "https://www.ft.lk/HR/Women-led-LPO-services-firm-Velox-Partners-enters-new-office-space-in-Colombo/47-746421")],
-         faqs=[("Do UK companies outsource to Sri Lanka?", "Yes. HSBC, the London Stock Exchange Group, WNS and the specialist insurer CFC all run operations in Colombo, and UK accounting, law and architecture firms use Sri Lankan teams."),
+         faqs=[("Do UK companies outsource to Sri Lanka?", "Yes. HSBC, the London Stock Exchange Group and the specialist insurer CFC all run operations in Colombo, and UK accounting, law and architecture firms use Sri Lankan teams."),
                ("What time difference is there between the UK and Sri Lanka?", "Sri Lanka is 4.5 hours ahead of the UK in British Summer Time and 5.5 hours ahead in winter. Sri Lanka has no daylight saving."),
                ("Is outsourcing to Sri Lanka GDPR compliant?", "It can be. Compliance depends on your contract and the provider's controls: a data processing agreement, approved transfer terms and appropriate security. Sri Lanka's Personal Data Protection Act also applies from 1 January 2027.")]),
     dict(slug="from-australia", name="Australia", short="Australia", h1="Outsourcing to Sri Lanka from Australia",
@@ -157,7 +157,7 @@ MARKET_PAGES = [
          law="The Australian Privacy Principles still apply to personal information you send offshore, so choose a provider with strong security and contract for it. Staff employed by a Sri Lankan provider are employed under Sri Lankan law, and Australian superannuation does not normally apply to them; confirm your position with an adviser.",
          proof=[("Sri Lankan staffing firms provide remote staff, employer of record, payroll and recruitment for Australian companies without a local entity.", "Outsource Accelerator", "https://www.outsourceaccelerator.com/articles/hire-remote-staff-sri-lanka-australia/"),
                 ("Two Australian companies signed two year contracts in 2026 to build teams in Sri Lanka.", "Outsource Accelerator", "https://news.outsourceaccelerator.com/formix-australian-it-contracts/"),
-                ("Global remote staffing firm Emapta opened its Colombo office in 2022.", "EIN Presswire", "https://www.einpresswire.com/article/596646716/emapta-sri-lanka-celebrates-first-year-as-global-expansion-continues"),
+                ("A global remote staffing firm opened its Colombo office in 2022 to serve Australian and other clients.", "EIN Presswire", "https://www.einpresswire.com/article/596646716/emapta-sri-lanka-celebrates-first-year-as-global-expansion-continues"),
                 ("Australia, the UK, the Nordics and North America were named as the main markets of Sri Lanka's business process industry.", "Echelon", "https://echelon.lk/the-growing-influence-of-sri-lankas-bpm-industry")],
          faqs=[("Do Australian companies outsource to Sri Lanka?", "Yes. Australia is one of the main markets for Sri Lankan business process firms, particularly for accounting, administration, marketing and payroll teams."),
                ("What is the time difference between Australia and Sri Lanka?", "Sri Lanka is 4.5 hours behind Sydney and Melbourne in winter and 5.5 hours behind during Australian daylight saving, and 2.5 hours behind Perth."),
@@ -193,59 +193,56 @@ TZS = {"from-uk": "4.5 to 5.5 hrs ahead", "from-australia": "4.5 to 5.5 hrs behi
 # ---------------------------------------------------------------- company directory
 DIRECTORY = [
     ("Finance, accounting and shared services", [
-        ("HSBC Electronic Data Processing Lanka", "HSBC's own centre since 2004: fund administration, lending and trade operations for 24 markets.", "Global (captive)", "https://www.about.hsbc.lk/hsbc-in-sri-lanka/hsbc-electronic-data-processing"),
-        ("London Stock Exchange Group (LSEG)", "Colombo and Malabe hubs with more than 1,600 people, including finance and data roles.", "Global (captive)", "https://www.lseg.com/en/careers/where-we-work/colombo-sri-lanka"),
-        ("Infomate", "Accounting and business process outsourcing: AP, AR, ledger, reconciliations and reporting.", "UK, US, Australia, Nordics, Middle East", "https://www.ft.lk/it-telecom-tech/Infomate-reveals-ambitious-growth-plans-and-introduces-new-world-class-facility/50-754756"),
-        ("EY Global Delivery Services Sri Lanka", "Business process, data analytics and audit support for EY member firms.", "Global (captive)", "https://www.dailynews.lk/2024/03/27/business/467550/ey-gds-sri-lanka-increase-local-presence-by-100/"),
-        ("WNS Sri Lanka", "Finance and accounting, customer care and shipping and logistics operations since 2004.", "UK, US, global", "https://www.dailymirror.lk/print/business-news/WNS-strengthens-commitment-to-SL-with-Orion-City-expansion/273-304576"),
-        ("H Connect International", "Finance, accounting, HR and admin teams, including Australian accounting.", "Australia, Canada, US, UK", "https://srilankabusiness.com/exporters-directory/company-profiles/h-connect-international-pvt-ltd"),
+        ("HSBC", "Its own Colombo centre since 2004: fund administration, lending and trade operations for 24 markets.", "Global (captive)", "https://www.about.hsbc.lk/hsbc-in-sri-lanka/hsbc-electronic-data-processing"),
+        ("London Stock Exchange Group", "Colombo and Malabe hubs with more than 1,600 people, including finance and data roles.", "Global (captive)", "https://www.lseg.com/en/careers/where-we-work/colombo-sri-lanka"),
+        ("Specialist accounting providers", "Accounting outsourcing firms with hundreds of staff running AP, AR, ledgers, reconciliations and reporting.", "UK, US, Australia, Nordics, Middle East", "https://www.ft.lk/it-telecom-tech/Infomate-reveals-ambitious-growth-plans-and-introduces-new-world-class-facility/50-754756"),
+        ("Big Four delivery centres", "Global delivery centres supporting audit, business process and analytics work for their member firms.", "Global (captive)", "https://www.dailynews.lk/2024/03/27/business/467550/ey-gds-sri-lanka-increase-local-presence-by-100/"),
+        ("Accounting teams for Australian firms", "Providers placing dedicated finance, HR and admin teams with Australian, Canadian, US and UK clients.", "Australia, Canada, US, UK", "https://srilankabusiness.com/exporters-directory/company-profiles/h-connect-international-pvt-ltd"),
     ]),
     ("Investment research and analytics", [
         ("Acuity Knowledge Partners", "Equity, credit and fixed income research, data science and deal support; began as Amba Research in Colombo in 2003.", "US, UK, Europe, Australia", "https://www.acuitykp.com/news/press-release/acuity-knowledge-partners-reaffirms-commitment-to-sri-lanka"),
     ]),
     ("Healthcare revenue cycle and medical billing", [
-        ("HealthRecon Connect", "Medical billing, coding and claims management, with a 300 seat centre in Kandy.", "US, UK, Australia", "https://dailymirror.lk/print/business-news/HealthRecon-Connect-opens-new-Kandy-office/273-296315"),
-        ("MedCube", "US revenue cycle team running billing, submissions, posting and collections on its own software.", "US", "https://www.ft.lk/Healthcare/Medcube-releases-AI-driven-medical-billing-software/45-766387"),
-        ("MedSource", "Medical transcription around the clock for US hospital groups, plus customer service.", "US", "https://www.srilankabusiness.com/exporters-directory/company-profiles/medsource-pvt-ltd/"),
+        ("Large revenue cycle centres", "Medical billing, coding and claims management, including a 300 seat centre in Kandy opened in 2024.", "US, UK, Australia", "https://dailymirror.lk/print/business-news/HealthRecon-Connect-opens-new-Kandy-office/273-296315"),
+        ("Software led billing teams", "US revenue cycle teams running billing, submissions, posting and collections on their own platforms.", "US", "https://www.ft.lk/Healthcare/Medcube-releases-AI-driven-medical-billing-software/45-766387"),
+        ("Medical transcription", "Teams of 250+ working around the clock for US hospital groups.", "US", "https://www.srilankabusiness.com/exporters-directory/company-profiles/medsource-pvt-ltd/"),
     ]),
     ("Insurance, HR, payroll and recruitment", [
-        ("CFC global services hub (with Virtusa)", "A 200 seat hub opened in Colombo in 2025 for the UK specialist insurer.", "UK (captive)", "https://www.dailymirror.lk/business-news/Virtusa-partners-to-unveil-200-seat-digital-service-hub-in-Sri-Lanka/273-323084"),
-        ("IGT 1 Lanka", "IT, cloud and business process work for portfolio companies of EQT, Hg and TA Associates.", "Americas, Europe", "https://www.themorning.lk/articles/DVbn77E2JVlO4Il2tkMb"),
-        ("SourceOne BPO", "Recruitment process outsourcing, employer of record and virtual staffing, with 300+ staff.", "Global", "https://www.srilankabusiness.com/exporters-directory/company-profiles/sourceone-bpo-private-limited/"),
-        ("JFS Holdings", "Virtual staffing, PEO and employer of record.", "Sri Lanka and overseas", "https://www.srilankabusiness.com/exporters-directory/company-profiles/jfs-holdings-limited"),
+        ("CFC", "The UK specialist insurer opened a 200 seat global services hub in Colombo in 2025.", "UK (captive)", "https://www.dailymirror.lk/business-news/Virtusa-partners-to-unveil-200-seat-digital-service-hub-in-Sri-Lanka/273-323084"),
+        ("Private equity portfolio centres", "Centres serving the software companies of global private equity owners, with business process teams.", "Americas, Europe", "https://www.themorning.lk/articles/DVbn77E2JVlO4Il2tkMb"),
+        ("Recruitment and payroll providers", "RPO, employer of record, PEO and payroll firms, the largest with 300+ staff.", "Global", "https://www.srilankabusiness.com/exporters-directory/company-profiles/sourceone-bpo-private-limited/"),
     ]),
     ("Remote staffing and virtual assistants", [
-        ("Emapta", "Global remote staffing firm with a Colombo office since 2022.", "Australia, global", "https://www.einpresswire.com/article/596646716/emapta-sri-lanka-celebrates-first-year-as-global-expansion-continues"),
-        ("Formix", "Remote staffing, employer of record and payroll for Australian firms.", "Australia", "https://www.outsourceaccelerator.com/articles/hire-remote-staff-sri-lanka-australia/"),
-        ("Sterling BPO Solution", "24/7 virtual assistant and back office services.", "Australia, UAE", "https://www.srilankabusiness.com/exporters-directory/company-profiles/sterling-bpo-solution-pvt-ltd/"),
+        ("Global remote staffing firms", "International staffing brands with Colombo offices, employing dedicated staff for overseas clients.", "Australia, global", "https://www.einpresswire.com/article/596646716/emapta-sri-lanka-celebrates-first-year-as-global-expansion-continues"),
+        ("Local remote staffing providers", "Sri Lankan firms offering dedicated staff, employer of record and payroll for clients without an entity.", "Australia", "https://www.outsourceaccelerator.com/articles/hire-remote-staff-sri-lanka-australia/"),
+        ("Virtual assistant services", "Round the clock assistant and back office services.", "Australia, UAE", "https://www.srilankabusiness.com/exporters-directory/company-profiles/sterling-bpo-solution-pvt-ltd/"),
     ]),
     ("Customer support and contact centres", [
-        ("Bellvantage", "Inbound and outbound contact centre outsourcing since 2008.", "Global", "https://www.srilankabusiness.com/exporters-directory/company-profiles/bellvantage-pvt-ltd/"),
-        ("The Edge Group", "Contact centre and channel management for airlines and hospitality.", "Global", "https://www.srilankabusiness.com/exporters-directory/company-profiles/the-edge-group-pvt-ltd/"),
+        ("Global business process firms", "Customer care and operations from Colombo since 2004, with 300+ jobs added in 2025.", "UK, US, global", "https://www.dailymirror.lk/print/business-news/WNS-strengthens-commitment-to-SL-with-Orion-City-expansion/273-304576"),
+        ("Local contact centres", "Inbound and outbound contact centres, including for airlines and hospitality.", "Global", "https://www.srilankabusiness.com/exporters-directory/company-profiles/the-edge-group-pvt-ltd/"),
     ]),
     ("Legal process outsourcing", [
-        ("Velox Partners", "Women led LPO serving clients in more than 14 jurisdictions.", "UK, Australia, Singapore", "https://www.ft.lk/HR/Women-led-LPO-services-firm-Velox-Partners-enters-new-office-space-in-Colombo/47-746421"),
-        ("Imperial Advisers", "Offshore LPO supporting law firms with administration, finance and client service.", "Law firms abroad", "https://dailymirror.lk/print/business-news/Imperial-establishes-offshore-LPO-firm-in-Sri-Lanka/273-294093"),
-        ("Teams Squared", "Connects Sri Lankan legal professionals with law firms and in-house teams.", "Australia, UK, US", "https://www.dailymirror.lk/press_releases/Beyond-the-Square-How-a-Homegrown-Startup-Is-Taking-Sri-Lankan-Legal-Talent-Global/335-324277"),
+        ("Specialist LPO firms", "Paralegal, research and contract support for clients in more than 14 jurisdictions.", "UK, Australia, Singapore", "https://www.ft.lk/HR/Women-led-LPO-services-firm-Velox-Partners-enters-new-office-space-in-Colombo/47-746421"),
+        ("Law firm support centres", "Offshore teams handling administration, finance and client service for law firms.", "Law firms abroad", "https://dailymirror.lk/print/business-news/Imperial-establishes-offshore-LPO-firm-in-Sri-Lanka/273-294093"),
+        ("Legal talent platforms", "Connecting Sri Lankan legal professionals with law firms and in-house teams.", "Australia, UK, US", "https://www.dailymirror.lk/press_releases/Beyond-the-Square-How-a-Homegrown-Startup-Is-Taking-Sri-Lankan-Legal-Talent-Global/335-324277"),
     ]),
     ("Engineering design, BIM and quantity surveying", [
-        ("The Sourcing Collective", "UK managed BIM team: Revit, clash detection, shop drawings, scan to BIM.", "UK", "https://thesourcingcollective.co.uk/about-us-bim-manager-team/"),
-        ("Nex-Gen Engineering Studio", "BIM and CAD, 3D walkthroughs and engineering surveys.", "International", "https://www.ft.lk/Business/Nex-Gen-Engineering-Studio-opens-new-corporate-office/34-765199"),
+        ("UK managed BIM teams", "Revit, clash detection, shop drawings and scan to BIM delivered from Sri Lanka.", "UK", "https://thesourcingcollective.co.uk/about-us-bim-manager-team/"),
+        ("Engineering design studios", "BIM and CAD, 3D walkthroughs, surveys and quantity surveying.", "International", "https://www.ft.lk/Business/Nex-Gen-Engineering-Studio-opens-new-corporate-office/34-765199"),
     ]),
     ("Data, annotation and content processing", [
-        ("OREL IT", "Data annotation and visual tasking; 2025 Presidential Export Award winner.", "International", "https://ft.lk/business/OREL-IT-wins-top-honour-at-Presidential-Export-Awards/34-774823"),
-        ("Innodata Lanka", "Data and content conversion with Board of Investment status since 1994.", "International", "https://www.srilankabusiness.com/exporters-directory/company-profiles/innodata-lanka-pvt-ltd/"),
+        ("Data services firms", "Data annotation and visual tasking; one won a 2025 Presidential Export Award.", "International", "https://ft.lk/business/OREL-IT-wins-top-honour-at-Presidential-Export-Awards/34-774823"),
+        ("Content conversion firms", "Data and content conversion, some with Board of Investment status since 1994.", "International", "https://www.srilankabusiness.com/exporters-directory/company-profiles/innodata-lanka-pvt-ltd/"),
     ]),
     ("Digital marketing", [
-        ("eMarketingEye", "Digital marketing agency founded in 2007, working across 45 countries.", "Southeast Asia, Australia, Middle East", "https://echelon.lk/emarketingeye-from-pioneering-digital-marketing-in-sri-lanka-to-global-heavyweight"),
-        ("Weblook International", "SEO, search marketing and social media; registered exporter.", "International", "https://www.srilankabusiness.com/exporters-directory/company-profiles/weblook-international-pvt-ltd/"),
+        ("Digital agencies", "SEO, paid media and social for international clients; one founded in 2007 has worked across 45 countries.", "Southeast Asia, Australia, Middle East", "https://echelon.lk/emarketingeye-from-pioneering-digital-marketing-in-sri-lanka-to-global-heavyweight"),
     ]),
 ]
 
 DIR_FAQS = [
-    ("What are the biggest BPO companies in Sri Lanka?", "Among the largest business process operations are the captive centres of HSBC, the London Stock Exchange Group and EY, alongside WNS, Acuity Knowledge Partners and specialist firms in accounting, medical billing and legal support. This page lists examples by service, each with a source."),
+    ("What are the biggest BPO companies in Sri Lanka?", "Among the largest are the captive centres of global firms such as HSBC and the London Stock Exchange Group, the investment research firm Acuity Knowledge Partners, and global business process firms that have operated in Colombo since 2004, alongside specialist providers in accounting, medical billing, legal support and remote staffing. We introduce buyers to the right ones for their needs."),
     ("How many BPO companies are there in Sri Lanka?", "The industry body SLASSCOM counts more than 680 IT and BPM companies employing about 175,000 people. There is no current official count of business process firms alone."),
-    ("Which outsourcing companies in Sri Lanka serve Australian clients?", "Remote staffing and accounting providers such as Emapta, Formix, H Connect and Sterling BPO list Australia among their markets. See the outsourcing from Australia page for more."),
+    ("Which outsourcing companies in Sri Lanka serve Australian clients?", "Several remote staffing, accounting and payroll providers in Colombo serve Australia as a main market, and Australian firms signed new contracts to build Sri Lankan teams in 2026. Tell us what you need and we will introduce two or three that fit."),
     ("Are there medical billing companies in Sri Lanka?", "Yes. Revenue cycle firms in Colombo and Kandy serve mainly US healthcare providers, including one with a 300 seat Kandy centre opened in 2024."),
 ]
 
@@ -300,35 +297,35 @@ def build_directory(B, stories, cta):
     n = 0
     for grp, rows in DIRECTORY:
         n += len(rows)
-        blocks += f'<h2 class="h-sub mt">{e(grp)}</h2><div class="tbl"><table><thead><tr><th>Organisation</th><th>What they do from Sri Lanka</th><th>Markets</th></tr></thead><tbody>' + "".join(
+        blocks += f'<h2 class="h-sub mt">{e(grp)}</h2><div class="tbl"><table><thead><tr><th>Who</th><th>What they do from Sri Lanka</th><th>Markets</th></tr></thead><tbody>' + "".join(
             f"<tr><td><strong>{e(nm)}</strong></td><td>{e(wh)} {a('Source', u)}</td><td>{e(mk)}</td></tr>" for nm, wh, mk, u in rows) + "</tbody></table></div>"
-    itemlist = SP.ld({"@context": "https://schema.org", "@type": "ItemList", "name": "BPO and outsourcing companies in Sri Lanka", "numberOfItems": n,
+    itemlist = "" and SP.ld({"@context": "https://schema.org", "@type": "ItemList", "name": "BPO and outsourcing companies in Sri Lanka", "numberOfItems": n,
                       "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": nm} for i, nm in enumerate(nm for _, rows in DIRECTORY for nm, _, _, _ in rows)]})
     body = f"""
 <section class="page-head"><div class="wrap narrow">
   {SP.crumb_html([("Offshoring", "../")])}
   <h1>BPO and outsourcing companies in Sri Lanka (2026)</h1>
-  <p class="answer">Sri Lanka's business process industry ranges from the captive centres of global firms, such as HSBC, the London Stock Exchange Group and EY, to specialist providers in accounting, investment research, medical billing, legal support, remote staffing, engineering design and data. The industry body SLASSCOM counts more than 680 IT and BPM companies employing about 175,000 people. Below are {n} organisations that deliver business services from Sri Lanka to overseas clients, grouped by service, each with a public source.</p>
-  <p class="reviewed">Last reviewed 23 October 2026. Not a ranking and not an endorsement. We have no commercial relationship with the organisations listed unless stated.</p>
+  <p class="answer">Sri Lanka's business process industry ranges from the captive centres of global firms, such as HSBC and the London Stock Exchange Group, to specialist providers in accounting, investment research, medical billing, legal support, remote staffing, engineering design and data. The industry body SLASSCOM counts more than 680 IT and BPM companies employing about 175,000 people. Below is who delivers business services from Sri Lanka to overseas clients, grouped by service, each with a public source. We name global firms running their own centres; for specialist providers we describe what exists and introduce buyers directly.</p>
+  <p class="reviewed">Last reviewed 23 October 2026. Not a ranking or an endorsement.</p>
 </div></section>
 <section class="section top-0"><div class="wrap narrow">
   {blocks}
-  <p class="body-l mt">Know an organisation that should be here? <a href="mailto:{B.EMAIL}">Email us</a> with a public source.</p>
-  {cta(B, prefix, 'directory')}
+  <div class="reach mt"><h2>Get introduced to the right providers</h2><p>We know which Sri Lankan providers do this work well. Tell us the service, volumes and hours, and we will introduce two or three that fit, at no cost to you.</p>
+  <div class="actions"><a class="btn" href="{prefix}talent/find/?route=offshoring-directory">Request introductions</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a></div></div>
   {faq}
   <p class="body-l mt">See also: <a href="../">All business services</a> · <a href="../from-uk/">From the UK</a> · <a href="../from-australia/">From Australia</a> · <a href="../from-usa/">From the USA</a> · <a href="../from-uae/">From the UAE</a></p>
 </div></section>
 """
     head = faq_ld + itemlist + SP.crumbs_ld(B, [("Offshoring", "offshoring/"), ("BPO companies", path)])
     B.write(path + "index.html", B.page("BPO and outsourcing companies in Sri Lanka (2026)",
-                                        f"{n} BPO and outsourcing companies in Sri Lanka by service: accounting, research, medical billing, legal, staffing, support, BIM and data. Sourced, not a ranking.",
+                                        "Who provides BPO and outsourcing services in Sri Lanka: global captive centres and specialist providers in accounting, research, medical billing, legal, staffing, support and BIM. Sourced, with introductions.",
                                         body, prefix, path, extra_head=head, active="services", seo_title="BPO and outsourcing companies in Sri Lanka (2026 list)"))
     return [path]
 
 
 ANSWERS = [
     ("Is Sri Lanka good for outsourcing business services?", "Yes for finance and accounting, investment research, medical billing, banking and insurance operations and specialist support. Global firms such as HSBC and LSEG have run operations in Colombo for over 20 years. It is smaller than the largest destinations, so it suits specialist teams more than very large voice operations.", "offshoring/"),
-    ("What are the BPO companies in Sri Lanka?", "They include captive centres of HSBC, LSEG and EY, plus WNS, Acuity Knowledge Partners and specialists in accounting, medical billing, legal and remote staffing. Our directory lists examples by service with sources.", "offshoring/bpo-companies-sri-lanka/"),
+    ("What are the BPO companies in Sri Lanka?", "They range from captive centres of global firms such as HSBC and LSEG and research firms such as Acuity Knowledge Partners, to specialist providers in accounting, medical billing, legal and remote staffing. Our overview describes who does what, with sources, and we can introduce the right providers.", "offshoring/bpo-companies-sri-lanka/"),
     ("Can I outsource bookkeeping to Sri Lanka?", "Yes. Sri Lanka has more than 9,000 Chartered Accountants and 40,000 students, and providers serve UK, Australian, US and Gulf clients in Xero, QuickBooks, MYOB and Sage.", "offshoring/accounting-bookkeeping-outsourcing-sri-lanka/"),
     ("Is Sri Lanka good for medical billing outsourcing?", "Yes, especially for US providers. Revenue cycle firms in Colombo and Kandy work overnight relative to the US, including a 300 seat Kandy centre opened in 2024.", "offshoring/medical-billing-outsourcing-sri-lanka/"),
     ("What is the time difference for outsourcing to Sri Lanka from Australia?", "Sri Lanka is 4.5 to 5.5 hours behind Sydney and 2.5 hours behind Perth, so teams overlap the Australian afternoon.", "offshoring/from-australia/"),
