@@ -12,7 +12,7 @@ ANSWER = ("Sri Lanka exported US$17.25 billion of goods and services in 2025, up
           "From January to September 2026 exports reached US$13.61 billion, up 5.04%, with goods at US$10.76 billion, up 5.35%. "
           "The largest export is apparel and textiles, at US$4.91 billion in 2025, followed by tea, coconut products and rubber products. "
           "The fastest growing in 2026 are electrical and electronic components, up 61%, and spices and essential oils, up 30.5%. "
-          "The United States is the largest market, at about a fifth of goods exports, followed by India and the United Kingdom.")
+          "The United States is the largest market, taking more than a fifth of goods exports, followed by India and the United Kingdom.")
 
 STATS = [("US$17.25B", "total exports in 2025, up 5.6%"), ("US$13.61B", "January to September 2026, up 5.04%"),
          ("US$4.91B", "apparel and textiles, the largest export, 2025"), ("+61%", "electrical and electronic components, January to September 2026")]
@@ -57,8 +57,11 @@ LINES = [
     ("Electrical transformers", "electrical-cables-transformers/", None, "+33.46%"),
     ("Switches, boards and panels", "electrical-cables-transformers/", None, "+31.49%"),
     ("Cinnamon", "ceylon-cinnamon/", 221.56, "+31.03%"),
+    ("Oleoresins", "spices-essential-oils/", None, "+30.09%"),
     ("Gaskets, washers and seals", "rubber-gloves/", None, "+27.78%"),
     ("Essential oils", "spices-essential-oils/", None, "+22.17%"),
+    ("Animal feed", "processed-food-beverages/", None, "+13.69%"),
+    ("Instant tea", "ceylon-tea/", None, "+9.85%"),
     ("Industrial and surgical gloves", "rubber-gloves/", None, "+7.58%"),
     ("Apparel", "apparel-manufacturing/", 3513.37, f"{M}5.36%"),
     ("Bulk tea", "ceylon-tea/", None, f"{M}11.13%"),
@@ -73,10 +76,11 @@ MARKETS = [
     ("Germany", 706.49, "+12.45%", 513.08, f"{M}4.27%"),
     ("Netherlands", 474.80, "+20.63%", 328.12, f"{M}5.35%"),
     ("China", None, None, 234.39, "+16.46%"),
-    ("United Arab Emirates", None, None, 232.06, f"{M}10.50%"),
+    ("United Arab Emirates", 341.06, None, 232.06, f"{M}10.50%"),
     ("Türkiye", None, None, 218.24, "+94.01%"),
     ("France", 277.18, "+5.09%", 198.77, f"{M}6.54%"),
     ("Belgium", 254.44, "+6.42%", 193.42, "+3.16%"),
+    ("Australia", 262.00, None, None, None),
     ("Pakistan", None, f"{M}2.03%", 74.73, "+33.59%"),
     ("European Union, all members", None, "+13.41%", None, f"{M}0.15%"),
 ]
@@ -87,13 +91,14 @@ SHIFTS = [
     ("Food and beverages rose 20.90%, with processed food up 34.19% and non-alcoholic beverages up 46.78%.", "EDB, January to September 2026", EDB9M),
     ("Tea fell 6.83% overall, but tea bags rose 53.39% and tea exports to Türkiye rose 126.51%.", "EDB, January to September 2026", EDB9M),
     ("Activated carbon exports to China rose 78.33%.", "EDB, January to September 2026", EDB9M),
-    ("Apparel fell 5.68%, with apparel to the US down 3.83%, the EU down 5.54% and the UK down 10.41%.", "EDB, January to September 2026", EDB9M),
+    ("Apparel and textiles fell 5.68%, and apparel alone 5.36%, with apparel to the US down 3.83%, the EU down 5.54% and the UK down 10.41%.", "EDB, January to September 2026", EDB9M),
     ("September 2026 alone was strong: goods exports rose 21.66% to US$1.39 billion.", "EDB, September 2026", EDB9M),
 ]
 
 SRC = (f'Source: Export Development Board, <a href="{EDB25}" rel="noopener">2025 export performance</a> (published January 2026) and '
        f'<a href="{EDB9M_EDB}" rel="noopener">January to September 2026</a> (also reported by <a href="{EDB9M}" rel="noopener">Newswire</a>, 26 October 2026); '
-       f'gems 2025 value from the <a href="{GEMS_URL}" rel="noopener">EDB gem sector page</a>. Provisional figures; services are EDB estimates. '
+       f'gems 2025 value from the <a href="{GEMS_URL}" rel="noopener">EDB gem sector page</a>; 2025 values for Australia and the UAE from the EDB market briefs on '
+       f'<a href="https://www.srilankabusiness.com/pdfs/market-profiles/2026/australia-2026.pdf" rel="noopener">Australia</a> and <a href="https://www.srilankabusiness.com/pdfs/market-profiles/2026/uae-2026.pdf" rel="noopener">the UAE</a>. Provisional figures; services are EDB estimates. '
        "A dash means the release did not give that figure.")
 
 FAQS = [
@@ -109,7 +114,7 @@ FAQS = [
     ("What is Sri Lanka's export income in 2026?",
      "From January to September 2026 Sri Lanka earned US$13.61 billion from exports, up 5.04% on the same months of 2025. Goods were US$10.76 billion, up 5.35%, and services an estimated US$2.85 billion, up 3.88%."),
     ("Which countries buy the most from Sri Lanka?",
-     "The United States, at US$3.0 billion in 2025 and about a fifth of goods exports, then India (US$1.04 billion), the United Kingdom (US$929 million), Germany, Italy and the Netherlands. "
+     "The United States, at US$3.0 billion in 2025 and more than a fifth of goods exports, then India (US$1.04 billion), the United Kingdom (US$929 million), Germany, Italy and the Netherlands. "
      "In January to September 2026 China, the UAE and Türkiye each took more than US$200 million, and Türkiye grew fastest, up 94%."),
     ("Which Sri Lankan exports are growing fastest?",
      "In January to September 2026: electrical and electronic components, up 61.05%, spices and essential oils, up 30.53%, and food and beverages, up 20.90%. "

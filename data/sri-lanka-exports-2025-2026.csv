@@ -27,8 +27,11 @@ product_line,Processed food,,,243.28,+34.19%,EDB
 product_line,Electrical transformers,,,,+33.46%,EDB
 product_line,"Switches, boards and panels",,,,+31.49%,EDB
 product_line,Cinnamon,,,221.56,+31.03%,EDB
+product_line,Oleoresins,,,,+30.09%,EDB
 product_line,"Gaskets, washers and seals",,,,+27.78%,EDB
 product_line,Essential oils,,,,+22.17%,EDB
+product_line,Animal feed,,,,+13.69%,EDB
+product_line,Instant tea,,,,+9.85%,EDB
 product_line,Industrial and surgical gloves,,,,+7.58%,EDB
 product_line,Apparel,,,3513.37,-5.36%,EDB
 product_line,Bulk tea,,,,-11.13%,EDB
@@ -39,9 +42,10 @@ market,Italy,679.77,+14.16%,514.28,+1.48%,EDB
 market,Germany,706.49,+12.45%,513.08,-4.27%,EDB
 market,Netherlands,474.80,+20.63%,328.12,-5.35%,EDB
 market,China,,,234.39,+16.46%,EDB
-market,United Arab Emirates,,,232.06,-10.50%,EDB
+market,United Arab Emirates,341.06,,232.06,-10.50%,EDB
 market,Türkiye,,,218.24,+94.01%,EDB
 market,France,277.18,+5.09%,198.77,-6.54%,EDB
 market,Belgium,254.44,+6.42%,193.42,+3.16%,EDB
+market,Australia,262.00,,,,EDB
 market,Pakistan,,-2.03%,74.73,+33.59%,EDB
 market,"European Union, all members",,+13.41%,,-0.15%,EDB

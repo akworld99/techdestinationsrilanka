@@ -75,7 +75,7 @@ CHECKS = [
 ANSWERS = [  # (question, short answer, site path) for the site wide answers page
     ("What are Sri Lanka's main exports?", "Apparel and textiles (US$4.91 billion in 2025), tea (US$1.51 billion), coconut products (US$1.23 billion), rubber products (US$946 million), food and beverages, spices and essential oils, and electrical and electronic components.", "source/sri-lanka-export-statistics/"),
     ("How much did Sri Lanka export in 2025?", "US$17.25 billion of goods and services, up 5.6%: US$13.58 billion of goods and US$3.67 billion of services, according to the Export Development Board. January to September 2026 reached US$13.61 billion, up 5.04%.", "source/sri-lanka-export-statistics/"),
-    ("Which countries buy the most from Sri Lanka?", "The United States, at about a fifth of goods exports, then India, the United Kingdom, Italy, Germany and the Netherlands.", "source/sri-lanka-export-statistics/"),
+    ("Which countries buy the most from Sri Lanka?", "The United States, at more than a fifth of goods exports, then India, the United Kingdom, Italy, Germany and the Netherlands.", "source/sri-lanka-export-statistics/"),
     ("Which Sri Lankan exports are growing fastest?", "Electrical and electronic components, up 61% in January to September 2026, spices and essential oils, up 30.5%, and food and beverages, up 20.9%.", "source/sri-lanka-export-statistics/"),
     ("How do I import from Sri Lanka?", "Agree the specification and terms with an exporter, check its registration and certificates, take samples, then ship from Colombo with a certificate of origin to claim any lower duty your country offers.", "source/how-to-import-from-sri-lanka/"),
     ("How do I find a supplier in Sri Lanka?", "Send us one request. Within two working days we come back with exporters who make your product, hold the certificates you need and already ship to markets like yours.", "source/request-a-quote/"),
@@ -516,19 +516,19 @@ def build_stats(B, stories):
 <section class="section top-0"><div class="wrap narrow">
   {SP.stats_strip(X.STATS)}
   <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-    <li><a href="#totals">Total exports</a></li><li><a href="#by-product">Exports by product</a></li><li><a href="#lines">Fastest growing product lines</a></li>
+    <li><a href="#totals">Total exports</a></li><li><a href="#by-product">Exports by product</a></li><li><a href="#lines">Growth by product line</a></li>
     <li><a href="#by-country">Exports by country</a></li><li><a href="#changes">What changed in 2026</a></li><li><a href="#list">Main export products list</a></li></ol></nav>
   <h2 class="h-sub mt" id="totals">Sri Lanka's total exports, 2025 and 2026</h2>
   {_table(head5, rows)}
   <h2 class="h-sub mt" id="by-product">Sri Lanka exports by product</h2>
-  <p class="body-l">Goods by sector, largest first, with services below. Each product links to our buyer's guide for it.</p>
+  <p class="body-l">Goods by sector, largest first by January to September 2026 value, with services below. Each product links to our buyer's guide for it.</p>
   {_table(head5, sect + [[f"<strong>Services</strong>", "", "", "", ""]] + serv)}
   <p class="cap">{X.SRC}</p>
-  <h2 class="h-sub mt" id="lines">Fastest growing product lines, January to September 2026</h2>
+  <h2 class="h-sub mt" id="lines">Growth by product line, January to September 2026</h2>
   {_table(["Product line", "Jan to Sep 2026, US$ million", "Change on Jan to Sep 2025"], lines, slim=True)}
   <p class="cap">Source: Export Development Board, <a href="{X.EDB9M_EDB}" rel="noopener">January to September 2026</a>. A dash means the release gave the growth rate but not the value.</p>
   <h2 class="h-sub mt" id="by-country">Sri Lanka exports by country</h2>
-  <p class="body-l">Goods exports to the largest markets. The United States takes about a fifth of Sri Lanka's goods exports.</p>
+  <p class="body-l">Goods exports to the markets named in EDB releases and market briefs. The United States takes more than a fifth of Sri Lanka's goods exports.</p>
   {_table(["Market", "2025, US$ million", "Change", "Jan to Sep 2026, US$ million", "Change"], mkts)}
   <p class="cap">{X.SRC}</p>
   <p class="body-l">What each market buys, its duty access and import rules:</p>
