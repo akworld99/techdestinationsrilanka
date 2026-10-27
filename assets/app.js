@@ -7,8 +7,57 @@
       var open = nav.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.textContent = open ? 'Close' : 'Menu';
+      if (!open) Array.prototype.forEach.call(nav.querySelectorAll('.mm-item.is-open'), function (it) {
+        it.classList.remove('is-open');
+        var b = it.querySelector('button.mm-top'); if (b) b.setAttribute('aria-expanded', 'false');
+      });
     });
   }
+
+  // master menu: hover or click opens a section panel on desktop, tap expands it on phones
+  document.documentElement.classList.add('js');
+  var mmItems = Array.prototype.slice.call(document.querySelectorAll('.mm-item'));
+  var wide = window.matchMedia('(min-width: 761px)');
+  var mmTimer;
+  function mmSet(item, open) {
+    var b = item.querySelector('button.mm-top');
+    if (!b) return;
+    item.classList.toggle('is-open', open);
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function mmCloseAll(except) { mmItems.forEach(function (it) { if (it !== except) mmSet(it, false); }); }
+  mmItems.forEach(function (item) {
+    var b = item.querySelector('button.mm-top');
+    if (!b) return;
+    b.addEventListener('click', function () {
+      var open = !item.classList.contains('is-open');
+      if (!open && wide.matches && Date.now() - (+item.dataset.ho || 0) < 700) return;   // just opened by hover, keep it open
+      if (wide.matches) mmCloseAll(item);
+      mmSet(item, open);
+    });
+    item.addEventListener('mouseenter', function () {
+      if (!wide.matches) return;
+      clearTimeout(mmTimer);
+      if (item.classList.contains('is-open')) return;
+      mmTimer = setTimeout(function () { mmCloseAll(item); mmSet(item, true); item.dataset.ho = Date.now(); }, 110);
+    });
+    item.addEventListener('mouseleave', function () {
+      if (!wide.matches) return;
+      clearTimeout(mmTimer);
+      mmTimer = setTimeout(function () { mmSet(item, false); }, 220);
+    });
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key !== 'Escape') return;
+    var open = mmItems.filter(function (it) { return it.classList.contains('is-open'); })[0];
+    if (open) { mmSet(open, false); open.querySelector('button.mm-top').focus(); }
+  });
+  document.addEventListener('click', function (ev) {
+    if (wide.matches && !ev.target.closest('.mm')) mmCloseAll();
+  });
+  document.addEventListener('focusin', function (ev) {
+    if (wide.matches && !ev.target.closest('.mm-item.is-open')) mmCloseAll();
+  });
 
   var params = new URLSearchParams(location.search);
 

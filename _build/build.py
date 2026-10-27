@@ -19,6 +19,7 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 import seo_data  # noqa: E402
 import source_data  # noqa: E402
+import menu  # noqa: E402
 
 # ---------------------------------------------------------------- settings
 SITE_URL = "https://techdestinationsrilanka.lk"  # change when a custom domain is connected
@@ -260,10 +261,6 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
         extra_head += page_schema(title, desc, url, path)
     full_title = title_tag if (title_tag == SITE_NAME or len(title_tag) + len(SITE_NAME) + 3 > 62) else f"{title_tag} | {SITE_NAME}"
 
-    def nav(href, label, key):
-        cur = ' aria-current="page"' if key == active else ""
-        return f'<a href="{prefix}{href}"{cur}>{label}</a>'
-
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -300,15 +297,8 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
     <a class="brand" href="{prefix}index.html" aria-label="{SITE_NAME} home"><img src="{prefix}assets/logo.png" alt="{SITE_NAME}" width="431" height="200"></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" class="nav" aria-label="Main">
-      {nav('stories/', 'Stories', 'stories')}
-      {nav('companies/', 'Companies', 'companies')}
-      {nav('why-sri-lanka/', 'Why Sri Lanka', 'why')}
-      {nav('talent/', 'Talent', 'talent')}
-      {nav('source/', 'Source', 'source')}
-      {nav('services/', 'Services', 'services')}
-      {nav('guides/', 'Guides', 'guides')}
-      {nav('about/', 'About', 'about')}
-      <a class="btn btn-small" href="{prefix}talent/find/">Find talent</a>
+      {menu.render(prefix, path)}
+      <a class="btn btn-small nav-cta" href="{prefix}talent/find/">Find talent</a>
     </nav>
   </div>
 </header>
@@ -373,7 +363,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
     <p><strong>Ways to build</strong> {' '.join(f'<a href="{prefix}solutions/{x["slug"]}/">{x["label"]}</a>' for x in solutions.SOLUTIONS)}</p>
     <p><strong>Source by product</strong> {' '.join(f'<a href="{prefix}source/{c["slug"]}/">{c["label"]}</a>' for c in source_data.CATS)}</p>
     <p><strong>By country</strong> {' '.join(f'<a href="{prefix}hire-from/{m["slug"]}/">{m["label"]}</a>' for m in seo_data.MARKETS)}</p>
-    <p><strong>Compare</strong> {' '.join(f'<a href="{prefix}compare/{o["slug"]}/">Sri Lanka vs {o["name"][0].upper() + o["name"][1:]}</a>' for o in seo_compare.OTHERS)}</p>
+    <p><strong>Compare</strong> {' '.join(f'<a href="{prefix}compare/{o["slug"]}/">Sri Lanka vs {o["name"] if o["name"].startswith("the ") else o["name"][0].upper() + o["name"][1:]}</a>' for o in seo_compare.OTHERS)}</p>
   </div>
   <div class="wrap news">
     <form class="newsletter" data-form="newsletter" data-done="You are on the list." action="{e(FORM_ENDPOINT)}" method="POST">
@@ -851,6 +841,7 @@ def main():
     import seo_offshoring
     import seo_source
     stories = parse_stories()
+    menu.LATEST = stories[0] if stories else None
     import art
     art.write_all(ROOT)
     import art_more
