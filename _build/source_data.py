@@ -21,9 +21,12 @@ EDB_9M_FT = "https://www.ft.lk/top-story/Exports-hit-record-in-Sept-nine-month-e
 EDB_1H = "https://www.ft.lk/front-page/Export-earnings-exceed-9-b-in-1H/44-794983"
 
 
+import source_stats as X  # noqa: E402  latest figures; the monthly update edits only that file
+
+
 def src2(extra=""):
     return (f'2025 figures: Export Development Board via <a href="{EDB_2025}" rel="noopener nofollow">Daily FT</a>. '
-            f'2026 figures: Export Development Board via <a href="{EDB_9M}" rel="noopener nofollow">Newswire</a>.{extra}')
+            f'2026 figures: Export Development Board, <a href="{X.YTD_URL}" rel="noopener">{X.PERIOD}</a>.{extra}')
 
 
 # ---------------------------------------------------------------- export categories
@@ -36,18 +39,18 @@ HOME_TILES = ["ceylon-tea", "ceylon-cinnamon", "coco-peat-coir", "coconut-produc
 HUB_TITLE = "Sri Lanka exporters and export products list (2026)"
 HUB_DESC = "Buy direct from Sri Lankan exporters: Ceylon tea and cinnamon, coconut, coco peat, apparel, tyres, gloves, cables, seafood and more. Figures and certificates."
 HUB_ANSWER = ("Sri Lanka exported US$13.58 billion of goods in 2025. The largest categories are apparel, tea, coconut products, rubber products, "
-              "food and beverages, spices and electrical components, and the fastest growing in 2026 are electrical and electronic components, up 61% "
-              "in the first nine months, and spices, up 30.5%. Buyers in the US, India, the UK and the EU source Ceylon tea and cinnamon, coconut and "
+              f"food and beverages, spices and electrical components, and the fastest growing in {X.PERIOD} are {X.leaders_text()}. Buyers in the US, India, the UK and the EU source Ceylon tea and cinnamon, coconut and "
               "coir products, industrial tyres and gloves, apparel and a widening range of electrical goods. We match buyers with Sri Lankan exporters "
               "who make what they need and check them before we introduce them.")
-HUB_STATS = [("US$13.58B", "merchandise exports in 2025, up 6.32%"), ("US$10.76B", "merchandise exports, January to September 2026, up 5.35%"),
-             ("+61%", "electrical and electronic components, January to September 2026")]
+HUB_STATS = [("US$13.58B", "merchandise exports in 2025, up 6.32%"), (X.bn(X.goods_ytd()[0]), f"merchandise exports, {X.PERIOD}, {X.updown(X.goods_ytd()[1])}"),
+             ("+" + X.pct(X.leaders(1)[0][5]), f"{X.lc(X.leaders(1)[0][0])}, {X.PERIOD}")]
 HUB_STATS_SRC = src2()
 
 HOME_LEDE = ("Ceylon tea and cinnamon, coconut and coir, industrial tyres and gloves, apparel, seafood and a fast growing electrical industry. "
              "Tell us what you are buying and we introduce exporters who make it, hold your certificates and already ship to your market.")
-HOME_STATS = [("US$13.58B", "goods exported from Sri Lanka in 2025"), ("+61%", "electrical and electronic exports, January to September 2026"),
-              ("US$221.56M", "cinnamon exports, January to September 2026, up 31%")]
+_cin = X.line("Cinnamon")
+HOME_STATS = [("US$13.58B", "goods exported from Sri Lanka in 2025"), ("+" + X.pct(X.leaders(1)[0][5]), f"{X.lc(X.leaders(1)[0][0])} exports, {X.PERIOD}"),
+              (f"US${_cin[2]:.2f}M", f"cinnamon exports, {X.PERIOD}, up {X.pct(_cin[3])}") if _cin and _cin[2] else (X.bn(X.total_ytd()[0]), f"total exports, {X.PERIOD}")]
 
 HUB_FAQS = []          # filled in source_cats
 RFQ_FAQS = [
