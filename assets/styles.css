@@ -600,3 +600,5 @@ p { margin: 0 0 1em; }
 .svc-grid:not(.three):not(.one) > .svc:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .tbl .up { color: var(--green); font-weight: 700; }
 .tbl .down { color: var(--maroon); font-weight: 700; }
+.tbl.slim table { min-width: 0; }
+.tbl.slim td:nth-child(n+2), .tbl.slim th:nth-child(n+2) { text-align: right; white-space: nowrap; }

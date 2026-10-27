@@ -32,8 +32,8 @@ def _ticks(items):
     return '<ul class="ticks">' + "".join(f"<li>{x}</li>" for x in items) + "</ul>"
 
 
-def _table(head, rows):
-    return ('<div class="tbl"><table><thead><tr>' + "".join(f"<th>{e(h)}</th>" for h in head) + "</tr></thead><tbody>"
+def _table(head, rows, slim=False):
+    return (f'<div class="tbl{" slim" if slim else ""}"><table><thead><tr>' + "".join(f"<th>{e(h)}</th>" for h in head) + "</tr></thead><tbody>"
             + "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows) + "</tbody></table></div>")
 
 
@@ -179,6 +179,9 @@ def build_hub(B, stories):
   {_bars()}
   <p class="cap">{D.BARS_SRC}</p>
   <p class="body-l">Full tables by product line and by country, with a CSV: <a href="sri-lanka-export-statistics/">Sri Lanka export statistics 2025 and 2026</a>.</p>
+  <h2 class="h-sub mt">Buying for a specific market</h2>
+  <p class="body-l">What each market buys from Sri Lanka, the duty it pays and the import rules to check:</p>
+  {market_chips("")}
 </div>
 <div class="wrap"><h2 class="h-sub mt">Browse by product</h2>{tiles("", prefix)}</div>
 <div class="wrap narrow">
@@ -457,6 +460,8 @@ def build_guide(B, stories):
   <h2 class="h-sub mt" id="steps">Your first order from Sri Lanka, step by step</h2>
   {_steps(D.GUIDE_STEPS)}
   {sections}
+  <h2 class="h-sub mt" id="by-market">Guides by market</h2>
+  {market_chips("../")}
   {_rfq_box(B, prefix)}
   {faq}
   <p class="body-l mt">Browse products: <a href="../">all Sri Lankan export categories</a></p>
@@ -520,12 +525,14 @@ def build_stats(B, stories):
   {_table(head5, sect + [[f"<strong>Services</strong>", "", "", "", ""]] + serv)}
   <p class="cap">{X.SRC}</p>
   <h2 class="h-sub mt" id="lines">Fastest growing product lines, January to September 2026</h2>
-  {_table(["Product line", "Jan to Sep 2026, US$ million", "Change on Jan to Sep 2025"], lines)}
+  {_table(["Product line", "Jan to Sep 2026, US$ million", "Change on Jan to Sep 2025"], lines, slim=True)}
   <p class="cap">Source: Export Development Board, <a href="{X.EDB9M_EDB}" rel="noopener">January to September 2026</a>. A dash means the release gave the growth rate but not the value.</p>
   <h2 class="h-sub mt" id="by-country">Sri Lanka exports by country</h2>
   <p class="body-l">Goods exports to the largest markets. The United States takes about a fifth of Sri Lanka's goods exports.</p>
   {_table(["Market", "2025, US$ million", "Change", "Jan to Sep 2026, US$ million", "Change"], mkts)}
   <p class="cap">{X.SRC}</p>
+  <p class="body-l">What each market buys, its duty access and import rules:</p>
+  {market_chips("../")}
   <h2 class="h-sub mt" id="changes">What changed in 2026</h2>
   {_ev(X.SHIFTS)}
   <h2 class="h-sub mt" id="list">Sri Lanka's main export products list</h2>
@@ -563,7 +570,8 @@ def build_market(B, stories, m):
     path = f"source/{m['slug']}/"
     faq, faq_ld = SP.faq_block(stories, m["faqs"])
     by_slug = {c["slug"]: c for c in D.CATS}
-    rows = [[(f'<a href="../{cs}/">{e(p)}</a>' if cs else e(p)), (_usd(v) if v is not None else "–")] for p, v, cs in m["top"]["rows"]]
+    rows = [[(f'<a href="../{cs}/">{e(p)}</a>' if cs else (f"<strong>{e(p)}</strong>" if p == "All goods" else e(p)))] + [(f"<strong>{_usd(v)}</strong>" if p == "All goods" else _usd(v)) for v in vals]
+            for p, vals, cs in m["top"]["rows"]]
     cats = [by_slug[x] for x in m["cats"] if x in by_slug]
     others = "".join(f'<li><a href="../{x["slug"]}/">{e("Import to " + x["short"])}</a></li>' for x in MK.MARKETS if x is not m)
     body = f"""
@@ -576,7 +584,7 @@ def build_market(B, stories, m):
 <section class="section top-0"><div class="wrap narrow">
   {SP.stats_strip(m['stats'])}
   <h2 class="h-sub mt">What {e(m['the'])} buys from Sri Lanka</h2>
-  {_table(["Product", m["top"]["head"]], rows)}
+  {_table(m["top"]["head"], rows, slim=len(m["top"]["head"]) <= 3)}
   <p class="cap">{m['top']['src']}</p>
   <h2 class="h-sub mt">Duty and trade access</h2>
   {_ev(m['duty'])}
@@ -655,7 +663,10 @@ def llms_lines(B):
               f"- [{X.H1}]({B.SITE_URL}/source/sri-lanka-export-statistics/): {X.ANSWER} CSV: {B.SITE_URL}/data/sri-lanka-exports-2025-2026.csv"]
     lines += [f"- [{c['h1']}]({B.SITE_URL}/source/{c['slug']}/): {c['answer']}" for c in D.CATS]
     lines += [f"- [How to import from Sri Lanka]({B.SITE_URL}/source/how-to-import-from-sri-lanka/): {D.GUIDE_ANSWER}",
-              f"- [Request a quote from Sri Lankan exporters]({B.SITE_URL}/source/request-a-quote/)",
+              f"- [Request a quote from Sri Lankan exporters]({B.SITE_URL}/source/request-a-quote/)"]
+    import source_markets as MK
+    lines += [f"- [{m['h1']}]({B.SITE_URL}/source/{m['slug']}/): {m['answer']}" for m in MK.MARKETS]
+    lines += [
               "", "## Services for Sri Lankan exporters",
               f"- [Tender Radar: international tender alerts on WhatsApp]({B.SITE_URL}/source/tender-radar/): {D.RADAR_DESC}",
               f"- [Tender bid support and export consultancy]({B.SITE_URL}/source/bid-support/): {D.BID_DESC}",
