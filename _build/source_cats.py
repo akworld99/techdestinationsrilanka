@@ -114,7 +114,8 @@ cat(
               ("The ornamental fish industry in Sri Lanka has a history of nearly 100 years.", "EDB", "https://www.srilankabusiness.com/aquarium-fish/")],
     certs=[("NAQDA health certificate.", "Required for every ornamental fish export."), ("Animal quarantine and fisheries permits.", "Listed in the Export Development Board's export procedure."),
            ("Department of Fisheries certificate.", "Needed for live species whose export is restricted."), ("CITES permits.", "Needed for listed species, which matters for some marine fish and invertebrates.")],
-    caveats=[("Exports are falling: down 7.6% to US$22.6 million in 2025 and down 26.71% in January to September 2026.", "EDB", EDB25),
+    caveats=[("Exports are falling: down 7.6% to US$22.6 million in 2025.", "EDB", EDB25),
+             ("Ornamental fish exports were down 26.71% in January to September 2026.", "EDB via Newswire", EDB9M),
              ("Marine fish and invertebrates are mostly wild collected, and the Export Development Board warns that over collection can deplete wild stocks.", "EDB ornamental fish report 2025", ORN_R),
              ("Some live species, including endemic fish, are restricted for export. Do not expect endemic species to be freely available.", "EDB", "https://srilankabusiness.com/blog/export-ornamental-fish-sri-lanka.html")],
     ask=["Which species are farm bred and which are wild collected?", "What is your dead on arrival policy and how are claims settled?", "Can you share a current stock list with sizes and weekly volumes?",
@@ -161,7 +162,6 @@ cat(
           ("Is Sri Lanka's food export sector growing?", "Yes. Food and beverage exports rose 24.23% to US$583.89 million in 2025, and processed food rose 34.19% to US$243.28 million in January to September 2026."),
           ("Can Sri Lankan manufacturers make private label food?", "Some do. The sources we checked do not confirm it sector wide, so ask each manufacturer for private label references in your market. Tell us what you need and we will check before we introduce anyone."),
           ("Where do Sri Lankan processed foods sell?", "The latest Export Development Board split, from 2021, shows India, the US, the Maldives, the UAE and Australia as the top processed food markets, and India, Vietnam and Japan for animal feed.")],
-    tender="Government, institutional and agency food purchases go out to tender. Tender Radar matches them to your products and certificates.",
 )
 
 cat(
@@ -231,7 +231,7 @@ cat(
               ("High purity vein quartz with more than 98% silica is found in many districts, and white silica sand above 98% in Puttalam.", "EDB", MIN_BLOG)],
     certs=[("GSMB export licence.", "Minerals in raw and semi finished form need an export licence from the Geological Survey and Mines Bureau."),
            ("Export cess.", "Raw forms carry an export cess, for example Rs 4,400 a tonne on raw vein quartz, so check whether quotes include it."),
-           ("Certificate of analysis.", "No national standard applies, so set carbon content, particle size and moisture in the contract and test with an independent lab.")],
+           ("Certificate of analysis.", "We found no national standard, so set carbon content, particle size and moisture in the contract and test with an independent lab.")],
     caveats=[("Graphite export volumes have fallen since 2015 while unit prices rose, according to a 2025 University of Moratuwa study of UN trade data.", "University of Moratuwa", "https://dl.lib.uom.lk/items/8c07a5d8-05cd-45ca-9e16-5fcc3c97446c/full"),
              ("A parliamentary inquiry in September 2025 found clear quartz being exported illegally and royalty collection failures, so do full documentary checks.", "Ada Derana", "https://adaderana.lk/news/112617/clear-quartz-illegally-exported-from-sri-lanka-cope-inquiry-finds")],
     ask=["Do you hold a Geological Survey and Mines Bureau export licence for this mineral?", "Which mine or deposit does the material come from?",
@@ -299,10 +299,10 @@ cat(
     title="Rubber glove manufacturers in Sri Lanka: latex, surgical and industrial",
     desc="Source latex examination and surgical gloves, industrial and household gloves, seals, gaskets and mats from Sri Lankan rubber product manufacturers. Standards, HS codes and markets.",
     answer=("Sri Lanka exported US$293 million of industrial and surgical rubber gloves in 2025, its second largest rubber product line after tyres, and glove "
-            "exports rose 34.38% in September 2026. Manufacturers make gloves for healthcare, industrial, household and agricultural use, as well as seals, "
+            "exports rose 7.58% in the first nine months of 2026. Manufacturers make gloves for healthcare, industrial, household and agricultural use, as well as seals, "
             "gaskets, washers, mats, rubber bands and hoses, using Sri Lankan natural rubber including latex crepe. About 75 rubber product exporters are "
             "registered with the Board of Investment. For medical gloves in the UK or EU, ask for EN 455 test reports."),
-    stats=[("US$293M", "industrial and surgical glove exports in 2025"), ("+34.38%", "glove exports, September 2026"), ("~75", "rubber product exporters registered with the BOI")],
+    stats=[("US$293M", "industrial and surgical glove exports in 2025"), ("+7.58%", "glove exports, January to September 2026"), ("~75", "rubber product exporters registered with the BOI")],
     stats_src=f'Sources: Export Development Board,{ln("rubber report 2026", RUB_R)}; EDB via{ln("Newswire", EDB9M)}.',
     glance=[("Main products", "Latex examination and surgical gloves, industrial and household gloves, seals, gaskets and washers, rubber mats, bands, hoses"),
             ("Largest markets in 2025", "US, Germany, UK and India for rubber gloves and apparel articles; Italy, Belgium, France and Canada also named by EDB"),
@@ -327,7 +327,7 @@ cat(
     faqs=[("Which HS codes apply to rubber gloves?", "Medical, surgical and examination gloves of vulcanised rubber are HS 4015.12. Household and industrial rubber gloves are 4015.19. Gaskets and seals are 4016.93 and rubber mats 4016.91."),
           ("What kinds of gloves does Sri Lanka export?", "Gloves for industrial, household, agricultural and healthcare use. Industrial and surgical gloves earned US$293 million in 2025."),
           ("Which standards should I ask a glove supplier for?", "For medical gloves sold in the UK or EU, EN 455 test reports and CE or UKCA marking. For chemical protection, EN ISO 374. Ask which certificates the factory already holds before you order."),
-          ("Where do Sri Lankan rubber gloves go?", "UN trade data for 2025 show rubber apparel articles, mostly gloves, worth US$74.28 million to the US, US$25.56 million to Germany, US$17.05 million to the UK and US$16.20 million to India.")],
+          ("Where do Sri Lankan rubber gloves go?", "UN trade data for 2025 show rubber apparel articles, which include gloves, worth US$74.28 million to the US, US$25.56 million to Germany, US$17.05 million to the UK and US$16.20 million to India.")],
     tender="Health systems, UN agencies and public buyers tender for examination and surgical gloves to EN 455. Tender Radar sends you the ones that fit.",
 )
 
@@ -339,7 +339,7 @@ cat(
     answer=("Apparel is Sri Lanka's largest export, at US$4.91 billion for apparel and textiles in 2025. Manufacturers make sportswear and activewear, lingerie "
             "and intimate wear, swimwear, loungewear, bridal wear, workwear and children's wear, mostly for the US, the EU and the UK. The industry sells on "
             "ethical and green manufacturing: 17 factories are LEED certified, and Garments Without Guilt certifies labour standards. Exports are down 5.68% "
-            "in the first nine months of 2026 as US and EU demand softened, which means capacity for new buyers."),
+            "in the first nine months of 2026 as US and EU demand softened, so some factories may have spare capacity."),
     stats=[("US$4.91B", "apparel and textile exports in 2025"), ("17", "LEED certified apparel factories"), ("US$1.95B", "apparel exports to the US in 2025")],
     stats_src=f'Sources: Export Development Board,{ln("2025 export performance", EDB25)}; Sri Lanka Apparel Exporters Association,{ln("export tables", SLAEA_EXP)} and{ln("certifications", SLAEA_GB)}.',
     glance=[("Main products", "Activewear and sportswear, lingerie and intimate wear, swimwear, loungewear, bridal wear, workwear, children's wear, knitted fabric"),
@@ -432,7 +432,7 @@ cat(
     title="Ceylon tea suppliers and exporters: bulk, wholesale and private label",
     desc="Buy Ceylon tea in bulk, packets, tea bags or private label from Sri Lankan tea exporters. The Lion logo, the Colombo auction, grades by elevation, certificates and markets.",
     answer=("Sri Lanka exported US$1.51 billion of tea in 2025, about 257 million kilograms, and supplied 13% of the world's tea exports in 2024. Ceylon tea is "
-            "grown in seven regions and graded by elevation, and about 93% is made by orthodox methods. Most of it is sold through the Colombo Tea Auction, which "
+            "grown in seven regions and graded by elevation, and about 93% is made by orthodox methods. Most tea is sold through the Colombo Tea Auction, which "
             "runs every Tuesday and Wednesday. Exporters supply bulk tea, packets, tea bags, green, white and instant tea, and 59% of exports in 2025 were value "
             "added. Only 100% Ceylon tea packed in Sri Lanka may carry the Sri Lanka Tea Board's Lion logo."),
     stats=[("US$1.51B", "tea exports in 2025, up 4.97%"), ("13%", "of world tea exports in 2024"), ("59%", "of 2025 tea exports in value added form")],
@@ -441,13 +441,14 @@ cat(
             ("Largest markets in 2025 by volume", "Iraq, Russia, Turkiye, Libya, UAE, Chile, China, Iran, Azerbaijan, Saudi Arabia"),
             ("Grades", "High grown from 1,200 m, medium grown 600 to 1,200 m, low grown below 600 m, across seven regions"),
             ("Standards", "ISO 3720 minimum; ISO 22000; organic to EU, USDA NOP and JAS; Rainforest Alliance and Fairtrade available"),
-            ("Watch for", "Tea exports are down 6.83% in 2026 and production is tight")],
+            ("Watch for", "Tea earnings are down 6.83% in January to September 2026")],
     products=[("Black tea in bulk, packs over 3 kg", "0902.40"), ("Tea packets and tea bags, packs up to 3 kg", "0902.30"), ("Green tea", "0902.10 and 0902.20"),
               ("Instant tea and extracts", "2101.20"), ("White, oolong, organic, decaffeinated and flavoured tea", "0902")],
     names=["Ceylon black tea", "Sri Lankan tea", "orthodox tea", "tea bags", "private label tea"],
     evidence=[("Sri Lanka supplied 13% of global tea exports in 2024.", "EDB", TEA_EDB),
               ("Tea exports reached 257.44 million kg in 2025, worth US$1.51 billion at an average FOB of US$5.85 a kg.", "Daily FT", TEA_FT25),
               ("The Colombo Tea Auction runs every Tuesday and Wednesday and sells about 6.5 million kg a week.", "EDB", TEA_AUC),
+              ("The Sri Lanka Tea Board says tea has to be sold through the Colombo Tea Auction, with an exception for small factories.", "Sri Lanka Tea Board interview", "https://www.gtreview.com/news/asia/qa-an-interview-with-the-sri-lanka-tea-board/"),
               ("Ceylon tea is grown in seven regions, including Nuwara Eliya, Uva and Dimbula, and graded by elevation.", "EDB", TEA_CAP),
               ("About 93% of Ceylon tea is made by orthodox and artisanal methods, handpicked as two leaves and a bud.", "EDB", TEA_CAP),
               ("Value added segments reached 59% of tea exports in 2025, an 11 year high.", "Daily FT", TEA_FT25)],
@@ -455,7 +456,7 @@ cat(
            ("ISO 3720.", "The minimum product standard for Ceylon black tea."), ("ISO 22000.", "Food safety; the Export Development Board says Ceylon tea meets the ISO 22000 series and EU health and safety rules."),
            ("Organic.", "EU organic, USDA NOP, JAS and NASAA certification is available in the industry."), ("Rainforest Alliance, Fairtrade and Ethical Tea Partnership.", "Listed as industry partnerships; check the estate or factory you buy from.")],
     caveats=[("Tea earnings fell 6.83% in January to September 2026, with bulk tea down 11.13%; tea bags rose 53.39%.", "EDB via Newswire", EDB9M),
-             ("2024 production was 262 million kg, below the industry's stated capacity, so supply of some grades is tight.", "Daily FT", TEA_FT24),
+             ("2024 production was 262 million kg, which a leading tea broker called an underachievement.", "Daily FT", TEA_FT24),
              ("If you blend or pack outside Sri Lanka, you cannot use the Lion logo.", "EDB", TEA_LOGO)],
     ask=["Which regions and elevations do you buy from, and can you match my blend?", "Do you buy at the Colombo auction, and how do you price forward contracts?",
          "Are you a licensed packer for the Lion logo?", "Which certificates do you hold: ISO 22000, organic, Rainforest Alliance?", "What is your minimum order for private label packs or tea bags?"],
@@ -463,7 +464,6 @@ cat(
           ("In what formats can I buy Ceylon tea?", "Bulk tea, tea packets, tea bags and instant tea, in black, green, white and oolong, with organic, decaffeinated and flavoured versions. In 2025 packets were about 45% of export volume and bulk tea 106.8 million kg."),
           ("How is Ceylon tea traded?", "Most tea is sold at the Colombo Tea Auction every Tuesday and Wednesday, about 6.5 million kg a week. Exporters buy at auction and sell to overseas buyers in bulk, packed or private label form."),
           ("Which countries buy the most Ceylon tea?", "By volume in 2025: Iraq, Russia, Turkiye, Libya and the UAE, followed by Chile, China, Iran, Azerbaijan and Saudi Arabia. The Middle East and North Africa took half of exports in 2024.")],
-    tender="Government and institutional tea purchases go out to tender in several markets. Tender Radar sends you the ones that fit your grades and certificates.",
 )
 
 cat(
@@ -478,11 +478,11 @@ cat(
     stats=[("US$221.56M", "cinnamon exports, January to September 2026"), ("+31%", "on a year earlier"), ("2022", "EU protected geographical indication")],
     glance=[("Main products", "Quills by grade, quillings, featherings and chips, cut quills, powder, leaf oil, bark oil, oleoresin"),
             ("Grades", "Alba (thinnest, about 6 mm), Continental, Mexican, Hamburg"),
-            ("Largest markets", "Mexico, US, Peru, then Colombia, Ecuador, Bolivia, Guatemala, Chile, Spain"),
+            ("Largest markets", "Mexico, US, Peru, then Colombia, Ecuador, Bolivia, India, Guatemala, Chile, Spain"),
             ("Mandatory for export", "SLS 81:2010 conformity and a Sri Lanka Standards Institution clearance certificate"),
             ("Watch for", "Record raw material prices in 2026 as demand climbs")],
-    products=[("Cinnamon quills, cut quills, quillings, featherings and chips", "0906.11"), ("Other whole cinnamon", "0906.19"), ("Crushed cinnamon", "0906.20.10"),
-              ("Ground cinnamon powder", "0906.20.20"), ("Cinnamon leaf oil", "3301.90.30"), ("Cinnamon bark oil", "3301.90.40"), ("Cinnamon oleoresin", "3301.90.10")],
+    products=[("Cinnamon quills, cut quills, quillings, featherings and chips", "0906.11"), ("Other whole cinnamon", "0906.19"), ("Crushed cinnamon", "0906.20.10, Sri Lanka line"),
+              ("Ground cinnamon powder", "0906.20.20, Sri Lanka line"), ("Cinnamon leaf oil", "3301.90.30, Sri Lanka line"), ("Cinnamon bark oil", "3301.90.40, Sri Lanka line"), ("Cinnamon oleoresin", "3301.90.10, Sri Lanka line")],
     names=["true cinnamon", "Ceylon cinnamon sticks", "Alba cinnamon", "C5 cinnamon", "Cinnamomum zeylanicum"],
     evidence=[("The EU registered Ceylon cinnamon as a protected geographical indication under Regulation (EU) 2022/144, Sri Lanka's first.", "EUR-Lex", CIN_EU),
               ("The PGI mark covers cut quills, powder, leaf oil and bark oil made only from 100% Ceylon cinnamon grown and processed in Sri Lanka.", "EDB", CIN_GI),
@@ -501,7 +501,7 @@ cat(
     faqs=[("What is Alba grade cinnamon?", "The thinnest and most expensive grade of Ceylon cinnamon quill, with a diameter of about 6 mm. The other quill grades, by increasing diameter, are Continental, Mexican and Hamburg."),
           ("How do I import Ceylon cinnamon in bulk?", "Agree grade, moisture and packing with an exporter, who obtains the Sri Lanka Standards Institution clearance under SLS 81:2010 and a certificate of origin. Then check your own market's food rules. Tell us your grade and volume and we will introduce exporters."),
           ("How can I tell Ceylon cinnamon from cassia?", "Ceylon cinnamon is Cinnamomum zeylanicum. Packs with the EU PGI mark must contain 100% Ceylon cinnamon grown and processed in Sri Lanka, and the Pure Ceylon Cinnamon trademark is registered in the EU, Mexico, the US, Peru and Colombia."),
-          ("Which HS codes cover Ceylon cinnamon?", "Quills, quillings, featherings and chips are 0906.11, crushed cinnamon 0906.20.10, powder 0906.20.20, leaf oil 3301.90.30 and bark oil 3301.90.40.")],
+          ("Which HS codes cover Ceylon cinnamon?", "Quills, quillings, featherings and chips are 0906.11, crushed cinnamon 0906.20.10, powder 0906.20.20, leaf oil 3301.90.30 and bark oil 3301.90.40, the last three being Sri Lanka's own export tariff lines. Many importing tariffs class these oils under 3301.29.")],
 )
 
 cat(
@@ -511,7 +511,7 @@ cat(
     desc="Source Ceylon black pepper, cloves, nutmeg and mace, cardamom, essential oils and oleoresins from Sri Lankan spice exporters. HS codes, markets, documents and what to check.",
     answer=("Sri Lanka exported US$449.9 million of spices, essential oils and oleoresins in 2025, and the sector grew 30.53% in the first nine months of 2026, "
             "with pepper up 61% to US$136.26 million. Beyond cinnamon, exporters supply black pepper, cloves, nutmeg and mace, cardamom, ginger and turmeric, "
-            "and essential oils and oleoresins from four main distilleries and about 170 field units. Pepper, cloves, nutmeg and cardamom are sold under the "
+            "essential oils from four main distilleries, 12 smaller distilleries and about 170 field units, and oleoresins. Pepper, cloves, nutmeg and cardamom are sold under the "
             "Ceylon Spices geographical indication. Most spices ship in bulk, unprocessed form."),
     stats=[("US$449.9M", "spices and essential oils in 2025"), ("+61.45%", "pepper exports, January to September 2026"), ("~6%", "of world pepper demand")],
     stats_src=S2(f' Pepper share: Export Development Board,{ln("spice capability", CIN_CAP)}.'),
@@ -549,8 +549,8 @@ cat(
     desc="Source herbal teas, ayurvedic oils and balms, natural cosmetics and spice essential oils from Sri Lankan manufacturers. Regulators, certificates and what to check for your market.",
     answer=("Sri Lankan manufacturers make herbal teas such as Ranawara, Gotukola, Moringa and Bael flower, ayurvedic massage oils and balms, herbal soaps and "
             "hair care, and natural cosmetics, many using Sri Lankan spice oils. Ayurveda is governed by the Ayurveda Act of 1961 and the Department of Ayurveda, "
-            "and the National Medicines Regulatory Authority covers some products. It is a small, developing export category: official export figures are not "
-            "published separately, so check each manufacturer's certificates and how its products are classified in your market."),
+            "and the National Medicines Regulatory Authority covers some products. It is a small, developing export category and we found no separate official export "
+            "figures, so check each manufacturer's certificates and how its products are classified in your market."),
     stats=[("93", "ayurvedic items listed on the EDB eMarketplace"), ("66", "herbal cosmetic items listed"), ("1961", "Ayurveda Act that governs the sector")],
     stats_src=f'Sources: Export Development Board,{ln("eMarketplace", AYU_MKT)} and{ln("ayurveda services", "https://www.srilankabusiness.com/news/edb-s-role-in-promoting-ayurveda-services.html")}.',
     glance=[("Main products", "Herbal teas, ayurvedic oils and balms, herbal soaps and hair care, capsules and elixirs, natural cosmetics, spice essential oils"),
@@ -625,7 +625,7 @@ cat(
               ("Desiccated coconut comes in super fine, fine and medium cuts with moisture held at 2.5% to 3.0%.", "EDB", KERNEL)],
     certs=[("ISO 22000 or FSSC 22000.", "Food safety, held across kernel product mills."), ("HACCP and BRC.", "Ask for current certificates and the latest audit."),
            ("Coconut Development Authority certificate.", "Required with every desiccated coconut shipment."), ("Organic.", "Some farms are organic certified; ask for the scheme and certifier."),
-           ("Halal and kosher.", "Available from some processors; confirm for your product.")],
+           ("Halal and kosher.", "Ask whether the processor holds them for your product.")],
     caveats=[("Nut output fell to 2,684 million nuts in 2024 from 2,950 million in 2023, tightening raw material supply.", "Daily FT", CCCI),
              ("The International Coconut Community reported Sri Lankan desiccated coconut among the highest priced in the world and expects the market to stay volatile.", "International Coconut Community", ICC_DC),
              ("Kernel product exports fell 29.15% in September 2026, so monthly volumes can swing sharply.", "EDB", EDB9M_EDB),
@@ -647,7 +647,7 @@ cat(
             "largest coco peat exporter and the largest supplier of brown coir fibre, at about 100,000 tonnes a year. Exporters supply blocks and bricks, grow bags, "
             "discs, cubes and plugs, washed, unwashed or buffered with calcium nitrate, plus coir fibre, twine, geotextiles, mats and husk chips. Many products for "
             "Europe need RHP certification."),
-    stats=[("US$197.54M", "coco peat, pith and moulded products in 2024"), ("~100,000 t", "brown coir fibre exported a year"), ("+334%", "husk chip exports, January to September 2026")],
+    stats=[("US$197.54M", "coco peat, pith and moulded products in 2024"), ("~100,000 t", "brown coir fibre exported a year"), ("3rd", "largest coco peat exporter, EDB ranking")],
     stats_src=f'Sources: Export Development Board,{ln("export performance indicators 2024", EPI24)},{ln("coconut products", COCO_PAGE)} and{ln("January to September 2026", EDB9M)} (via Newswire).',
     glance=[("Main products", "Coco peat blocks, bricks and briquettes, grow bags, discs, cubes, open tops and plugs, husk chips, bristle and mattress fibre, twine, geotextiles, mats"),
             ("Processing options", "Washed low EC, unwashed high EC, or buffered with calcium nitrate"),
@@ -667,7 +667,8 @@ cat(
            ("Lot test reports.", "EC, pH, moisture and expansion volume for each lot."), ("ISO 9001 and ISO 14001.", "The Export Development Board says coir manufacturers work to these."),
            ("Organic.", "Available from some exporters for coco peat; ask for the certifier."), ("Phytosanitary certificate.", "Issued by the National Plant Quarantine Service where your country requires it.")],
     caveats=[("Husk supply is limited: husk chip volumes fell 33% in January to September 2025.", "International Coconut Community", ICC_FIB),
-             ("Prices swing: coir and coco peat prices fell by an average of 68% in 2022, and fibre prices roughly doubled from early 2024 to late 2025.", "EDB coco peat study", PEAT_R),
+             ("Prices swing: coir and coco peat prices fell by an average of 68% in 2022.", "EDB coco peat study", PEAT_R),
+             ("Coir fibre prices in Sri Lanka rose from the mid US$60s a tonne in early 2024 to about US$124 in October 2025.", "International Coconut Community", ICC_FIB),
              ("Coco peat and moulded product exports fell 10.63% in September 2026 even as husk chips rose, so monthly volumes are uneven.", "EDB", EDB9M_EDB)],
     ask=["Is the product washed, unwashed or buffered, and what EC do you guarantee?", "Does the site hold RHP, if I sell in Europe?", "What expansion volume and moisture do you guarantee per block?",
          "Can you make grow bags to my dimensions and fill?", "What is your monthly capacity in containers?"],
@@ -719,14 +720,14 @@ cat(
     h1="Fruit and vegetable exporters in Sri Lanka: pineapple, banana, papaya and king coconut",
     title="Fruit and vegetable exporters in Sri Lanka: fresh and processed",
     desc="Source fresh pineapple, banana, papaya and vegetables, king coconut water, gherkins and dried fruit from Sri Lankan exporters. Markets, phytosanitary rules, certificates and supply.",
-    answer=("Sri Lanka exported US$71.51 million of fruits, nuts and vegetables in 2024, led by bananas, papaya and melons, vegetables and gherkins, plus bottled "
-            "king coconut water, a fruit indigenous to Sri Lanka. About 65% of fresh produce goes to the Middle East and the Maldives, and almost all processed "
+    answer=("Sri Lanka exported US$71.51 million of fruits, nuts and vegetables in 2024, led by vegetables (US$29.79 million) and bananas (US$16.57 million), "
+            "alongside papaya, gherkins and bottled king coconut water, a fruit indigenous to Sri Lanka. About 65% of fresh produce goes to the Middle East and the Maldives, and almost all processed "
             "products go to Europe. Fresh shipments travel with a phytosanitary certificate from the National Plant Quarantine Service, and some farms are "
             "GlobalG.A.P. certified. It is a small category, so steady volumes of one fresh line may need several growers."),
     stats=[("US$71.51M", "fruit, nut and vegetable exports in 2024"), ("65%", "of fresh produce goes to the Middle East and Maldives"), ("2026", "first pineapple shipment to Pakistan")],
     stats_src=f'Sources: Export Development Board,{ln("export performance indicators 2024", EPI24)},{ln("major markets", "https://www.srilankabusiness.com/fruits-and-vegetables/major-markets.html")} and{ln("pineapple access", PINE)}.',
     glance=[("Main products", "Bananas, papaya and melons, pineapple, king coconut and king coconut water, gherkins, vegetables, frozen and dried fruit"),
-            ("Largest markets in 2021", "UAE, Maldives, Saudi Arabia, UK, Qatar; Switzerland, Germany and France for processed products"),
+            ("Largest markets in 2021", "UAE, Maldives, Saudi Arabia, UK, Qatar; Europe for processed products"),
             ("Documents", "Phytosanitary certificate from the National Plant Quarantine Service"),
             ("Certificates to ask for", "GlobalG.A.P. for farms; ISO 22000, HACCP, halal or kosher for processed products"),
             ("Watch for", "Small holdings and uneven supply")],
@@ -755,11 +756,11 @@ cat(
     h1="Cut foliage, live plant and aquarium plant exporters in Sri Lanka",
     title="Cut foliage and aquarium plant exporters in Sri Lanka: wholesale",
     desc="Source cut foliage, indoor pot plants, cuttings, tissue culture plants and aquarium plants from Sri Lankan producer exporters. Markets, certificates and plant health rules.",
-    answer=("Sri Lanka exported US$13.67 million of cut flowers and foliage in 2024, almost all of it foliage such as dracaena and cordyline, plus a further US$16.63 "
-            "million of live plants and parts of plants. Exporters also supply aquarium plants including Cryptocoryne, Anubias and Echinodorus. Europe takes 60% of "
+    answer=("Sri Lanka exported US$13.67 million of cut flowers and foliage in 2024, mostly foliage such as dracaena and cordyline (US$11.69 "
+            "million). Exporters also supply aquarium plants including Cryptocoryne, Anubias and Echinodorus. Europe takes 60% of "
             "floriculture exports, led by the Netherlands. The main exporters grow in their own nurseries and hold GLOBALG.A.P., MPS and Fair Trade certificates. "
             "Units are small, so large programmes may need several growers."),
-    stats=[("US$13.67M", "cut flowers and foliage exports in 2024"), ("60%", "of floriculture exports go to Europe"), ("US$16.63M", "live plants and parts of plants, 2024")],
+    stats=[("US$13.67M", "cut flowers and foliage exports in 2024"), ("60%", "of floriculture exports go to Europe"), ("US$11.69M", "cut foliage exports in 2024")],
     stats_src=f'Sources: Export Development Board,{ln("export performance indicators 2024", EPI24)} and{ln("floriculture overview", FLOR_OV)}.',
     glance=[("Main products", "Cut foliage, indoor pot plants, young plants and cuttings, tissue culture plants, aquarium plants, some cut flowers"),
             ("Largest foliage markets in 2021", "Netherlands, Japan, Saudi Arabia, Australia, UK; Germany for aquatic plants"),
@@ -814,9 +815,9 @@ cat(
     title="Transformer, cable and switchgear manufacturers in Sri Lanka",
     desc="Source power and distribution transformers, power cables, switchgear, panels and electronics assembly from Sri Lankan manufacturers. Export growth, standards, tenders and how to buy.",
     answer=("Sri Lanka's electrical and electronic component exports reached US$508.86 million in the first nine months of 2026, up 61% and already above the "
-            "US$438.49 million earned in all of 2025. Growth is led by insulated wires and cables, up 82.59%, transformers, up 33.46%, and switches, boards and "
-            "panels, up 31.49%. More than 100 manufacturers and service providers work across electronics manufacturing services, components, own products and "
-            "design, and Sri Lankan transformer makers have won national utility tenders abroad for over a thousand units at a time."),
+            "US$438.49 million earned in all of 2025. The Export Development Board credits insulated wires and cables (+82.59%), transformers (+33.46%), switches, "
+            "boards and panels (+31.49%), telephone and audio equipment (+234.82%) and boilers, engines and pumps (+508.71%). More than 100 manufacturers and service providers work across electronics manufacturing services, components, own products and "
+            "design, and a Sri Lankan transformer maker has won national utility tenders abroad for 1,040 units in 2014 and 1,000 units in 2017."),
     stats=[("US$508.86M", "exports, January to September 2026, up 61.05%"), ("+82.59%", "insulated wires and cables in the same period"), ("100+", "manufacturers and service providers")],
     stats_src=S2(f' Manufacturer count: Export Development Board,{ln("electrical and electronics", EEC_PROD)}.'),
     glance=[("Main products", "Power and distribution transformers, power, control and data cables, winding wire, LV switchboards and panels, switches and sockets, PCB assembly, wire harnesses, coils and inductors"),
@@ -825,19 +826,20 @@ cat(
             ("Watch for", "Type test coverage for the exact ratings you buy")],
     products=[("Insulated wires and cables, including power, data and winding wire", "8544"), ("Electrical transformers and static converters", "8504"),
               ("Boards, panels and consoles for electric control", "8537"), ("Parts of boards and panels", "8538"), ("Switches and sockets up to 1,000 V", "8536"),
-              ("Printed circuit assemblies", "8534 and 8543"), ("Telephone sets and audio and video equipment", "8517 and 8518")],
+              ("Printed circuits; assembled boards are classed by end use", "8534; 8473, 8538 or 8543"), ("Telephone sets and audio and video equipment", "8517 and 8518")],
     names=["distribution transformers", "power cables", "LV switchgear", "panel boards", "EMS", "PCBA"],
-    evidence=[("Electrical and electronic component exports reached US$508.86 million in January to September 2026, up 61.05%, led by insulated wires and cables (+82.59%), transformers (+33.46%) and switches, boards and panels (+31.49%).", "EDB via Newswire", EDB9M),
+    evidence=[("Electrical and electronic component exports reached US$508.86 million in January to September 2026, up 61.05%, with insulated wires and cables up 82.59%, transformers 33.46%, switches, boards and panels 31.49%, and boilers, engines and pumps 508.71%.", "EDB via Newswire", EDB9M),
               ("The sector has more than 100 manufacturers and service providers across electronics manufacturing services, component manufacturing, own products and design.", "EDB", EEC_PROD),
               ("The sector earned US$438.49 million in 2025 and employs 37,000 people.", "EDB", EEC_PAGE),
               ("Transformer, coil and inductor makers state conformity with ISO 9001, ISO 14001 and the EU RoHS directive.", "EDB", EEC_TR),
-              ("A Sri Lankan transformer maker won a national utility tender for 1,040 distribution transformers in South Asia.", "Daily FT", TR_NEPAL),
+              ("A Sri Lankan transformer maker won a national utility tender for 1,040 distribution transformers in South Asia in 2014.", "Daily FT", TR_NEPAL),
+              ("The same maker won a contract for 1,000 distribution transformers from an electricity distribution company in South Asia in 2017.", "Daily FT", TR_PAK),
               ("A Sri Lankan cable maker exports to Sweden, the UK, Africa, the Maldives, Australia, New Zealand and the Caribbean.", "EDB", EEC_CABLE)],
     certs=[("IEC 60076.", "The standard power and distribution transformer tenders specify, with type test reports often no older than five years."),
            ("IEC 60502.", "Power cables, with conductors to IEC 60228."), ("IEC 61439.", "Low voltage switchgear and controlgear assemblies, with type test or design verification certificates."),
            ("Accredited type tests.", "Short circuit and other type tests at an ISO/IEC 17025 accredited laboratory; ask which ratings each report covers."),
            ("ISO 9001, ISO 14001 and RoHS.", "Held by transformer and coil makers, according to the Export Development Board.")],
-    caveats=[("Monthly figures swing: exports fell 11.09% in December 2025 before rising 123.48% in the first half of 2026.", "EDB via Daily FT", EDB25_FT),
+    caveats=[("Monthly figures swing: exports fell 11.09% in December 2025, then rose 88.35% in September 2026.", "EDB via Daily FT", EDB25_FT),
              ("Local product testing services are limited, so ask for third party type test reports rather than relying on local tests.", "Central Bank of Sri Lanka", CBSL_EEC),
              ("Several of the largest exporters are units of foreign groups, so check that a claim describes the Sri Lankan plant, not the parent group.", "EDB", "https://www.srilankabusiness.com/edb/success-stories/electrical-and-electronics")],
     ask=["Which ratings and voltage classes do your type test reports cover, and from which lab?", "Which IEC or BS standards do you build to for this product?",
@@ -845,7 +847,7 @@ cat(
     faqs=[("What electrical and electronic products does Sri Lanka export?", "Insulated wires and cables, transformers, switches, boards and panels, printed circuit assemblies, telephone and audio equipment, wire harnesses, coils and inductors, from more than 100 manufacturers and service providers."),
           ("How fast is the sector growing?", "Exports reached US$508.86 million in January to September 2026, up 61.05%, against US$438.49 million in all of 2025."),
           ("Which countries buy Sri Lankan electrical products?", "Switzerland, Germany, the US, the Maldives, Australia, the UK, Japan and Norway, with India and Bangladesh in the region."),
-          ("Do Sri Lankan transformer makers bid on international tenders?", "Yes. Sri Lankan transformer makers have won national utility tenders abroad, including one for 1,040 distribution transformers. Our Tender Radar sends exporters matched utility tenders, and our bid desk helps them prepare.")],
+          ("Do Sri Lankan transformer makers bid on international tenders?", "Yes. A Sri Lankan transformer maker has won national utility tenders abroad for 1,040 distribution transformers in 2014 and 1,000 in 2017. Our Tender Radar sends exporters matched utility tenders, and our bid desk helps them prepare.")],
     tender="Utilities, governments and development bank projects buy transformers, cables and switchgear by tender. Tender Radar sends matched tenders to your WhatsApp.",
 )
 
@@ -857,7 +859,7 @@ cat(
     answer=("Sri Lanka's exports of boilers, piston engines, pumps and vacuum pumps reached US$171.39 million in the first half of 2026 and grew 508.71% in the "
             "first nine months. The wider light engineering industry has more than 500 manufacturing units making pumps, agricultural, tea and rubber processing "
             "machinery, castings, aluminium extrusions, fasteners, steel structures and auto parts. The Export Development Board says Sri Lankan makers can serve "
-            "small order and niche requirements. Growth in pumps and engines is from a low base, so check supplier depth case by case."),
+            "small order and niche requirements. The Export Development Board reports pumps and engines together with electrical and electronic components, and the growth is from a low base, so check supplier depth case by case."),
     stats=[("US$171.39M", "boilers, engines and pumps, January to June 2026"), ("+508.71%", "same group, January to September 2026"), ("500+", "light engineering manufacturing units")],
     stats_src=f'Sources: Export Development Board via{ln("Daily FT", EDB1H)} and{ln("Newswire", EDB9M)}; EDB,{ln("light engineering", LE_PAGE)}.',
     glance=[("Main products", "Pumps, engines and boilers, tea and rubber processing machinery, rice mills, agricultural machinery, castings, aluminium extrusions, fasteners, steel structures"),
@@ -874,7 +876,7 @@ cat(
               ("The US bought US$39.12 million of Sri Lankan nails, screws, bolts and nuts in 2025.", "EDB US market profile", "https://www.srilankabusiness.com/pdfs/market-profiles/2026/usa-2026.pdf")],
     certs=[("ISO 9001.", "Held by listed exporters; ask for the certificate for the producing site."), ("Material test certificates.", "Most makers use metal scrap, so ask for alloy and traceability certificates."),
            ("CE marking and pump test standards.", "Machinery for the EU needs CE marking; pump performance tests to ISO 9906 where specified.")],
-    caveats=[("The latest sector wide export figure is US$306 million for 2019; no 2025 total has been published.", "EDB", LE_PAGE),
+    caveats=[("The latest sector wide export figure we found is US$306 million for 2019; we found no 2025 sector total.", "EDB", LE_PAGE),
              ("The jump in pumps and engines comes from a very low base, so supplier depth varies.", "EDB India market profile", IN_PROF)],
     ask=["Which products do you make in house, and which do you assemble?", "Can you supply material test certificates for each lot?", "Do your machines carry CE marking, if I sell in the EU?",
          "What is your capacity per month for my product?", "Can you build to my drawings and standards?"],
@@ -926,7 +928,7 @@ cat(
     desc="Source corrugated cartons, printed boxes, labels and garment tags, paper sacks, kraft paper and book printing from Sri Lankan printers and packaging makers. Markets and what to check.",
     answer=("Sri Lankan printers and packaging makers supply tea cartons, printed paperboard boxes, corrugated cartons, labels and garment tags, paper sacks and "
             "recycled kraft paper, and print books, catalogues, stationery and calendars on flexo and offset presses. The industry has more than 50 years of "
-            "prepress experience, and export revenue was an estimated US$118 million in 2019, the latest sector total published. Much of the packaging serves "
+            "prepress experience, and export revenue was an estimated US$118 million in 2019, the latest sector total on the Export Development Board's pages. Much of the packaging serves "
             "Sri Lanka's own tea and apparel exporters. Certificates such as FSC, BRCGS or food contact compliance vary by company."),
     stats=[("US$118M", "printing and paper product exports, 2019 estimate"), ("50+ years", "of prepress experience")],
     stats_src=f'Source: Export Development Board,{ln("industry trends", PRINT_TR)} and{ln("printing and packaging", PRINT_PP)}.',
@@ -1010,7 +1012,7 @@ cat(
     certs=[("EU deforestation regulation.", "From 30 December 2026 for large and medium operators: deforestation free, legal and traceable to the plot of land."),
            ("FSC chain of custody.", "Check the certificate code on the FSC database."), ("ISPM 15.", "For wooden pallets and crates used in the shipment."),
            ("Furniture standards.", "BIFMA for US office furniture or EN standards in Europe, where your buyers ask.")],
-    caveats=[("Furniture exports to India, the largest itemised market, fell from US$25.7 million in 2023 to US$17.78 million in 2025.", "EDB India market profile", IN_PROF),
+    caveats=[("Furniture exports to India fell from US$25.7 million in 2023 to US$17.78 million in 2025.", "EDB India market profile", IN_PROF),
              ("Sustainability claims on official sector pages are not backed by cited evidence, so verify FSC or legality documents per supplier.", "EDB", WOOD_WHY)],
     ask=["Which timber do you use, and can you trace it to source?", "Can you provide EUDR documentation, if I sell in the EU?", "Do you hold FSC chain of custody?",
          "What is your monthly capacity, and can you ship flat pack?", "Can you build to my designs and finish standards?"],
@@ -1036,7 +1038,7 @@ SECTORS = [  # label, link, 2025 US$ million, Jan to Sep 2026 change, note
     ("Food and beverages", "processed-food-beverages/", 583.89, "+20.90%", "Processed food, beverages, animal feed"),
     ("Spices and essential oils", "spices-essential-oils/", 449.90, "+30.53%", "Cinnamon, pepper, cloves, oils, oleoresins"),
     ("Electrical and electronic components", "electrical-cables-transformers/", 438.49, "+61.05%", "Cables, transformers, switchgear, panels"),
-    ("Gems, diamonds and jewellery", "gems-jewellery/", 334.13, "Not yet published", "Sapphires, spinel, cut diamonds, jewellery"),
+    ("Gems, diamonds and jewellery", "gems-jewellery/", 334.13, "Not in EDB release", "Sapphires, spinel, cut diamonds, jewellery"),
     ("Seafood", "seafood/", 240.19, f"{M}2.03%", "Tuna, swordfish, shrimp, crab"),
     ("Ornamental fish", "ornamental-fish/", 22.60, f"{M}26.71%", "Freshwater and marine aquarium fish"),
 ]
@@ -1072,11 +1074,12 @@ RADAR_SOURCES = [
     ("Bidding documents for World Bank financed goods admit firms from all countries.", "Utility bidding document under World Bank rules", WB_ELIG),
     ("Asian Development Bank financed contracts are open to suppliers from member countries; Sri Lanka has been a member since 1966.", "Asian Development Bank", ADB_POL),
     ("Sri Lanka is not an African Development Bank member, so its exporters target contracts financed through the African Development Fund window, which is open to any country.", "African Development Bank", AFDB),
-    ("UNICEF buys health, nutrition, water and sanitation and education supplies, with suppliers registering through the UN Global Marketplace.", "UNICEF", UNICEF),
+    ("UN agencies buy health, nutrition, water and sanitation and education supplies, with suppliers registering through the UN Global Marketplace.", "UN supply division page", UNICEF),
     ("National utilities and government buyers publish their own tenders on national e-procurement systems. Eligibility for foreign firms varies, so read the clause in each notice.", "National e-procurement notice", NAT_EP),
 ]
 TENDER_REQS = [
-    ("A bid security, for example 2% of the bid price, by bank guarantee.", "Utility transformer tender", T_TRAFO),
+    ("A bid security, for example 2% of the bid price.", "Utility transformer tender", T_TRAFO),
+    ("The bid security is usually a bank guarantee, or a bid securing declaration where the bid data sheet allows it.", "World Bank standard bidding document", WB_SPD),
     ("A performance security of 10% of the contract price if you win.", "UN power transformer tender", T_UNOPS),
     ("A manufacturer's authorisation if the bidder does not make the goods itself.", "World Bank standard bidding document", WB_SPD),
     ("Transformer type tests to IEC 60076, with reports often no older than five years.", "Utility transformer specification", T_SPEC),
@@ -1119,14 +1122,14 @@ TRADE_SHORT = [
     ("New EU GSP rules apply from 1 January 2027, and current beneficiaries such as Sri Lanka must reapply by 31 December 2028.", "Daily Mirror", GSP_26),
     ("United Kingdom: Enhanced Preferences under the Developing Countries Trading Scheme, with zero duty on more than 7,000 product lines.", "EDB", DCTS),
     ("India: most Sri Lankan origin goods enter duty free under a free trade agreement in force since 2000, apart from a negative list and quota items.", "EDB", ISFTA),
-    ("Singapore and Pakistan: free trade agreements cover 80% of Singapore's tariff lines and give Pakistan market access with a negative list.", "Enterprise Singapore", SLSFTA),
+    ("Singapore: a free trade agreement in force since 2018 phases out tariffs on 80% of tariff lines over up to 15 years.", "Enterprise Singapore", SLSFTA),
     ("United States: in July 2026 Sri Lanka was placed in the 10% Section 301 tariff category, added on top of normal duties.", "News First", US_301),
 ]
 
 GUIDE_ANSWER = ("Importing from Sri Lanka means agreeing the specification and terms with an exporter, shipping from the Port of Colombo or by air, and using a "
                 "certificate of origin to claim lower duties where your country offers them. The EU removes duties on 66% of tariff lines under GSP+, the UK gives "
-                "zero duty on more than 7,000 product lines, and India admits most Sri Lankan goods duty free. US imports pay a 10% Section 301 tariff on top of "
-                "normal duties since July 2026. Colombo handled a record 8.29 million containers (TEUs) in 2025.")
+                "zero duty on more than 7,000 product lines, and India admits most Sri Lankan goods duty free. Most US imports from Sri Lanka pay a 10% Section 301 tariff "
+                "on top of normal duties since July 2026. Colombo handled a record 8.29 million TEUs in 2025.")
 GUIDE_STEPS = [
     ("Define what you are buying", "Product, grade, packing, labelling, quantity and the certificates you need. Ask your customs broker for the HS code and your duty rate, with and without a trade preference."),
     ("Shortlist and check exporters", "Check registration, certificates and export history. The Export Development Board's directory and our request for quote are two places to start."),
@@ -1141,7 +1144,7 @@ GUIDE_SECTIONS = [
         ("In 2025, 69% of eligible Sri Lankan exports to the EU used GSP+; apparel was 48% of preferential imports, rubber 17% and food preparations 12%.", "GSP Hub", GSP_HUB),
         ("New EU GSP rules apply from 1 January 2027. Countries that are GSP+ beneficiaries on 31 December 2026 must reapply by 31 December 2028.", "Daily Mirror", GSP_26),
         ("Sri Lanka is in the Enhanced Preferences tier of the UK Developing Countries Trading Scheme, with zero duty on more than 7,000 product lines.", "EDB", DCTS),
-        ("From early 2026, relaxed UK rules of origin let Sri Lankan garment makers use inputs from any country and keep duty free access.", "Ada Derana", DCTS_ROO),
+        ("Relaxed UK rules of origin, due to take effect in early 2026, let Sri Lankan garment makers use inputs from any country and keep duty free access.", "Ada Derana", DCTS_ROO),
         ("Under the India Sri Lanka Free Trade Agreement, in force since 1 March 2000, Sri Lankan origin goods enter India duty free except a negative list of 429 tariff lines and quota items such as garments, tea, pepper and desiccated coconut. Goods need at least 35% domestic value addition.", "EDB", ISFTA),
         ("The Pakistan Sri Lanka Free Trade Agreement has operated since June 2005, with a 10,000 tonne a year duty free quota for tea.", "EDB", PSFTA),
         ("The Singapore Sri Lanka Free Trade Agreement, in force since May 2018, removes tariffs on 80% of tariff lines over up to 15 years.", "Enterprise Singapore", SLSFTA),
@@ -1159,7 +1162,7 @@ GUIDE_SECTIONS = [
     ]),
     ("shipping", "Shipping from Sri Lanka", "", [
         ("The Port of Colombo handled a record 8,291,178 TEUs in 2025.", "Sri Lanka Ports Authority", SLPA),
-        ("About 80% of Colombo's container volume is transhipment, which gives direct sailings to many ports.", "Maritime Gateway", TRANS),
+        ("About 80% of Colombo's container volume in January to October 2025 was transhipment.", "Maritime Gateway", TRANS),
         ("Colombo rose to 20th among the world's container ports in the first half of 2026.", "Daily FT", RANK),
         ("In September 2026 yard operations ran at 125% of capacity, so allow for congestion in your lead times.", "Daily Mirror", CONGEST),
     ]),
@@ -1181,7 +1184,7 @@ GUIDE_FAQS = [
     ("What tariff does the US charge on Sri Lankan goods?", "In July 2026 Sri Lanka was placed in the 10% Section 301 tariff category, added on top of normal customs duties. Rates have changed several times since 2025, so check the current rate with your customs broker."),
     ("Does Sri Lanka still have GSP+ with the EU?", "Yes. Sri Lanka has had GSP+ since 2017. New EU GSP rules apply from 1 January 2027, and Sri Lanka must reapply by the end of 2028."),
     ("Who issues certificates of origin in Sri Lanka?", "The Department of Commerce issues preferential certificates of origin under GSP schemes and free trade agreements; chambers of commerce issue non preferential ones."),
-    ("How do I pay a Sri Lankan exporter safely?", "Letters of credit and documents against payment protect buyers best on a first order. Agree inspection before shipment, and move to open account once trust is built."),
+    ("How do I pay a Sri Lankan exporter safely?", "On a first order, a letter of credit that requires an independent inspection certificate gives the buyer most control. Documents against payment protects the seller more than the buyer. Move to open account once trust is built."),
 ]
 
 HUB_FAQS = [
@@ -1193,10 +1196,10 @@ HUB_FAQS = [
 ]
 
 RADAR_FAQS = [
-    ("Which tenders does Tender Radar cover?", "International tenders for electrical and engineering equipment, pumps and machinery, uniforms, gloves and medical rubber products, tea and food, packaging and boats, from utilities, governments, development bank financed projects, UN agencies and contractors."),
+    ("Which tenders does Tender Radar cover?", "International tenders for electrical and engineering equipment, pumps and machinery, uniforms, gloves and medical rubber products, packaging and boats, from utilities, governments, development bank financed projects, UN agencies and contractors."),
     ("Can Sri Lankan companies bid on World Bank, ADB and UN tenders?", "In most cases, yes. World Bank financed contracts are open to firms from all countries, Asian Development Bank financed contracts to member countries including Sri Lanka, and UN agencies buy through the UN Global Marketplace. African Development Bank contracts are for members, but African Development Fund financed contracts are open to any country."),
     ("Do you bid for us?", "No. You stay the bidder and every document goes out under your name. Our bid desk helps you read the tender, check your documents and prepare the bid."),
-    ("Why WhatsApp?", "Because export managers read WhatsApp faster than email. You opt in to alerts, as WhatsApp's business rules require, and you can pause them any time by replying STOP. The weekly digest can come by email too."),
+    ("Why WhatsApp?", "Because tender deadlines are short and an alert needs to be seen the same day. You opt in to alerts, as WhatsApp's business rules require, and you can pause them any time by replying STOP. The weekly digest can come by email too."),
     ("How quickly do alerts arrive?", "We check sources every working day and send a match the day we find it, with a reminder before the deadline."),
     ("What does a typical tender ask for?", "Usually a bid security, a performance security if you win, the manufacturer's authorisation, type test reports to the relevant IEC standard, ISO 9001, past supply records and minimum turnover. The details are in each tender, and Radar flags them in every alert."),
 ]

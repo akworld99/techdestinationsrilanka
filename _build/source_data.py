@@ -37,7 +37,7 @@ HUB_TITLE = "Sri Lanka exporters and export products list: source from Sri Lanka
 HUB_DESC = ("Buy direct from Sri Lankan exporters: Ceylon tea and cinnamon, coconut, coco peat and coir, activated carbon, tyres and gloves, apparel, "
             "electrical cables and transformers, seafood and more. Export figures, certificates to ask for and a reply within two working days.")
 HUB_ANSWER = ("Sri Lanka exported US$13.58 billion of goods in 2025. The largest categories are apparel, tea, coconut products, rubber products, "
-              "processed food, spices and electrical components, and the fastest growing in 2026 are electrical and electronic components, up 61% "
+              "food and beverages, spices and electrical components, and the fastest growing in 2026 are electrical and electronic components, up 61% "
               "in the first nine months, and spices, up 30.5%. Buyers in the US, India, the UK and the EU source Ceylon tea and cinnamon, coconut and "
               "coir products, industrial tyres and gloves, apparel and a widening range of electrical goods. We match buyers with Sri Lankan exporters "
               "who make what they need and check them before we introduce them.")
@@ -54,9 +54,9 @@ HUB_FAQS = []          # filled in source_cats
 RFQ_FAQS = [
     ("Do you sell the products yourselves?", "No. We are not a trading company. Quotes, contracts, payment and shipping are agreed between you and the exporter. We find and check the exporters and stay on hand until your first shipment."),
     ("How do you choose which exporters to introduce?", "By the product and grade you need, the certificates you ask for, the markets they already ship to and their capacity for your volume. We check registration and certificates before we introduce anyone."),
-    ("Can I get samples before I order?", "Yes. Most Sri Lankan exporters send samples before a first order. Agree in writing what the sample has to prove, such as grade, moisture or dimensions, so the order can be checked against it."),
+    ("Can I get samples before I order?", "Yes. Ask for samples before a first order, and agree in writing what the sample has to prove, such as grade, moisture or dimensions, so the order can be checked against it."),
     ("What if I only need a small quantity?", "Tell us anyway. Minimum orders vary by product and exporter, and some exporters accept a trial order before a full container."),
-    ("Which markets do Sri Lankan exporters ship to?", "In 2025 the largest markets for Sri Lankan goods were the US, India, the UK, Germany, Italy, the Netherlands, France and Belgium, according to the Export Development Board. Many exporters also ship to the Gulf, Japan, China, Australia and Turkey."),
+    ("Which markets do Sri Lankan exporters ship to?", "In 2025 the largest markets for Sri Lankan goods were the US, India, the UK, Germany, Italy and the Netherlands, according to the Export Development Board. Many exporters also ship to the Gulf, Japan, China, Australia and Turkey."),
 ]
 
 # ---------------------------------------------------------------- Tender Radar
@@ -85,7 +85,6 @@ RADAR_SECTORS = [
     ("Pumps, engines and machinery", "Pumps for water and irrigation projects, generator sets, boilers and fabricated equipment"),
     ("Uniforms and apparel", "Uniforms, workwear and protective clothing for public services, health systems and large employers"),
     ("Rubber and medical supplies", "Examination, surgical and industrial gloves, and tyres for public fleets and ports"),
-    ("Tea and food", "Government and institutional purchases of tea, spices and processed food"),
     ("Packaging and printing", "Cartons, labels and printed material for public bodies and international agencies"),
     ("Boats and marine", "Patrol, fisheries and passenger boats for governments and agencies"),
 ]
@@ -115,12 +114,12 @@ BID_ANSWER = ("We help Sri Lankan manufacturers bid for international tenders an
 BID_STEPS = [
     ("Read the tender", "Eligibility, qualification criteria, evaluation method, lots, deadlines and the clauses that can rule you out."),
     ("Go or no go", "A short written view on fit, gaps and the cost of bidding, so you only bid where you can win."),
-    ("Ask before the deadline", "Clarification questions drafted and sent within the buyer's clarification window."),
+    ("Ask before the deadline", "Clarification questions drafted for you to send within the buyer's clarification window."),
     ("Compliance matrix", "Every requirement mapped to your evidence, clause by clause, with gaps flagged early."),
     ("Technical submission", "Guaranteed technical particulars, data sheets, drawings, type test reports and a clear list of deviations."),
     ("Commercial submission", "Price schedules, delivery terms, freight and insurance, currency and payment terms, and the bid security with your bank."),
     ("Documents and forms", "Manufacturer's authorisation, experience certificates, financial statements, ISO certificates, and notarisation or legalisation where asked."),
-    ("Submit and follow up", "Upload on the procurement portal or send by courier, then answer clarifications during evaluation and prepare the performance security if you win."),
+    ("Submit and follow up", "Final checks before you upload or courier the bid, then help with clarifications during evaluation and the performance security if you win."),
 ]
 CONSULT = [
     ("Export readiness review.", "Where your product, documents and certificates stand against what buyers in your target markets ask for."),
@@ -133,17 +132,17 @@ CONSULT = [
 BID_PRINCIPLES = [
     "You stay the bidder. Every document goes out under your name and your signature.",
     "Confidential by default. We sign a non disclosure agreement before you share prices or drawings.",
-    "One bidder per tender. We do not work for two competing bidders on the same tender.",
+    "One bid per tender. Radar alerts go to every exporter they match, but on any one tender our bid desk prepares only one bid.",
     "Honest calls. If we think a tender is not winnable, we say so before you spend money on it.",
 ]
 BID_TEAM = ("Tech Destination Sri Lanka is run from Colombo by people with backgrounds in freight and logistics, ERP for manufacturers, and B2B demand "
-            "generation for buyers in North America, Europe and Asia Pacific. We know how bids are scored, how goods leave Colombo and how overseas "
+            "generation for buyers in North America, Europe and Asia Pacific. We know how goods leave Colombo and how overseas "
             "buyers find suppliers. For type testing, legal and banking steps we bring in specialists you deal with directly.")
 BID_FAQS = [
     ("Do you write the whole bid for us?", "We can, working from your data, prices and documents. Most manufacturers keep pricing in house and use us for reading the tender, the compliance matrix, the technical pack and the final checks."),
     ("What is a go or no go review?", "A short written assessment of a tender before you commit: whether you meet the eligibility and qualification criteria, which documents you are missing, how bids will be evaluated, and what bidding will cost you in time, tests and bank guarantees."),
     ("Can you help if we have never exported?", "Yes, but start with an export readiness review. Many tenders ask for past supply records and type tests, so the first step may be a smaller tender, a contractor's approved supplier list or a distributor rather than a large utility bid."),
-    ("Which tenders do you support?", "Mainly electrical and engineering equipment, uniforms and apparel, rubber and medical supplies, tea and food, packaging and boats, from utilities, governments, development bank funded projects, UN agencies and contractors."),
+    ("Which tenders do you support?", "Mainly electrical and engineering equipment, uniforms and apparel, rubber and medical supplies, packaging and boats, from utilities, governments, development bank funded projects, UN agencies and contractors."),
 ]
 
 # ---------------------------------------------------------------- for exporters
@@ -168,7 +167,7 @@ EXP_FAQS = [
     ("What does it take to join the network?", "A registered Sri Lankan company that exports or is ready to export, the product details and certificates on the form, and a short call so we understand your capacity."),
     ("Will you share my details with buyers without asking?", "No. We tell you about a buyer request first and introduce you only if you want to quote."),
     ("Do you work with small exporters?", "Yes. Some buyer requests are for trial orders, and Tender Radar can be set to smaller contracts."),
-    ("Do you only work with electrical and engineering exporters?", "No. Buyer requests cover every category on this site. Tender Radar is strongest for electrical and engineering goods, uniforms, gloves, tea, packaging and boats, where public buyers use tenders."),
+    ("Do you only work with electrical and engineering exporters?", "No. Buyer requests cover every category on this site. Tender Radar is strongest for electrical and engineering goods, uniforms, gloves, packaging and boats, where public buyers use tenders."),
 ]
 
 # ---------------------------------------------------------------- import guide (filled in source_cats)
