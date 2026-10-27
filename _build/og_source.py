@@ -39,8 +39,12 @@ def pages():
         ("how-to-import-from-sri-lanka", "Buyer's guide 2026", "How to import from Sri Lanka", "UK, EU, US", "duty access, documents, shipping and payment", "s-import"),
         ("sri-lanka-export-statistics", "Export statistics 2026", "Sri Lanka exports by product and by country", "US$17.25B", "exported in 2025, goods and services, up 5.6%", "s-stats"),
     ]
-    extra = getattr(D, "OG_EXTRA", [])
-    return out + list(extra)
+    try:
+        import source_markets as MK
+        out += [(m["slug"], "Import from Sri Lanka", f"Buying from Sri Lanka for {m['the']}", m["stats"][0][0], m["stats"][0][1], m.get("art", "s-import")) for m in MK.MARKETS]
+    except ImportError:
+        pass
+    return out
 
 
 def _b64(path, mime):

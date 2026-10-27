@@ -101,6 +101,9 @@ FAQS = [
      "Apparel and textiles (US$4.91 billion in 2025), tea (US$1.51 billion), coconut products (US$1.23 billion), rubber products (US$946 million), "
      "food and beverages (US$584 million), spices and essential oils (US$450 million), electrical and electronic components (US$438 million), "
      "gems and jewellery and seafood. In services, logistics brought in US$1.85 billion and IT and business process services US$1.64 billion."),
+    ("What is Sri Lanka's most famous export?",
+     "Tea, sold as Ceylon tea, which earned US$1.51 billion in 2025. By value apparel and textiles earn more, at US$4.91 billion. "
+     "Sri Lanka is also known for Ceylon cinnamon, blue sapphires and coconut products."),
     ("How much did Sri Lanka export in 2025?",
      "US$17.25 billion of goods and services, up 5.6% on 2024. Goods were US$13.58 billion, up 6.32%, and services US$3.67 billion, up 2.79%, according to the Export Development Board."),
     ("What is Sri Lanka's export income in 2026?",

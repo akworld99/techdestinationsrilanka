@@ -551,6 +551,69 @@ def build_stats(B, stories):
     return path
 
 
+# ------------------------------------------------------------------ buyer market pages
+def market_chips(prefix):
+    import source_markets as MK
+    return '<ul class="names roles">' + "".join(f'<li><a href="{prefix}{m["slug"]}/">{e("Import to " + m["short"])}</a></li>' for m in MK.MARKETS) + "</ul>"
+
+
+def build_market(B, stories, m):
+    import source_markets as MK
+    prefix = "../../"
+    path = f"source/{m['slug']}/"
+    faq, faq_ld = SP.faq_block(stories, m["faqs"])
+    by_slug = {c["slug"]: c for c in D.CATS}
+    rows = [[(f'<a href="../{cs}/">{e(p)}</a>' if cs else e(p)), (_usd(v) if v is not None else "–")] for p, v, cs in m["top"]["rows"]]
+    cats = [by_slug[x] for x in m["cats"] if x in by_slug]
+    others = "".join(f'<li><a href="../{x["slug"]}/">{e("Import to " + x["short"])}</a></li>' for x in MK.MARKETS if x is not m)
+    body = f"""
+<section class="page-head"><div class="wrap narrow">
+  {SP.crumb_html([("Source from Sri Lanka", "../")])}
+  <h1>{e(m['h1'])}</h1>
+  <p class="answer">{e(m['answer'])}</p>
+  <p class="reviewed">Last reviewed {REVIEWED}. General information with sources linked, not legal or customs advice. We do not name buyers.</p>
+</div></section>
+<section class="section top-0"><div class="wrap narrow">
+  {SP.stats_strip(m['stats'])}
+  <h2 class="h-sub mt">What {e(m['the'])} buys from Sri Lanka</h2>
+  {_table(["Product", m["top"]["head"]], rows)}
+  <p class="cap">{m['top']['src']}</p>
+  <h2 class="h-sub mt">Duty and trade access</h2>
+  {_ev(m['duty'])}
+  <h2 class="h-sub mt">Import rules to check in {e(m['the'])}</h2>
+  {_ev(m['rules'])}
+  <p class="body-l">Documents, shipping from Colombo and payment terms are in the full guide: <a href="../how-to-import-from-sri-lanka/">how to import from Sri Lanka</a>. Figures for every market: <a href="../sri-lanka-export-statistics/">Sri Lanka export statistics</a>.</p>
+</div>
+<div class="wrap"><h2 class="h-sub mt">Products buyers in {e(m['the'])} source from Sri Lanka</h2>{tiles("../", prefix, cats)}</div>
+<div class="wrap narrow">
+  <h2 class="h-sub mt">How we help you buy</h2>
+  {_steps(HOW_BUY)}
+  <div class="reach mt"><h2>Sourcing for {e(m['the'])}?</h2>
+  <p>Send the product, grade, quantity and the certificates {e(m['the'])} requires. We reply within two working days with Sri Lankan exporters who make it and already ship to {e(m['the'])} or markets like it.</p>
+  <div class="actions"><a class="btn" href="../request-a-quote/?to={quote(m['to'])}">Request a quote</a><a class="btn btn-wa" href="{wa("Hi, I want to source from Sri Lanka for " + m["the"] + ".")}" rel="noopener">WhatsApp us</a><a class="btn btn-ghost" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a></div></div>
+  {faq}
+  <h2 class="h-sub mt">Other markets</h2>
+  <ul class="names roles">{others}</ul>
+</div></section>
+"""
+    org = {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"}
+    art = SP.ld({"@context": "https://schema.org", "@type": "Article", "headline": m["h1"], "description": m["desc"], "datePublished": D.PUBLISHED, "dateModified": D.PUBLISHED,
+                 "author": org, "publisher": org, "mainEntityOfPage": f"{B.SITE_URL}/{path}", "inLanguage": "en",
+                 "image": f"{B.SITE_URL}/" + (og_path(m["slug"]) or "assets/share.jpg"), "about": ["Sri Lanka", m["label"], "Import", "Export"],
+                 "spatialCoverage": [{"@type": "Country", "name": "Sri Lanka"}, {"@type": "Place", "name": m["label"]}]})
+    head = faq_ld + art + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), (f"Import to {m['short']}", path)])
+    B.write(path + "index.html", B.page(m["h1"], m["desc"], body, prefix, path, image=og_path(m["slug"]), extra_head=head, active="source", seo_title=m["title"]))
+    return path
+
+
+def build_markets(B, stories):
+    try:
+        import source_markets as MK
+    except ImportError:
+        return []
+    return [build_market(B, stories, m) for m in MK.MARKETS]
+
+
 # ------------------------------------------------------------------ homepage band
 def home_section(B):
     feat = [c for c in D.CATS if c["slug"] in D.HOME_TILES]
@@ -581,12 +644,13 @@ def build(B, stories):
     art_source.write_all(B.ROOT)
     paths = [build_category(B, stories, c) for c in D.CATS]
     paths += [build_hub(B, stories), build_rfq(B, stories), build_radar(B, stories), build_bid(B, stories), build_exporters(B, stories), build_guide(B, stories), build_stats(B, stories)]
+    paths += build_markets(B, stories)
     return paths
 
 
 def llms_lines(B):
     import source_stats as X
-    lines = ["", "## Sri Lanka export facts"] + [f"- {q} {ans}" for q, ans in X.FAQS[:5]]
+    lines = ["", "## Sri Lanka export facts"] + [f"- {q} {ans}" for q, ans in X.FAQS[:6]]
     lines += ["", "## Source products from Sri Lanka", f"- [Source from Sri Lanka: exporters, products and how to buy]({B.SITE_URL}/source/): {D.HUB_ANSWER}",
               f"- [{X.H1}]({B.SITE_URL}/source/sri-lanka-export-statistics/): {X.ANSWER} CSV: {B.SITE_URL}/data/sri-lanka-exports-2025-2026.csv"]
     lines += [f"- [{c['h1']}]({B.SITE_URL}/source/{c['slug']}/): {c['answer']}" for c in D.CATS]

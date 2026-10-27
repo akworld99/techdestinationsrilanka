@@ -97,6 +97,10 @@
     if (pv && psel && /^[a-z-]+$/.test(pv)) {
       for (var pi = 0; pi < psel.options.length; pi++) { if (psel.options[pi].value === pv) psel.selectedIndex = pi; }
     }
+    // market pages pass the destination country
+    var to = params.get('to');
+    var dest = rfq.querySelector('input[name=destination]');
+    if (to && dest && !dest.value && /^[A-Za-z .-]{2,40}$/.test(to)) dest.value = to;
   }
 
   // every form on the site posts to the same endpoint
