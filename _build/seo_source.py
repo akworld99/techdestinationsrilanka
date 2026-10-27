@@ -7,6 +7,8 @@ from urllib.parse import quote
 import seo_pages as SP
 from seo_pages import a
 import source_data as D
+from og_source import og_path
+from source_cats import M
 
 e = html.escape
 REVIEWED = D.REVIEWED
@@ -70,6 +72,16 @@ CHECKS = [
 ]
 
 
+ANSWERS = [  # (question, short answer, site path) for the site wide answers page
+    ("What are Sri Lanka's main exports?", "Apparel and textiles (US$4.91 billion in 2025), tea (US$1.51 billion), coconut products (US$1.23 billion), rubber products (US$946 million), food and beverages, spices and essential oils, and electrical and electronic components.", "source/sri-lanka-export-statistics/"),
+    ("How much did Sri Lanka export in 2025?", "US$17.25 billion of goods and services, up 5.6%: US$13.58 billion of goods and US$3.67 billion of services, according to the Export Development Board. January to September 2026 reached US$13.61 billion, up 5.04%.", "source/sri-lanka-export-statistics/"),
+    ("Which countries buy the most from Sri Lanka?", "The United States, at about a fifth of goods exports, then India, the United Kingdom, Italy, Germany and the Netherlands.", "source/sri-lanka-export-statistics/"),
+    ("Which Sri Lankan exports are growing fastest?", "Electrical and electronic components, up 61% in January to September 2026, spices and essential oils, up 30.5%, and food and beverages, up 20.9%.", "source/sri-lanka-export-statistics/"),
+    ("How do I import from Sri Lanka?", "Agree the specification and terms with an exporter, check its registration and certificates, take samples, then ship from Colombo with a certificate of origin to claim any lower duty your country offers.", "source/how-to-import-from-sri-lanka/"),
+    ("How do I find a supplier in Sri Lanka?", "Send us one request. Within two working days we come back with exporters who make your product, hold the certificates you need and already ship to markets like yours.", "source/request-a-quote/"),
+    ("What is Tender Radar?", "A WhatsApp alert service for Sri Lankan exporters. It matches international tenders from UN agencies, development banks and utilities to what a company makes, with deadline reminders and a read on whether to bid.", "source/tender-radar/"),
+]
+
 def _steps(steps):
     return '<ol class="steps compact">' + "".join(f"<li><h3>{e(n)}</h3><p>{e(t)}</p></li>" for n, t in steps) + "</ol>"
 
@@ -128,11 +140,11 @@ def build_category(B, stories, c):
     url = f"{B.SITE_URL}/{path}"
     org = {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"}
     art = {"@context": "https://schema.org", "@type": "Article", "headline": c["h1"], "description": c["desc"], "datePublished": D.PUBLISHED, "dateModified": D.PUBLISHED,
-           "author": org, "publisher": org, "mainEntityOfPage": url, "image": f"{B.SITE_URL}/assets/art/{c['art']}.svg", "inLanguage": "en", "about": [c["label"], "Sri Lanka", "Export"]}
+           "author": org, "publisher": org, "mainEntityOfPage": url, "image": f"{B.SITE_URL}/" + (og_path(c["slug"]) or f"assets/art/{c['art']}.svg"), "inLanguage": "en", "about": [c["label"], "Sri Lanka", "Export"]}
     svc = {"@context": "https://schema.org", "@type": "Service", "name": f"Sourcing {lc(c['label'])} from Sri Lanka", "serviceType": "Supplier sourcing", "url": url,
            "provider": org, "areaServed": "Worldwide", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": f"{B.SITE_URL}/source/request-a-quote/"}}
     head = faq_ld + SP.ld(art) + SP.ld(svc) + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), (c["label"], path)])
-    B.write(path + "index.html", B.page(c["h1"], c["desc"], body, prefix, path, extra_head=head, active="source", seo_title=c["title"]))
+    B.write(path + "index.html", B.page(c["h1"], c["desc"], body, prefix, path, image=og_path(c["slug"]), extra_head=head, active="source", seo_title=c["title"]))
     return path
 
 
@@ -166,6 +178,7 @@ def build_hub(B, stories):
   <h2 class="h-sub mt">What Sri Lanka exports, by category</h2>
   {_bars()}
   <p class="cap">{D.BARS_SRC}</p>
+  <p class="body-l">Full tables by product line and by country, with a CSV: <a href="sri-lanka-export-statistics/">Sri Lanka export statistics 2025 and 2026</a>.</p>
 </div>
 <div class="wrap"><h2 class="h-sub mt">Browse by product</h2>{tiles("", prefix)}</div>
 <div class="wrap narrow">
@@ -183,9 +196,12 @@ def build_hub(B, stories):
 </div></section>
 """
     art = SP.ld({"@context": "https://schema.org", "@type": "CollectionPage", "name": "Source from Sri Lanka: exporters, products and how to buy", "url": f"{B.SITE_URL}/source/",
-                 "description": D.HUB_DESC, "hasPart": [{"@type": "WebPage", "name": c["h1"], "url": f"{B.SITE_URL}/source/{c['slug']}/"} for c in D.CATS]})
+                 "description": D.HUB_DESC, "inLanguage": "en", "dateModified": D.PUBLISHED, "about": {"@type": "Country", "name": "Sri Lanka"},
+                 "publisher": {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"},
+                 "mainEntity": {"@type": "ItemList", "name": "Sri Lankan export product categories", "numberOfItems": len(D.CATS),
+                                "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": c["label"], "url": f"{B.SITE_URL}/source/{c['slug']}/"} for i, c in enumerate(D.CATS)]}})
     head = faq_ld + art + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/")])
-    B.write("source/index.html", B.page("Source from Sri Lanka: exporters, products and how to buy", D.HUB_DESC, body, prefix, "source/", extra_head=head, active="source", seo_title=D.HUB_TITLE))
+    B.write("source/index.html", B.page("Source from Sri Lanka: exporters, products and how to buy", D.HUB_DESC, body, prefix, "source/", image=og_path("hub"), extra_head=head, active="source", seo_title=D.HUB_TITLE))
     return "source/"
 
 
@@ -260,8 +276,8 @@ def build_rfq(B, stories):
 </div></section>
 """
     head = faq_ld + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), ("Request a quote", path)])
-    B.write(path + "index.html", B.page("Request a quote from Sri Lankan exporters", "Send one request and get matched with Sri Lankan exporters who make your product, hold the certificates you need and ship to your market. Reply within two working days.",
-                                        body, prefix, path, extra_head=head, active="source", seo_title="Request a quote from Sri Lankan exporters and suppliers"))
+    B.write(path + "index.html", B.page("Request a quote from Sri Lankan exporters", "Send one request and get matched with Sri Lankan exporters who make your product, hold your certificates and ship to your market. Reply in two working days.",
+                                        body, prefix, path, image=og_path("request-a-quote"), extra_head=head, active="source", seo_title="Request a quote from Sri Lankan exporters and suppliers"))
     return path
 
 
@@ -333,7 +349,7 @@ def build_radar(B, stories):
                  "description": D.RADAR_DESC, "url": f"{B.SITE_URL}/{path}", "provider": {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"},
                  "areaServed": {"@type": "Country", "name": "Sri Lanka"}, "availableChannel": {"@type": "ServiceChannel", "serviceUrl": wa("Tender Radar")}})
     head = faq_ld + svc + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), ("For exporters", "source/for-exporters/"), ("Tender Radar", path)])
-    B.write(path + "index.html", B.page("Tender Radar: international tender alerts on WhatsApp", D.RADAR_DESC, body, prefix, path, extra_head=head, active="source", seo_title=D.RADAR_TITLE))
+    B.write(path + "index.html", B.page("Tender Radar: international tender alerts on WhatsApp", D.RADAR_DESC, body, prefix, path, image=og_path("tender-radar"), extra_head=head, active="source", seo_title=D.RADAR_TITLE))
     return path
 
 
@@ -378,7 +394,7 @@ def build_bid(B, stories):
                  "description": D.BID_DESC, "url": f"{B.SITE_URL}/{path}", "provider": {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"}, "areaServed": {"@type": "Country", "name": "Sri Lanka"}})
     how = SP.ld({"@context": "https://schema.org", "@type": "HowTo", "name": "How to prepare an international tender bid", "step": [{"@type": "HowToStep", "position": i + 1, "name": n, "text": t} for i, (n, t) in enumerate(D.BID_STEPS)]})
     head = faq_ld + svc + how + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), ("For exporters", "source/for-exporters/"), ("Bid support", path)])
-    B.write(path + "index.html", B.page("Tender bid support and export consultancy for Sri Lankan manufacturers", D.BID_DESC, body, prefix, path, extra_head=head, active="source", seo_title=D.BID_TITLE))
+    B.write(path + "index.html", B.page("Tender bid support and export consultancy for Sri Lankan manufacturers", D.BID_DESC, body, prefix, path, image=og_path("bid-support"), extra_head=head, active="source", seo_title=D.BID_TITLE))
     return path
 
 
@@ -417,7 +433,7 @@ def build_exporters(B, stories):
 </div></section>
 """
     head = faq_ld + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), ("For exporters", path)])
-    B.write(path + "index.html", B.page("Services for Sri Lankan exporters: buyers, tenders and bids", D.EXP_DESC, body, prefix, path, extra_head=head, active="source", seo_title=D.EXP_TITLE))
+    B.write(path + "index.html", B.page("Services for Sri Lankan exporters: buyers, tenders and bids", D.EXP_DESC, body, prefix, path, image=og_path("for-exporters"), extra_head=head, active="source", seo_title=D.EXP_TITLE))
     return path
 
 
@@ -451,7 +467,87 @@ def build_guide(B, stories):
                  "mainEntityOfPage": f"{B.SITE_URL}/{path}", "image": f"{B.SITE_URL}/assets/art/s-import.svg"})
     how = SP.ld({"@context": "https://schema.org", "@type": "HowTo", "name": "How to import from Sri Lanka", "step": [{"@type": "HowToStep", "position": i + 1, "name": n, "text": t} for i, (n, t) in enumerate(D.GUIDE_STEPS)]})
     head = faq_ld + art + how + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), ("How to import from Sri Lanka", path)])
-    B.write(path + "index.html", B.page("How to import from Sri Lanka", D.GUIDE_DESC, body, prefix, path, extra_head=head, active="source", seo_title=D.GUIDE_TITLE))
+    B.write(path + "index.html", B.page("How to import from Sri Lanka", D.GUIDE_DESC, body, prefix, path, image=og_path("how-to-import-from-sri-lanka"), extra_head=head, active="source", seo_title=D.GUIDE_TITLE))
+    return path
+
+
+# ------------------------------------------------------------------ export statistics
+def _usd(v):
+    return "–" if v is None else f"{v:,.2f}"
+
+
+def _chg(c):
+    if not c:
+        return "–"
+    return f'<span class="{"down" if c.startswith(M) else "up"}">{e(c)}</span>'
+
+
+def _lnk(label, href, prefix):
+    """Link from a page one level inside /source/: category slugs and ../root paths both gain one ../"""
+    return f'<a href="{prefix}{href}">{e(label)}</a>' if href else e(label)
+
+
+def build_stats(B, stories):
+    import source_stats as X
+    prefix = "../"
+    path = "source/sri-lanka-export-statistics/"
+    faq, faq_ld = SP.faq_block(stories, X.FAQS)
+    rows = [[f"<strong>{e(l)}</strong>", _usd(v1), _chg(c1), _usd(v2), _chg(c2)] for l, v1, c1, v2, c2 in X.TOTALS]
+    head5 = ["", "2025, US$ million", "Change", "Jan to Sep 2026, US$ million", "Change"]
+    sect = [[_lnk(l, h, prefix), _usd(v1), _chg(c1), _usd(v2), _chg(c2)] for l, h, v1, c1, v2, c2 in X.SECTORS]
+    serv = [[_lnk(l, h, prefix), _usd(v1), _chg(c1), _usd(v2), _chg(c2)] for l, h, v1, c1, v2, c2 in X.SERVICES]
+    lines = [[_lnk(l, h, prefix), _usd(v), _chg(c)] for l, h, v, c in X.LINES]
+    mkts = [[e(l), _usd(v1), _chg(c1), _usd(v2), _chg(c2)] for l, v1, c1, v2, c2 in X.MARKETS]
+    products = "".join(f'<li><a href="../{c["slug"]}/">{e(c["label"])}</a></li>' for c in D.CATS)
+    csv_name = "sri-lanka-exports-2025-2026.csv"
+    B.write("data/" + csv_name, "\n".join(",".join(f'"{x}"' if "," in x else x for x in r) for r in X.csv_rows()) + "\n")
+    body = f"""
+<section class="page-head"><div class="wrap narrow">
+  {SP.crumb_html([("Source from Sri Lanka", "../")])}
+  <h1>{e(X.H1)}</h1>
+  <p class="answer">{e(X.ANSWER)}</p>
+  <p class="reviewed">Last reviewed {REVIEWED}. Figures from the Export Development Board, linked below each table.</p>
+</div></section>
+<section class="section top-0"><div class="wrap narrow">
+  {SP.stats_strip(X.STATS)}
+  <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
+    <li><a href="#totals">Total exports</a></li><li><a href="#by-product">Exports by product</a></li><li><a href="#lines">Fastest growing product lines</a></li>
+    <li><a href="#by-country">Exports by country</a></li><li><a href="#changes">What changed in 2026</a></li><li><a href="#list">Main export products list</a></li></ol></nav>
+  <h2 class="h-sub mt" id="totals">Sri Lanka's total exports, 2025 and 2026</h2>
+  {_table(head5, rows)}
+  <h2 class="h-sub mt" id="by-product">Sri Lanka exports by product</h2>
+  <p class="body-l">Goods by sector, largest first, with services below. Each product links to our buyer's guide for it.</p>
+  {_table(head5, sect + [[f"<strong>Services</strong>", "", "", "", ""]] + serv)}
+  <p class="cap">{X.SRC}</p>
+  <h2 class="h-sub mt" id="lines">Fastest growing product lines, January to September 2026</h2>
+  {_table(["Product line", "Jan to Sep 2026, US$ million", "Change on Jan to Sep 2025"], lines)}
+  <p class="cap">Source: Export Development Board, <a href="{X.EDB9M_EDB}" rel="noopener">January to September 2026</a>. A dash means the release gave the growth rate but not the value.</p>
+  <h2 class="h-sub mt" id="by-country">Sri Lanka exports by country</h2>
+  <p class="body-l">Goods exports to the largest markets. The United States takes about a fifth of Sri Lanka's goods exports.</p>
+  {_table(["Market", "2025, US$ million", "Change", "Jan to Sep 2026, US$ million", "Change"], mkts)}
+  <p class="cap">{X.SRC}</p>
+  <h2 class="h-sub mt" id="changes">What changed in 2026</h2>
+  {_ev(X.SHIFTS)}
+  <h2 class="h-sub mt" id="list">Sri Lanka's main export products list</h2>
+  <p class="body-l">Every category we cover, with products, HS codes, certificates, markets and how to buy:</p>
+  <ul class="names roles">{products}</ul>
+  <div class="cite"><strong>Use this data.</strong> Free to quote, chart or republish with a link to this page. <a href="../../data/{csv_name}" download>Download the CSV</a>.<br><span>Suggested credit: Tech Destination Sri Lanka, Sri Lanka export statistics 2025 and 2026, from Export Development Board data, {B.SITE_URL}/{path}</span></div>
+  {_rfq_box(B, "../../")}
+  {faq}
+</div></section>
+"""
+    org = {"@type": "Organization", "name": B.SITE_NAME, "url": B.SITE_URL + "/"}
+    ds = SP.ld({"@context": "https://schema.org", "@type": "Dataset", "name": "Sri Lanka export statistics 2025 and January to September 2026",
+                "description": "Sri Lanka goods and services exports in US$ million for 2025 and January to September 2026, by sector, product line and market, compiled from Export Development Board releases.",
+                "url": f"{B.SITE_URL}/{path}", "creator": org, "publisher": org, "license": "https://creativecommons.org/licenses/by/4.0/", "isAccessibleForFree": True,
+                "isBasedOn": [X.EDB25, X.EDB9M_EDB], "temporalCoverage": "2025-01-01/2026-09-30", "spatialCoverage": {"@type": "Place", "name": "Sri Lanka"},
+                "dateModified": D.PUBLISHED, "keywords": ["Sri Lanka exports", "Sri Lanka export statistics", "Sri Lanka exports by country", "Sri Lanka export products", "Sri Lanka export income"],
+                "variableMeasured": ["Export value (US$ million)", "Year on year change (%)"],
+                "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": f"{B.SITE_URL}/data/{csv_name}"}]})
+    art = SP.ld({"@context": "https://schema.org", "@type": "Article", "headline": X.H1, "description": X.DESC, "datePublished": D.PUBLISHED, "dateModified": D.PUBLISHED,
+                 "author": org, "publisher": org, "mainEntityOfPage": f"{B.SITE_URL}/{path}", "image": f"{B.SITE_URL}/" + (og_path("sri-lanka-export-statistics") or "assets/share.jpg")})
+    head = faq_ld + ds + art + SP.crumbs_ld(B, [("Source from Sri Lanka", "source/"), ("Export statistics", path)])
+    B.write(path + "index.html", B.page("Sri Lanka export statistics", X.DESC, body, "../../", path, image=og_path("sri-lanka-export-statistics"), extra_head=head, active="source", seo_title=X.TITLE))
     return path
 
 
@@ -484,12 +580,15 @@ def build(B, stories):
     import art_source
     art_source.write_all(B.ROOT)
     paths = [build_category(B, stories, c) for c in D.CATS]
-    paths += [build_hub(B, stories), build_rfq(B, stories), build_radar(B, stories), build_bid(B, stories), build_exporters(B, stories), build_guide(B, stories)]
+    paths += [build_hub(B, stories), build_rfq(B, stories), build_radar(B, stories), build_bid(B, stories), build_exporters(B, stories), build_guide(B, stories), build_stats(B, stories)]
     return paths
 
 
 def llms_lines(B):
-    lines = ["", "## Source products from Sri Lanka", f"- [Source from Sri Lanka: exporters, products and how to buy]({B.SITE_URL}/source/): {D.HUB_ANSWER}"]
+    import source_stats as X
+    lines = ["", "## Sri Lanka export facts"] + [f"- {q} {ans}" for q, ans in X.FAQS[:5]]
+    lines += ["", "## Source products from Sri Lanka", f"- [Source from Sri Lanka: exporters, products and how to buy]({B.SITE_URL}/source/): {D.HUB_ANSWER}",
+              f"- [{X.H1}]({B.SITE_URL}/source/sri-lanka-export-statistics/): {X.ANSWER} CSV: {B.SITE_URL}/data/sri-lanka-exports-2025-2026.csv"]
     lines += [f"- [{c['h1']}]({B.SITE_URL}/source/{c['slug']}/): {c['answer']}" for c in D.CATS]
     lines += [f"- [How to import from Sri Lanka]({B.SITE_URL}/source/how-to-import-from-sri-lanka/): {D.GUIDE_ANSWER}",
               f"- [Request a quote from Sri Lankan exporters]({B.SITE_URL}/source/request-a-quote/)",

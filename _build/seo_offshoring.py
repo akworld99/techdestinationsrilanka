@@ -398,7 +398,7 @@ def build(B, stories):
   </div>
   {_cta(B, prefix)}
   {faq}
-  <p class="body-l mt">Looking for software teams instead? See <a href="{prefix}solutions/software-outsourcing-sri-lanka/">software outsourcing</a>, <a href="{prefix}solutions/dedicated-development-team-sri-lanka/">dedicated teams</a> and <a href="{prefix}why-sri-lanka/finance-accounting/">finance and shared services</a>.</p>
+  <p class="body-l mt">Looking for software teams instead? See <a href="{prefix}solutions/software-outsourcing-sri-lanka/">software outsourcing</a>, <a href="{prefix}solutions/dedicated-development-team-sri-lanka/">dedicated teams</a> and <a href="{prefix}why-sri-lanka/finance-accounting/">finance and shared services</a>. Buying physical products? See <a href="{prefix}source/">Source from Sri Lanka</a> and the <a href="{prefix}source/sri-lanka-export-statistics/">export statistics</a>.</p>
 </div></section>
 """
     art = SP.ld({"@context": "https://schema.org", "@type": "Article", "headline": "Outsourcing to Sri Lanka: business services beyond tech", "datePublished": "2026-10-23", "dateModified": "2026-10-23",

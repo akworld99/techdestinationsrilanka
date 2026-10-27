@@ -127,6 +127,11 @@ SCENES = {
     + globe(900, 380, 120) + f'<path d="M680 230q120-110 220 30" stroke="{S}" stroke-width="6"/><path d="M890 240l12 26 22-20" stroke="{S}" stroke-width="6"/>',
     "s-rfq": doc(330, 190, 320, 460, W, 7) + f'<circle cx="790" cy="410" r="120" stroke="{C}" stroke-width="9"/><path d="M875 495l120 120" stroke="{C}" stroke-width="18"/>'
     + person(790, 430, .9, S) + f'<rect x="380" y="560" width="180" height="50" rx="10" fill="{S}" stroke="none"/>',
+    "s-stats": f'<path d="M230 690h740" stroke="{W}" stroke-width="7"/><path d="M230 690V200" stroke="{W}" stroke-width="7"/>'
+    + "".join(f'<rect x="{x}" y="{690 - h}" width="78" height="{h}" rx="8" fill="{f}" stroke="{c}" stroke-width="6"/>'
+              for x, h, f, c in [(290, 170, T, C), (400, 230, T, C), (510, 205, T, C), (620, 300, G, S), (730, 360, T, C), (840, 440, G, S)])
+    + f'<path d="M300 470L440 400L550 430L660 330L770 290L880 190" stroke="{S}" stroke-width="7" stroke-dasharray="2 16" stroke-linecap="round"/>'
+    + node(880, 190, 16, S),
 }
 
 

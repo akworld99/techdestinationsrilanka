@@ -598,3 +598,5 @@ p { margin: 0 0 1em; }
 @media (max-width: 980px) { .src-head, .split, .offer2 { grid-template-columns: 1fr; } .plans { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .promo { grid-template-columns: 1fr; } .promo img { width: 100%; height: auto; aspect-ratio: 16 / 9; } .wa-msg dl div { grid-template-columns: 74px 1fr; } }
 .svc-grid:not(.three):not(.one) > .svc:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.tbl .up { color: var(--green); font-weight: 700; }
+.tbl .down { color: var(--maroon); font-weight: 700; }

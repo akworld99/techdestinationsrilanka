@@ -287,6 +287,7 @@ ANSWERS = [
         ("What is a global capability centre?", "A company's own offshore operation, staffed by its employees. IFS, Sysco, Synopsys and EY run them in Sri Lanka.", "solutions/offshore-development-center-sri-lanka/"),
     ]),
     ("Outsourcing business services", [(q, ans, u) for q, ans, u in __import__("seo_offshoring_plus").ANSWERS]),
+    ("Exports and sourcing", [(q, ans, u) for q, ans, u in __import__("seo_source").ANSWERS]),
     ("The industry", [
         ("How big is Sri Lanka's IT industry?", "USD 1.645 billion in IT and business process exports in 2025 according to the Export Development Board, with roughly 150,000 to 175,000 people employed.", "guides/sri-lanka-tech-industry-facts/"),
         ("Which global tech companies are in Sri Lanka?", "IFS, Sysco, Synopsys, Zebra Technologies, Virtusa, HCLTech, EY, HSBC, WNS and Michelin all run engineering or delivery operations there.", "companies/"),
@@ -304,14 +305,14 @@ def build_answers(B, stories):
     faq_ld = SP.ld({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": ans}} for _, qs in ANSWERS for q, ans, _ in qs]})
     body = f"""
 <section class="page-head"><div class="wrap narrow">
-  <h1>Answers: hiring, outsourcing and setting up in Sri Lanka</h1>
-  <p class="lede">Short, sourced answers to the questions founders and CTOs ask us most. Each links to the page with the detail and the sources.</p>
+  <h1>Answers: hiring, outsourcing, setting up and sourcing from Sri Lanka</h1>
+  <p class="lede">Short, sourced answers to the questions founders, CTOs and buyers ask us most. Each links to the page with the detail and the sources.</p>
 </div></section>
 <section class="section top-0"><div class="wrap narrow">{blocks}
   <div class="reach mt"><h2>Have a different question?</h2><p>Ask us directly.</p><div class="actions"><a class="btn" href="{B.BOOKING_URL}" rel="noopener">Schedule a call</a><a class="btn btn-ghost" href="mailto:{B.EMAIL}">Email us</a></div></div>
 </div></section>
 """
-    B.write("answers/index.html", B.page("Hiring and outsourcing in Sri Lanka: questions answered", "Short, sourced answers on hiring developers, outsourcing software, costs, tax and company setup in Sri Lanka.", body, "../", "answers/", extra_head=faq_ld, active="guides"))
+    B.write("answers/index.html", B.page("Sri Lanka questions answered: hiring, outsourcing, exports", "Short, sourced answers on hiring developers, outsourcing, costs, tax, company setup, Sri Lankan exports and buying from Sri Lanka.", body, "../", "answers/", extra_head=faq_ld, active="guides"))
     return "answers/"
 
 

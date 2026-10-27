@@ -48,8 +48,8 @@ USGS = "https://pubs.usgs.gov/myb/vol3/2019/myb3-2019-sri-lanka.pdf"
 SEAFOOD = dict(
     slug="seafood", label="Seafood", short="Yellowfin tuna, swordfish, shrimp, crab and lobster.", art="s-seafood", seller="seafood exporter",
     h1="Seafood exporters in Sri Lanka: yellowfin tuna, swordfish, shrimp and crab",
-    title="Seafood exporters in Sri Lanka: tuna, swordfish, shrimp and crab suppliers",
-    desc="Source yellowfin tuna, swordfish, shrimp, crab and lobster from Sri Lankan seafood exporters. EU approved plants, catch certificates, HS codes, markets and how to buy.",
+    title="Seafood exporters in Sri Lanka: tuna, swordfish and shrimp",
+    desc="Source yellowfin tuna, swordfish, shrimp, crab and lobster from Sri Lankan seafood exporters. EU approved plants, catch certificates, HS codes and markets.",
     answer=("Sri Lanka exported US$240.19 million of seafood in 2025, led by yellowfin tuna and swordfish, fresh, chilled and frozen, with shrimp, crab, "
             "lobster and sea cucumber. The EU lifted its ban on Sri Lankan fishery exports in June 2016, and the Export Development Board counts 55 EU "
             "approved processing plants. The largest markets in 2024 were the US, Germany, the UK, France, Italy and the Netherlands. Supply follows the "
@@ -93,8 +93,8 @@ cat(**SEAFOOD)
 cat(
     slug="ornamental-fish", label="Ornamental fish", short="Guppies, freshwater and marine aquarium fish.", art="s-aquarium", seller="ornamental fish exporter",
     h1="Ornamental fish exporters in Sri Lanka: aquarium fish wholesale",
-    title="Ornamental and aquarium fish exporters in Sri Lanka: wholesale guide",
-    desc="Wholesale ornamental and aquarium fish from Sri Lanka: farm bred guppies and freshwater fish, marine fish and invertebrates. Markets, health certificates and how to buy.",
+    title="Ornamental and aquarium fish exporters in Sri Lanka",
+    desc="Wholesale ornamental and aquarium fish from Sri Lanka: farm bred guppies, freshwater and marine fish and invertebrates. Markets and health certificates.",
     answer=("Sri Lanka exports ornamental fish to more than 68 countries through about 85 active exporters, according to the Export Development Board. "
             "Freshwater fish led by guppies are bred on farms all year, while marine fish and invertebrates are mostly collected by divers. The US took about "
             "41% of the US$24.46 million exported in 2024. Exports fell 7.6% to US$22.6 million in 2025 and are down 26.71% in the first nine months of 2026, "
@@ -129,8 +129,8 @@ cat(
 cat(
     slug="processed-food-beverages", label="Processed food and beverages", short="Biscuits, sauces, jams, cordials, drinks and feed.", art="s-food", seller="food manufacturer",
     h1="Processed food and beverage exporters in Sri Lanka: biscuits, sauces, drinks and feed",
-    title="Sri Lankan food exporters and manufacturers: biscuits, sauces, beverages",
-    desc="Source biscuits and wafers, confectionery, sauces, jams, cordials, ready to drink beverages and animal feed from Sri Lankan food manufacturers. Certificates, markets and how to buy.",
+    title="Sri Lankan food exporters: biscuits, sauces and beverages",
+    desc="Source biscuits, wafers, confectionery, sauces, jams, cordials and ready to drink beverages from Sri Lankan food manufacturers. Certificates and how to buy.",
     answer=("Sri Lanka's food and beverage exports rose 24.23% to US$583.89 million in 2025, and processed food rose another 34.19% to US$243.28 million in "
             "the first nine months of 2026, with non alcoholic beverages up 46.78%. The Export Development Board lists more than 110 food and beverage "
             "manufacturers and marketers making biscuits and wafers, confectionery, sauces, jams, cordials, ready to drink beverages, ready to serve food "
@@ -167,8 +167,8 @@ cat(
 cat(
     slug="gems-jewellery", label="Gems and jewellery", short="Ceylon sapphire, padparadscha, spinel and cut diamonds.", art="s-gems", seller="gem exporter",
     h1="Ceylon sapphires and gems from Sri Lanka: wholesale buying guide",
-    title="Ceylon sapphire wholesale and Sri Lanka gem exporters: buyer's guide",
-    desc="Buy Ceylon blue sapphire, padparadscha, spinel and other gems wholesale from licensed Sri Lankan exporters. Export rules, gem certificates, treatments and markets.",
+    title="Ceylon sapphire wholesale: Sri Lanka gem exporters guide",
+    desc="Buy Ceylon blue sapphire, padparadscha, spinel and other gems wholesale from licensed Sri Lankan exporters. Export rules, certificates, treatments, markets.",
     answer=("Sri Lanka exported US$334 million of gems, diamonds and jewellery in 2025: US$189 million of gemstones, US$127 million of diamonds and US$17.8 "
             "million of jewellery, according to the Export Development Board. It is known for Ceylon blue sapphire, padparadscha, star and fancy sapphires "
             "and spinel, mined mainly around Ratnapura and Elahera. Only cut and polished stones may be exported, every exporter needs a National Gem and "
@@ -209,7 +209,7 @@ cat(
 cat(
     slug="graphite-minerals", label="Graphite and minerals", short="Vein graphite, ilmenite, quartz and mica.", art="s-minerals", seller="mineral exporter",
     h1="Sri Lanka vein graphite, ilmenite and quartz: mineral suppliers and export rules",
-    title="Sri Lanka vein graphite and mineral suppliers: graphite, ilmenite, quartz",
+    title="Vein graphite suppliers in Sri Lanka: ilmenite and quartz",
     desc="Source natural vein graphite, ilmenite, rutile, zircon, vein quartz and mica from Sri Lanka. Grades, export licences, volumes and what to check before you buy.",
     answer=("Sri Lanka is the only country that commercially produces natural crystalline vein graphite, graded above 90% carbon, according to the Export "
             "Development Board. It also exports ilmenite, rutile and zircon from the Pulmoddai beach sand deposit, high purity vein quartz and mica. Volumes "
@@ -257,8 +257,8 @@ US_TARIFF_CAVEAT = ("In July 2026 the US placed Sri Lanka in its 10% Section 301
 cat(
     slug="industrial-tyres", label="Industrial and solid tyres", short="Solid forklift tyres, press on bands, OTR and agri tyres.", art="s-tyres", seller="tyre manufacturer",
     h1="Solid tyre manufacturers in Sri Lanka: forklift, industrial and OTR tyres",
-    title="Solid tyre manufacturers in Sri Lanka: forklift and industrial tyres",
-    desc="Source solid forklift tyres, press on bands, industrial, agricultural and off the road tyres from Sri Lankan manufacturers. Market share, HS codes, standards and how to buy.",
+    title="Solid tyre manufacturers in Sri Lanka: forklift tyres",
+    desc="Source solid forklift tyres, press on bands, industrial, agricultural and off the road tyres from Sri Lankan manufacturers. Standards, HS codes and how to buy.",
     answer=("Sri Lanka is the world's leading solid tyre exporter, with about 25% of world demand by the Export Development Board's estimate. Tyres and tubes "
             "earned US$522 million in 2025, the largest rubber product line, and solid tyres make up 61% of tyre export value. Manufacturers, including joint "
             "ventures with international tyre makers, also produce pneumatic and semi pneumatic tyres, tubes and retreading material. Solid tyres go mainly to "
@@ -296,8 +296,8 @@ cat(
 cat(
     slug="rubber-gloves", label="Rubber gloves and rubber products", short="Examination, surgical, industrial and household gloves, seals, mats.", art="s-gloves", seller="glove manufacturer",
     h1="Rubber glove manufacturers in Sri Lanka: examination, surgical, industrial and household gloves",
-    title="Rubber glove manufacturers in Sri Lanka: latex, surgical and industrial",
-    desc="Source latex examination and surgical gloves, industrial and household gloves, seals, gaskets and mats from Sri Lankan rubber product manufacturers. Standards, HS codes and markets.",
+    title="Rubber glove manufacturers in Sri Lanka: latex and surgical",
+    desc="Source latex examination and surgical gloves, industrial and household gloves, seals and mats from Sri Lankan rubber manufacturers. Standards and HS codes.",
     answer=("Sri Lanka exported US$293 million of industrial and surgical rubber gloves in 2025, its second largest rubber product line after tyres, and glove "
             "exports rose 7.58% in the first nine months of 2026. Manufacturers make gloves for healthcare, industrial, household and agricultural use, as well as seals, "
             "gaskets, washers, mats, rubber bands and hoses, using Sri Lankan natural rubber including latex crepe. About 75 rubber product exporters are "
@@ -334,8 +334,8 @@ cat(
 cat(
     slug="apparel-manufacturing", label="Apparel and textiles", short="Activewear, intimates, swimwear, workwear and fabrics.", art="s-apparel", seller="apparel manufacturer",
     h1="Apparel manufacturers in Sri Lanka: activewear, intimates, swimwear and workwear",
-    title="Apparel and clothing manufacturers in Sri Lanka: buyer's guide (2026)",
-    desc="Find clothing and garment manufacturers in Sri Lanka for activewear, lingerie, swimwear, workwear, uniforms and children's wear. Certifications, markets, LEED factories and how to start.",
+    title="Clothing and garment manufacturers in Sri Lanka (2026)",
+    desc="Find clothing and garment manufacturers in Sri Lanka for activewear, lingerie, swimwear and workwear. Certifications, LEED factories, markets and how to start.",
     answer=("Apparel is Sri Lanka's largest export, at US$4.91 billion for apparel and textiles in 2025. Manufacturers make sportswear and activewear, lingerie "
             "and intimate wear, swimwear, loungewear, bridal wear, workwear and children's wear, mostly for the US, the EU and the UK. The industry sells on "
             "ethical and green manufacturing: 17 factories are LEED certified, and Garments Without Guilt certifies labour standards. Exports are down 5.68% "
@@ -372,8 +372,8 @@ cat(
 cat(
     slug="leather-footwear", label="Footwear and leather goods", short="Shoes, safety boots, sole crepe and leather goods.", art="s-leather", seller="footwear manufacturer",
     h1="Footwear and leather goods manufacturers in Sri Lanka",
-    title="Shoe and leather goods manufacturers in Sri Lanka: buyer's guide",
-    desc="Source shoes, safety footwear, rubber boots, thongs, sole crepe soles and leather goods from Sri Lankan manufacturers. Capacity, materials, markets and what to check.",
+    title="Shoe and leather goods manufacturers in Sri Lanka",
+    desc="Source shoes, safety footwear, rubber boots, thongs, crepe soles and leather goods from Sri Lankan manufacturers. Capacity, materials, markets and checks.",
     answer=("Sri Lanka's footwear industry can make 25 to 35 million pairs a year, plus 30 to 35 million pairs of rubber thongs, according to the Export "
             "Development Board. It makes leather and canvas shoes, safety shoes, rubber boots and sports shoes, and small leather goods such as wallets, "
             "belts and bags. Sri Lanka is the only producer of sole crepe, a natural rubber used for unit soles. The sector is small, at US$46.4 million of "
@@ -429,8 +429,8 @@ AYU_MKT = "https://www.srilankabusiness.com/emarketplace/ayurvedic"
 cat(
     slug="ceylon-tea", label="Ceylon tea", short="Bulk, packets, tea bags, green, white and instant tea.", art="s-tea", seller="tea exporter",
     h1="Ceylon tea suppliers and exporters in Sri Lanka: bulk, packets and private label",
-    title="Ceylon tea suppliers and exporters: bulk, wholesale and private label",
-    desc="Buy Ceylon tea in bulk, packets, tea bags or private label from Sri Lankan tea exporters. The Lion logo, the Colombo auction, grades by elevation, certificates and markets.",
+    title="Ceylon tea suppliers and exporters: bulk and private label",
+    desc="Buy Ceylon tea in bulk, packets, tea bags or private label from Sri Lankan exporters. The Lion logo, the Colombo auction, grades by elevation and certificates.",
     answer=("Sri Lanka exported US$1.51 billion of tea in 2025, about 257 million kilograms, and supplied 13% of the world's tea exports in 2024. Ceylon tea is "
             "grown in seven regions and graded by elevation, and about 93% is made by orthodox methods. Most tea is sold through the Colombo Tea Auction, which "
             "runs every Tuesday and Wednesday. Exporters supply bulk tea, packets, tea bags, green, white and instant tea, and 59% of exports in 2025 were value "
@@ -469,8 +469,8 @@ cat(
 cat(
     slug="ceylon-cinnamon", label="Ceylon cinnamon", short="Alba quills, powder, cut sticks, leaf and bark oil.", art="s-cinnamon", seller="cinnamon exporter",
     h1="Ceylon cinnamon suppliers and exporters in Sri Lanka: Alba quills, powder and oils",
-    title="Ceylon cinnamon suppliers and exporters: wholesale, bulk and Alba grade",
-    desc="Buy true Ceylon cinnamon wholesale from Sri Lankan exporters: Alba and Continental quills, cut sticks, powder, leaf and bark oil. EU PGI, SLS standard, grades, HS codes and markets.",
+    title="Ceylon cinnamon suppliers: wholesale, bulk and Alba grade",
+    desc="Buy true Ceylon cinnamon wholesale: Alba and Continental quills, cut sticks, powder, leaf and bark oil. EU PGI, SLS grades, HS codes and export markets.",
     answer=("Sri Lanka is the world's largest producer and exporter of true cinnamon, Cinnamomum zeylanicum, and Ceylon cinnamon has been a protected "
             "geographical indication in the EU since February 2022. Cinnamon exports reached US$221.56 million in the first nine months of 2026, up 31%. Quills "
             "are graded by diameter into Alba, Continental, Mexican and Hamburg, and every export of quills, chips and powder must meet the national standard SLS "
@@ -507,8 +507,8 @@ cat(
 cat(
     slug="spices-essential-oils", label="Spices and essential oils", short="Pepper, cloves, nutmeg, cardamom, oils and oleoresins.", art="s-spices", seller="spice exporter",
     h1="Sri Lankan spice exporters: black pepper, cloves, nutmeg, essential oils and oleoresins",
-    title="Sri Lankan spice exporters: pepper, cloves, nutmeg and essential oils",
-    desc="Source Ceylon black pepper, cloves, nutmeg and mace, cardamom, essential oils and oleoresins from Sri Lankan spice exporters. HS codes, markets, documents and what to check.",
+    title="Sri Lankan spice exporters: pepper, cloves, essential oils",
+    desc="Source Ceylon black pepper, cloves, nutmeg, mace, cardamom, essential oils and oleoresins from Sri Lankan spice exporters. HS codes, markets and checks.",
     answer=("Sri Lanka exported US$449.9 million of spices, essential oils and oleoresins in 2025, and the sector grew 30.53% in the first nine months of 2026, "
             "with pepper up 61% to US$136.26 million. Beyond cinnamon, exporters supply black pepper, cloves, nutmeg and mace, cardamom, ginger and turmeric, "
             "essential oils from four main distilleries, 12 smaller distilleries and about 170 field units, and oleoresins. Pepper, cloves, nutmeg and cardamom are sold under the "
@@ -545,8 +545,8 @@ cat(
 cat(
     slug="ayurveda-herbal-products", label="Ayurveda and herbal products", short="Herbal teas, oils, balms and natural cosmetics.", art="s-herbal", seller="herbal products manufacturer",
     h1="Ayurvedic and herbal product manufacturers in Sri Lanka: herbal teas, oils and natural cosmetics",
-    title="Ayurvedic and herbal products from Sri Lanka: manufacturers and private label",
-    desc="Source herbal teas, ayurvedic oils and balms, natural cosmetics and spice essential oils from Sri Lankan manufacturers. Regulators, certificates and what to check for your market.",
+    title="Ayurvedic and herbal products from Sri Lanka: private label",
+    desc="Source herbal teas, ayurvedic oils and balms, natural cosmetics and essential oils from Sri Lankan manufacturers. Regulators, certificates and market checks.",
     answer=("Sri Lankan manufacturers make herbal teas such as Ranawara, Gotukola, Moringa and Bael flower, ayurvedic massage oils and balms, herbal soaps and "
             "hair care, and natural cosmetics, many using Sri Lankan spice oils. Ayurveda is governed by the Ayurveda Act of 1961 and the Department of Ayurveda, "
             "and the National Medicines Regulatory Authority covers some products. It is a small, developing export category and we found no separate official export "
@@ -602,8 +602,8 @@ FLOR_OV = "https://www.srilankabusiness.com/floriculture/overview.html"
 cat(
     slug="coconut-products", label="Coconut food products", short="Desiccated coconut, milk, cream, powder and VCO.", art="s-coconut", seller="coconut processor",
     h1="Desiccated coconut, coconut milk and virgin coconut oil suppliers in Sri Lanka",
-    title="Desiccated coconut and coconut milk suppliers in Sri Lanka: wholesale",
-    desc="Source desiccated coconut, coconut milk and cream, milk powder, virgin coconut oil and coconut water from Sri Lankan processors. Grades, certificates, HS codes, markets and supply risks.",
+    title="Sri Lanka desiccated coconut and coconut milk suppliers",
+    desc="Source desiccated coconut, coconut milk and cream, milk powder, virgin coconut oil and coconut water from Sri Lankan processors. Grades, HS codes and risks.",
     answer=("Sri Lanka's coconut and coconut based exports rose 42.66% to US$1.23 billion in 2025, led by coconut cream, coconut oil and milk powder. The Export "
             "Development Board ranks Sri Lanka the fourth largest exporter of coconut products, and in 2024 it exported US$138 million of liquid coconut milk and "
             "US$112 million of desiccated coconut. Kernel processors hold ISO 22000, FSSC 22000, HACCP and BRC certificates, and every desiccated coconut shipment "
@@ -641,8 +641,8 @@ cat(
 cat(
     slug="coco-peat-coir", label="Coco peat and coir", short="Coco peat blocks, grow bags, coir fibre, twine, husk chips.", art="s-cocopeat", seller="coco peat exporter",
     h1="Coco peat and coir suppliers in Sri Lanka: blocks, grow bags, fibre and husk chips",
-    title="Coco peat suppliers and coir exporters in Sri Lanka: blocks and grow bags",
-    desc="Source coco peat blocks, grow bags, discs and plugs, coir fibre, twine, geotextiles and husk chips from Sri Lankan exporters. Washed, buffered, RHP, HS codes and markets.",
+    title="Coco peat and coir suppliers in Sri Lanka: blocks, grow bags",
+    desc="Source coco peat blocks, grow bags, discs, coir fibre, twine and geotextiles from Sri Lankan exporters. Washed and buffered grades, RHP, HS codes and markets.",
     answer=("Sri Lanka exported US$197.54 million of coco peat, fibre pith and moulded products in 2024, and the Export Development Board describes it as the third "
             "largest coco peat exporter and the largest supplier of brown coir fibre, at about 100,000 tonnes a year. Exporters supply blocks and bricks, grow bags, "
             "discs, cubes and plugs, washed, unwashed or buffered with calcium nitrate, plus coir fibre, twine, geotextiles, mats and husk chips. Many products for "
@@ -681,8 +681,8 @@ cat(
 cat(
     slug="activated-carbon", label="Coconut shell activated carbon", short="Granular, powdered and pellet activated carbon, shell charcoal.", art="s-carbon", seller="activated carbon producer",
     h1="Coconut shell activated carbon manufacturers in Sri Lanka",
-    title="Coconut shell activated carbon manufacturers and exporters in Sri Lanka",
-    desc="Source granular, powdered and pelletised coconut shell activated carbon and shell charcoal from Sri Lankan producers for water treatment, gold recovery, air and food. Specs, HS codes and markets.",
+    title="Coconut shell activated carbon manufacturers in Sri Lanka",
+    desc="Source granular, powdered and pelletised coconut shell activated carbon from Sri Lankan producers for water, gold recovery, air and food. Specs and HS codes.",
     answer=("Sri Lanka is among the top three producers of activated carbon in the world, according to the Export Development Board, and exports reached US$155.55 "
             "million in 2024. Exports rose 37.79% in the first nine months of 2026. Producers make granular, powdered and pelletised coconut shell activated carbon "
             "for water treatment, air and gas treatment, gold recovery, food and beverage and energy storage, and the main markets are the US, the EU, Japan and "
@@ -718,8 +718,8 @@ cat(
 cat(
     slug="fruits-vegetables", label="Fruits and vegetables", short="Pineapple, banana, papaya, king coconut water, gherkins.", art="s-fruit", seller="fruit and vegetable exporter",
     h1="Fruit and vegetable exporters in Sri Lanka: pineapple, banana, papaya and king coconut",
-    title="Fruit and vegetable exporters in Sri Lanka: fresh and processed",
-    desc="Source fresh pineapple, banana, papaya and vegetables, king coconut water, gherkins and dried fruit from Sri Lankan exporters. Markets, phytosanitary rules, certificates and supply.",
+    title="Fruit and vegetable exporters in Sri Lanka: fresh, processed",
+    desc="Source fresh pineapple, banana, papaya and vegetables, king coconut water, gherkins and dried fruit from Sri Lankan exporters. Markets and plant health rules.",
     answer=("Sri Lanka exported US$71.51 million of fruits, nuts and vegetables in 2024, led by vegetables (US$29.79 million) and bananas (US$16.57 million), "
             "alongside papaya, gherkins and bottled king coconut water, a fruit indigenous to Sri Lanka. About 65% of fresh produce goes to the Middle East and the Maldives, and almost all processed "
             "products go to Europe. Fresh shipments travel with a phytosanitary certificate from the National Plant Quarantine Service, and some farms are "
@@ -754,8 +754,8 @@ cat(
 cat(
     slug="floriculture", label="Cut foliage and live plants", short="Cut foliage, pot plants, aquarium plants and cuttings.", art="s-flora", seller="floriculture exporter",
     h1="Cut foliage, live plant and aquarium plant exporters in Sri Lanka",
-    title="Cut foliage and aquarium plant exporters in Sri Lanka: wholesale",
-    desc="Source cut foliage, indoor pot plants, cuttings, tissue culture plants and aquarium plants from Sri Lankan producer exporters. Markets, certificates and plant health rules.",
+    title="Cut foliage and aquarium plant exporters in Sri Lanka",
+    desc="Source cut foliage, indoor pot plants, cuttings, tissue culture and aquarium plants from Sri Lankan producer exporters. Markets and plant health rules.",
     answer=("Sri Lanka exported US$13.67 million of cut flowers and foliage in 2024, mostly foliage such as dracaena and cordyline (US$11.69 "
             "million). Exporters also supply aquarium plants including Cryptocoryne, Anubias and Echinodorus. Europe takes 60% of "
             "floriculture exports, led by the Netherlands. The main exporters grow in their own nurseries and hold GLOBALG.A.P., MPS and Fair Trade certificates. "
@@ -813,7 +813,7 @@ cat(
     slug="electrical-cables-transformers", label="Electrical and electronics", short="Cables, transformers, switchgear, panels and PCBA.", art="s-electrical", seller="electrical manufacturer",
     h1="Electrical cable, transformer and switchgear manufacturers in Sri Lanka",
     title="Transformer, cable and switchgear manufacturers in Sri Lanka",
-    desc="Source power and distribution transformers, power cables, switchgear, panels and electronics assembly from Sri Lankan manufacturers. Export growth, standards, tenders and how to buy.",
+    desc="Source power and distribution transformers, cables, switchgear, panels and electronics assembly from Sri Lankan makers. Export growth, standards and tenders.",
     answer=("Sri Lanka's electrical and electronic component exports reached US$508.86 million in the first nine months of 2026, up 61% and already above the "
             "US$438.49 million earned in all of 2025. The Export Development Board credits insulated wires and cables (+82.59%), transformers (+33.46%), switches, "
             "boards and panels (+31.49%), telephone and audio equipment (+234.82%) and boilers, engines and pumps (+508.71%). More than 100 manufacturers and service providers work across electronics manufacturing services, components, own products and "
@@ -854,8 +854,8 @@ cat(
 cat(
     slug="light-engineering", label="Light engineering and machinery", short="Pumps, engines, boilers, castings and fabrication.", art="s-engineering", seller="engineering manufacturer",
     h1="Pump, engine and light engineering manufacturers in Sri Lanka",
-    title="Light engineering manufacturers in Sri Lanka: pumps, machinery, fabrication",
-    desc="Source pumps, engines, boilers, agricultural and processing machinery, castings, aluminium extrusions, fasteners and metal fabrication from Sri Lankan manufacturers.",
+    title="Sri Lanka light engineering: pumps, machinery, fabrication",
+    desc="Source pumps, engines, boilers, processing machinery, castings, aluminium extrusions, fasteners and metal fabrication from Sri Lankan manufacturers.",
     answer=("Sri Lanka's exports of boilers, piston engines, pumps and vacuum pumps reached US$171.39 million in the first half of 2026 and grew 508.71% in the "
             "first nine months. The wider light engineering industry has more than 500 manufacturing units making pumps, agricultural, tea and rubber processing "
             "machinery, castings, aluminium extrusions, fasteners, steel structures and auto parts. The Export Development Board says Sri Lankan makers can serve "
@@ -889,8 +889,8 @@ cat(
 cat(
     slug="boat-building", label="Boats and marine", short="Fibreglass boats, workboats, catamarans and patrol craft.", art="s-boats", seller="boat builder",
     h1="Boat builders in Sri Lanka: fibreglass boats, catamarans, workboats and patrol craft",
-    title="Boat builders in Sri Lanka: fibreglass, catamaran and workboat yards",
-    desc="Commission fibreglass boats, catamarans, fishing vessels, passenger and crew boats, patrol craft and pontoons from Sri Lankan boatyards. Classification, CE marking, markets and what to check.",
+    title="Boat builders in Sri Lanka: fibreglass, catamaran, workboats",
+    desc="Commission fibreglass boats, catamarans, fishing vessels, crew boats, patrol craft and pontoons from Sri Lankan boatyards. Classification, CE marking, checks.",
     answer=("Sri Lankan boatyards build yachts and leisure boats, catamarans, fishing vessels, passenger and crew boats, landing craft, tugs, patrol and rescue "
             "craft and pontoons, mostly in fibreglass and composite, with larger vessels in aluminium and steel. Norway bought US$43.1 million of Sri Lankan built "
             "boats in 2025, up from US$21 million in 2023. Yards build to Lloyd's Register, DNV, Bureau Veritas and ABS rules, but the Export Development Board "
@@ -924,8 +924,8 @@ cat(
 cat(
     slug="printing-packaging", label="Printing and packaging", short="Cartons, labels, tags, books and paper products.", art="s-packaging", seller="printing and packaging company",
     h1="Printing and packaging companies in Sri Lanka: cartons, labels and book printing",
-    title="Packaging manufacturers and printers in Sri Lanka: cartons, labels, books",
-    desc="Source corrugated cartons, printed boxes, labels and garment tags, paper sacks, kraft paper and book printing from Sri Lankan printers and packaging makers. Markets and what to check.",
+    title="Packaging manufacturers in Sri Lanka: cartons, labels, books",
+    desc="Source corrugated cartons, printed boxes, labels, garment tags, paper sacks and book printing from Sri Lankan printers and packaging makers. Markets and checks.",
     answer=("Sri Lankan printers and packaging makers supply tea cartons, printed paperboard boxes, corrugated cartons, labels and garment tags, paper sacks and "
             "recycled kraft paper, and print books, catalogues, stationery and calendars on flexo and offset presses. The industry has more than 50 years of "
             "prepress experience, and export revenue was an estimated US$118 million in 2019, the latest sector total on the Export Development Board's pages. Much of the packaging serves "
@@ -958,8 +958,8 @@ cat(
 cat(
     slug="ceramics-porcelain", label="Ceramics and porcelain", short="Porcelain tableware, hotelware, tiles and ornaments.", art="s-ceramics", seller="porcelain manufacturer",
     h1="Porcelain tableware and ceramics manufacturers in Sri Lanka",
-    title="Porcelain tableware and ceramic manufacturers in Sri Lanka: hotelware",
-    desc="Source porcelain and fine china tableware, hotelware, ceramic tiles and ornamental ware from Sri Lankan manufacturers. FDA and ASTM conformity, decoration, markets and what to check.",
+    title="Porcelain tableware manufacturers in Sri Lanka: hotelware",
+    desc="Source porcelain and fine china tableware, hotelware, tiles and ornamental ware from Sri Lankan manufacturers. FDA and ASTM conformity, decoration, markets.",
     answer=("Sri Lanka exported US$20.76 million of tableware and kitchenware in 2024, mostly porcelain and fine china, along with wall and floor tiles and "
             "ornamental ware. The Export Development Board says Sri Lankan tableware conforms to US FDA norms and ASTM standards, with in glaze, on glaze and "
             "under glaze decoration, heavy metal free designs and microwave safe gold and platinum. The industry uses local quartz, feldspar, dolomite and china "
@@ -990,8 +990,8 @@ cat(
 cat(
     slug="wood-furniture", label="Wood products and furniture", short="Rubberwood furniture, flooring, brush handles and toys.", art="s-wood", seller="furniture manufacturer",
     h1="Furniture and wood product manufacturers in Sri Lanka",
-    title="Furniture manufacturers and wood product exporters in Sri Lanka",
-    desc="Source rubberwood and hardwood furniture, parquet flooring, brush handles, panels and wooden toys from Sri Lankan manufacturers. EUDR, FSC, markets and what to check.",
+    title="Furniture manufacturers and wood exporters in Sri Lanka",
+    desc="Source rubberwood and hardwood furniture, parquet flooring, brush handles, panels and wooden toys from Sri Lankan manufacturers. EUDR, FSC and what to check.",
     answer=("Sri Lanka's wood exports are mainly furniture, parquet flooring, brush handles, wooden panels and wooden toys. Manufacturers make office, bedroom "
             "and kitchen furniture, often in treated rubberwood from rubber trees no longer tapped for latex. India bought US$17.78 million of Sri Lankan "
             "furniture and seats in 2025. For the EU, the deforestation regulation applies to wood products for large and medium operators from 30 December "

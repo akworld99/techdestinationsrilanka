@@ -1,0 +1,47 @@
+table,item,value_2025_usd_m,change_2025,value_jan_sep_2026_usd_m,change_jan_sep_2026,source
+total,"Total exports, goods and services",17252.15,+5.60%,13612.55,+5.04%,EDB
+total,Merchandise (goods),13579.38,+6.32%,10761.92,+5.35%,EDB
+total,Services (EDB estimate),3672.77,+2.79%,2850.63,+3.88%,EDB
+sector,Apparel and textiles,4909.05,+5.34%,3783.76,-5.68%,EDB
+sector,Tea,1507.19,+4.97%,1083.58,-6.83%,EDB
+sector,Coconut and coconut based products,1233.01,+42.66%,942.50,+3.68%,EDB
+sector,Rubber and rubber products,945.73,-5.56%,773.88,+8.44%,EDB
+sector,Food and beverages,583.89,+24.23%,526.31,+20.90%,EDB
+sector,Electrical and electronic components,438.49,+3.91%,508.86,+61.05%,EDB
+sector,"Spices, essential oils and oleoresins",449.90,-2.59%,430.53,+30.53%,EDB
+sector,"Gems, diamonds and jewellery",334.13,,,,EDB gem sector page
+sector,Seafood,240.19,+3.09%,180.81,-2.03%,EDB
+sector,Ornamental fish,22.60,-7.60%,,-26.71%,EDB
+sector,Logistics and transport services,1851.58,+3.22%,,,EDB
+sector,ICT and BPM services,1644.83,+8.81%,1240.67,+3.69%,EDB
+product_line,"Boilers, piston engines, pumps and vacuum pumps",,,,+508.71%,EDB
+product_line,Coconut husk chips,,,,+334.15%,EDB
+product_line,Telephone sets and audio and video equipment,,,,+234.82%,EDB
+product_line,Insulated wires and cables,,,,+82.59%,EDB
+product_line,Pepper,,,136.26,+61.45%,EDB
+product_line,Tea bags,,,,+53.39%,EDB
+product_line,Non-alcoholic beverages,,,,+46.78%,EDB
+product_line,Coconut shell based products,,,,+45.91%,EDB
+product_line,Activated carbon,,,,+37.79%,EDB
+product_line,Processed food,,,243.28,+34.19%,EDB
+product_line,Electrical transformers,,,,+33.46%,EDB
+product_line,"Switches, boards and panels",,,,+31.49%,EDB
+product_line,Cinnamon,,,221.56,+31.03%,EDB
+product_line,"Gaskets, washers and seals",,,,+27.78%,EDB
+product_line,Essential oils,,,,+22.17%,EDB
+product_line,Industrial and surgical gloves,,,,+7.58%,EDB
+product_line,Apparel,,,3513.37,-5.36%,EDB
+product_line,Bulk tea,,,,-11.13%,EDB
+market,United States,2999.15,+3.06%,2252.99,+0.05%,EDB
+market,India,1035.72,+17.21%,889.84,+12.30%,EDB
+market,United Kingdom,929.03,+2.80%,654.36,-9.33%,EDB
+market,Italy,679.77,+14.16%,514.28,+1.48%,EDB
+market,Germany,706.49,+12.45%,513.08,-4.27%,EDB
+market,Netherlands,474.80,+20.63%,328.12,-5.35%,EDB
+market,China,,,234.39,+16.46%,EDB
+market,United Arab Emirates,,,232.06,-10.50%,EDB
+market,Türkiye,,,218.24,+94.01%,EDB
+market,France,277.18,+5.09%,198.77,-6.54%,EDB
+market,Belgium,254.44,+6.42%,193.42,+3.16%,EDB
+market,Pakistan,,-2.03%,74.73,+33.59%,EDB
+market,"European Union, all members",,+13.41%,,-0.15%,EDB

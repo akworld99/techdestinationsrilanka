@@ -33,9 +33,8 @@ HOME_TILES = ["ceylon-tea", "ceylon-cinnamon", "coco-peat-coir", "coconut-produc
               "industrial-tyres", "rubber-gloves", "apparel-manufacturing", "electrical-cables-transformers", "seafood"]
 
 # ---------------------------------------------------------------- hub and homepage
-HUB_TITLE = "Sri Lanka exporters and export products list: source from Sri Lanka (2026)"
-HUB_DESC = ("Buy direct from Sri Lankan exporters: Ceylon tea and cinnamon, coconut, coco peat and coir, activated carbon, tyres and gloves, apparel, "
-            "electrical cables and transformers, seafood and more. Export figures, certificates to ask for and a reply within two working days.")
+HUB_TITLE = "Sri Lanka exporters and export products list (2026)"
+HUB_DESC = "Buy direct from Sri Lankan exporters: Ceylon tea and cinnamon, coconut, coco peat, apparel, tyres, gloves, cables, seafood and more. Figures and certificates."
 HUB_ANSWER = ("Sri Lanka exported US$13.58 billion of goods in 2025. The largest categories are apparel, tea, coconut products, rubber products, "
               "food and beverages, spices and electrical components, and the fastest growing in 2026 are electrical and electronic components, up 61% "
               "in the first nine months, and spices, up 30.5%. Buyers in the US, India, the UK and the EU source Ceylon tea and cinnamon, coconut and "
@@ -60,9 +59,8 @@ RFQ_FAQS = [
 ]
 
 # ---------------------------------------------------------------- Tender Radar
-RADAR_TITLE = "Tender alert service on WhatsApp: UN, World Bank and utility tenders"
-RADAR_DESC = ("Tender Radar sends Sri Lankan exporters international tenders matched to their products, ratings and markets on WhatsApp, "
-              "with deadline reminders, a weekly digest and a read on whether to bid.")
+RADAR_TITLE = "Tender alerts on WhatsApp: UN, World Bank, utility tenders"
+RADAR_DESC = "Tender Radar sends Sri Lankan exporters international tenders matched to their products and markets on WhatsApp, with deadline reminders and a read on bidding."
 RADAR_LEDE = ("International tenders for what you make, found for you and sent to your WhatsApp. Each alert says what is being bought, "
               "by whom, by when and what the tender will ask you for, with our read on whether it is worth your time.")
 SAMPLE_ALERT = [("Product", "Distribution transformers, 11 kV, 100 to 500 kVA, to IEC 60076"), ("Buyer", "National power utility, East Africa"),
@@ -105,8 +103,7 @@ TENDER_REQS = []       # filled in source_cats
 
 # ---------------------------------------------------------------- bid support and consultancy
 BID_TITLE = "Tender consultant and bid support for Sri Lankan exporters"
-BID_DESC = ("Bid support for Sri Lankan manufacturers on international tenders: go or no go reviews, compliance matrices, technical, commercial and "
-            "document packs, and export consultancy on markets, vendor registration and certification.")
+BID_DESC = "Tender bid support for Sri Lankan manufacturers: go or no go reviews, compliance matrices, technical and commercial packs, vendor registration and advice."
 BID_ANSWER = ("We help Sri Lankan manufacturers bid for international tenders and build the export business around them. On a live tender we read "
               "the documents, tell you honestly whether to bid, build the compliance matrix, and prepare the technical, commercial and document packs "
               "with your team until the bid is submitted. Around the bid, we help with market selection, vendor registration, certification roadmaps "
@@ -146,7 +143,7 @@ BID_FAQS = [
 ]
 
 # ---------------------------------------------------------------- for exporters
-EXP_TITLE = "Services for Sri Lankan exporters: buyer requests, tenders and bids"
+EXP_TITLE = "Services for Sri Lankan exporters: buyers, tenders, bids"
 EXP_DESC = "Services for Sri Lankan exporters: buyer requests matched to your products, Tender Radar alerts on WhatsApp, bid support and export consultancy."
 EXP_ANSWER = ("Overseas buyers look for suppliers through search, procurement portals and people they trust. We put Sri Lankan exporters in front of "
               "them in three ways: buyer requests that reach us through this site, international tenders matched to what you make, and help to win both.")
@@ -171,8 +168,8 @@ EXP_FAQS = [
 ]
 
 # ---------------------------------------------------------------- import guide (filled in source_cats)
-GUIDE_TITLE = "How to import from Sri Lanka: duties for the UK, EU, US and India (2026)"
-GUIDE_DESC = "How to import from Sri Lanka: trade agreements and duty access, export documents, shipping from Colombo, payment terms and how to check an exporter."
+GUIDE_TITLE = "How to import from Sri Lanka: duties and documents (2026)"
+GUIDE_DESC = "How to import from Sri Lanka: duty access for the UK, EU, US and India, export documents, shipping from Colombo, payment terms and how to check an exporter."
 GUIDE_ANSWER = ""
 GUIDE_STEPS = []
 GUIDE_SECTIONS = []

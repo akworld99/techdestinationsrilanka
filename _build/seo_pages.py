@@ -174,6 +174,21 @@ def cta(prefix, heading, text, q=""):
 
 
 # ------------------------------------------------------------------ industry pages
+MADE_HERE = {  # industry slug -> (heading, sentence, link text, path) for physical goods made in Sri Lanka
+    "semiconductors-embedded": ("The hardware is made here too", "Sri Lankan exports of electrical and electronic components rose 61% to US$508.86 million in January to September 2026, led by cables, transformers and switchgear.", "Transformer, cable and switchgear manufacturers in Sri Lanka", "source/electrical-cables-transformers/"),
+    "automotive": ("Tyres and rubber parts are made here too", "Sri Lankan makers supply about a quarter of world demand for solid tyres, by Export Development Board estimate, along with pneumatic tyres, seals and gaskets.", "Solid tyre manufacturers in Sri Lanka", "source/industrial-tyres/"),
+    "healthtech": ("Medical consumables are made here too", "Sri Lanka exported US$293 million of industrial and surgical gloves in 2025, from manufacturers using local natural rubber.", "Rubber glove manufacturers in Sri Lanka", "source/rubber-gloves/"),
+    "logistics-travel": ("Moving goods out of Sri Lanka", "Sri Lanka exported US$13.58 billion of goods in 2025, and its logistics and transport services earned US$1.85 billion.", "How to import from Sri Lanka", "source/how-to-import-from-sri-lanka/"),
+}
+
+
+def _made_here(slug, prefix):
+    if slug not in MADE_HERE:
+        return ""
+    h, t, lt, p = MADE_HERE[slug]
+    return f'<aside class="promo"><img src="{prefix}assets/art/{"s-electrical" if "electrical" in p else "s-tyres" if "tyres" in p else "s-gloves" if "gloves" in p else "s-import"}.svg" alt="" loading="lazy" width="1200" height="900"><div><h2>{e(h)}</h2><p>{e(t)}</p><a class="door-go" href="{prefix}{p}">{e(lt)}</a></div></aside>'
+
+
 def build_verticals(B, stories):
     paths = []
     for v in VERTICALS:
@@ -198,6 +213,7 @@ def build_verticals(B, stories):
     <h2 class="h-sub mt">Roles you can hire</h2>
     <ul class="names roles">{''.join(f'<li><span>{e(r)}</span></li>' for r in v['roles'])}</ul>
     <div class="prose tight">{''.join(f'<h2>{e(h)}</h2><p>{linked(B, stories, t, prefix)}</p>' for h, t in v['sections'])}</div>
+    {_made_here(v['slug'], prefix)}
     <div class="reach mt">
       <h2>Start with a shortlist</h2>
       <p>Tell us the roles and the stack. We introduce engineers or partner teams with {e(v['name'])} experience, and you take it from there.</p>
@@ -592,6 +608,7 @@ def build_facts(B, stories):
 </div></section>
 <section class="section top-0"><div class="wrap narrow">{items}
   <div class="cite"><strong>Use these numbers.</strong> Free to quote or republish with a link to this page. Each one names its original source, so cite that as well.<br><span>Suggested credit: Tech Destination Sri Lanka, Sri Lanka tech industry facts 2026, {B.SITE_URL}/guides/sri-lanka-tech-industry-facts/</span></div>
+  <p class="body-l">For goods exports by product and by country, from tea and apparel to cables and spices, see <a href="{prefix}source/sri-lanka-export-statistics/">Sri Lanka export statistics</a>.</p>
   <div class="reach mt"><h2>Need a number we do not have?</h2><p>Ask us. If we can source it, we will add it here.</p><div class="actions"><a class="btn" href="{prefix}contact/">Contact us</a><a class="btn btn-ghost" href="{prefix}stories/">Read the stories</a></div></div>
 </div></section>
 """
@@ -617,10 +634,13 @@ def build_guides_hub(B):
         ("../playbook/", "The 2026 playbook (PDF)", "Salaries, hiring routes, setup, tax and industry numbers in one download."),
         ("../why-sri-lanka/", "Why Sri Lanka, by industry", "Evidence pages for healthtech, automotive, fintech, AI and more."),
         ("../hire-from/", "Hiring by country", "Time zones and proof for the USA, UK, Nordics, Netherlands, Germany, Australia and the Gulf."),
+        ("../source/how-to-import-from-sri-lanka/", "How to import from Sri Lanka", "Duty access for the UK, EU and US, export documents, shipping from Colombo and payment terms."),
+        ("../source/sri-lanka-export-statistics/", "Sri Lanka export statistics", "Exports by product and by country for 2025 and 2026, with a CSV download."),
     ]
     art = {"sri-lanka-tech-salaries/": "g-salaries", "how-to-hire-in-sri-lanka/": "g-hire", "set-up-a-company-in-sri-lanka/": "g-setup", "sri-lanka-tech-industry-facts/": "g-facts",
            "sri-lanka-startup-ecosystem/": "g-ecosystem", "employer-of-record-sri-lanka/": "g-eor", "pay-employees-and-contractors-in-sri-lanka/": "g-pay", "../offshoring/": "g-offshoring",
-           "../tools/team-cost-calculator/": "g-calculator", "../compare/": "g-compare", "../answers/": "g-answers", "../playbook/": "g-playbook", "../why-sri-lanka/": "g-why", "../hire-from/": "g-countries"}
+           "../tools/team-cost-calculator/": "g-calculator", "../compare/": "g-compare", "../answers/": "g-answers", "../playbook/": "g-playbook", "../why-sri-lanka/": "g-why", "../hire-from/": "g-countries",
+           "../source/how-to-import-from-sri-lanka/": "s-import", "../source/sri-lanka-export-statistics/": "s-stats"}
     cards = "".join(f'<a class="door has-art" href="{h}"><img class="door-art" src="../assets/art/{art.get(h, "g-why")}.svg" alt="{e(t)}, illustration" loading="lazy" width="1200" height="900"><h3>{e(t)}</h3><p>{e(d)}</p><span class="door-go">Open</span></a>' for h, t, d in items)
     body = f"""
 <section class="page-head"><div class="wrap">
@@ -702,7 +722,7 @@ def build_tour(B, stories):
 
 # ------------------------------------------------------------------ machine readable summary
 def build_llms(B, stories, pages):
-    lines = [f"# {B.SITE_NAME}", "", f"> {B.SITE_NAME} helps companies abroad hire technology talent, find software outsourcing partners and set up teams in Sri Lanka. It publishes sourced reporting on the software, products and companies built by Sri Lankan technology talent.", "",
+    lines = [f"# {B.SITE_NAME}", "", f"> {B.SITE_NAME} helps companies abroad hire technology talent, find software outsourcing partners and set up teams in Sri Lanka. It publishes sourced reporting on the software, products and companies built by Sri Lankan technology talent. Through Source from Sri Lanka it also connects buyers abroad with Sri Lankan exporters of tea, cinnamon, coconut products, apparel, rubber products, electrical equipment and more, and runs Tender Radar, international tender alerts and bid support for Sri Lankan exporters.", "",
              "Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its sources at the end.", "", "## Key facts"]
     lines += [f"- {q} {ans}" for q, ans, _ in FACTS]
     lines += ["", "## Guides"]
@@ -720,6 +740,7 @@ def build_llms(B, stories, pages):
         ("guides/sri-lanka-startup-ecosystem/", "Sri Lanka's startup ecosystem", "Size, rankings, exits, investors and weaknesses"),
         ("playbook/", "Sri Lanka tech team playbook 2026", "All guides in one PDF"),
         ("data/sri-lanka-tech-salaries-2026.csv", "Salary data 2026 (CSV)", "Open data, free to use with attribution"),
+        ("data/sri-lanka-exports-2025-2026.csv", "Sri Lanka export statistics 2025 and 2026 (CSV)", "Exports by sector, product line and market from Export Development Board releases, free to use with attribution"),
     ]]
     import seo_offshoring, seo_offshoring_plus as OX
     lines += ["", "## Outsourcing business services to Sri Lanka"] + [f"- [{c['h1']}]({B.SITE_URL}/offshoring/{c['slug']}/): {c['answer']}" for c in seo_offshoring.CAPS]
