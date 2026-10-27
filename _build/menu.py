@@ -95,7 +95,7 @@ def _groups():
 GROUP_BY_PATH = [("source/", "source"), ("offshoring/", "outsourcing"), ("solutions/", "hire"), ("hire/", "hire"), ("talent/", "hire"), ("services/", "hire"),
                  ("why-sri-lanka/", "why"), ("hire-from/", "why"), ("compare/", "why"), ("guides/", "guides"), ("tools/", "guides"), ("answers/", "guides"),
                  ("playbook/", "guides"), ("stories/", "stories"), ("companies/", "stories"), ("tech-50/", "stories"), ("tech-tour/", "stories"),
-                 ("get-featured/", "stories"), ("featured-badge/", "stories"), ("about/", "about"), ("contact/", "about")]
+                 ("get-featured/", "stories"), ("featured-badge/", "stories"), ("about/", "about"), ("editorial-standards/", "about"), ("contact/", "about")]
 
 _CACHE = {}
 

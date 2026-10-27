@@ -251,6 +251,28 @@ def page_schema(title, desc, url, path):
     return f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
 
 
+def _with_principles(head):
+    """Give every Organization in the page's JSON-LD a link to the editorial standards."""
+    def walk(o):
+        if isinstance(o, dict):
+            if o.get("@type") in ("Organization", "NewsMediaOrganization") and o.get("name") == SITE_NAME:
+                o.setdefault("publishingPrinciples", f"{SITE_URL}/editorial-standards/")
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+
+    def fix(m):
+        try:
+            o = json.loads(m.group(1))
+        except ValueError:
+            return m.group(0)
+        walk(o)
+        return f'<script type="application/ld+json">{json.dumps(o, ensure_ascii=False)}</script>'
+    return re.sub(r'<script type="application/ld\+json">(.*?)</script>', fix, head, flags=re.S)
+
+
 def page(title, desc, body, prefix, path, image=None, extra_head="", article=False, active="", seo_title=None, noindex=False):
     url = f"{SITE_URL}/{path}".rstrip("/") + ("/" if not path.endswith(".html") else "")
     if path == "":
@@ -259,6 +281,9 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
     title_tag = seo_title or title
     if path and not noindex and "application/ld+json" not in extra_head:
         extra_head += page_schema(title, desc, url, path)
+    if 'class="reviewed"' in body and "editorial-standards/" not in body:
+        body = re.sub(r'(<p class="reviewed">)(.*?)(</p>)', lambda m: f'{m.group(1)}{m.group(2)} <a href="{prefix}editorial-standards/">How we check</a>{m.group(3)}', body, count=1, flags=re.S)
+    extra_head = _with_principles(extra_head)
     full_title = title_tag if (title_tag == SITE_NAME or len(title_tag) + len(SITE_NAME) + 3 > 62) else f"{title_tag} | {SITE_NAME}"
 
     return f"""<!doctype html>
@@ -323,6 +348,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}answers/">Answers</a>
       <a href="{prefix}tech-50/">Sri Lanka Tech 50</a>
       <a href="{prefix}about/">About</a>
+      <a href="{prefix}editorial-standards/">Editorial standards</a>
     </div>
     <div>
       <p class="foot-h">For companies</p>
@@ -547,7 +573,7 @@ def build_home(stories):
   </div>
 </section>
 """
-    ld = [{"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png", "sameAs": [LINKEDIN, INSTAGRAM], "description": TAGLINE, "email": EMAIL, "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "url": BOOKING_URL},
+    ld = [{"@context": "https://schema.org", **org_ld(), "description": TAGLINE, "email": EMAIL, "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "url": BOOKING_URL},
            "areaServed": ["LK", "US", "GB", "SE", "NO", "DK", "FI", "NL", "DE", "AU", "AE", "OM", "SA", "QA"], "knowsAbout": ["Sri Lanka technology industry", "software engineering talent", "IT outsourcing", "global capability centres"]},
           {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/"},
           {"@context": "https://schema.org", "@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
@@ -607,7 +633,7 @@ def build_story(s, stories):
       <p class="crumb"><a href="../">Stories</a> <span aria-hidden="true">/</span> <a href="../?type={s['category']}">{e(s['catname'])}</a></p>
       <h1>{e(s['title'])}</h1>
       <p class="lede">{e(s['dek'])}</p>
-      <div class="byline">{logo(s, '../../', 'by-logo') if s.get('company') else ''}<p class="meta"><time datetime="{s['date'].isoformat()}">{fdate(s['date'])}</time><span>{read_minutes(s)} min read</span><span>{e(s['sector'])}</span></p></div>
+      <div class="byline">{logo(s, '../../', 'by-logo') if s.get('company') else ''}<p class="meta"><span>By the <a href="../../editorial-standards/">editorial team</a></span><time datetime="{s['date'].isoformat()}">{fdate(s['date'])}</time><span>{read_minutes(s)} min read</span><span>{e(s['sector'])}</span></p></div>
     </div>
   </header>
   <div class="wrap narrow">
@@ -723,6 +749,7 @@ def build_about(stories):
       <li>One company, one story. No filler and no buzzwords.</li>
       <li>When facts change after publication, we update the story and say so.</li>
     </ul>
+    <p>The full rules, including how we check figures and handle corrections, are in our <a href="../editorial-standards/">editorial standards</a>.</p>
 
     <h2>Who it is for</h2>
     <p>Foreign founders, CTOs, hiring managers and investors who are deciding where to build their next team. If that is you, <a href="../contact/">tell us what you need</a> and we will point you to the right people.</p>
@@ -736,6 +763,59 @@ def build_about(stories):
 </section>
 """
     write("about/index.html", page("About", "Who runs Tech Destination Sri Lanka, how we source and check every story, and how to suggest a company.", body, "../", "about/", active="about"))
+
+
+ED_PATH = "editorial-standards/"
+
+
+def build_editorial():
+    body = f"""
+<section class="page-head">
+  <div class="wrap narrow">
+    <h1>Editorial standards</h1>
+    <p class="lede">How Tech Destination Sri Lanka researches, checks and corrects what it publishes, from company stories to export statistics and import guides.</p>
+  </div>
+</section>
+<section class="section top-0">
+  <div class="wrap narrow prose">
+    <h2 id="who">Who writes this</h2>
+    <p>Tech Destination Sri Lanka is written and edited by a small editorial team in Colombo. We publish under the masthead rather than individual bylines, as The Economist and many trade titles do, so every page is the publication's responsibility. Each guide shows the date it was last reviewed, and each story shows its publication date.</p>
+
+    <h2 id="sources">What we rely on</h2>
+    <p>Primary sources first: the Export Development Board, the Central Bank of Sri Lanka, the Board of Investment, government gazettes and official trade and customs portals in buyer markets, and company filings and announcements. We use established news outlets when they report those sources, and we link to the original wherever it is public.</p>
+
+    <h2 id="checking">How we check</h2>
+    <ul>
+      <li>Every figure and claim is linked to its source, next to the claim or in a sources list at the end.</li>
+      <li>Before a page goes live, its figures are checked against the source document: the number, the period it covers, the unit and the direction of change.</li>
+      <li>New sections get a second, separate check against the same sources before publication.</li>
+      <li>If we cannot verify a number, we ask the company or leave it out.</li>
+      <li>Guides on duties, tax and employment are general information, and say so. They are not legal, tax or customs advice.</li>
+    </ul>
+
+    <h2 id="updates">Updates and corrections</h2>
+    <p>Export statistics are updated when the Export Development Board publishes new monthly figures. Guides are reviewed when the rules they describe change, and the review date on the page moves with them.</p>
+    <p>If you spot an error, email <a href="mailto:{EMAIL}">{EMAIL}</a> with the page and the source. We check it, fix it and update the page. Where a correction changes a figure or a conclusion, we say so on the page.</p>
+
+    <h2 id="independence">Independence</h2>
+    <p>We are an independent platform. We are not a government body, an industry association or an investment promotion agency, and we do not speak for any of them. We also help companies hire, source products and bid for tenders. Our reporting and data pages follow the same sourcing rules whether or not a company works with us, and we do not name the buyers of Sri Lankan exporters.</p>
+
+    <h2 id="data">Using our data</h2>
+    <p>Our data files, such as the <a href="../data/sri-lanka-exports-2025-2026.csv">export statistics</a> and <a href="../data/sri-lanka-tech-salaries-2026.csv">salary data</a>, are free to quote and republish with a link to the page they come from. Cite the original source as well.</p>
+  </div>
+</section>
+"""
+    head = f'<script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "AboutPage", "name": "Editorial standards", "url": SITE_URL + "/" + ED_PATH, "about": org_ld()}, ensure_ascii=False)}</script>'
+    write(ED_PATH + "index.html", page("Editorial standards", "How Tech Destination Sri Lanka researches, checks, updates and corrects its stories, guides and export statistics.", body, "../", ED_PATH, extra_head=head, active="about"))
+    return ED_PATH
+
+
+def org_ld():
+    """The publisher with its editorial policies, for the homepage and the editorial page."""
+    ed = f"{SITE_URL}/{ED_PATH}"
+    return {"@type": "NewsMediaOrganization", "name": SITE_NAME, "url": SITE_URL + "/", "logo": f"{SITE_URL}/assets/logo.png", "sameAs": [LINKEDIN, INSTAGRAM],
+            "publishingPrinciples": ed, "verificationFactCheckingPolicy": ed + "#checking", "correctionsPolicy": ed + "#updates",
+            "actionableFeedbackPolicy": ed + "#updates", "ethicsPolicy": ed + "#independence", "masthead": ed + "#who"}
 
 
 def build_contact():
@@ -798,7 +878,7 @@ def lastmod(path, published=None):
 
 def build_meta(stories, extra_pages=()):
     now = datetime.now(timezone.utc)
-    paths = ["", "stories/", "companies/", "about/", "contact/"] + list(extra_pages)
+    paths = ["", "stories/", "companies/", "about/", "editorial-standards/", "contact/"] + list(extra_pages)
     story_dates = {f"stories/{s['slug']}/": s["date"] for s in stories}
     urls = [(p, lastmod(p, story_dates.get(p))) for p in paths + list(story_dates)]
     LASTMOD_FILE.write_text(json.dumps(LASTMOD, indent=1, sort_keys=True) + "\n")
@@ -872,6 +952,7 @@ def main():
         build_story(s, stories)
     build_companies(stories)
     build_about(stories)
+    build_editorial()
     build_contact()
     import extra
     build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_source.build(sys.modules[__name__], stories))
