@@ -136,7 +136,7 @@ def schema(B, c, path):
 # ---------------------------------------------------------------- buyer market pages
 MARKET_PAGES = [
     dict(slug="from-uk", name="the UK", short="UK", h1="Outsourcing to Sri Lanka from the UK",
-         title="Outsourcing to Sri Lanka from the UK: BPO, accounting and offshore teams",
+         title="Outsourcing to Sri Lanka from the UK: accounting and BPO",
          desc="How UK companies, accounting firms, insurers and law firms outsource to Sri Lanka: time zone, the best fit services, data protection, examples and how to start.",
          answer="UK businesses have outsourced to Sri Lanka for more than 20 years. HSBC opened its Colombo operations in 2004, the London Stock Exchange Group employs more than 1,600 people there, and in 2025 the UK specialist insurer CFC opened a 200 seat hub in Colombo. Sri Lanka is 4.5 hours ahead of the UK in summer and 5.5 in winter, so a team starting early afternoon covers the full UK day, and work processed in the Sri Lankan morning is ready before London opens.",
          tz="4.5 hours ahead (BST) or 5.5 hours ahead (GMT)", best=["accounting-bookkeeping-outsourcing-sri-lanka", "insurance-hr-payroll-outsourcing-sri-lanka", "legal-process-outsourcing-sri-lanka", "engineering-design-bim-outsourcing-sri-lanka", "customer-support-outsourcing-sri-lanka"],
@@ -150,8 +150,8 @@ MARKET_PAGES = [
                ("What time difference is there between the UK and Sri Lanka?", "Sri Lanka is 4.5 hours ahead of the UK in British Summer Time and 5.5 hours ahead in winter. Sri Lanka has no daylight saving."),
                ("Is outsourcing to Sri Lanka GDPR compliant?", "It can be. Compliance depends on your contract and the provider's controls: a data processing agreement, approved transfer terms and appropriate security. Sri Lanka's Personal Data Protection Act also applies from 1 January 2027.")]),
     dict(slug="from-australia", name="Australia", short="Australia", h1="Outsourcing to Sri Lanka from Australia",
-         title="Outsourcing to Sri Lanka from Australia: offshore staff, accounting and BPO",
-         desc="How Australian businesses and accounting firms build offshore teams in Sri Lanka: time zone overlap, the best fit services, providers that serve Australia and how to start.",
+         title="Outsourcing to Sri Lanka from Australia: offshore staff, BPO",
+         desc="How Australian businesses and accounting firms build offshore teams in Sri Lanka: time zone overlap, best fit services, providers and how to start.",
          answer="Australian businesses are one of Sri Lanka's main outsourcing markets, especially accounting firms, professional services and growing companies hiring offshore staff. Sri Lanka is 4.5 to 5.5 hours behind Sydney and 2.5 hours behind Perth, so the Sri Lankan morning overlaps the Australian afternoon and overnight work is ready for the next morning. Remote staffing providers in Colombo employ staff locally for Australian clients, and Australian firms signed new contracts to build Sri Lankan teams in 2026.",
          tz="4.5 to 5.5 hours behind Sydney and Melbourne, 2.5 hours behind Perth", best=["accounting-bookkeeping-outsourcing-sri-lanka", "virtual-assistants-sri-lanka", "digital-marketing-outsourcing-sri-lanka", "insurance-hr-payroll-outsourcing-sri-lanka", "engineering-design-bim-outsourcing-sri-lanka"],
          law="The Australian Privacy Principles still apply to personal information you send offshore, so choose a provider with strong security and contract for it. Staff employed by a Sri Lankan provider are employed under Sri Lankan law, and Australian superannuation does not normally apply to them; confirm your position with an adviser.",
@@ -163,8 +163,8 @@ MARKET_PAGES = [
                ("What is the time difference between Australia and Sri Lanka?", "Sri Lanka is 4.5 hours behind Sydney and Melbourne in winter and 5.5 hours behind during Australian daylight saving, and 2.5 hours behind Perth."),
                ("Sri Lanka or the Philippines for Australian offshore staff?", "The Philippines is larger and closer in time. Sri Lanka suits Australian firms that want qualified accountants and finance staff, and teams with strong business backgrounds. See our comparison page.")]),
     dict(slug="from-usa", name="the USA", short="USA", h1="Outsourcing to Sri Lanka from the USA",
-         title="Outsourcing to Sri Lanka from the USA: medical billing, research and back office",
-         desc="How US companies use Sri Lanka for overnight back office, medical billing, investment research and finance operations. Time zones, best fit services and how to start.",
+         title="Outsourcing to Sri Lanka from the USA: billing and research",
+         desc="How US companies use Sri Lanka for overnight back office, medical billing, investment research and finance operations: time zones, fit and how to start.",
          answer="US companies use Sri Lanka mainly for work that benefits from an overnight turnaround: medical billing and revenue cycle management, investment research, finance operations and data work. Sri Lanka is 9.5 to 13.5 hours ahead of the US, so claims, reconciliations and research processed during the Sri Lankan day are ready when US offices open. Investment research firms in Colombo serve Wall Street institutions, and revenue cycle firms serve US hospitals and practices.",
          tz="9.5 to 10.5 hours ahead of New York, 12.5 to 13.5 hours ahead of California", best=["medical-billing-outsourcing-sri-lanka", "investment-research-kpo-sri-lanka", "accounting-bookkeeping-outsourcing-sri-lanka", "data-annotation-sri-lanka", "customer-support-outsourcing-sri-lanka"],
          law="For healthcare work, sign a HIPAA business associate agreement and check the provider's security controls. For other personal data, apply your state privacy obligations through your contract. Sri Lanka's data protection law applies to processors from 1 January 2027.",
@@ -175,8 +175,8 @@ MARKET_PAGES = [
          faqs=[("Do US companies outsource to Sri Lanka?", "Yes, especially for medical billing, investment research, finance operations and software. The time difference gives an overnight turnaround."),
                ("Can a Sri Lankan team work US hours?", "Yes, on night shifts, which is standard in US facing healthcare and support work. For back office work, most US clients prefer the overnight model.")]),
     dict(slug="from-uae", name="the UAE", short="UAE", h1="Outsourcing to Sri Lanka from the UAE and the Gulf",
-         title="Outsourcing to Sri Lanka from Dubai and the UAE: back office and offshore teams",
-         desc="How UAE and Gulf companies use Sri Lanka for finance, quantity surveying, marketing, support and virtual assistance, working almost the same day. Best fit services and how to start.",
+         title="Outsourcing to Sri Lanka from Dubai and UAE: offshore teams",
+         desc="How UAE and Gulf companies use Sri Lanka for finance, quantity surveying, marketing, support and assistants, working almost the same day, and how to start.",
          answer="For companies in Dubai, Abu Dhabi and the wider Gulf, Sri Lanka is one of the closest offshore options: 1.5 hours ahead of the UAE and a short flight from Colombo. Sri Lankan teams already work in Gulf construction, finance and hospitality, and providers serve UAE clients with accountants, quantity surveyors, marketers, support agents and virtual assistants who share almost the whole working day.",
          tz="1.5 hours ahead of the UAE, 2.5 hours ahead of Saudi Arabia", best=["accounting-bookkeeping-outsourcing-sri-lanka", "engineering-design-bim-outsourcing-sri-lanka", "digital-marketing-outsourcing-sri-lanka", "virtual-assistants-sri-lanka", "customer-support-outsourcing-sri-lanka"],
          law="Apply the UAE Personal Data Protection Law, or DIFC or ADGM rules if you are in a free zone, to data you send offshore, through your contract with the provider. Sri Lanka's data protection law applies to processors from 1 January 2027.",
@@ -318,7 +318,7 @@ def build_directory(B, stories, cta):
 """
     head = faq_ld + itemlist + SP.crumbs_ld(B, [("Offshoring", "offshoring/"), ("BPO companies", path)])
     B.write(path + "index.html", B.page("BPO and outsourcing companies in Sri Lanka (2026)",
-                                        "Who provides BPO and outsourcing services in Sri Lanka: global captive centres and specialist providers in accounting, research, medical billing, legal, staffing, support and BIM. Sourced, with introductions.",
+                                        "Who provides BPO services in Sri Lanka: global captive centres and specialist providers in accounting, research, medical billing, legal, support and BIM.",
                                         body, prefix, path, extra_head=head, active="services", seo_title="BPO and outsourcing companies in Sri Lanka (2026 list)"))
     return [path]
 

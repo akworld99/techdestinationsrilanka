@@ -78,8 +78,8 @@ CAPS = [
     dict(
         slug="virtual-assistants-sri-lanka", label="Virtual assistants",
         h1="Hire virtual assistants and remote admin staff in Sri Lanka",
-        title="Virtual assistants in Sri Lanka: hire offshore admin and EA support",
-        desc="Hire virtual assistants, executive assistants and operations coordinators in Sri Lanka. Who provides them, how much time zone overlap you get, and where AI changes the role.",
+        title="Virtual assistants in Sri Lanka: offshore admin and EAs",
+        desc="Hire virtual assistants, executive assistants and operations coordinators in Sri Lanka: who provides them, time zone overlap and where AI changes the role.",
         short="Executive and operations assistants, admin and coordination.",
         answer="Australian, UK and Gulf businesses hire virtual and executive assistants in Sri Lanka through remote staffing firms that employ the assistant locally and manage payroll, equipment and compliance. The strongest demand comes from Australia, where the time zone gives a shared afternoon, and from the UAE, which works almost the same day. The role is changing fast: routine scheduling and inbox work is being handled by AI, so the best Sri Lankan assistants are hired as operations coordinators who run those tools and own workflows.",
         stats=[("1.5 hrs", "time difference with the UAE"), ("150,000", "online freelancers in Sri Lanka (ICTA survey)"), ("UAE, AU, UK", "main client markets")],
@@ -101,8 +101,8 @@ CAPS = [
     dict(
         slug="digital-marketing-outsourcing-sri-lanka", label="Digital marketing",
         h1="Digital marketing outsourcing to Sri Lanka",
-        title="Digital marketing outsourcing to Sri Lanka: offshore SEO, PPC and content",
-        desc="Outsource SEO, paid media, social, content and marketing operations to Sri Lankan teams. What they do well, who uses them and how to set up an offshore marketing team.",
+        title="Digital marketing outsourcing to Sri Lanka: SEO and PPC",
+        desc="Outsource SEO, paid media, social, content and marketing operations to Sri Lankan teams: what they do well, who uses them and how to set up a team.",
         short="SEO, paid media, social, content and marketing operations.",
         answer="Sri Lankan agencies and remote teams run SEO, paid search and social, content, email and marketing operations for clients in Australia, Southeast Asia, the Middle East and the UK. Digital marketing, advertising and PR outsourcing is one of the business services the Export Development Board promotes, and Australian firms are now building dedicated offshore marketing teams in Colombo. Evidence on the size of this market is thin, so judge providers on case studies rather than country statistics.",
         stats=[("45", "countries one Colombo agency says it has worked in"), ("150,000", "online freelancers, many in design and writing"), ("UTC+5:30", "same working day as the Gulf")],
@@ -123,8 +123,8 @@ CAPS = [
     dict(
         slug="customer-support-outsourcing-sri-lanka", label="Customer support",
         h1="Customer support and back office outsourcing to Sri Lanka",
-        title="Customer support outsourcing to Sri Lanka: BPO and call centres",
-        desc="Email, chat and voice support, operations and back office from Sri Lanka. Which companies run them, the time zone fit for UK, Australian and Gulf customers, and AI's impact.",
+        title="Customer support outsourcing to Sri Lanka: BPO, call centres",
+        desc="Email, chat and voice support and back office from Sri Lanka: who runs them, the time zone fit for UK, Australian and Gulf customers, and AI's impact.",
         short="Email, chat and voice support, customer operations and back office.",
         answer="Sri Lanka's strongest track record in customer operations is in banking, insurance and complex servicing rather than high volume call centres. HSBC has served customers in 24 markets from Colombo since 2004, a global business process firm that has delivered from Colombo for more than 20 years added over 300 jobs in 2025, and local business process firms run contact centres for airlines, hospitality and retail. The time zone suits UK, Gulf and Australian customers well. For live US hours, teams work night shifts.",
         stats=[("2004", "HSBC begins operations in Colombo"), ("24", "markets served by HSBC's Colombo centre"), ("300+", "jobs one global BPM firm added in Colombo in 2025")],
@@ -167,7 +167,7 @@ CAPS = [
     dict(
         slug="legal-process-outsourcing-sri-lanka", label="Legal process outsourcing",
         h1="Legal process outsourcing (LPO) to Sri Lanka",
-        title="Legal process outsourcing to Sri Lanka: offshore paralegal and legal support",
+        title="Legal process outsourcing to Sri Lanka: offshore paralegals",
         desc="Offshore paralegals, contract review, legal research, conveyancing and company secretarial support from Sri Lanka for UK, Australian and US law firms.",
         short="Paralegal, contract review, legal research and company secretarial.",
         answer="Sri Lankan legal process outsourcing firms provide paralegal support, contract drafting and review, legal research, matter administration and company secretarial work for law firms and in-house teams in the UK, Australia, Singapore and the US. Sri Lankan lawyers train in English in a system with common law roots, which makes them a natural fit for UK and Australian work. This is a small, specialist market: choose providers on the jurisdictions they already serve.",
@@ -406,7 +406,7 @@ def build(B, stories):
                  "mainEntityOfPage": f"{B.SITE_URL}/offshoring/", "image": f"{B.SITE_URL}/assets/art/g-offshoring.svg", "about": ["Business process outsourcing", "Sri Lanka"]})
     head = faq_ld + art + SP.crumbs_ld(B, [("Offshoring", "offshoring/")])
     B.write("offshoring/index.html", B.page("Outsourcing to Sri Lanka: business services beyond tech",
-                                            "Outsourcing companies and BPO services in Sri Lanka: accounting, investment research, medical billing, customer support, legal, BIM, marketing and virtual assistants. Evidence and sources.",
+                                            "Outsourcing companies and BPO services in Sri Lanka: accounting, investment research, medical billing, support, legal, BIM, marketing and virtual assistants.",
                                             body, prefix, "offshoring/", extra_head=head, active="services",
                                             seo_title="Outsourcing to Sri Lanka: BPO companies and services (2026)"))
     paths += X.build_markets(B, stories, CAPS, _cta, _markets()) + X.build_directory(B, stories, _cta)
