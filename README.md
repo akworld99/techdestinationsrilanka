@@ -21,3 +21,11 @@ Content for `why-sri-lanka/<industry>/` and `hire-from/<country>/` lives in `_bu
 - `sitemap.xml` lastmod dates come from `_build/lastmod.json`, which stores a hash of each page. A page's date only moves when its content changes, so commit `lastmod.json` with every build.
 - `.github/workflows/indexnow.yml` runs after each GitHub Pages deploy and submits changed URLs to IndexNow (Bing, Yandex and others). Run it by hand from the Actions tab with "Submit every URL" ticked to resubmit the whole site.
 - Google does not use IndexNow. Use Search Console's sitemap report and URL Inspection for Google.
+
+## Source from Sri Lanka
+
+Buyer pages for Sri Lankan exports live under `source/`: a hub, one page per export category, a request for quote page, Tender Radar (tender alerts on WhatsApp), bid support, exporter services and an import guide.
+
+- Category records (figures, HS codes, evidence, certificates, caveats, FAQs) are in `_build/source_cats.py`. Every figure carries its source link. No buyer is named, and exporters are described rather than named.
+- Hub, homepage band, Tender Radar, bid support and exporter copy is in `_build/source_data.py`. Page templates are in `_build/seo_source.py` and the artwork in `_build/art_source.py`.
+- Update the export figures when the Export Development Board publishes new monthly or annual numbers, and change `REVIEWED` in `source_data.py`.

@@ -18,6 +18,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 import seo_data  # noqa: E402
+import source_data  # noqa: E402
 
 # ---------------------------------------------------------------- settings
 SITE_URL = "https://techdestinationsrilanka.lk"  # change when a custom domain is connected
@@ -229,9 +230,9 @@ LANDMARKS = """<svg class="landmarks" viewBox="0 0 1200 300" role="img" aria-lab
 
 
 PAGE_TYPES = {"about/": "AboutPage", "contact/": "ContactPage", "stories/": "CollectionPage", "companies/": "CollectionPage",
-              "guides/": "CollectionPage", "why-sri-lanka/": "CollectionPage", "solutions/": "CollectionPage", "talent/": "CollectionPage"}
+              "guides/": "CollectionPage", "why-sri-lanka/": "CollectionPage", "solutions/": "CollectionPage", "talent/": "CollectionPage", "source/": "CollectionPage"}
 CRUMB_NAMES = {"stories": "Stories", "guides": "Guides", "why-sri-lanka": "Why Sri Lanka", "hire-from": "Hire from", "hire": "Hire",
-               "solutions": "Solutions", "compare": "Compare", "talent": "Talent", "tools": "Tools", "companies": "Companies"}
+               "solutions": "Solutions", "compare": "Compare", "talent": "Talent", "tools": "Tools", "companies": "Companies", "source": "Source from Sri Lanka"}
 
 
 def page_schema(title, desc, url, path):
@@ -303,6 +304,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       {nav('companies/', 'Companies', 'companies')}
       {nav('why-sri-lanka/', 'Why Sri Lanka', 'why')}
       {nav('talent/', 'Talent', 'talent')}
+      {nav('source/', 'Source', 'source')}
       {nav('services/', 'Services', 'services')}
       {nav('guides/', 'Guides', 'guides')}
       {nav('about/', 'About', 'about')}
@@ -344,6 +346,8 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}guides/employer-of-record-sri-lanka/">Employer of record</a>
       <a href="{prefix}guides/pay-employees-and-contractors-in-sri-lanka/">Pay people in Sri Lanka</a>
       <a href="{prefix}offshoring/">Business process outsourcing</a>
+      <a href="{prefix}source/">Source products from Sri Lanka</a>
+      <a href="{prefix}source/request-a-quote/">Request a quote</a>
       <a href="{prefix}tools/team-cost-calculator/">Team cost calculator</a>
       <a href="{prefix}compare/">Compare destinations</a>
       <a href="{prefix}playbook/">Free playbook</a>
@@ -353,6 +357,10 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
     <div>
       <p class="foot-h">For professionals</p>
       <a href="{prefix}talent/top-talent/">Be featured as Top Talent</a>
+      <p class="foot-h mt-s">For exporters</p>
+      <a href="{prefix}source/tender-radar/">Tender Radar</a>
+      <a href="{prefix}source/bid-support/">Bid support</a>
+      <a href="{prefix}source/for-exporters/">Exporter services</a>
       <a href="{LINKEDIN}" rel="noopener">LinkedIn</a>
       <a href="{INSTAGRAM}" rel="noopener">Instagram</a>
       <a href="{prefix}featured-badge/">Featured badge</a>
@@ -363,6 +371,7 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
   <div class="wrap foot-hubs">
     <p><strong>By industry</strong> {' '.join(f'<a href="{prefix}why-sri-lanka/{v["slug"]}/">{v["label"]}</a>' for v in seo_data.VERTICALS)}</p>
     <p><strong>Ways to build</strong> {' '.join(f'<a href="{prefix}solutions/{x["slug"]}/">{x["label"]}</a>' for x in solutions.SOLUTIONS)}</p>
+    <p><strong>Source by product</strong> {' '.join(f'<a href="{prefix}source/{c["slug"]}/">{c["label"]}</a>' for c in source_data.CATS)}</p>
     <p><strong>By country</strong> {' '.join(f'<a href="{prefix}hire-from/{m["slug"]}/">{m["label"]}</a>' for m in seo_data.MARKETS)}</p>
     <p><strong>Compare</strong> {' '.join(f'<a href="{prefix}compare/{o["slug"]}/">Sri Lanka vs {o["name"][0].upper() + o["name"][1:]}</a>' for o in seo_compare.OTHERS)}</p>
   </div>
@@ -481,6 +490,8 @@ def build_home(stories):
 </section>
 
 {seo_offshoring.home_section(sys.modules[__name__])}
+
+{seo_source.home_section(sys.modules[__name__])}
 
 <section class="section tint">
   <div class="wrap">
@@ -707,6 +718,7 @@ def build_about(stories):
   <div class="wrap narrow prose">
     <h2>What we do</h2>
     <p>Two things. We report on what Sri Lankan technology talent has built, with sources. And we help companies abroad act on it: <a href="../talent/find/">finding talent</a>, <a href="../solutions/software-outsourcing-sri-lanka/">matching delivery partners</a>, and <a href="../solutions/offshore-development-center-sri-lanka/">setting up their own teams</a>. The reporting is how most people find us. The <a href="../services/">services</a> are how we help once they do.</p>
+    <p>Beyond technology, we help buyers <a href="../source/">source products from Sri Lankan exporters</a>, and help Sri Lankan exporters find and win overseas tenders through <a href="../source/tender-radar/">Tender Radar</a> and <a href="../source/bid-support/">bid support</a>.</p>
 
     <h2>Why this exists</h2>
     <p>Sri Lankan engineers built the trading platform the London Stock Exchange bought. They write core R&D for IFS, Sysco and Synopsys. They founded WSO2 and Virtusa. Most of the world has never heard any of it.</p>
@@ -740,7 +752,7 @@ def build_contact():
     booking = f'<a class="btn" href="{e(BOOKING_URL)}" rel="noopener">Schedule a 30 minute call</a>' if BOOKING_URL else ""
     import extra
     form = extra.form(sys.modules[__name__], "contact", "Send a message", "", [
-        ("select", "need", "I want to", True, ["Hire Sri Lankan talent", "Find a delivery partner", "Set up in Sri Lanka", "Recruit at scale", "Feature my company", "Employer branding", "Events and delegations", "Something else"]),
+        ("select", "need", "I want to", True, ["Hire Sri Lankan talent", "Find a delivery partner", "Set up in Sri Lanka", "Recruit at scale", "Source products from Sri Lanka", "Tender alerts or bid support", "Feature my company", "Employer branding", "Events and delegations", "Something else"]),
         ("text", "name", "Your name", True, ""),
         ("email", "email", "Work email", True, ""),
         ("text", "company", "Company", False, ""),
@@ -829,7 +841,7 @@ def write(rel, content):
 
 
 def main():
-    global seo_pages, seo_more, solutions, seo_compare, seo_startups, seo_offshoring
+    global seo_pages, seo_more, solutions, seo_compare, seo_startups, seo_offshoring, seo_source
     import seo_pages
     import seo_more
     import solutions
@@ -837,6 +849,7 @@ def main():
     import seo_startups
     import seo_payroll
     import seo_offshoring
+    import seo_source
     stories = parse_stories()
     import art
     art.write_all(ROOT)
@@ -870,7 +883,7 @@ def main():
     build_about(stories)
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_source.build(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 

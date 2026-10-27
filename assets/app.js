@@ -89,6 +89,16 @@
     });
   }
 
+  // preselect the product on the request for quote form when a category page links to it
+  var rfq = document.getElementById('rfq-form');
+  if (rfq) {
+    var pv = params.get('product');
+    var psel = rfq.querySelector('select[name=product]');
+    if (pv && psel && /^[a-z-]+$/.test(pv)) {
+      for (var pi = 0; pi < psel.options.length; pi++) { if (psel.options[pi].value === pv) psel.selectedIndex = pi; }
+    }
+  }
+
   // every form on the site posts to the same endpoint
   Array.prototype.forEach.call(document.querySelectorAll('form[data-form]'), function (form) {
     form.addEventListener('submit', function (ev) {

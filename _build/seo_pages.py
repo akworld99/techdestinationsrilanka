@@ -731,6 +731,8 @@ def build_llms(B, stories, pages):
     lines += ["", "## Ways to build a team in Sri Lanka"] + [f"- [{x['h1']}]({B.SITE_URL}/solutions/{x['slug']}/): {x['desc']}" for x in solutions.SOLUTIONS]
     lines += ["", "## Why Sri Lanka, by industry"] + [f"- [{v['h1']}]({B.SITE_URL}/why-sri-lanka/{v['slug']}/): {v['desc']}" for v in VERTICALS]
     lines += ["", "## Hiring from each country"] + [f"- [{m['h1']}]({B.SITE_URL}/hire-from/{m['slug']}/): {m['desc']}" for m in MARKETS]
+    import seo_source
+    lines += seo_source.llms_lines(B)
     lines += ["", "## Services", f"- [Find talent from Sri Lanka]({B.SITE_URL}/talent/find/)", f"- [Be featured as Sri Lankan Top Talent]({B.SITE_URL}/talent/top-talent/)", f"- [All services]({B.SITE_URL}/services/)",
               f"- [Sri Lanka Tech 50]({B.SITE_URL}/tech-50/)", f"- [Sri Lanka Tech Tour]({B.SITE_URL}/tech-tour/)", f"- [Companies directory]({B.SITE_URL}/companies/)", "", "## Contact", f"- Schedule a call: {B.BOOKING_URL}", f"- Email: {B.EMAIL}"]
     lines += ["", "## Stories"] + [f"- [{s['title']}]({B.SITE_URL}/stories/{s['slug']}/): {s['dek']}" for s in stories]
