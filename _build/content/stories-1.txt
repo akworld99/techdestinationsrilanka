@@ -1,3 +1,40 @@
+slug: orfium
+title: Sri Lankan engineers helped Sony, Warner and Universal get paid for their music. Meet Orfium
+dek: Los Angeles-founded Orfium tracks music usage across digital platforms and broadcast so rights owners get paid. Its clients include Sony Music, Warner Music Group and Universal Music Publishing Group, and part of its team works from Colombo.
+date: 2026-10-29
+category: global
+company: Orfium
+sector: Music rights management software
+blurb: Music rights software used by Sony, Warner and Universal, with a team in Colombo.
+facts: $200M+ :: generated for rights owners in 2022 || 700+ :: people across 8 locations || 2019 :: Sony Music signs as first B2B client
+sources: Orfium, about us => https://orfium.com/about-us/ || Orfium careers, client list => https://apply.workable.com/orfium/ || Orfium Sri Lanka => https://www.facebook.com/people/Orfium-Sri-Lanka/100063593710140/ || Digital Music News, Orfium acquires Soundmouse (2023) => https://www.digitalmusicnews.com/2023/01/16/orfium-acquires-soundmouse/ || Music Business Worldwide, BMI to acquire Soundmouse from Orfium (2026) => https://musicbusinessworldwide.com/bmi-to-acquire-soundmouse-from-orfium-to-build-largest-and-most-comprehensive-global-cue-sheet-database/
+---
+Every time a song plays on YouTube, TikTok or TV, someone is owed money. Tracking that usage across billions of plays is a data problem. Orfium built a business solving it, with Sri Lankan engineers in the team.
+
+Orfium was founded in Los Angeles in 2016 by Chris Mohoney and Drew Delis. It is led by CEO Rob Wells, former President of Global Digital Business at Universal Music Group.
+
+## What it builds
+
+Orfium builds rights management software. It finds where music is used across digital platforms and broadcast, matches each use to the right owner, and collects the royalties due.
+
+## Who uses it
+
+Sony Music became Orfium's first B2B client in 2019. Its client list now includes Warner Music Group, Warner Chappell Music, Sony Music Publishing, Universal Music Publishing Group, Ingrooves and Red Bull.
+
+## The proof
+
+By the company's own figures, Orfium generated more than $200 million in incremental revenue for rights owners and creators in 2022, and employs 700+ people across eight locations.
+
+In 2023 Orfium acquired Soundmouse, the London-based cue sheet and music reporting company with operations in Sri Lanka. In 2026, US rights organisation BMI agreed to acquire Soundmouse from Orfium to build the largest global cue sheet database.
+
+## The Sri Lanka part
+
+Orfium Sri Lanka in Colombo has handled engineering and music data operations behind this work: matching and reporting music usage at the volume the world's largest labels and publishers depend on.
+
+## Why it matters
+
+Global music rights run on precise, high-volume data work. Sri Lankan teams have been part of delivering it for the biggest names in the industry.
+=====
 slug: vetstoria
 title: 900,000 vet appointments a month are booked on software built in Colombo. Meet Vetstoria
 dek: Founded by two vets and an engineer and now part of US-based PetDesk, Vetstoria's online booking platform is used by 10,000+ veterinary clinics and engineered by its team in Colombo.

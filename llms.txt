@@ -152,6 +152,7 @@ Sri Lanka is UTC+5:30. Colombo is the main technology hub. Every story lists its
 - Email: techdestinationsrilanka@gmail.com
 
 ## Stories
+- [Sri Lankan engineers helped Sony, Warner and Universal get paid for their music. Meet Orfium](https://techdestinationsrilanka.lk/stories/orfium/): Los Angeles-founded Orfium tracks music usage across digital platforms and broadcast so rights owners get paid. Its clients include Sony Music, Warner Music Group and Universal Music Publishing Group, and part of its team works from Colombo.
 - [900,000 vet appointments a month are booked on software built in Colombo. Meet Vetstoria](https://techdestinationsrilanka.lk/stories/vetstoria/): Founded by two vets and an engineer and now part of US-based PetDesk, Vetstoria's online booking platform is used by 10,000+ veterinary clinics and engineered by its team in Colombo.
 - [The boardroom software Petronas and Deloitte use is built in Sri Lanka. Meet BoardPAC](https://techdestinationsrilanka.lk/stories/boardpac/): Founded by Lakmini Wijesundera, BoardPAC replaces printed board packs with a secure app used by 50,000+ directors and executives in 40+ countries.
 - [The AI and API platforms telcos use across Asia are built out of Colombo. Meet Axonect](https://techdestinationsrilanka.lk/stories/axonect/): Formerly Axiata Digital Labs, the company started in Colombo in 2019 and now sells Gartner recognised API and integration platforms to telcos and banks.
