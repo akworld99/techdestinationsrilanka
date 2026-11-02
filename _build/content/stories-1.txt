@@ -1,3 +1,36 @@
+slug: pearson-lanka
+title: Sri Lankan engineers build for 100,000+ US students in Pearson's online schools. Meet Pearson Lanka
+dek: Pearson Lanka grew from eCollege's Colombo team into Pearson's largest owned technology centre. Its engineers work on the platform behind Connections Academy and are now hiring for a new AI data engineering group.
+date: 2026-11-02
+category: global
+company: Pearson Lanka
+sector: Education technology engineering
+blurb: Pearson's largest owned technology centre, engineering online schooling for 100,000+ US students.
+facts: 100,000+ :: US students in Pearson Virtual Schools || 800+ :: people at Pearson Lanka (2019) || 2007 :: Pearson buys eCollege for $477M
+sources: Pearson Virtual Schools => https://www.pearson.com/en-us/education/k12-education/learn/virtual-schools || Daily FT, Pearson relocates global technical operations hub to Maga One (2019) => https://ft.lk/it-telecom-tech/Pearson-relocates-global-technical-operations-hub-to-Maga-One/50-687209 || Daily FT, eCollege Lanka is now Pearson Lanka (2012) => https://www.ft.lk/youthcareershigher-education/ecollege-lanka-is-now-pearson-lanka/30-116809 || eCollege and the Pearson acquisition => https://en.wikipedia.org/wiki/ECollege || Pearson, Staff Data Engineer, Sri Lanka (2026) => https://lk.linkedin.com/jobs/view/staff-data-engineer-at-pearson-4484525675 || Pearson, Software Engineering Manager, Sri Lanka (2026) => https://lk.linkedin.com/jobs/view/software-engineering-manager-at-pearson-4478447827
+---
+More than 100,000 American K-12 students go to school online every year through Pearson's Connections Academy. A large part of the engineering behind it sits in Colombo.
+
+Pearson Lanka started as eCollege Lanka, the Sri Lankan team of US online learning company eCollege. When Pearson bought eCollege for $477 million in 2007, it moved the platform's maintenance from the US to Sri Lanka. The team took the Pearson Lanka name in 2012.
+
+## What it builds
+
+The Colombo team works on Connexus, the student, curriculum and assessment platform behind Pearson Virtual Schools. That covers Connections Academy, which runs online public school programmes in 32 US states, and Pearson Online Academy. Pearson Lanka also provides cloud learning platforms, software engineering, quality engineering and technology operations for Pearson groups worldwide.
+
+## The proof
+
+In 2012 Pearson Lanka was a 160-person team at Orion City. By 2019 it had more than 800 people and was Pearson's largest owned technology centre, after moving its global technical operations hub to nine floors at Maga One.
+
+In 2026 it is hiring the first engineers for a new data engineering group at Pearson Virtual Schools. The group will control how AI agents access student records protected under US federal privacy law (FERPA).
+
+## The Sri Lanka part
+
+Pearson is trusting a Colombo team with the security design for sensitive student data as AI starts working alongside teachers and school staff. The current openings run from software engineers to staff-level data engineers and engineering managers.
+
+## Why it matters
+
+Two decades after the eCollege team started, Sri Lankan engineers are still building education technology used by students across the US.
+=====
 slug: orfium
 title: Sri Lankan engineers helped Sony, Warner and Universal get paid for their music. Meet Orfium
 dek: Los Angeles-founded Orfium tracks music usage across digital platforms and broadcast so rights owners get paid. Its clients include Sony Music, Warner Music Group and Universal Music Publishing Group, and part of its team works from Colombo.
