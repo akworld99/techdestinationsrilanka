@@ -12,20 +12,20 @@
   "2026-11-02"
  ],
  "companies/": [
-  "6e5c7dfb2fe712cc",
-  "2026-11-02"
+  "243686f636b9d0cc",
+  "2026-11-04"
  ],
  "compare/": [
   "b6bbab2f98514cc8",
   "2026-11-02"
  ],
  "compare/latin-america/": [
-  "97fdc0c0ca018682",
-  "2026-11-02"
+  "6a7f8723c26a14dd",
+  "2026-11-04"
  ],
  "compare/philippines/": [
-  "0a5cd71842f96067",
-  "2026-11-02"
+  "e7fd81e20d129166",
+  "2026-11-04"
  ],
  "compare/poland/": [
   "02467fefb96a1123",
@@ -132,48 +132,56 @@
   "2026-11-02"
  ],
  "hire/": [
-  "81628bd9f133aab6",
-  "2026-11-02"
+  "6f2baa70de775215",
+  "2026-11-04"
  ],
  "hire/accountants/": [
-  "d0c3f31f85e9f1ec",
-  "2026-11-02"
+  "de6467e36d6f331d",
+  "2026-11-04"
  ],
  "hire/cybersecurity-engineers/": [
-  "e4535506eedce376",
-  "2026-11-02"
+  "d8b43ee061e6cf45",
+  "2026-11-04"
  ],
  "hire/data-ai-engineers/": [
-  "fdac6d4cd3111b33",
-  "2026-11-02"
+  "54a27a2845b4859d",
+  "2026-11-04"
  ],
  "hire/designers-product-managers/": [
-  "9c63c371825ee696",
-  "2026-11-02"
+  "f50ba9f078e49aee",
+  "2026-11-04"
  ],
  "hire/devops-engineers/": [
-  "b83aaedd273348f2",
-  "2026-11-02"
+  "7377ea8ef8d9cd24",
+  "2026-11-04"
  ],
  "hire/erp-consultants/": [
-  "11230560f24221bc",
-  "2026-11-02"
+  "803ff22f8e281f83",
+  "2026-11-04"
+ ],
+ "hire/forward-deployed-engineers/": [
+  "a3ea519926ccfa39",
+  "2026-11-04"
+ ],
+ "hire/ifs-consultants/": [
+  "7fc72ce06b516bd8",
+  "2026-11-04"
  ],
  "hire/qa-engineers/": [
-  "4505fbad25e875ae",
-  "2026-11-02"
+  "b9c06382eedad82e",
+  "2026-11-04"
  ],
  "hire/software-engineers/": [
-  "371e5298226f940d",
-  "2026-11-02"
+  "95fdb591da0c1bee",
+  "2026-11-04"
  ],
  "offshoring/": [
   "61e3b23b0be38a59",
   "2026-11-02"
  ],
  "offshoring/accounting-bookkeeping-outsourcing-sri-lanka/": [
-  "840ad783e9112d6d",
-  "2026-11-02"
+  "b669f5c0b0c14588",
+  "2026-11-04"
  ],
  "offshoring/bpo-companies-sri-lanka/": [
   "17da77e0fa5d165a",
@@ -192,8 +200,8 @@
   "2026-11-02"
  ],
  "offshoring/engineering-design-bim-outsourcing-sri-lanka/": [
-  "84ec327da89c4e1c",
-  "2026-11-02"
+  "a233e226fa9159b4",
+  "2026-11-04"
  ],
  "offshoring/from-australia/": [
   "57523c57c363004b",
@@ -216,8 +224,8 @@
   "2026-11-02"
  ],
  "offshoring/investment-research-kpo-sri-lanka/": [
-  "6b68b005f2b65832",
-  "2026-11-02"
+  "536e5faa98e53e52",
+  "2026-11-04"
  ],
  "offshoring/legal-process-outsourcing-sri-lanka/": [
   "372db11a916eda6b",
@@ -256,8 +264,8 @@
   "2026-11-02"
  ],
  "solutions/software-outsourcing-sri-lanka/": [
-  "a5d2d295602fa508",
-  "2026-11-02"
+  "2cec70333e485519",
+  "2026-11-04"
  ],
  "solutions/sri-lanka-for-startups/": [
   "091c37156ddd8248",
@@ -488,16 +496,16 @@
   "2026-11-02"
  ],
  "stories/orfium/": [
-  "c0b620a535464079",
-  "2026-11-02"
+  "b4f93648f7755960",
+  "2026-11-04"
  ],
  "stories/orion-city/": [
   "54719a7466bf22ca",
   "2026-11-02"
  ],
  "stories/pearson-lanka/": [
-  "c4eed409a3799883",
-  "2026-11-02"
+  "ae8404a4ed0f7c36",
+  "2026-11-04"
  ],
  "stories/roar-global/": [
   "e8bd509d7b724a0b",
@@ -540,8 +548,8 @@
   "2026-11-02"
  ],
  "stories/vetstoria/": [
-  "905444e9f1c78515",
-  "2026-11-02"
+  "45c9fb90f57abe73",
+  "2026-11-04"
  ],
  "stories/virtusa/": [
   "b020396d7fe75765",
@@ -608,8 +616,8 @@
   "2026-11-02"
  ],
  "why-sri-lanka/automotive/": [
-  "a93d9674a6c9b5f7",
-  "2026-11-02"
+  "e8a05d9e1958dd23",
+  "2026-11-04"
  ],
  "why-sri-lanka/enterprise-software/": [
   "8cef593538e1316e",
@@ -624,8 +632,8 @@
   "2026-11-02"
  ],
  "why-sri-lanka/govtech/": [
-  "6322a1dd9d900649",
-  "2026-11-02"
+  "4c7ad4c31f98b15e",
+  "2026-11-04"
  ],
  "why-sri-lanka/healthtech/": [
   "a59c09c845e9b8ea",
@@ -636,7 +644,7 @@
   "2026-11-02"
  ],
  "why-sri-lanka/semiconductors-embedded/": [
-  "4babc60398d7e125",
-  "2026-11-02"
+  "c11221673da16693",
+  "2026-11-04"
  ]
 }

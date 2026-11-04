@@ -742,6 +742,8 @@ def build_llms(B, stories, pages):
         ("data/sri-lanka-tech-salaries-2026.csv", "Salary data 2026 (CSV)", "Open data, free to use with attribution"),
         ("data/sri-lanka-exports-2025-2026.csv", "Sri Lanka export statistics 2025 and 2026 (CSV)", "Exports by sector, product line and market from Export Development Board releases, free to use with attribution"),
     ]]
+    import seo_hire_plus as HP
+    lines += ["", "## Hiring specialist roles in Sri Lanka"] + [f"- [{t}]({B.SITE_URL}/{p}): {d}" for p, t, d in HP.LLMS]
     import seo_offshoring, seo_offshoring_plus as OX
     lines += ["", "## Outsourcing business services to Sri Lanka"] + [f"- [{c['h1']}]({B.SITE_URL}/offshoring/{c['slug']}/): {c['answer']}" for c in seo_offshoring.CAPS]
     lines += [f"- [{m['h1']}]({B.SITE_URL}/offshoring/{m['slug']}/): {m['answer']}" for m in OX.MARKET_PAGES]

@@ -72,7 +72,8 @@ def build_roles(B, stories):
             (f"Do I need a local company to hire {r['role']} in Sri Lanka?", "No. You can hire through an employer of record, contract individuals, or take a dedicated team from a Sri Lankan company. Your own entity makes sense once the team passes a few dozen people."),
         ]
         faq, faq_ld = SP.faq_block(stories, faqs)
-        others = SP.chip_links([(x["short"], f"../{x['slug']}/") for x in ROLES if x is not r])
+        import seo_hire_plus as HP
+        others = SP.chip_links([(x["short"], f"../{x['slug']}/") for x in ROLES if x is not r] + [(t, f"../{sl}/") for sl, t, _ in HP.HUB_DOORS])
         body = f"""
 <section class="page-head"><div class="wrap narrow">
   {SP.crumb_html([("Hire in Sri Lanka", "../")])}
@@ -106,6 +107,8 @@ def build_roles(B, stories):
         paths.append(path)
 
     cards = "".join(f'<a class="door" href="{r["slug"]}/"><h3>{e(r["short"])}</h3><p>Median about LKR {r["pay"][0][1] if r["slug"] != "software-engineers" else 177},000 a month for a {e((r["pay"][0][0] if r["slug"] != "software-engineers" else "software engineer").lower())}.</p><span class="door-go">Pay, companies and how to hire</span></a>' for r in ROLES)
+    import seo_hire_plus as HP
+    cards += "".join(f'<a class="door" href="{sl}/"><h3>{e(t)}</h3><p>{e(d)}</p><span class="door-go">Cost, skills and how to hire</span></a>' for sl, t, d in HP.HUB_DOORS)
     v, m = SP.hub_blocks("../", stories)
     faqs = [
         ("How do I hire developers in Sri Lanka?", "Choose one of four routes: an employer of record for a handful of direct hires, contractors for short projects, a dedicated team run by a Sri Lankan company, or your own registered company for a long term centre."),

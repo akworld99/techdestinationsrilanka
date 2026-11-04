@@ -279,6 +279,10 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
         url = SITE_URL + "/"
     img = f"{SITE_URL}/{image or 'assets/share.jpg'}"
     title_tag = seo_title or title
+    if len(desc) > 160:  # keep meta descriptions inside what Google shows
+        cut = desc[:160]
+        dot = cut.rfind(". ")
+        desc = cut[:dot + 1] if dot > 90 else cut[:cut.rfind(" ")].rstrip(",;:") + "…"
     if path and not noindex and "application/ld+json" not in extra_head:
         extra_head += page_schema(title, desc, url, path)
     if 'class="reviewed"' in body and "editorial-standards/" not in body:
@@ -955,7 +959,8 @@ def main():
     build_editorial()
     build_contact()
     import extra
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_source.build(sys.modules[__name__], stories))
+    import seo_hire_plus
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_source.build(sys.modules[__name__], stories) + seo_hire_plus.build(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 
