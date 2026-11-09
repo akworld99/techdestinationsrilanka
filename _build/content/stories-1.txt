@@ -1,3 +1,40 @@
+slug: mitra-ai
+title: Sri Lankan engineers help Aetna and Travis Perkins modernise legacy systems. Meet Mitra AI
+dek: Mitra AI, founded in 2012 by Dr Ashok Suppiah and Dammika Ganegama, uses its own AI tools to map decades-old systems before they are changed. Its clients include Aetna International and Travis Perkins, with R&D in Sri Lanka.
+date: 2026-11-09
+category: global
+company: Mitra AI
+sector: Legacy modernisation and AI
+blurb: Legacy modernisation and AI for Aetna International, Travis Perkins and others, with R&D in Sri Lanka.
+facts: 100+ :: modernisation programmes worldwide || 350+ :: technical experts || 67% :: lower operating cost for Aetna International
+sources: Mitra AI, client results => https://mitrai.com/client-results || Mitra AI, about => https://mitrai.com/about || Echelon, Mitra Innovation: Decoding Legacy Systems for the AI Era (2026) => https://echelon.lk/mitra-innovation-decoding-legacy-systems-for-the-ai-era/ || EconomyNext, Mitra Innovation to double R&D team in Sri Lanka (2017) => https://economynext.com/mitra-innovation-to-double-rd-team-in-sri-lanka-7583/ || Mitra Innovation careers, Sri Lanka (2026) => https://jobeka.lk/company/Mitra-Innovation-PvtLtd-584
+---
+Banks, insurers, utilities and retailers still run on systems built decades ago. The people who understood them have often moved on, and the business rules sit buried in the code. Mitra AI built its business around finding them, with an engineering base in Sri Lanka.
+
+Mitra was founded in 2012 by Dr Ashok Suppiah, now Chairman and CEO, and Dammika Ganegama, now President, both formerly of Virtusa. It started as Mitra Innovation, with headquarters in the UK and research and development in Sri Lanka, and now trades as Mitra AI.
+
+## What it builds
+
+Mitra maps a client's existing technology before anything changes: the code, data, dependencies and business rules. Its own AI accelerators, novolingo and veridis, analyse legacy code and make each finding traceable to the evidence behind it. It then helps clients stabilise, modernise or replace those systems, and runs them afterwards.
+
+## Who uses it
+
+Mitra's published client results include:
+
+- Aetna International: modernising a global digital estate during major business change, with 67% lower operational and infrastructure cost
+- Travis Perkins: releasing engineering capacity from a business-critical ERP platform, worth an estimated £650,000 a year
+- Water Plus: connecting two utility estates and supporting 400,000+ customer accounts without disruption
+- Leap in!: running NDIS claims and finance operations, with AUD 628 million in payments processed in FY26
+- Cellcard Cambodia: cutting the transactions that reach its core billing system by 66%
+
+## The proof
+
+Mitra reports 100+ modernisation programmes worldwide, 350+ technical experts and a Net Promoter Score of +90. By 2017 it had 150 people in Colombo, 90% of them Sri Lankan, and it is still hiring engineers in Sri Lanka in 2026.
+
+## Why it matters
+
+Understanding old code is the slowest and riskiest part of any modernisation programme. A company with its engineering roots in Colombo is building the tools and delivery teams that make it faster for clients in the UK, Europe and Australia.
+=====
 slug: pearson-lanka
 title: Sri Lankan engineers build for 100,000+ US students in Pearson's online schools. Meet Pearson Lanka
 dek: Pearson Lanka grew from eCollege's Colombo team into Pearson's largest owned technology centre. Its engineers work on the platform behind Connections Academy and are now hiring for a new AI data engineering group.
