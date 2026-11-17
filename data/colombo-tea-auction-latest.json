@@ -1,0 +1,215 @@
+{
+ "name": "Colombo tea auction prices",
+ "url": "https://techdestinationsrilanka.lk/source/ceylon-tea/auction-prices/",
+ "csv": "https://techdestinationsrilanka.lk/data/colombo-tea-auction-weekly-prices.csv",
+ "source": "Forbes & Walker Tea Brokers, weekly tea auction quantities and averages",
+ "source_url": "https://web.forbestea.com/statistics/sri-lankan-statistics/90-weekly-tea-auction-quantities-averages",
+ "units": {
+  "price": "LKR per kg of made tea",
+  "quantity": "thousand kg"
+ },
+ "latest_sale": {
+  "date": "2026-11-04",
+  "avg_high": 1174.33,
+  "avg_medium": 998.93,
+  "avg_low": 1266.82,
+  "avg_total": 1206.02,
+  "qty_total": 4456.0
+ },
+ "year_to_date": {
+  "year": 2026,
+  "sales": 43,
+  "avg_high": 1118.29,
+  "avg_medium": 978.19,
+  "avg_low": 1272.64,
+  "avg_total": 1192.6,
+  "change_vs_same_period_last_year_pct": 1.22
+ },
+ "months": [
+  {
+   "month": "2025-01",
+   "sales": 4,
+   "avg_high": 1116.37,
+   "avg_medium": 1043.98,
+   "avg_low": 1279.98,
+   "avg_total": 1208.07
+  },
+  {
+   "month": "2025-02",
+   "sales": 4,
+   "avg_high": 1111.77,
+   "avg_medium": 1036.18,
+   "avg_low": 1244.1,
+   "avg_total": 1187.08
+  },
+  {
+   "month": "2025-03",
+   "sales": 4,
+   "avg_high": 1151.73,
+   "avg_medium": 1072.54,
+   "avg_low": 1256.14,
+   "avg_total": 1204.48
+  },
+  {
+   "month": "2025-04",
+   "sales": 4,
+   "avg_high": 1108.86,
+   "avg_medium": 1066.62,
+   "avg_low": 1246.77,
+   "avg_total": 1183.64
+  },
+  {
+   "month": "2025-05",
+   "sales": 4,
+   "avg_high": 1023.66,
+   "avg_medium": 1032.61,
+   "avg_low": 1255.85,
+   "avg_total": 1163.69
+  },
+  {
+   "month": "2025-06",
+   "sales": 4,
+   "avg_high": 987.66,
+   "avg_medium": 982.46,
+   "avg_low": 1202.94,
+   "avg_total": 1114.28
+  },
+  {
+   "month": "2025-07",
+   "sales": 5,
+   "avg_high": 1039.61,
+   "avg_medium": 984.11,
+   "avg_low": 1221.08,
+   "avg_total": 1142.64
+  },
+  {
+   "month": "2025-08",
+   "sales": 4,
+   "avg_high": 1122.02,
+   "avg_medium": 1021.52,
+   "avg_low": 1265.06,
+   "avg_total": 1198.05
+  },
+  {
+   "month": "2025-09",
+   "sales": 5,
+   "avg_high": 1170.77,
+   "avg_medium": 1036.77,
+   "avg_low": 1267.83,
+   "avg_total": 1210.66
+  },
+  {
+   "month": "2025-10",
+   "sales": 3,
+   "avg_high": 1163.38,
+   "avg_medium": 1036.42,
+   "avg_low": 1243.89,
+   "avg_total": 1191.63
+  },
+  {
+   "month": "2025-11",
+   "sales": 4,
+   "avg_high": 1167.85,
+   "avg_medium": 1017.29,
+   "avg_low": 1274.73,
+   "avg_total": 1213.35
+  },
+  {
+   "month": "2025-12",
+   "sales": 4,
+   "avg_high": 1187.99,
+   "avg_medium": 1058.67,
+   "avg_low": 1278.58,
+   "avg_total": 1220.78
+  },
+  {
+   "month": "2026-01",
+   "sales": 4,
+   "avg_high": 1142.3,
+   "avg_medium": 979.95,
+   "avg_low": 1233.47,
+   "avg_total": 1174.15
+  },
+  {
+   "month": "2026-02",
+   "sales": 4,
+   "avg_high": 1155.86,
+   "avg_medium": 979.65,
+   "avg_low": 1209.14,
+   "avg_total": 1162.96
+  },
+  {
+   "month": "2026-03",
+   "sales": 5,
+   "avg_high": 1156.14,
+   "avg_medium": 974.48,
+   "avg_low": 1194.35,
+   "avg_total": 1154.49
+  },
+  {
+   "month": "2026-04",
+   "sales": 3,
+   "avg_high": 1181.69,
+   "avg_medium": 1031.43,
+   "avg_low": 1254.77,
+   "avg_total": 1201.11
+  },
+  {
+   "month": "2026-05",
+   "sales": 4,
+   "avg_high": 1117.94,
+   "avg_medium": 1015.28,
+   "avg_low": 1289.49,
+   "avg_total": 1200.69
+  },
+  {
+   "month": "2026-06",
+   "sales": 4,
+   "avg_high": 1057.21,
+   "avg_medium": 952.71,
+   "avg_low": 1277.26,
+   "avg_total": 1170.9
+  },
+  {
+   "month": "2026-07",
+   "sales": 5,
+   "avg_high": 1069.37,
+   "avg_medium": 959.75,
+   "avg_low": 1314.56,
+   "avg_total": 1196.59
+  },
+  {
+   "month": "2026-08",
+   "sales": 4,
+   "avg_high": 1081.33,
+   "avg_medium": 943.54,
+   "avg_low": 1299.48,
+   "avg_total": 1197.87
+  },
+  {
+   "month": "2026-09",
+   "sales": 5,
+   "avg_high": 1082.76,
+   "avg_medium": 957.09,
+   "avg_low": 1331.92,
+   "avg_total": 1228.66
+  },
+  {
+   "month": "2026-10",
+   "sales": 4,
+   "avg_high": 1161.46,
+   "avg_medium": 1006.45,
+   "avg_low": 1318.31,
+   "avg_total": 1242.02
+  },
+  {
+   "month": "2026-11",
+   "sales": 1,
+   "avg_high": 1174.33,
+   "avg_medium": 998.93,
+   "avg_low": 1266.82,
+   "avg_total": 1206.02
+  }
+ ],
+ "note": "Monthly figures are quantity weighted averages of each month's sales, calculated by Tech Destination Sri Lanka."
+}

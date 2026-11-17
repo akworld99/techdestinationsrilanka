@@ -288,6 +288,7 @@ ANSWERS = [
     ]),
     ("Outsourcing business services", [(q, ans, u) for q, ans, u in __import__("seo_offshoring_plus").ANSWERS]),
     ("Exports and sourcing", [(q, ans, u) for q, ans, u in __import__("seo_source").ANSWERS]),
+    ("Ceylon tea prices", [(q, ans, u) for q, ans, u in __import__("seo_tea").ANSWERS]),
     ("The industry", [
         ("How big is Sri Lanka's IT industry?", "USD 1.645 billion in IT and business process exports in 2025 according to the Export Development Board, with roughly 150,000 to 175,000 people employed.", "guides/sri-lanka-tech-industry-facts/"),
         ("Which global tech companies are in Sri Lanka?", "IFS, Sysco, Synopsys, Zebra Technologies, Virtusa, HCLTech, EY, HSBC, WNS and Michelin all run engineering or delivery operations there.", "companies/"),
