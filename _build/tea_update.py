@@ -131,7 +131,11 @@ def main():
     fresh, report = [], {"run": datetime.now(timezone.utc).isoformat(timespec="seconds"), "sources": []}
     for url, text in crawl(years):
         rows, rejected = T.parse_text(text, url)
-        rows = [r for r in rows if r["sale_date"].year >= today.year - 1]
+        rows = [r for r in rows if r["sale_date"].year in years]
+        dupes = T.misaligned(rows)
+        if dupes:   # the same figures under two dates: the PDF's columns were read out of line, so trust nothing from it
+            print(f"  skipped {urllib.parse.unquote(url)}: figures repeat under {', '.join(d.isoformat() for d in dupes)}, so its rows are out of line")
+            rows = []
         latest = max((r["sale_date"] for r in rows), default=None)
         report["sources"].append({"url": url, "rows": len(rows), "rejected": [r["sale_date"].isoformat() for r in rejected],
                                   "latest": latest.isoformat() if latest else None})
@@ -144,7 +148,10 @@ def main():
     for r in sorted(fresh, key=lambda r: reach.get(r["source"], "")):
         best[r["sale_date"]] = r
     fresh = [best[d] for d in sorted(best)]
-    rows, added, changed = T.merge(old, fresh)
+    rows, added, changed = T.merge(old, fresh, keep_existing=True)
+    for r in changed:
+        print(f"  {r['sale_date']}: the broker's file now differs from the stored figures; kept the stored ones. Check by hand.")
+    changed = []
     report.update(parsed=len(fresh), added=[r["sale_date"].isoformat() for r in added], changed=[r["sale_date"].isoformat() for r in changed],
                   latest_sale=rows[-1]["sale_date"].isoformat(), total_sales=len(rows))
     if added or changed:
