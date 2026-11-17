@@ -29,3 +29,12 @@ Buyer pages for Sri Lankan exports live under `source/`: a hub, one page per exp
 - Category records (figures, HS codes, evidence, certificates, caveats, FAQs) are in `_build/source_cats.py`. Every figure carries its source link. No buyer is named, and exporters are described rather than named.
 - Hub, homepage band, Tender Radar, bid support and exporter copy is in `_build/source_data.py`. Page templates are in `_build/seo_source.py` and the artwork in `_build/art_source.py`.
 - Update the export figures when the Export Development Board publishes new monthly or annual numbers, and change `REVIEWED` in `source_data.py`.
+
+## Ceylon tea prices
+
+`source/ceylon-tea/auction-prices/` (weekly Colombo auction averages by elevation, monthly averages, CSV) and `source/ceylon-tea/green-leaf-price-calculator/` (leaf rate for bought-leaf factories), plus a latest-prices box on the Ceylon tea page.
+
+- Every sale is in `_build/tea/weekly.csv`, from Forbes & Walker Tea Brokers' "Weekly Tea Auction Quantities & Averages". `_build/tea_data.py` checks each row before it is stored: the three elevations must add up to the total quantity and their weighted average must match the total average.
+- `.github/workflows/tea-prices.yml` runs `_build/tea_update.py` every Thursday and Saturday. It finds the broker's newest copy of the file, adds new sales, rebuilds the site and commits. Run it by hand from the Actions tab at any time; the run's `tea-update-report` artifact lists every file it read and any rows it rejected.
+- To run it locally: `pip install pdfplumber`, then `python3 _build/tea_update.py` and `python3 _build/build.py`.
+- Page copy and the calculator are in `_build/seo_tea.py`. The green leaf formula follows the Tea Research Institute's 2003 description; change the defaults there if the Tea Commissioner's Division revises it.

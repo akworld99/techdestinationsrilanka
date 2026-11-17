@@ -381,6 +381,8 @@ gtag('js',new Date());gtag('config','{GA_ID}');</script>
       <a href="{prefix}source/tender-radar/">Tender Radar</a>
       <a href="{prefix}source/bid-support/">Bid support</a>
       <a href="{prefix}source/for-exporters/">Exporter services</a>
+      <a href="{prefix}source/ceylon-tea/auction-prices/">Tea auction prices</a>
+      <a href="{prefix}source/ceylon-tea/green-leaf-price-calculator/">Green leaf price calculator</a>
       <a href="{LINKEDIN}" rel="noopener">LinkedIn</a>
       <a href="{INSTAGRAM}" rel="noopener">Instagram</a>
       <a href="{prefix}featured-badge/">Featured badge</a>
@@ -924,6 +926,7 @@ def main():
     import seo_payroll
     import seo_offshoring
     import seo_source
+    import seo_tea
     stories = parse_stories()
     menu.LATEST = stories[0] if stories else None
     import art
@@ -960,7 +963,7 @@ def main():
     build_contact()
     import extra
     import seo_hire_plus
-    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_source.build(sys.modules[__name__], stories) + seo_hire_plus.build(sys.modules[__name__], stories))
+    build_meta(stories, extra.build_all(sys.modules[__name__], stories) + seo_pages.build_all(sys.modules[__name__], stories) + seo_more.build_all(sys.modules[__name__], stories) + solutions.build_all(sys.modules[__name__], stories) + seo_compare.build_all(sys.modules[__name__], stories) + seo_startups.build(sys.modules[__name__], stories) + [seo_payroll.build(sys.modules[__name__], stories)] + seo_offshoring.build(sys.modules[__name__], stories) + seo_source.build(sys.modules[__name__], stories) + seo_tea.build(sys.modules[__name__], stories) + seo_hire_plus.build(sys.modules[__name__], stories))
     print(f"Built {len(stories)} stories, {sum(1 for s in stories if s.get('company'))} companies")
 
 
