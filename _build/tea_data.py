@@ -17,6 +17,7 @@ FIELDS = ["sale_date", "qty_high", "qty_medium", "qty_low", "qty_total", "avg_hi
 ELEV = [("high", "High Grown"), ("medium", "Medium Grown"), ("low", "Low Grown")]
 
 FW_HOME = "https://www.forbestea.com/"
+FW_REPORTS = "https://www.forbestea.com/statistics-tea-market-reports"
 FW_STATS = "https://web.forbestea.com/statistics/sri-lankan-statistics/90-weekly-tea-auction-quantities-averages"
 TRI_FORMULA = "https://dl.nsf.gov.lk/bitstreams/c8413e7e-337e-408d-839e-6ce5c0073cf0/download"
 TEA_BOARD = "https://www.srilankateaboard.lk/"
@@ -49,16 +50,26 @@ def check(r):
     return abs(weighted - r["avg_total"]) <= 1.0
 
 
-def parse_text(text, year, source):
-    """Find sale rows in text extracted from the broker's PDF or HTML page. The file for one year is the authority on
-    the year: the broker has printed 01-JUL-2027 in the 2026 file, so the year comes from the file, not the row."""
-    rows, rejected = [], []
+def parse_text(text, source, year=None):
+    """Find sale rows in text extracted from the broker's PDF or HTML page. Each file covers one year, so the year
+    most rows print is the file's year, and a row printing a neighbouring year is a typo: the broker printed
+    01-JUL-2027 in the 2026 file. Pass `year` to force the file's year when it is known."""
+    found = []
     for m in ROW_RE.finditer(text):
-        d, mon, y = int(m.group(1)), m.group(2).upper(), int(m.group(3))
-        if mon not in MONTHS or abs(y - year) > 1:
+        mon = m.group(2).upper()
+        if mon in MONTHS:
+            found.append((int(m.group(1)), MONTHS[mon], int(m.group(3)), m))
+    if not found:
+        return [], []
+    if year is None:
+        years = [y for _, _, y, _ in found]
+        year = max(set(years), key=years.count)
+    rows, rejected = [], []
+    for d, mon, y, m in found:
+        if abs(y - year) > 1:
             continue
         try:
-            sale = date(year, MONTHS[mon], d)
+            sale = date(year, mon, d)
         except ValueError:
             continue
         r = {"sale_date": sale, "qty_high": _num(m.group(4)), "qty_medium": _num(m.group(5)), "qty_low": _num(m.group(6)),
