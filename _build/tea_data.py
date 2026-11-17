@@ -99,8 +99,10 @@ def save(rows):
             w.writerow([r["sale_date"].isoformat()] + [int(r[k]) for k in FIELDS[1:5]] + [f"{r[k]:.2f}" for k in FIELDS[5:9]] + [r["source"]])
 
 
-def merge(old, new):
-    """New rows win on the same sale date (the broker sometimes revises a figure). Returns rows, added, changed."""
+def merge(old, new, keep_existing=False):
+    """Add sales we do not have yet. A stored sale that differs in the new data is listed in `changed`, and replaced
+    only when keep_existing is False: reading a PDF can shift figures onto the wrong date while every row still adds
+    up, so the updater keeps stored sales and leaves revisions for a person to check. Returns rows, added, changed."""
     by_date = OrderedDict((r["sale_date"], r) for r in old)
     added, changed = [], []
     for r in new:
@@ -109,10 +111,24 @@ def merge(old, new):
             added.append(r)
         elif any(abs(prev[k] - r[k]) > 0.005 for k in FIELDS[1:9]):
             changed.append(r)
+            if keep_existing:
+                continue
         else:
             continue
         by_date[r["sale_date"]] = r
     return list(by_date.values()), added, changed
+
+
+def misaligned(rows):
+    """Dates whose figures repeat another date's exactly: a sign the PDF's date column and number columns were read
+    out of line. Two real sales never match on all eight figures."""
+    seen, dupes = {}, []
+    for r in rows:
+        key = tuple(r[k] for k in FIELDS[1:9])
+        if key in seen and seen[key] != r["sale_date"]:
+            dupes.append(r["sale_date"])
+        seen.setdefault(key, r["sale_date"])
+    return dupes
 
 
 # ------------------------------------------------------------------ summaries for the pages
