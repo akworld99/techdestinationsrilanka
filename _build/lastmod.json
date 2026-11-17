@@ -8,7 +8,7 @@
   "2026-11-17"
  ],
  "answers/": [
-  "bf61c6f3a25007a1",
+  "3066dff2f5580cec",
   "2026-11-17"
  ],
  "companies/": [
@@ -308,15 +308,127 @@
   "2026-11-17"
  ],
  "source/ceylon-tea/": [
-  "3d3779b90f5edb9a",
+  "26f010bfb63881ce",
   "2026-11-17"
  ],
  "source/ceylon-tea/auction-prices/": [
-  "f924facba723d579",
+  "b7dc014557684f1a",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/2025/": [
+  "572713888a5c2a70",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/2026/": [
+  "4d6880e0bf4f5ac1",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/april-2025/": [
+  "e89532cda7ff6d80",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/april-2026/": [
+  "412602f86c22302f",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/august-2025/": [
+  "e62b58eba7f771e1",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/august-2026/": [
+  "79bb1b3210c331f7",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/december-2025/": [
+  "d6b4e964a9b31c35",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/february-2025/": [
+  "586e6ea12ea24186",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/february-2026/": [
+  "2925f04350fb7cdb",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/high-grown/": [
+  "b3e6e0f6001ee270",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/january-2025/": [
+  "cbf6cccd6c8e8c1d",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/january-2026/": [
+  "d053654a8c3237ef",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/july-2025/": [
+  "cc23ab884e1a2875",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/july-2026/": [
+  "683792185cff30c8",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/june-2025/": [
+  "b53a0d4830e9e8b7",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/june-2026/": [
+  "eba7606b61518650",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/low-grown/": [
+  "204052b4aadc96b7",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/march-2025/": [
+  "5e09bd1daa79952e",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/march-2026/": [
+  "d2983d1eccb7711b",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/may-2025/": [
+  "86cee39d1aac99ec",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/may-2026/": [
+  "10bf6a38c1825c77",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/medium-grown/": [
+  "690c370531832b11",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/november-2025/": [
+  "f8e7568565ea4d15",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/november-2026/": [
+  "30c0505f3c714f2c",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/october-2025/": [
+  "f4b962e94aa00c28",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/october-2026/": [
+  "527ca1f6dc701ef5",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/september-2025/": [
+  "560e537667eb5eb0",
+  "2026-11-17"
+ ],
+ "source/ceylon-tea/auction-prices/september-2026/": [
+  "8c42ae969abc9680",
   "2026-11-17"
  ],
  "source/ceylon-tea/green-leaf-price-calculator/": [
-  "b003a4d0665fe4a4",
+  "e80250ef55ab8ac8",
   "2026-11-17"
  ],
  "source/coco-peat-coir/": [

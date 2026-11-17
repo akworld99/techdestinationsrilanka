@@ -180,3 +180,31 @@ def signed(v, dp=1, unit="%"):
         return "–"
     s = f"{abs(v):.{dp}f}{unit}"
     return ("+" if v > 0 else "−" if v < 0 else "") + s
+
+
+# ------------------------------------------------------------------ more summaries for the month, year and elevation pages
+LEAF_SHARE, LEAF_EXCESS, OUTTURN = 0.68, 0.50, 0.2222   # green leaf formula as documented by the Tea Research Institute (2003)
+
+
+def leaf_rate(nsa, ea=None):
+    """Green leaf rate per kg of leaf for a factory net sale average `nsa`, against elevation average `ea` (defaults to nsa)."""
+    ea = nsa if ea is None else ea
+    made = LEAF_SHARE * nsa if nsa <= ea else LEAF_SHARE * ea + LEAF_EXCESS * (nsa - ea)
+    return made * OUTTURN
+
+
+def month_slug(y, m):
+    return f"{MONTH_NAMES[m - 1].lower()}-{y}"
+
+
+def range_52w(rows, k):
+    """Highest and lowest weekly average for elevation k over the 52 weeks to the latest sale: (hi, hi_date, lo, lo_date)."""
+    last = rows[-1]["sale_date"]
+    sel = [r for r in rows if (last - r["sale_date"]).days < 364]
+    hi = max(sel, key=lambda r: r[f"avg_{k}"])
+    lo = min(sel, key=lambda r: r[f"avg_{k}"])
+    return hi[f"avg_{k}"], hi["sale_date"], lo[f"avg_{k}"], lo["sale_date"]
+
+
+def years(rows):
+    return sorted({r["sale_date"].year for r in rows})
