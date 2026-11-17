@@ -97,6 +97,11 @@ def _promo(prefix, c):
 
 
 # ------------------------------------------------------------------ category pages
+def _tea_box():
+    import seo_tea
+    return seo_tea.category_box()
+
+
 def build_category(B, stories, c):
     prefix = "../../"
     path = f"source/{c['slug']}/"
@@ -132,6 +137,7 @@ def build_category(B, stories, c):
   {_ticks([e(q) for q in c['ask']])}
   <h2 class="h-sub mt">How we help you source {e(lc(c['label']))}</h2>
   {_steps(HOW_BUY)}
+  {_tea_box() if c['slug'] == 'ceylon-tea' else ''}
   {_rfq_box(B, prefix, c)}
   {_promo(prefix, c) if c.get('tender') else ''}
   {faq}
@@ -691,6 +697,8 @@ def llms_lines(B):
     lines += [f"- [{c['h1']}]({B.SITE_URL}/source/{c['slug']}/): {c['answer']}" for c in D.CATS]
     lines += [f"- [How to import from Sri Lanka]({B.SITE_URL}/source/how-to-import-from-sri-lanka/): {D.GUIDE_ANSWER}",
               f"- [Request a quote from Sri Lankan exporters]({B.SITE_URL}/source/request-a-quote/)"]
+    import seo_tea
+    lines += seo_tea.llms_lines(B)
     import source_markets as MK
     lines += [f"- [{m['h1']}]({B.SITE_URL}/source/{m['slug']}/): {m['answer']}" for m in MK.MARKETS]
     lines += [

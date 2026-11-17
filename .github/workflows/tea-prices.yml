@@ -1,0 +1,55 @@
+name: Update Colombo tea prices
+
+# Twice a week, read Forbes & Walker's latest weekly tea auction quantities and averages. When a new sale is found,
+# rebuild the site and commit, which republishes /source/ceylon-tea/auction-prices/ and the green leaf calculator.
+# Run it by hand from the Actions tab after merging, to load every sale published since the seed data.
+on:
+  schedule:
+    - cron: "30 3 * * 4,6"   # 09:00 Sri Lanka time, Thursday and Saturday, after the Tuesday and Wednesday sale
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: tea-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pdfplumber pillow
+      - name: Fetch new sales
+        id: fetch
+        run: |
+          python3 _build/tea_update.py
+          if git diff --quiet -- _build/tea/weekly.csv; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Rebuild and commit
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          python3 _build/build.py --no-images
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update Colombo tea auction prices"
+          git push
+      - name: Ask GitHub Pages to publish
+        if: steps.fetch.outputs.changed == 'true'
+        continue-on-error: true
+        run: >
+          curl -fsS -X POST -H "Authorization: Bearer ${{ github.token }}" -H "Accept: application/vnd.github+json"
+          "https://api.github.com/repos/${{ github.repository }}/pages/builds"
+      - name: Keep the fetch report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tea-update-report
+          path: _build/tea/last_update.json
+          if-no-files-found: ignore
