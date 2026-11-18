@@ -1,3 +1,34 @@
+slug: vitalhub
+title: Sri Lankan engineers build health software for 1,300+ care providers. Meet VitalHub
+dek: Toronto-listed VitalHub makes patient flow, health records and workforce software for hospitals and care providers in the UK, Canada and beyond. Its development centre, VitalHub Innovations Lab, has been in Colombo for about 18 years.
+date: 2026-11-18
+category: global
+company: VitalHub
+sector: Health software
+blurb: Patient flow, health records and workforce software for 1,300+ care providers, engineered in Colombo.
+facts: 1,300+ :: clients in the UK, Canada and other markets || CAD 107.2M :: annual recurring revenue, Sept 2026 || 300+ :: people at the Colombo lab (2023)
+sources: VitalHub, Q2 2026 results => https://vitalhub.com/investor-news/vitalhub-reports-second-quarter-2026-results/ || Investing.com, VitalHub Q3 2026 earnings call transcript => https://au.investing.com/news/stock-market-news/earnings-call-transcript-vitalhub-misses-q3-2026-estimates-as-shares-fall-13-93CH-4769949 || Lanka Business News, VitalHub Innovations Lab celebrates 15 years (2023) => https://lankabusinessnews.com/?p=82652 || VitalHub Innovations Lab => https://www.vitalhub.lk/ || Yahoo Finance, VitalHub Intouch with Health market penetration update (2022) => https://finance.yahoo.com/news/vitalhub-announces-intouch-health-market-113000945.html
+---
+Hospitals in the UK and Canada run patient flow, bed management, mental health records and outpatient check-ins on VitalHub software. A large part of the engineering behind it sits in Colombo.
+
+VitalHub is a health software company listed on the Toronto Stock Exchange and led by chief executive Dan Matlow. Its development centre, VitalHub Innovations Lab, has operated in Sri Lanka for around 18 years.
+
+## What it builds
+
+VitalHub's largest business line is patient flow and operational visibility software for hospitals. It also builds electronic health records and case management systems for mental health and community care, and workforce automation and compliance tools.
+
+## The Sri Lanka part
+
+The Colombo lab handles software development, quality engineering and customer support for clients in North America, Europe, the Middle East and Oceania. It is also where newly acquired products are integrated into the VitalHub platform. The lab had more than 300 people in 2023, and on its third quarter 2026 earnings call the company said it plans to move more of its research and development work to Sri Lanka.
+
+## The proof
+
+VitalHub serves more than 1,300 clients across the UK, Canada and other markets. Its annual recurring revenue reached CAD 107.2 million at the end of September 2026, up 14% on a year earlier. In 2022 its Intouch with Health platform was in use at 73 of England's 140 acute NHS trusts and handled about 56% of outpatient appointments.
+
+## Why it matters
+
+Health software is regulated, safety critical and deeply tied into hospital workflows. VitalHub has built a growing listed company in that market, with a Sri Lankan engineering team at its core.
+=====
 slug: mitra-ai
 title: Sri Lankan engineers help Aetna and Travis Perkins modernise legacy systems. Meet Mitra AI
 dek: Mitra AI, founded in 2012 by Dr Ashok Suppiah and Dammika Ganegama, uses its own AI tools to map decades-old systems before they are changed. Its clients include Aetna International and Travis Perkins, with R&D in Sri Lanka.
