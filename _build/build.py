@@ -288,6 +288,8 @@ def page(title, desc, body, prefix, path, image=None, extra_head="", article=Fal
     if 'class="reviewed"' in body and "editorial-standards/" not in body:
         body = re.sub(r'(<p class="reviewed">)(.*?)(</p>)', lambda m: f'{m.group(1)}{m.group(2)} <a href="{prefix}editorial-standards/">How we check</a>{m.group(3)}', body, count=1, flags=re.S)
     extra_head = _with_principles(extra_head)
+    import layout
+    body = layout.upgrade(body, prefix, BOOKING_URL, path)
     full_title = title_tag if (title_tag == SITE_NAME or len(title_tag) + len(SITE_NAME) + 3 > 62) else f"{title_tag} | {SITE_NAME}"
 
     return f"""<!doctype html>
@@ -634,17 +636,24 @@ def build_story(s, stories):
     note = f'<p class="note"><strong>Update.</strong> {e(s["note"])}</p>' if s.get("note") else ""
     body = f"""
 <article class="story">
-  <header class="story-head">
-    <div class="wrap narrow">
-      <p class="crumb"><a href="../">Stories</a> <span aria-hidden="true">/</span> <a href="../?type={s['category']}">{e(s['catname'])}</a></p>
-      <h1>{e(s['title'])}</h1>
-      <p class="lede">{e(s['dek'])}</p>
-      <div class="byline">{logo(s, '../../', 'by-logo') if s.get('company') else ''}<p class="meta"><span>By the <a href="../../editorial-standards/">editorial team</a></span><time datetime="{s['date'].isoformat()}">{fdate(s['date'])}</time><span>{read_minutes(s)} min read</span><span>{e(s['sector'])}</span></p></div>
+  <header class="ph story-ph">
+    <div class="wrap ph-grid">
+      <div class="ph-title">
+        <p class="crumb"><a href="../">Stories</a> <span aria-hidden="true">/</span> <a href="../?type={s['category']}">{e(s['catname'])}</a></p>
+        <h1>{e(s['title'])}</h1>
+        <p class="lede">{e(s['dek'])}</p>
+        <div class="byline">{logo(s, '../../', 'by-logo') if s.get('company') else ''}<p class="meta"><span>By the <a href="../../editorial-standards/">editorial team</a></span><time datetime="{s['date'].isoformat()}">{fdate(s['date'])}</time><span>{read_minutes(s)} min read</span><span>{e(s['sector'])}</span></p></div>
+      </div>
+      <div class="ph-media"><img class="story-cover" src="../../assets/covers/{s['slug']}.jpg" alt="{e(s['title'])}" width="1200" height="630"></div>
     </div>
+    <div class="ph-flag" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   </header>
-  <div class="wrap narrow">
-    <img class="story-cover" src="../../assets/covers/{s['slug']}.jpg" alt="{e(s['title'])}" width="1200" height="630">
-    <dl class="facts">{facts}</dl>
+  <div class="wrap doc story-doc">
+    <aside class="doc-side">
+      <div class="side-facts"><p class="side-h">At a glance</p><dl class="facts">{facts}</dl></div>
+      <div class="side-card"><p class="side-card-h">Want a team like this one?</p><p>We introduce you to Sri Lankan companies and engineers who have done this work.</p><a class="btn btn-saffron btn-small" href="../../talent/find/">Find talent</a><a class="side-link" href="{BOOKING_URL}" rel="noopener">Schedule a call</a></div>
+    </aside>
+    <div class="doc-main">
     {note}
     <div class="prose">
 {render_body(s['body'])}
@@ -655,6 +664,7 @@ def build_story(s, stories):
     <div class="story-actions">
       <a class="btn btn-ghost" href="{li}" rel="noopener">Join the discussion on LinkedIn</a>
       <button class="btn btn-ghost" data-copy>Copy link</button>
+    </div>
     </div>
   </div>
 </article>

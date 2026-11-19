@@ -207,3 +207,21 @@
     });
   }
 })();
+
+// Highlight the current section in the sidebar contents
+(function () {
+  var links = document.querySelectorAll('.side-toc a');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  var seen = {};
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { seen[en.target.id] = en.isIntersecting ? en.boundingClientRect.top : null; });
+    var best = null, bestTop = Infinity;
+    Object.keys(seen).forEach(function (id) { if (seen[id] !== null && seen[id] < bestTop) { bestTop = seen[id]; best = id; } });
+    if (!best) return;
+    links.forEach(function (a) { a.classList.remove('is-on'); });
+    if (map[best]) map[best].classList.add('is-on');
+  }, { rootMargin: '-100px 0px -55% 0px' });
+  Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+})();
