@@ -793,3 +793,40 @@ html:not(.js) .mm-item:hover > .mm-panel, html:not(.js) .mm-item:focus-within > 
 .doc.solo { grid-template-columns: minmax(0, 1fr); }
 .doc.solo .doc-main > form, .doc.solo .doc-main .form, .doc.solo .doc-main .faq, .doc.solo .doc-main > .body-l, .doc.solo .doc-main > p, .doc.solo .doc-main .calc, .doc.solo .doc-main .reach { max-width: 860px; }
 @media (max-width: 560px) { .ph-art { display: none; } }
+
+/* contact page */
+.contact-ph h1 { max-width: 18ch; }
+.contact-sec { padding: 56px 0 88px; }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 64px; align-items: start; }
+.contact-h { font-size: 1.35rem; font-weight: 800; margin-bottom: 16px; }
+.contact-sec .doors { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 36px; }
+.contact-sec .door { padding: 20px 20px 18px; border-radius: var(--r-m); }
+.contact-sec .door h3 { font-size: 1.12rem; margin-bottom: 6px; }
+.contact-sec .door p { font-size: 14.5px; line-height: 1.5; }
+.contact-sec .door-go { font-size: 14.5px; }
+.contact-main .form { margin: 0; }
+.contact-side { position: sticky; top: 104px; display: grid; gap: 28px; }
+.contact-side h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: 10px; }
+.contact-call { background: var(--blue-deep); color: #c9d5ea; border-radius: var(--r-l); padding: 28px 26px 26px; position: relative; overflow: hidden; }
+.contact-call h2 { color: #fff; font-size: 1.3rem; }
+.contact-call p { font-size: 15.5px; line-height: 1.55; }
+.contact-call .btn { width: 100%; background: var(--saffron); border-color: var(--saffron); color: var(--ink); margin-top: 6px; }
+.contact-call::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--maroon) 0 50%, var(--saffron) 50% 75%, var(--green) 75%); }
+.contact-ways ul { list-style: none; margin: 0; padding: 0; }
+.contact-ways li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.contact-ways li:first-child { border-top: 1px solid var(--line); }
+.contact-ways span { color: var(--muted); font-weight: 600; }
+.contact-ways a { font-weight: 700; overflow-wrap: anywhere; }
+.contact-next ol { margin: 0; padding-left: 1.2em; font-size: 15px; color: var(--body); }
+.contact-next li { margin-bottom: 8px; padding-left: 4px; }
+.contact-next li::marker { color: var(--saffron-deep); font-weight: 800; }
+@media (max-width: 960px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-side { position: static; }
+}
+@media (max-width: 640px) {
+  .contact-sec .doors { grid-template-columns: 1fr; }
+}
+.contact-ways li { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
+.contact-ways span { font-size: 13.5px; font-weight: 600; }
+.contact-ways a { overflow-wrap: normal; word-break: normal; font-size: 15.5px; }

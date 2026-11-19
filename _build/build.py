@@ -844,27 +844,43 @@ def build_contact():
         ("text", "company", "Company", False, ""),
         ("textarea", "message", "What do you need?", True, "Roles, team size, timeline, or the question you have"),
     ], "Send message", "Message sent. We will reply by email.")
+    wa = "https://wa.me/94716147945?text=" + "Hi%2C%20I%20found%20Tech%20Destination%20Sri%20Lanka%20and%20would%20like%20to%20talk."
     body = f"""
-<section class="page-head">
-  <div class="wrap narrow">
-    <h1 id="contact-title">Contact</h1>
-    <p class="lede" id="contact-lede">Tell us what you are trying to do. We will point you to the people, partners and companies who have done it before.</p>
-  </div>
-</section>
-<section class="section top-0">
-  <div class="wrap narrow">
-    <div class="doors stack" id="needs">{doors("../")}</div>
-    <div class="reach">
-      <h2>Reach us</h2>
-      <p>Schedule a 30 minute call and tell us what you need, or email <a href="mailto:{EMAIL}">{EMAIL}</a> for any enquiry. It helps to say roughly how many people and what timeline you have in mind.</p>
-      <div class="actions">
-        {booking}
-        <a class="btn btn-ghost" href="mailto:{EMAIL}">Email us</a>
-        <a class="btn btn-ghost" href="{LINKEDIN}" rel="noopener">Message us on LinkedIn</a>
-        <a class="btn btn-ghost" href="{INSTAGRAM}" rel="noopener">Instagram</a>
-      </div>
+<section class="ph contact-ph"><div class="wrap ph-grid one"><div class="ph-title">
+  <h1 id="contact-title">Tell us what you are building</h1>
+  <p class="lede" id="contact-lede">Hiring, setting up, outsourcing or sourcing from Sri Lanka. Tell us what you need and we point you to the people, partners and companies who have done it before.</p>
+</div></div><div class="ph-flag" aria-hidden="true"><i></i><i></i><i></i><i></i></div></section>
+<section class="section contact-sec">
+  <div class="wrap contact-grid">
+    <div class="contact-main">
+      <h2 class="contact-h">What do you need?</h2>
+      <div class="doors stack" id="needs">{doors("../")}</div>
+      {form}
     </div>
-    {form}
+    <aside class="contact-side">
+      <div class="contact-call">
+        <h2>Prefer to talk?</h2>
+        <p>Book a 30 minute call. Come with the roles, rough team size and timeline, and we will tell you what we would do.</p>
+        {booking}
+      </div>
+      <div class="contact-ways">
+        <h2>Other ways to reach us</h2>
+        <ul>
+          <li><span>Email</span><a href="mailto:{EMAIL}">{EMAIL}</a></li>
+          <li><span>WhatsApp</span><a href="{wa}" rel="noopener">+94 71 614 7945</a></li>
+          <li><span>LinkedIn</span><a href="{LINKEDIN}" rel="noopener">Tech Destination Sri Lanka</a></li>
+          <li><span>Instagram</span><a href="{INSTAGRAM}" rel="noopener">@techdestination_srilanka</a></li>
+        </ul>
+      </div>
+      <div class="contact-next">
+        <h2>What happens next</h2>
+        <ol>
+          <li>You tell us what you need, here or on a call.</li>
+          <li>We reply by email with names, partners or next steps.</li>
+          <li>You speak to them directly and decide.</li>
+        </ol>
+      </div>
+    </aside>
   </div>
 </section>
 """
