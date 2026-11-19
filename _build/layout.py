@@ -39,7 +39,7 @@ def _first_unbalanced_close(html_text):
     return -1
 
 
-def _narrow_to_doc(tail):
+def _narrow_to_doc(tail, solo=False):
     """Inside a tail, turn any top-level wrap.narrow block into an aligned doc block."""
     out, pos = "", 0
     opener = '<div class="wrap narrow">'
@@ -56,18 +56,14 @@ def _narrow_to_doc(tail):
                 break
         if end < 0:
             return out + tail[pos:]
-        out += tail[pos:i] + '<div class="wrap doc"><aside class="doc-side"></aside><div class="doc-main">' + tail[i + len(opener):end] + "</div></div>"
+        out += tail[pos:i] + ('<div class="wrap doc solo"><div class="doc-main">' if solo else '<div class="wrap doc"><aside class="doc-side"></aside><div class="doc-main">') + tail[i + len(opener):end] + "</div></div>"
         pos = close_end
 
 
-def _hero(inner):
-    m = re.search(r"</h1>", inner)
-    if not m:
-        return f'<section class="ph"><div class="wrap ph-grid one"><div class="ph-title">{inner}</div></div><div class="ph-flag" aria-hidden="true"><i></i><i></i><i></i><i></i></div></section>'
-    left, right = inner[:m.end()], inner[m.end():].strip()
-    grid = "ph-grid" if right else "ph-grid one"
-    right_html = f'<div class="ph-answer">{right}</div>' if right else ""
-    return (f'<section class="ph"><div class="wrap {grid}"><div class="ph-title">{left}</div>{right_html}</div>'
+def _hero(inner, art=""):
+    right = f'<div class="ph-art">{art}</div>' if art else ""
+    grid = "ph-grid has-art" if art else "ph-grid one"
+    return (f'<section class="ph"><div class="wrap {grid}"><div class="ph-title">{inner}</div>{right}</div>'
             f'<div class="ph-flag" aria-hidden="true"><i></i><i></i><i></i><i></i></div></section>')
 
 
@@ -97,12 +93,19 @@ def upgrade(body, prefix, booking, path=""):
     if HEAD_OPEN not in body:
         return body
     body = re.sub(r'(<section class="(?!page-head")[^"]*">)\s*<div class="wrap narrow([^"]*)">', r'\1<div class="wrap narrow" data-x="\2">', body)
+    # pull a leading illustration out of the first section into the hero
+    art = ""
+    am = re.search(r'(<div class="wrap narrow" data-x="[^"]*">)\s*(<img class="story-cover art"[^>]*>)', body)
+    if am:
+        art = am.group(2)
+        body = body[:am.start()] + am.group(1) + body[am.end():]
+    solo_page = "<form" in body
     # 1. hero
     s = body.index(HEAD_OPEN)
     e = _close_of(body, s)
     inner = body[s + len(HEAD_OPEN):e]
     inner = inner[: inner.rfind("</div>")]  # drop the wrap's closing div and </section>
-    body = body[:s] + _hero(inner.strip()) + body[e:]
+    body = body[:s] + _hero(inner.strip(), art) + body[e:]
 
     # 2. every narrow section after the hero becomes a doc layout
     first = True
@@ -138,14 +141,16 @@ def upgrade(body, prefix, booking, path=""):
             text = re.sub(r"<[^>]+>", "", h.group(2)).strip()
             if text and text.lower() not in ("on this page",):
                 toc.append((h.group(1), html.escape(html.unescape(text))))
-        side = _side(toc, prefix, booking, path) if first else '<aside class="doc-side"></aside>'
+        if first:
+            solo_page = solo_page or len(toc) < 3
+        side = "" if solo_page else (_side(toc, prefix, booking, path) if first else '<aside class="doc-side"></aside>')
         cut = _first_unbalanced_close(content)
         tail = ""
         if cut >= 0:
-            tail = _narrow_to_doc(content[cut + 6:] + "</div>")
+            tail = _narrow_to_doc(content[cut + 6:] + "</div>", solo_page)
             content = content[:cut]
         extra = (m.group(2) or "").strip()
-        new = f'{open_tag}<div class="wrap doc">{side}<div class="doc-main{(" " + extra) if extra else ""}">{content}</div></div>{tail}</section>'
+        new = f'{open_tag}<div class="wrap doc{" solo" if solo_page else ""}">{side}<div class="doc-main{(" " + extra) if extra else ""}">{content}</div></div>{tail}</section>'
         body = body[:s] + new + body[e:]
         pos = s + len(new)
         first = False
