@@ -1,5 +1,5 @@
 slug: fcode-labs
-title: Three Moratuwa friends now build software for Europe and Singapore. Meet Fcode Labs
+title: Berlin AI startups build their products with a team from Sri Lanka. Meet Fcode Labs
 dek: Buddhishan Manamperi, Tharindu Malawaraarachchi and Ramesh Rathnayake founded Fcode Labs in 2018 after their student startups failed. It now builds software for clients in Singapore, Germany, Sweden, the Netherlands, Australia and New Zealand.
 date: 2026-11-22
 category: built
