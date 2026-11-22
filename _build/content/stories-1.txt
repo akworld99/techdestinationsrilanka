@@ -1,3 +1,42 @@
+slug: fcode-labs
+title: Three Moratuwa friends now build software for Europe and Singapore. Meet Fcode Labs
+dek: Buddhishan Manamperi, Tharindu Malawaraarachchi and Ramesh Rathnayake founded Fcode Labs in 2018 after their student startups failed. It now builds software for clients in Singapore, Germany, Sweden, the Netherlands, Australia and New Zealand.
+date: 2026-11-22
+category: built
+company: Fcode Labs
+sector: Software engineering
+blurb: Founded by three Moratuwa friends in 2018, now building software for clients in Europe, Singapore and beyond.
+facts: 2018 :: founded by three University of Moratuwa friends || 80+ :: professionals today || 7+ :: countries with clients
+sources: EconomyNext, Fcode Labs: Creating Opportunity Through Perseverance (2023) => https://economynext.com/brand_voice/fcode-labs-creating-opportunity-through-perseverance/ || Hiru News, Fcode Labs marks one year of Sweden partnership (2026) => https://hirunews.lk/en/business/482072/fcode-labs-marks-one-year-of-sweden-partnership || Daily News, Fcode Labs launches Forevate (2026) => https://dailynews.lk/2026/03/17/business/967829/fcode-labs-launches-forevate-real-time-market-intelligence-solutions/ || Clutch, Fcode Labs client reviews => https://clutch.co/profile/fcode-labs || Fcode Labs, Founders => https://www.fcodelabs.com/founders
+---
+Three friends at the University of Moratuwa kept starting companies, and most of them failed. After graduating and going their separate ways, they decided to give it one last try.
+
+That was 2018. Fcode Labs now builds software for clients in Singapore, Germany, Sweden, the Netherlands, Australia and New Zealand from its base in Nugegoda, with an office in Singapore.
+
+## Who built it
+
+Buddhishan Manamperi and Tharindu Malawaraarachchi lead the company as Co-CEOs. Ramesh Rathnayake is CTO; he was the first of the three to leave his job and work on Fcode Labs full time. The company has grown from its three founders to more than 80 professionals.
+
+## What it builds
+
+Fcode Labs builds digital products, cloud and AI systems for companies in healthcare, manufacturing, mobility and security, and runs dedicated remote engineering teams for clients abroad. The company says 80% of its engagements last longer than a year. In March 2026 it launched Forevate, its own market intelligence platform.
+
+## Who it builds for
+
+- A registered vendor to Singapore's Ministry of Health, delivering a web-based healthcare platform since 2020
+- Berlin AI companies Exazyme and PromiseQ
+- Praedico Rail in the Netherlands and Australia
+- Maia in New Zealand: a mental health app built to a first version in about a month, which won a Designers Institute of New Zealand Best Design Award in 2021
+- Swedish recruitment firms, through a country partnership in Stockholm that marked its first year in August 2026
+
+## The proof
+
+Fcode Labs is ISO 9001 certified and reports ISO 27001 information security compliance. Great Place to Work has named it one of the best workplaces in Asia.
+
+## Why it matters
+
+Fcode Labs did not start with outside funding or a large parent company. It started with three engineers who kept going after their first attempts failed, and it now wins work in demanding markets in Europe and Asia.
+=====
 slug: vitalhub
 title: Sri Lankan engineers build health software for 1,300+ care providers. Meet VitalHub
 dek: Toronto-listed VitalHub makes patient flow, health records and workforce software for hospitals and care providers in the UK, Canada and beyond. Its development centre, VitalHub Innovations Lab, has been in Colombo for about 18 years.
