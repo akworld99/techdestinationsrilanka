@@ -7,15 +7,17 @@ SHIFTS and FAQS. The hub, homepage, answers page, bar chart and llms.txt read th
 from source_cats import M, EDB25, EDB9M, EDB9M_EDB
 
 # ---------------------------------------------------------------- latest year-to-date release
-PERIOD = "January to September 2026"          # the period the year-to-date columns cover
-PERIOD_SHORT = "Jan to Sep 2026"
-PERIOD_END = "2026-09-30"
-YTD_URL = EDB9M_EDB                            # EDB release for that period
-YTD_NEWS = EDB9M                               # a news report of the same release
+PERIOD = "January to October 2026"          # the period the year-to-date columns cover
+PERIOD_SHORT = "Jan to Oct 2026"
+PERIOD_END = "2026-10-31"
+YTD_URL = ("https://www.srilankabusiness.com/news/"
+           "sri-lankas-export-momentum-strengthens-reaching-us-15-3-bn-with-6-growth.html")  # EDB release for that period
+YTD_NEWS = ("https://www.newswire.lk/2026/11/25/"
+            "sri-lankas-export-earnings-rise-6-03-to-us-15-28-billion-in-first-10-months-of-2026/")  # a news report of the same release
 YTD_NEWS_NAME = "Newswire"
-YTD_PUBLISHED = "26 October 2026"
-REVIEWED = "27 October 2026"                   # date of the last update to this page
-MODIFIED = "2026-10-27"
+YTD_PUBLISHED = "25 November 2026"
+REVIEWED = "27 November 2026"                  # date of the last update to this page
+MODIFIED = "2026-11-27"
 
 # month, total, change, goods, change, services, change, source URL, note. As first published in each monthly release.
 EDB_NEWS = "https://www.srilankabusiness.com/news/"
@@ -29,99 +31,105 @@ MONTHLY = [
     ("July 2026", 1637.26, "+2.63%", 1285.31, f"{M}1.30%", 351.92, "+3.75%", EDB_NEWS + "sri-lankas-exports-surpass-us-10-billion-in-first-seven-months-of-2026-maintaining-positive-growth-momentum.html", ""),
     ("August 2026", 1601.36, "+1.77%", 1269.49, f"{M}1.00%", 331.87, "+13.97%", EDB_NEWS + "sri-lankas-exports-surpass-us-12-bn-in-first-eight-months-of-2026.html", ""),
     ("September 2026", 1690.00, "+17.23%", 1390.00, "+21.66%", 306.17, "+0.67%", EDB9M_EDB, "total and goods rounded to US$10 million in the release"),
+    ("October 2026", 1620.00, "+11.57%", 1260.00, "+9.65%", 360.21, "+18.87%", YTD_URL, "total and goods rounded to US$10 million in the release"),
 ]
 
 GEMS_URL = "https://www.srilankabusiness.com/gem-diamond-and-jewellery/"
 
 TITLE = "Sri Lanka exports 2026: by month, product and country"
 H1 = "Sri Lanka export statistics: 2025 and 2026, by month, product and country"
-DESC = ("Sri Lanka exported US$17.25B in 2025 and US$13.61B in January to September 2026. Exports by month, product and country, "
+DESC = ("Sri Lanka exported US$17.25B in 2025 and US$15.28B in January to October 2026. Exports by month, product and country, "
         "with sources and a CSV.")
 ANSWER = ("Sri Lanka exported US$17.25 billion of goods and services in 2025, up 5.6%: US$13.58 billion of goods and US$3.67 billion of services. "
-          "From January to September 2026 exports reached US$13.61 billion, up 5.04%, with goods at US$10.76 billion, up 5.35%. "
+          "From January to October 2026 exports reached US$15.28 billion, up 6.03%, with goods at US$12.01 billion, up 5.72%. "
           "The largest export is apparel and textiles, at US$4.91 billion in 2025, followed by tea, coconut products and rubber products. "
-          "The fastest growing in 2026 are electrical and electronic components, up 61%, and spices and essential oils, up 30.5%. "
+          "The fastest growing in 2026 are electrical and electronic components, up 59.6%, and spices and essential oils, up 35.4%. "
           "The United States is the largest market, taking more than a fifth of goods exports, followed by India and the United Kingdom.")
 
-STATS = [("US$17.25B", "total exports in 2025, up 5.6%"), ("US$13.61B", "January to September 2026, up 5.04%"),
-         ("US$4.91B", "apparel and textiles, the largest export, 2025"), ("+61%", "electrical and electronic components, January to September 2026")]
+STATS = [("US$17.25B", "total exports in 2025, up 5.6%"), ("US$15.28B", "January to October 2026, up 6.03%"),
+         ("US$4.91B", "apparel and textiles, the largest export, 2025"), ("+59.6%", "electrical and electronic components, January to October 2026")]
 
-# label, 2025 value, 2025 change, Jan to Sep 2026 value, Jan to Sep 2026 change
+# label, 2025 value, 2025 change, Jan to Oct 2026 value, Jan to Oct 2026 change
 TOTALS = [
-    ("Total exports, goods and services", 17252.15, "+5.60%", 13612.55, "+5.04%"),
-    ("Merchandise (goods)", 13579.38, "+6.32%", 10761.92, "+5.35%"),
-    ("Services (EDB estimate)", 3672.77, "+2.79%", 2850.63, "+3.88%"),
+    ("Total exports, goods and services", 17252.15, "+5.60%", 15281.57, "+6.03%"),
+    ("Merchandise (goods)", 13579.38, "+6.32%", 12014.99, "+5.72%"),
+    ("Services (EDB estimate)", 3672.77, "+2.79%", 3266.58, "+7.20%"),
 ]
 
-# label, link inside /source/ (or a root path starting with ../), 2025 value, 2025 change, Jan to Sep 2026 value, Jan to Sep 2026 change
+# label, link inside /source/ (or a root path starting with ../), 2025 value, 2025 change, Jan to Oct 2026 value, Jan to Oct 2026 change
 SECTORS = [
-    ("Apparel and textiles", "apparel-manufacturing/", 4909.05, "+5.34%", 3783.76, f"{M}5.68%"),
-    ("Tea", "ceylon-tea/", 1507.19, "+4.97%", 1083.58, f"{M}6.83%"),
-    ("Coconut and coconut based products", "coconut-products/", 1233.01, "+42.66%", 942.50, "+3.68%"),
-    ("Rubber and rubber products", "industrial-tyres/", 945.73, f"{M}5.56%", 773.88, "+8.44%"),
-    ("Food and beverages", "processed-food-beverages/", 583.89, "+24.23%", 526.31, "+20.90%"),
-    ("Electrical and electronic components", "electrical-cables-transformers/", 438.49, "+3.91%", 508.86, "+61.05%"),
-    ("Spices, essential oils and oleoresins", "spices-essential-oils/", 449.90, f"{M}2.59%", 430.53, "+30.53%"),
+    ("Apparel and textiles", "apparel-manufacturing/", 4909.05, "+5.34%", 4196.56, f"{M}5.50%"),
+    ("Tea", "ceylon-tea/", 1507.19, "+4.97%", 1202.26, f"{M}6.77%"),
+    ("Coconut and coconut based products", "coconut-products/", 1233.01, "+42.66%", 1054.43, "+2.07%"),
+    ("Rubber and rubber products", "industrial-tyres/", 945.73, f"{M}5.56%", 873.85, "+10.10%"),
+    ("Food and beverages", "processed-food-beverages/", 583.89, "+24.23%", 594.52, "+18.93%"),
+    ("Electrical and electronic components", "electrical-cables-transformers/", 438.49, "+3.91%", 566.14, "+59.60%"),
+    ("Spices, essential oils and oleoresins", "spices-essential-oils/", 449.90, f"{M}2.59%", 498.43, "+35.35%"),
     ("Gems, diamonds and jewellery", "gems-jewellery/", 334.13, None, None, None),
-    ("Seafood", "seafood/", 240.19, "+3.09%", 180.81, f"{M}2.03%"),
-    ("Ornamental fish", "ornamental-fish/", 22.60, f"{M}7.60%", None, f"{M}26.71%"),
+    ("Seafood", "seafood/", 240.19, "+3.09%", 199.34, f"{M}0.29%"),
+    ("Ornamental fish", "ornamental-fish/", 22.60, f"{M}7.60%", None, None),
 ]
 SERVICES = [
     ("Logistics and transport services", None, 1851.58, "+3.22%", None, None),
-    ("ICT and BPM services", "../offshoring/", 1644.83, "+8.81%", 1240.67, "+3.69%"),
+    ("ICT and BPM services", "../offshoring/", 1644.83, "+8.81%", 1415.37, "+6.37%"),
 ]
 
-# product line, link, Jan to Sep 2026 value (or None), Jan to Sep 2026 change
+# product line, link, Jan to Oct 2026 value (or None), Jan to Oct 2026 change
 LINES = [
-    ("Boilers, piston engines, pumps and vacuum pumps", "light-engineering/", None, "+508.71%"),
-    ("Coconut husk chips", "coco-peat-coir/", None, "+334.15%"),
-    ("Telephone sets and audio and video equipment", "electrical-cables-transformers/", None, "+234.82%"),
-    ("Insulated wires and cables", "electrical-cables-transformers/", None, "+82.59%"),
-    ("Pepper", "spices-essential-oils/", 136.26, "+61.45%"),
-    ("Tea bags", "ceylon-tea/", None, "+53.39%"),
-    ("Non-alcoholic beverages", "processed-food-beverages/", None, "+46.78%"),
-    ("Coconut shell based products", "activated-carbon/", None, "+45.91%"),
-    ("Activated carbon", "activated-carbon/", None, "+37.79%"),
-    ("Processed food", "processed-food-beverages/", 243.28, "+34.19%"),
-    ("Electrical transformers", "electrical-cables-transformers/", None, "+33.46%"),
-    ("Switches, boards and panels", "electrical-cables-transformers/", None, "+31.49%"),
-    ("Cinnamon", "ceylon-cinnamon/", 221.56, "+31.03%"),
-    ("Oleoresins", "spices-essential-oils/", None, "+30.09%"),
-    ("Gaskets, washers and seals", "rubber-gloves/", None, "+27.78%"),
-    ("Essential oils", "spices-essential-oils/", None, "+22.17%"),
-    ("Animal feed", "processed-food-beverages/", None, "+13.69%"),
-    ("Instant tea", "ceylon-tea/", None, "+9.85%"),
-    ("Industrial and surgical gloves", "rubber-gloves/", None, "+7.58%"),
-    ("Apparel", "apparel-manufacturing/", 3513.37, f"{M}5.36%"),
-    ("Bulk tea", "ceylon-tea/", None, f"{M}11.13%"),
+    ("Boilers, piston engines, pumps and vacuum pumps", "light-engineering/", None, "+520.54%"),
+    ("Coconut husk chips", "coco-peat-coir/", 39.41, "+317.92%"),
+    ("Telephone sets and audio and video equipment", "electrical-cables-transformers/", None, "+205.54%"),
+    ("Meat, fish and dairy preparations", "processed-food-beverages/", 95.98, "+121.41%"),
+    ("Insulated wires and cables", "electrical-cables-transformers/", None, "+82.65%"),
+    ("Pepper", "spices-essential-oils/", 157.30, "+75.25%"),
+    ("Tea bags", "ceylon-tea/", None, "+49.54%"),
+    ("Non-alcoholic beverages", "processed-food-beverages/", None, None),
+    ("Coconut shell based products", "activated-carbon/", 249.50, "+43.88%"),
+    ("Activated carbon", "activated-carbon/", 223.08, "+36.38%"),
+    ("Processed food", "processed-food-beverages/", 319.40, "+24.81%"),
+    ("Electrical transformers", "electrical-cables-transformers/", None, "+36.19%"),
+    ("Switches, boards and panels", "electrical-cables-transformers/", None, "+33.05%"),
+    ("Cinnamon", "ceylon-cinnamon/", 256.64, "+31.57%"),
+    ("Oleoresins", "spices-essential-oils/", None, "+52.79%"),
+    ("Gaskets, washers and seals", "rubber-gloves/", 55.14, "+26.18%"),
+    ("Essential oils", "spices-essential-oils/", None, "+23.95%"),
+    ("Animal feed", "processed-food-beverages/", None, None),
+    ("Instant tea", "ceylon-tea/", None, "+15.30%"),
+    ("Pneumatic and retreaded tyres and tubes", "industrial-tyres/", 483.39, "+10.0%"),
+    ("Industrial and surgical gloves", "rubber-gloves/", 266.59, "+8.70%"),
+    ("Coconut fibre based products", "coco-peat-coir/", 267.08, "+6.11%"),
+    ("Tea packets", "ceylon-tea/", None, f"{M}5.18%"),
+    ("Apparel", "apparel-manufacturing/", 3897.30, f"{M}5.16%"),
+    ("Textiles", "apparel-manufacturing/", 299.26, f"{M}9.70%"),
+    ("Bulk tea", "ceylon-tea/", None, f"{M}10.37%"),
 ]
 
-# market, 2025 value, 2025 change, Jan to Sep 2026 value, Jan to Sep 2026 change
+# market, 2025 value, 2025 change, Jan to Oct 2026 value, Jan to Oct 2026 change
 MARKETS = [
-    ("United States", 2999.15, "+3.06%", 2252.99, "+0.05%"),
-    ("India", 1035.72, "+17.21%", 889.84, "+12.30%"),
-    ("United Kingdom", 929.03, "+2.80%", 654.36, f"{M}9.33%"),
-    ("Italy", 679.77, "+14.16%", 514.28, "+1.48%"),
-    ("Germany", 706.49, "+12.45%", 513.08, f"{M}4.27%"),
-    ("Netherlands", 474.80, "+20.63%", 328.12, f"{M}5.35%"),
-    ("China", None, None, 234.39, "+16.46%"),
-    ("United Arab Emirates", 341.06, None, 232.06, f"{M}10.50%"),
-    ("Türkiye", None, None, 218.24, "+94.01%"),
-    ("France", 277.18, "+5.09%", 198.77, f"{M}6.54%"),
-    ("Belgium", 254.44, "+6.42%", 193.42, "+3.16%"),
+    ("United States", 2999.15, "+3.06%", 2518.31, "+0.81%"),
+    ("India", 1035.72, "+17.21%", 989.66, "+14.16%"),
+    ("United Kingdom", 929.03, "+2.80%", 723.40, f"{M}8.67%"),
+    ("Italy", 679.77, "+14.16%", 573.18, "+0.05%"),
+    ("Germany", 706.49, "+12.45%", 565.95, f"{M}5.32%"),
+    ("Netherlands", 474.80, "+20.63%", 364.43, f"{M}6.72%"),
+    ("China", None, None, 261.31, "+16.24%"),
+    ("United Arab Emirates", 341.06, None, 252.35, f"{M}13.02%"),
+    ("Türkiye", None, None, 239.30, "+84.93%"),
+    ("France", 277.18, "+5.09%", 219.76, f"{M}7.09%"),
+    ("Belgium", 254.44, "+6.42%", 217.15, "+3.25%"),
     ("Australia", 262.00, None, None, None),
-    ("Pakistan", None, f"{M}2.03%", 74.73, "+33.59%"),
-    ("European Union, all members", None, "+13.41%", None, f"{M}0.15%"),
+    ("Pakistan", None, f"{M}2.03%", 88.13, "+38.83%"),
+    ("European Union, all members", None, "+13.41%", 2591.36, f"{M}0.85%"),
 ]
 
 SHIFTS = [
-    ("Electrical and electronic components rose 61.05% to US$508.86 million, led by insulated wires and cables, up 82.59%, and transformers, up 33.46%.", "EDB, January to September 2026", EDB9M),
-    ("Spices and essential oils rose 30.53%: pepper up 61.45% to US$136.26 million and cinnamon up 31.03% to US$221.56 million.", "EDB, January to September 2026", EDB9M),
-    ("Food and beverages rose 20.90%, with processed food up 34.19% and non-alcoholic beverages up 46.78%.", "EDB, January to September 2026", EDB9M),
-    ("Tea fell 6.83% overall, but tea bags rose 53.39% and tea exports to Türkiye rose 126.51%.", "EDB, January to September 2026", EDB9M),
-    ("Activated carbon exports to China rose 78.33%.", "EDB, January to September 2026", EDB9M),
-    ("Apparel and textiles fell 5.68%, and apparel alone 5.36%, with apparel to the US down 3.83%, the EU down 5.54% and the UK down 10.41%.", "EDB, January to September 2026", EDB9M),
-    ("September 2026 alone was strong: goods exports rose 21.66% to US$1.39 billion.", "EDB, September 2026", EDB9M),
+    ("Electrical and electronic components rose 59.60% to US$566.14 million, led by insulated wires and cables, up 82.65%, and transformers, up 36.19%.", "EDB, January to October 2026", YTD_URL),
+    ("Spices and concentrates rose 35.35% to US$498.43 million: pepper up 75.25% to US$157.30 million and cinnamon up 31.57% to US$256.64 million.", "EDB, January to October 2026", YTD_URL),
+    ("Food and beverages rose 18.93%, with processed food up 24.81% and meat, fish and dairy preparations up 121.41% to US$95.98 million.", "EDB, January to October 2026", YTD_URL),
+    ("Rubber products rose 10.10% to US$873.85 million, with tyres and tubes up 10.0% and gloves up 8.70%.", "EDB, January to October 2026", YTD_URL),
+    ("Tea fell 6.77% overall, with bulk tea down 10.37% and tea to the Middle East down 33.50%, while tea bags rose 49.54%.", "EDB, January to October 2026", YTD_URL),
+    ("Apparel and textiles fell 5.50%, and apparel alone 5.16%, with apparel to the US down 3.99%, the EU down 9.67% and the UK down 5.64%.", "EDB, January to October 2026", YTD_URL),
+    ("October 2026 alone rose 11.57% to US$1.62 billion, with services up 18.87% on transport and logistics, and spices up 76.90% in the month.", "EDB, October 2026", YTD_URL),
 ]
 
 SRC = (f'Source: Export Development Board, <a href="{EDB25}" rel="noopener">2025 export performance</a> (published January 2026) and '
@@ -141,13 +149,13 @@ FAQS = [
     ("How much did Sri Lanka export in 2025?",
      "US$17.25 billion of goods and services, up 5.6% on 2024. Goods were US$13.58 billion, up 6.32%, and services US$3.67 billion, up 2.79%, according to the Export Development Board."),
     ("What is Sri Lanka's export income in 2026?",
-     "From January to September 2026 Sri Lanka earned US$13.61 billion from exports, up 5.04% on the same months of 2025. Goods were US$10.76 billion, up 5.35%, and services an estimated US$2.85 billion, up 3.88%."),
+     "From January to October 2026 Sri Lanka earned US$15.28 billion from exports, up 6.03% on the same months of 2025. Goods were US$12.01 billion, up 5.72%, and services an estimated US$3.27 billion, up 7.20%."),
     ("Which countries buy the most from Sri Lanka?",
      "The United States, at US$3.0 billion in 2025 and more than a fifth of goods exports, then India (US$1.04 billion), the United Kingdom (US$929 million), Germany, Italy and the Netherlands. "
-     "In January to September 2026 China, the UAE and Türkiye each took more than US$200 million, and Türkiye grew fastest, up 94%."),
+     "In January to October 2026 India grew 14.16% to US$990 million, China, the UAE and Türkiye each took more than US$230 million, and Türkiye grew fastest, up 85%."),
     ("Which Sri Lankan exports are growing fastest?",
-     "In January to September 2026: electrical and electronic components, up 61.05%, spices and essential oils, up 30.53%, and food and beverages, up 20.90%. "
-     "Within those, pepper rose 61%, insulated cables 83% and processed food 34%."),
+     "In January to October 2026: electrical and electronic components, up 59.60%, spices and essential oils, up 35.35%, and food and beverages, up 18.93%. "
+     "Within those, pepper rose 75%, insulated cables 83% and processed food 25%."),
     ("Where do these figures come from?",
      "From the Export Development Board's monthly export releases, linked on this page. They are provisional and can be revised, and the services figures are estimates."),
 ]

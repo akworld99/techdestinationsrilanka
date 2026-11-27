@@ -1,54 +1,59 @@
 table,item,value_2025_usd_m,change_2025,value_2026_ytd_usd_m,change_2026_ytd,source,ytd_period
-total,"Total exports, goods and services",17252.15,+5.60%,13612.55,+5.04%,EDB,January to September 2026
-total,Merchandise (goods),13579.38,+6.32%,10761.92,+5.35%,EDB,January to September 2026
-total,Services (EDB estimate),3672.77,+2.79%,2850.63,+3.88%,EDB,January to September 2026
-sector,Apparel and textiles,4909.05,+5.34%,3783.76,-5.68%,EDB,January to September 2026
-sector,Tea,1507.19,+4.97%,1083.58,-6.83%,EDB,January to September 2026
-sector,Coconut and coconut based products,1233.01,+42.66%,942.50,+3.68%,EDB,January to September 2026
-sector,Rubber and rubber products,945.73,-5.56%,773.88,+8.44%,EDB,January to September 2026
-sector,Food and beverages,583.89,+24.23%,526.31,+20.90%,EDB,January to September 2026
-sector,Electrical and electronic components,438.49,+3.91%,508.86,+61.05%,EDB,January to September 2026
-sector,"Spices, essential oils and oleoresins",449.90,-2.59%,430.53,+30.53%,EDB,January to September 2026
-sector,"Gems, diamonds and jewellery",334.13,,,,EDB gem sector page,January to September 2026
-sector,Seafood,240.19,+3.09%,180.81,-2.03%,EDB,January to September 2026
-sector,Ornamental fish,22.60,-7.60%,,-26.71%,EDB,January to September 2026
-sector,Logistics and transport services,1851.58,+3.22%,,,EDB,January to September 2026
-sector,ICT and BPM services,1644.83,+8.81%,1240.67,+3.69%,EDB,January to September 2026
-product_line,"Boilers, piston engines, pumps and vacuum pumps",,,,+508.71%,EDB,January to September 2026
-product_line,Coconut husk chips,,,,+334.15%,EDB,January to September 2026
-product_line,Telephone sets and audio and video equipment,,,,+234.82%,EDB,January to September 2026
-product_line,Insulated wires and cables,,,,+82.59%,EDB,January to September 2026
-product_line,Pepper,,,136.26,+61.45%,EDB,January to September 2026
-product_line,Tea bags,,,,+53.39%,EDB,January to September 2026
-product_line,Non-alcoholic beverages,,,,+46.78%,EDB,January to September 2026
-product_line,Coconut shell based products,,,,+45.91%,EDB,January to September 2026
-product_line,Activated carbon,,,,+37.79%,EDB,January to September 2026
-product_line,Processed food,,,243.28,+34.19%,EDB,January to September 2026
-product_line,Electrical transformers,,,,+33.46%,EDB,January to September 2026
-product_line,"Switches, boards and panels",,,,+31.49%,EDB,January to September 2026
-product_line,Cinnamon,,,221.56,+31.03%,EDB,January to September 2026
-product_line,Oleoresins,,,,+30.09%,EDB,January to September 2026
-product_line,"Gaskets, washers and seals",,,,+27.78%,EDB,January to September 2026
-product_line,Essential oils,,,,+22.17%,EDB,January to September 2026
-product_line,Animal feed,,,,+13.69%,EDB,January to September 2026
-product_line,Instant tea,,,,+9.85%,EDB,January to September 2026
-product_line,Industrial and surgical gloves,,,,+7.58%,EDB,January to September 2026
-product_line,Apparel,,,3513.37,-5.36%,EDB,January to September 2026
-product_line,Bulk tea,,,,-11.13%,EDB,January to September 2026
-market,United States,2999.15,+3.06%,2252.99,+0.05%,EDB,January to September 2026
-market,India,1035.72,+17.21%,889.84,+12.30%,EDB,January to September 2026
-market,United Kingdom,929.03,+2.80%,654.36,-9.33%,EDB,January to September 2026
-market,Italy,679.77,+14.16%,514.28,+1.48%,EDB,January to September 2026
-market,Germany,706.49,+12.45%,513.08,-4.27%,EDB,January to September 2026
-market,Netherlands,474.80,+20.63%,328.12,-5.35%,EDB,January to September 2026
-market,China,,,234.39,+16.46%,EDB,January to September 2026
-market,United Arab Emirates,341.06,,232.06,-10.50%,EDB,January to September 2026
-market,Türkiye,,,218.24,+94.01%,EDB,January to September 2026
-market,France,277.18,+5.09%,198.77,-6.54%,EDB,January to September 2026
-market,Belgium,254.44,+6.42%,193.42,+3.16%,EDB,January to September 2026
-market,Australia,262.00,,,,EDB,January to September 2026
-market,Pakistan,,-2.03%,74.73,+33.59%,EDB,January to September 2026
-market,"European Union, all members",,+13.41%,,-0.15%,EDB,January to September 2026
+total,"Total exports, goods and services",17252.15,+5.60%,15281.57,+6.03%,EDB,January to October 2026
+total,Merchandise (goods),13579.38,+6.32%,12014.99,+5.72%,EDB,January to October 2026
+total,Services (EDB estimate),3672.77,+2.79%,3266.58,+7.20%,EDB,January to October 2026
+sector,Apparel and textiles,4909.05,+5.34%,4196.56,-5.50%,EDB,January to October 2026
+sector,Tea,1507.19,+4.97%,1202.26,-6.77%,EDB,January to October 2026
+sector,Coconut and coconut based products,1233.01,+42.66%,1054.43,+2.07%,EDB,January to October 2026
+sector,Rubber and rubber products,945.73,-5.56%,873.85,+10.10%,EDB,January to October 2026
+sector,Food and beverages,583.89,+24.23%,594.52,+18.93%,EDB,January to October 2026
+sector,Electrical and electronic components,438.49,+3.91%,566.14,+59.60%,EDB,January to October 2026
+sector,"Spices, essential oils and oleoresins",449.90,-2.59%,498.43,+35.35%,EDB,January to October 2026
+sector,"Gems, diamonds and jewellery",334.13,,,,EDB gem sector page,January to October 2026
+sector,Seafood,240.19,+3.09%,199.34,-0.29%,EDB,January to October 2026
+sector,Ornamental fish,22.60,-7.60%,,,EDB,January to October 2026
+sector,Logistics and transport services,1851.58,+3.22%,,,EDB,January to October 2026
+sector,ICT and BPM services,1644.83,+8.81%,1415.37,+6.37%,EDB,January to October 2026
+product_line,"Boilers, piston engines, pumps and vacuum pumps",,,,+520.54%,EDB,January to October 2026
+product_line,Coconut husk chips,,,39.41,+317.92%,EDB,January to October 2026
+product_line,Telephone sets and audio and video equipment,,,,+205.54%,EDB,January to October 2026
+product_line,"Meat, fish and dairy preparations",,,95.98,+121.41%,EDB,January to October 2026
+product_line,Insulated wires and cables,,,,+82.65%,EDB,January to October 2026
+product_line,Pepper,,,157.30,+75.25%,EDB,January to October 2026
+product_line,Tea bags,,,,+49.54%,EDB,January to October 2026
+product_line,Non-alcoholic beverages,,,,,EDB,January to October 2026
+product_line,Coconut shell based products,,,249.50,+43.88%,EDB,January to October 2026
+product_line,Activated carbon,,,223.08,+36.38%,EDB,January to October 2026
+product_line,Processed food,,,319.40,+24.81%,EDB,January to October 2026
+product_line,Electrical transformers,,,,+36.19%,EDB,January to October 2026
+product_line,"Switches, boards and panels",,,,+33.05%,EDB,January to October 2026
+product_line,Cinnamon,,,256.64,+31.57%,EDB,January to October 2026
+product_line,Oleoresins,,,,+52.79%,EDB,January to October 2026
+product_line,"Gaskets, washers and seals",,,55.14,+26.18%,EDB,January to October 2026
+product_line,Essential oils,,,,+23.95%,EDB,January to October 2026
+product_line,Animal feed,,,,,EDB,January to October 2026
+product_line,Instant tea,,,,+15.30%,EDB,January to October 2026
+product_line,Pneumatic and retreaded tyres and tubes,,,483.39,+10.0%,EDB,January to October 2026
+product_line,Industrial and surgical gloves,,,266.59,+8.70%,EDB,January to October 2026
+product_line,Coconut fibre based products,,,267.08,+6.11%,EDB,January to October 2026
+product_line,Tea packets,,,,-5.18%,EDB,January to October 2026
+product_line,Apparel,,,3897.30,-5.16%,EDB,January to October 2026
+product_line,Textiles,,,299.26,-9.70%,EDB,January to October 2026
+product_line,Bulk tea,,,,-10.37%,EDB,January to October 2026
+market,United States,2999.15,+3.06%,2518.31,+0.81%,EDB,January to October 2026
+market,India,1035.72,+17.21%,989.66,+14.16%,EDB,January to October 2026
+market,United Kingdom,929.03,+2.80%,723.40,-8.67%,EDB,January to October 2026
+market,Italy,679.77,+14.16%,573.18,+0.05%,EDB,January to October 2026
+market,Germany,706.49,+12.45%,565.95,-5.32%,EDB,January to October 2026
+market,Netherlands,474.80,+20.63%,364.43,-6.72%,EDB,January to October 2026
+market,China,,,261.31,+16.24%,EDB,January to October 2026
+market,United Arab Emirates,341.06,,252.35,-13.02%,EDB,January to October 2026
+market,Türkiye,,,239.30,+84.93%,EDB,January to October 2026
+market,France,277.18,+5.09%,219.76,-7.09%,EDB,January to October 2026
+market,Belgium,254.44,+6.42%,217.15,+3.25%,EDB,January to October 2026
+market,Australia,262.00,,,,EDB,January to October 2026
+market,Pakistan,,-2.03%,88.13,+38.83%,EDB,January to October 2026
+market,"European Union, all members",,+13.41%,2591.36,-0.85%,EDB,January to October 2026
 month_total,January 2026,,,1532.60,+13.71%,EDB monthly release,January 2026
 month_goods,January 2026,,,1165.02,+10.66%,EDB monthly release,January 2026
 month_services,January 2026,,,367.55,+24.59%,EDB monthly release,January 2026
@@ -76,3 +81,6 @@ month_services,August 2026,,,331.87,+13.97%,EDB monthly release,August 2026
 month_total,September 2026,,,1690.00,+17.23%,EDB monthly release,September 2026
 month_goods,September 2026,,,1390.00,+21.66%,EDB monthly release,September 2026
 month_services,September 2026,,,306.17,+0.67%,EDB monthly release,September 2026
+month_total,October 2026,,,1620.00,+11.57%,EDB monthly release,October 2026
+month_goods,October 2026,,,1260.00,+9.65%,EDB monthly release,October 2026
+month_services,October 2026,,,360.21,+18.87%,EDB monthly release,October 2026
