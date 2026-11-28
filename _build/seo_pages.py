@@ -759,7 +759,14 @@ def build_llms(B, stories, pages):
     lines += ["", "## Services", f"- [Find talent from Sri Lanka]({B.SITE_URL}/talent/find/)", f"- [Be featured as Sri Lankan Top Talent]({B.SITE_URL}/talent/top-talent/)", f"- [All services]({B.SITE_URL}/services/)",
               f"- [Sri Lanka Tech 50]({B.SITE_URL}/tech-50/)", f"- [Sri Lanka Tech Tour]({B.SITE_URL}/tech-tour/)", f"- [Companies directory]({B.SITE_URL}/companies/)", "", "## Contact", f"- Schedule a call: {B.BOOKING_URL}", f"- Email: {B.EMAIL}"]
     lines += ["", "## Stories"] + [f"- [{s['title']}]({B.SITE_URL}/stories/{s['slug']}/): {s['dek']}" for s in stories]
-    B.write("llms.txt", "\n".join(lines) + "\n")
+    B.write("llms-full.txt", "\n".join(lines) + "\n")
+    # llms.txt stays short (summary, key facts and guides) and points AI tools to the full index.
+    g = lines.index("## Guides") if "## Guides" in lines else len(lines)
+    nxt = next((i for i in range(g + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
+    rest = [l[3:] for l in lines[nxt:] if l.startswith("## ")]
+    short = lines[:nxt] + ["## Full index",
+                           f"- [Every page with a short summary]({B.SITE_URL}/llms-full.txt): " + "; ".join(rest)]
+    B.write("llms.txt", "\n".join(short) + "\n")
 
 
 def build_all(B, stories):
